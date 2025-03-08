@@ -1,11 +1,109 @@
 {
-    "timestamp": "2025-03-05T12:00:00Z",
-    "index_value": 6.8,
-    "interpretation": "Slight job creation from AI",
-    "components": {
-      "news_events": {"score": 12.3},
-      "research_trends": {"score": -5.2},
-      "employment_stats": {"score": -3.8},
-      "job_trends": {"score": 16.6}
+  "timestamp": "2025-03-07T17:46:10.413680",
+  "index_value": 31.8636791761787,
+  "interpretation": "Moderate job creation from AI",
+  "components": {
+    "news_events": {
+      "score": 0,
+      "weight": 0.35,
+      "weighted_score": 0.0,
+      "details": {
+        "error": "No data available"
+      }
+    },
+    "research_trends": {
+      "score": 7.00636942675159,
+      "weight": 0.1,
+      "weighted_score": 0.7006369426751591,
+      "details": {
+        "paper_count": 150,
+        "positive_sentiment": 53.503184713375795
+      }
+    },
+    "employment_stats": {
+      "score": 20.54347411167847,
+      "weight": 0.3,
+      "weighted_score": 6.163042233503541,
+      "details": {
+        "avg_weighted_change": 0.8217389644671388,
+        "growing_industries": [
+          [
+            "Education and Health Services",
+            3.5202682109113077
+          ],
+          [
+            "Construction",
+            2.0429009193054135
+          ],
+          [
+            "Other Services",
+            1.6357130686658716
+          ],
+          [
+            "Government",
+            1.5497935027887768
+          ],
+          [
+            "Leisure and Hospitality",
+            1.532638371804418
+          ],
+          [
+            "Total Nonfarm",
+            1.2666098316101202
+          ],
+          [
+            "Financial Activities",
+            1.0334212840809147
+          ],
+          [
+            "Trade, Transportation, and Utilities",
+            0.9508827128124453
+          ]
+        ],
+        "declining_industries": [
+          [
+            "Manufacturing",
+            -0.6953125
+          ],
+          [
+            "Mining and Logging",
+            -0.6420545746388443
+          ],
+          [
+            "Professional and Business Services",
+            -0.35727045373347627
+          ],
+          [
+            "Information",
+            -0.27220142905750255
+          ]
+        ]
+      }
+    },
+    "job_trends": {
+      "score": 100.0,
+      "weight": 0.25,
+      "weighted_score": 25.0,
+      "details": {
+        "ai_job_growth_rate": 397.0873786407767,
+        "avg_emerging_role_growth": 54.0,
+        "current_posting_count": 2048,
+        "previous_posting_count": 412
+      }
+    }
+  },
+  "meta": {
+    "component_weights": {
+      "news_events": 0.35,
+      "research_trends": 0.1,
+      "employment_stats": 0.3,
+      "job_trends": 0.25
+    },
+    "data_sources": {
+      "news_events": "workforce_events_20250307.json",
+      "research_trends": "research_trends_20250307.json",
+      "employment_stats": "employment_stats_20250307.json",
+      "job_trends": "job_trends_20250307.json"
     }
   }
+}
