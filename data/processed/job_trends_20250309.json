@@ -1,0 +1,72 @@
+{
+  "date_analyzed": "2025-03-09T02:29:35.282655",
+  "ai_related_postings": [
+    {
+      "date": "previous_month",
+      "count": 412
+    },
+    {
+      "date": "current_month",
+      "count": 2049
+    }
+  ],
+  "growth_rate": 397.33009708737865,
+  "top_job_titles": [
+    [
+      "Machine Learning Engineer",
+      29
+    ],
+    [
+      "Data Engineer",
+      26
+    ],
+    [
+      "Data Scientist",
+      26
+    ],
+    [
+      "Prompt Engineer",
+      2
+    ],
+    [
+      "NLP Specialist",
+      2
+    ],
+    [
+      "AI Engineer",
+      2
+    ]
+  ],
+  "top_growing_titles": [
+    {
+      "title": "Prompt Engineer",
+      "count": 2,
+      "growth_rate": 96
+    },
+    {
+      "title": "AI Engineer",
+      "count": 2,
+      "growth_rate": 68
+    },
+    {
+      "title": "Machine Learning Engineer",
+      "count": 29,
+      "growth_rate": 54
+    },
+    {
+      "title": "NLP Specialist",
+      "count": 2,
+      "growth_rate": 48
+    },
+    {
+      "title": "Data Scientist",
+      "count": 26,
+      "growth_rate": 32
+    },
+    {
+      "title": "Data Engineer",
+      "count": 26,
+      "growth_rate": 26
+    }
+  ]
+}
