@@ -337,6 +337,7 @@ class IndexCalculator:
             "index_value": final_index,
             "interpretation": interpretation,
             "components": components,
+            "news_events": news_data.get("events", []) if news_data else [],
             "meta": {
                 "component_weights": self.weights,
                 "data_sources": {
