@@ -1,14 +1,37 @@
 {
-  "timestamp": "2025-03-11T03:44:13.717739",
-  "index_value": 31.8636791761787,
+  "timestamp": "2025-03-11T04:17:39.982103",
+  "index_value": 35.3636791761787,
   "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
-      "score": 0,
+      "score": 10.0,
       "weight": 0.35,
-      "weighted_score": 0.0,
+      "weighted_score": 3.5,
       "details": {
-        "error": "No data available"
+        "count": 2,
+        "event_counts": {
+          "layoff": 1,
+          "hiring": 1,
+          "restructuring": 0,
+          "reskilling": 0
+        },
+        "ai_relation_counts": {
+          "Direct": 2,
+          "Indirect": 0,
+          "None": 0
+        },
+        "top_positive_companies": [
+          [
+            "Google",
+            2.5
+          ]
+        ],
+        "top_negative_companies": [
+          [
+            "Amazon",
+            -1.5
+          ]
+        ]
       }
     },
     "research_trends": {
@@ -92,7 +115,28 @@
       }
     }
   },
-  "news_events": [],
+  "news_events": [
+    {
+      "date": "2025-03-11T04:17:39.869664",
+      "source": "Tech News Daily",
+      "title": "Google Announces AI Transformation Initiative",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 2500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/google-ai"
+    },
+    {
+      "date": "2025-03-11T04:17:39.869671",
+      "source": "Business Weekly",
+      "title": "Retail Giant Implements Large-Scale Automation",
+      "company": "Amazon",
+      "event_type": "layoff",
+      "count": 1500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/retail-automation"
+    }
+  ],
   "meta": {
     "component_weights": {
       "news_events": 0.35,

@@ -1,0 +1,25 @@
+{
+  "date_processed": "2025-03-11T04:17:39.869674",
+  "events": [
+    {
+      "date": "2025-03-11T04:17:39.869664",
+      "source": "Tech News Daily",
+      "title": "Google Announces AI Transformation Initiative",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 2500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/google-ai"
+    },
+    {
+      "date": "2025-03-11T04:17:39.869671",
+      "source": "Business Weekly",
+      "title": "Retail Giant Implements Large-Scale Automation",
+      "company": "Amazon",
+      "event_type": "layoff",
+      "count": 1500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/retail-automation"
+    }
+  ]
+}
