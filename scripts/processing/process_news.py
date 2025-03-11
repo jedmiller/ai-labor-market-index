@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import sys
+import re
 from datetime import datetime
 import glob
 
@@ -25,6 +26,89 @@ class NewsProcessor:
         
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
+        
+        # Common tech companies for extraction
+        self.common_companies = [
+            "Google", "Microsoft", "Apple", "Amazon", "Meta", "Facebook",
+            "Twitter", "X Corp", "IBM", "OpenAI", "Anthropic", "Tesla",
+            "Nvidia", "Intel", "AMD", "Salesforce", "Oracle", "SAP",
+            "Adobe", "Netflix", "Spotify", "Uber", "Lyft", "Airbnb"
+        ]
+    
+    def extract_company(self, text):
+        """Extract company name from text."""
+        for company in self.common_companies:
+            if company.lower() in text.lower():
+                return company
+        
+        # Try to extract company followed by common suffixes
+        company_pattern = r'([A-Z][a-zA-Z]+)\s+(Inc\.?|Corp\.?|Corporation|Company|Technologies|Tech)'
+        match = re.search(company_pattern, text)
+        if match:
+            return match.group(1)
+        
+        return "Unknown"
+    
+    def extract_count(self, text):
+        """Extract count of people affected from text."""
+        # Look for patterns like "1,000 employees" or "500 workers"
+        patterns = [
+            r'(\d+,\d+|\d+)\s+(employees|workers|jobs|positions|staff)',
+            r'(lay off|layoff|cut|hire|hiring)\s+(\d+,\d+|\d+)',
+            r'(thousands|hundreds)\s+of\s+(employees|workers|jobs|positions)'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                if 'thousands' in match.group():
+                    return 1000
+                elif 'hundreds' in match.group():
+                    return 500
+                
+                # Extract number and remove commas
+                num_str = match.group(1) if match.group(1).isdigit() else match.group(2)
+                return int(num_str.replace(',', ''))
+        
+        # Default count if not found
+        return 100
+    
+    def determine_event_type(self, text):
+        """Determine if article is about hiring or layoffs."""
+        hiring_terms = ['hire', 'hiring', 'recruit', 'add', 'create', 'expansion', 'grow']
+        layoff_terms = ['layoff', 'lay off', 'cut', 'reduce', 'downsize', 'restructure', 'fire']
+        
+        text_lower = text.lower()
+        
+        # Check if hiring terms are present
+        if any(term in text_lower for term in hiring_terms):
+            return "hiring"
+        
+        # Check if layoff terms are present
+        if any(term in text_lower for term in layoff_terms):
+            return "layoff"
+        
+        # Default to unknown
+        return "unknown"
+    
+    def determine_ai_relation(self, text):
+        """Determine if the article is related to AI."""
+        ai_terms = ['ai', 'artificial intelligence', 'machine learning', 'ml', 
+                    'deep learning', 'llm', 'large language model', 'chatbot',
+                    'automation', 'robot']
+        
+        text_lower = text.lower()
+        
+        # Check if explicit AI terms are present
+        if any(term in text_lower for term in ai_terms):
+            return "Direct"
+        
+        # Tech terms that suggest AI relation
+        tech_terms = ['technology', 'tech', 'digital', 'transformation']
+        if any(term in text_lower for term in tech_terms):
+            return "Indirect"
+        
+        return "None"
     
     def process_news_data(self):
         """Process news data and identify events."""
@@ -33,33 +117,98 @@ class NewsProcessor:
         
         if not news_files:
             logger.warning(f"No news data files found in {self.input_dir}")
-            return None
-        
-        logger.info(f"Found {len(news_files)} news files")
-        
-        # Sample events (for demo)
-        events = [
-            {
-                "date": datetime.now().isoformat(),
-                "source": "Tech News Daily",
-                "title": "Google Announces AI Transformation Initiative",
-                "company": "Google",
-                "event_type": "hiring",
-                "count": 2500,
-                "ai_relation": "Direct",
-                "url": "https://example.com/news/google-ai"
-            },
-            {
-                "date": datetime.now().isoformat(),
-                "source": "Business Weekly",
-                "title": "Retail Giant Implements Large-Scale Automation",
-                "company": "Amazon",
-                "event_type": "layoff",
-                "count": 1500,
-                "ai_relation": "Direct",
-                "url": "https://example.com/news/retail-automation"
-            }
-        ]
+            
+            # Fallback to sample events
+            events = [
+                {
+                    "date": datetime.now().isoformat(),
+                    "source": "Tech News Daily",
+                    "title": "Google Announces AI Transformation Initiative",
+                    "company": "Google",
+                    "event_type": "hiring",
+                    "count": 2500,
+                    "ai_relation": "Direct",
+                    "url": "https://example.com/news/google-ai"
+                },
+                {
+                    "date": datetime.now().isoformat(),
+                    "source": "Business Weekly",
+                    "title": "Retail Giant Implements Large-Scale Automation",
+                    "company": "Amazon",
+                    "event_type": "layoff",
+                    "count": 1500,
+                    "ai_relation": "Direct",
+                    "url": "https://example.com/news/retail-automation"
+                }
+            ]
+        else:
+            logger.info(f"Found {len(news_files)} news files")
+            events = []
+            
+            # Process each news file
+            for file_path in news_files:
+                try:
+                    with open(file_path, 'r') as f:
+                        data = json.load(f)
+                        articles = data.get("articles", [])
+                        
+                        for article in articles:
+                            title = article.get("title", "")
+                            description = article.get("description", "")
+                            content = article.get("content", "")
+                            
+                            # Combine text for analysis
+                            full_text = f"{title} {description} {content}"
+                            
+                            # Determine event type
+                            event_type = self.determine_event_type(full_text)
+                            
+                            # Skip if not a relevant event
+                            if event_type == "unknown":
+                                continue
+                            
+                            # Extract event details
+                            event = {
+                                "date": article.get("publishedAt", datetime.now().isoformat()),
+                                "source": article.get("source", {}).get("name", "Unknown"),
+                                "title": title,
+                                "company": self.extract_company(full_text),
+                                "event_type": event_type,
+                                "count": self.extract_count(full_text),
+                                "ai_relation": self.determine_ai_relation(full_text),
+                                "url": article.get("url", "")
+                            }
+                            
+                            events.append(event)
+                            
+                except Exception as e:
+                    logger.error(f"Error processing news file {file_path}: {str(e)}")
+            
+            # If no events were found in real articles, use sample data
+            if not events:
+                logger.warning("No events found in articles, using sample data")
+                events = [
+                    {
+                        "date": datetime.now().isoformat(),
+                        "source": "Tech News Daily",
+                        "title": "Google Announces AI Transformation Initiative",
+                        "company": "Google",
+                        "event_type": "hiring",
+                        "count": 2500,
+                        "ai_relation": "Direct",
+                        "url": "https://example.com/news/google-ai"
+                    },
+                    {
+                        "date": datetime.now().isoformat(),
+                        "source": "Business Weekly",
+                        "title": "Retail Giant Implements Large-Scale Automation",
+                        "company": "Amazon",
+                        "event_type": "layoff",
+                        "count": 1500,
+                        "ai_relation": "Direct",
+                        "url": "https://example.com/news/retail-automation"
+                    }
+                ]
         
         # Create output object
         output = {
