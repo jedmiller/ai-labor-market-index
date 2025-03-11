@@ -1,25 +1,35 @@
 {
-  "date_processed": "2025-03-11T04:17:39.869674",
+  "date_processed": "2025-03-11T04:41:51.196496",
   "events": [
     {
-      "date": "2025-03-11T04:17:39.869664",
-      "source": "Tech News Daily",
-      "title": "Google Announces AI Transformation Initiative",
-      "company": "Google",
+      "date": "2025-03-07T19:40:22Z",
+      "source": "New York Post",
+      "title": "Meta keeps secret \u2018do not rehire\u2019 list of ex-employees \u2014 despite exceptional performance reviews: report",
+      "company": "Meta",
       "event_type": "hiring",
-      "count": 2500,
+      "count": 100,
       "ai_relation": "Direct",
-      "url": "https://example.com/news/google-ai"
+      "url": "https://nypost.com/2025/03/07/business/meta-keeps-a-secret-do-not-rehire-list-of-ex-employees-report/"
     },
     {
-      "date": "2025-03-11T04:17:39.869671",
-      "source": "Business Weekly",
-      "title": "Retail Giant Implements Large-Scale Automation",
-      "company": "Amazon",
-      "event_type": "layoff",
-      "count": 1500,
+      "date": "2025-03-06T17:49:04Z",
+      "source": "The Times of India",
+      "title": "India Inc's attrition rates hit lowest point since 2020 amid hiring slowdown",
+      "company": "India",
+      "event_type": "hiring",
+      "count": 100,
       "ai_relation": "Direct",
-      "url": "https://example.com/news/retail-automation"
+      "url": "https://economictimes.indiatimes.com/jobs/mid-career/india-incs-attrition-rates-hit-lowest-point-since-2020-amid-hiring-slowdown/articleshow/118767184.cms"
+    },
+    {
+      "date": "2025-03-06T17:21:43Z",
+      "source": "Business Insider",
+      "title": "Software engineers at Google, Microsoft, and more share their best tips for landing a coding job in tech",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.businessinsider.com/software-engineer-job-market-hiring-skills"
     }
   ]
 }

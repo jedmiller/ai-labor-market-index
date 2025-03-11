@@ -1,37 +1,40 @@
 {
-  "timestamp": "2025-03-11T04:17:39.982103",
-  "index_value": 35.3636791761787,
+  "timestamp": "2025-03-11T04:41:51.344233",
+  "index_value": 32.5636791761787,
   "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
-      "score": 10.0,
+      "score": 2.0000000000000004,
       "weight": 0.35,
-      "weighted_score": 3.5,
+      "weighted_score": 0.7000000000000001,
       "details": {
-        "count": 2,
+        "count": 3,
         "event_counts": {
-          "layoff": 1,
-          "hiring": 1,
+          "layoff": 0,
+          "hiring": 3,
           "restructuring": 0,
           "reskilling": 0
         },
         "ai_relation_counts": {
-          "Direct": 2,
+          "Direct": 3,
           "Indirect": 0,
           "None": 0
         },
         "top_positive_companies": [
           [
+            "Meta",
+            0.1
+          ],
+          [
+            "India",
+            0.1
+          ],
+          [
             "Google",
-            2.5
+            0.1
           ]
         ],
-        "top_negative_companies": [
-          [
-            "Amazon",
-            -1.5
-          ]
-        ]
+        "top_negative_companies": []
       }
     },
     "research_trends": {
@@ -117,24 +120,34 @@
   },
   "news_events": [
     {
-      "date": "2025-03-11T04:17:39.869664",
-      "source": "Tech News Daily",
-      "title": "Google Announces AI Transformation Initiative",
-      "company": "Google",
+      "date": "2025-03-07T19:40:22Z",
+      "source": "New York Post",
+      "title": "Meta keeps secret \u2018do not rehire\u2019 list of ex-employees \u2014 despite exceptional performance reviews: report",
+      "company": "Meta",
       "event_type": "hiring",
-      "count": 2500,
+      "count": 100,
       "ai_relation": "Direct",
-      "url": "https://example.com/news/google-ai"
+      "url": "https://nypost.com/2025/03/07/business/meta-keeps-a-secret-do-not-rehire-list-of-ex-employees-report/"
     },
     {
-      "date": "2025-03-11T04:17:39.869671",
-      "source": "Business Weekly",
-      "title": "Retail Giant Implements Large-Scale Automation",
-      "company": "Amazon",
-      "event_type": "layoff",
-      "count": 1500,
+      "date": "2025-03-06T17:49:04Z",
+      "source": "The Times of India",
+      "title": "India Inc's attrition rates hit lowest point since 2020 amid hiring slowdown",
+      "company": "India",
+      "event_type": "hiring",
+      "count": 100,
       "ai_relation": "Direct",
-      "url": "https://example.com/news/retail-automation"
+      "url": "https://economictimes.indiatimes.com/jobs/mid-career/india-incs-attrition-rates-hit-lowest-point-since-2020-amid-hiring-slowdown/articleshow/118767184.cms"
+    },
+    {
+      "date": "2025-03-06T17:21:43Z",
+      "source": "Business Insider",
+      "title": "Software engineers at Google, Microsoft, and more share their best tips for landing a coding job in tech",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.businessinsider.com/software-engineer-job-market-hiring-skills"
     }
   ],
   "meta": {
