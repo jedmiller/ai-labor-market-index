@@ -47,12 +47,18 @@ jobs:
       
       - name: Collect job data
         run: python scripts/collection/collect_jobs.py
+
+      - name: Collect news data
+        run: python scripts/collection/collect_news.py
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
       
       - name: Process data
         run: |
           python scripts/processing/process_research.py
           python scripts/processing/process_employment.py
           python scripts/processing/process_jobs.py
+          python scripts/processing/process_news.py
       
       - name: Calculate index
         run: python scripts/analysis/calculate_index.py
