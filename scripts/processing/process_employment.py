@@ -42,6 +42,37 @@ class EmploymentProcessor:
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
     
+    def validate_industry_mapping(self, industries):
+        """Validates that processed industry names match expected categories in the index calculation"""
+        # Expected categories based on index calculation weights
+        expected_categories = {
+            "Information",
+            "Professional and Business Services",
+            "Financial Activities", 
+            "Education and Health Services",
+            "Manufacturing",
+            "Trade, Transportation, and Utilities",
+            "Construction",
+            "Leisure and Hospitality",
+            "Mining and Logging",
+            "Other Services",
+            "Government",
+            "Total Nonfarm"  # Include this as it may be in the data but not used in calculations
+        }
+        
+        # Check for mismatches
+        processed_categories = set(industries.keys())
+        missing = expected_categories - processed_categories
+        unexpected = processed_categories - expected_categories
+        
+        if missing:
+            logger.warning(f"Expected industry categories missing from processed data: {missing}")
+        
+        if unexpected:
+            logger.warning(f"Unexpected industry categories in processed data: {unexpected}")
+        
+        return {"missing": list(missing), "unexpected": list(unexpected)}
+    
     def process_employment_data(self):
         """Process BLS employment data and calculate industry trends."""
         # Find all BLS data files
@@ -123,11 +154,19 @@ class EmploymentProcessor:
                 except (ValueError, TypeError) as e:
                     logger.error(f"Error calculating change for {industry_name}: {str(e)}")
         
+        # Validate industry mappings against expected categories
+        validation_results = self.validate_industry_mapping(industries)
+        
         # Create employment stats object
         stats = {
             "date_analyzed": datetime.now().isoformat(),
             "industries": industries
         }
+        
+        # Add validation warnings if any were found
+        if validation_results["missing"] or validation_results["unexpected"]:
+            logger.warning("Industry category mismatch detected - this may affect index calculation accuracy")
+            stats["validation_warnings"] = validation_results
         
         # Save stats to a file
         output_file = os.path.join(
@@ -149,6 +188,14 @@ def main():
     
     if stats:
         logger.info(f"Processing complete. Analyzed employment data for {len(stats['industries'])} industries.")
+        
+        # Log validation warnings if present
+        if "validation_warnings" in stats:
+            warnings = stats["validation_warnings"]
+            if warnings["missing"]:
+                logger.warning(f"Missing expected industries: {', '.join(warnings['missing'])}")
+            if warnings["unexpected"]:
+                logger.warning(f"Unexpected industries found: {', '.join(warnings['unexpected'])}")
     else:
         logger.error("Processing failed or no data was found.")
 

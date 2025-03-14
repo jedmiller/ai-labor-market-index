@@ -201,6 +201,52 @@ class IndexCalculator:
             "positive_sentiment": positive_sentiment
         }
     
+    def get_industry_weight(self, industry_name):
+        """Get industry weight with robust matching."""
+        # Industry weights matching actual BLS categories
+        industry_weights = {
+            "Information": 2.0,
+            "Professional and Business Services": 1.5,
+            "Financial Activities": 1.2,
+            "Education and Health Services": 1.0,
+            "Manufacturing": 1.0,
+            "Trade, Transportation, and Utilities": 0.8,
+            "Construction": 0.5,
+            "Leisure and Hospitality": 0.5,
+            "Mining and Logging": 0.4,
+            "Other Services": 0.6,
+            "Government": 0.7,
+            "Total Nonfarm": 1.0  # Reference category, not typically used in calculation
+        }
+        
+        # Direct match attempt
+        if industry_name in industry_weights:
+            return industry_weights[industry_name]
+        
+        # Try case-insensitive match
+        for key, value in industry_weights.items():
+            if key.lower() == industry_name.lower():
+                logger.info(f"Industry '{industry_name}' matched to '{key}' via case-insensitive comparison")
+                return value
+        
+        # Try standardized format (lowercase, no spaces/commas)
+        std_name = industry_name.lower().replace(" ", "").replace(",", "")
+        for key, value in industry_weights.items():
+            if key.lower().replace(" ", "").replace(",", "") == std_name:
+                logger.info(f"Industry '{industry_name}' matched to '{key}' via standardized format")
+                return value
+        
+        # No match found
+        logger.warning(f"No weight defined for industry: '{industry_name}', using default weight of 1.0")
+        return 1.0
+        
+    def log_industry_weights_usage(self, industries):
+        """Log which industry weights are being used in calculation"""
+        logger.info("Industry weights being applied:")
+        for industry in industries:
+            weight = self.get_industry_weight(industry)
+            logger.info(f"  {industry}: {weight}")
+    
     def calculate_employment_stats_score(self, employment_data):
         """Calculate score from employment statistics component."""
         if not employment_data or "industries" not in employment_data:
@@ -212,18 +258,8 @@ class IndexCalculator:
         if not industries:
             return 0, {"count": 0}
         
-        # Industry weights (importance to AI impact assessment)
-        industry_weights = {
-            "information": 2.0,
-            "professional_services": 1.5,
-            "finance": 1.2,
-            "healthcare": 1.0,
-            "manufacturing": 1.0,
-            "retail": 0.8,
-            "transportation": 0.7,
-            "construction": 0.5,
-            "hospitality": 0.5
-        }
+        # Log which weights are being applied
+        self.log_industry_weights_usage(industries)
         
         # Calculate weighted employment change across industries
         total_weight = 0
@@ -232,9 +268,8 @@ class IndexCalculator:
         industry_impacts = {}
         
         for industry, data in industries.items():
-            # Get standardized industry name
-            std_industry = industry.lower().replace(" ", "_")
-            weight = industry_weights.get(std_industry, 1.0)
+            # Get weight using robust matching
+            weight = self.get_industry_weight(industry)
             
             # Get employment change percentage
             change_pct = data.get("change_percentage", 0)
@@ -338,8 +373,22 @@ class IndexCalculator:
             "interpretation": interpretation,
             "components": components,
             "news_events": news_data.get("events", []) if news_data else [],
-            "meta": {
+            "methodology": {
                 "component_weights": self.weights,
+                "industry_weights": {
+                    "Information": 2.0,
+                    "Professional and Business Services": 1.5,
+                    "Financial Activities": 1.2,
+                    "Education and Health Services": 1.0,
+                    "Manufacturing": 1.0,
+                    "Trade, Transportation, and Utilities": 0.8,
+                    "Construction": 0.5,
+                    "Leisure and Hospitality": 0.5,
+                    "Mining and Logging": 0.4,
+                    "Other Services": 0.6,
+                    "Government": 0.7,
+                    "Total Nonfarm": 1.0
+                },
                 "data_sources": {
                     "news_events": self.news_file,
                     "research_trends": self.research_file,
