@@ -2,7 +2,8 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime
+import argparse
+from datetime import datetime, timedelta
 
 import requests
 
@@ -26,19 +27,40 @@ class NewsCollector:
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
     
-    def collect_news(self, query="AI layoffs hiring", api_key=None):
+    def collect_news(self, query="AI layoffs hiring", api_key=None, year=None, month=None):
         """
-        Collect news articles related to AI workforce impact.
+        Collect news articles related to AI workforce impact for a specific month.
         
         Args:
             query (str): Search query for news articles
             api_key (str): News API key
+            year (int): Target year (defaults to current year)
+            month (int): Target month (defaults to current month)
             
         Returns:
             dict: Collection results
         """
+        # Set default year and month if not provided
+        if year is None or month is None:
+            today = datetime.now()
+            year = year or today.year
+            month = month or today.month
+        
+        # Calculate start and end dates for the month
+        start_date = datetime(year, month, 1).strftime('%Y-%m-%d')
+        if month == 12:
+            end_date = datetime(year + 1, 1, 1) - timedelta(days=1)
+        else:
+            end_date = datetime(year, month + 1, 1) - timedelta(days=1)
+        end_date = end_date.strftime('%Y-%m-%d')
+        
+        logger.info(f"Collecting news for period: {start_date} to {end_date}")
+        
         results = {
             "timestamp": datetime.now().isoformat(),
+            "target_period": f"{year}-{month:02d}",
+            "start_date": start_date,
+            "end_date": end_date,
             "articles_collected": 0,
             "files_created": []
         }
@@ -50,13 +72,15 @@ class NewsCollector:
             logger.warning("No NEWS_API_KEY found in environment variables")
             return results
         
-        # Set up request parameters
+        # Set up request parameters with date filtering
         params = {
             'q': query,
             'apiKey': api_key,
-            'pageSize': 20,
+            'pageSize': 100,  # Increased to get more articles for the month
             'language': 'en',
-            'sortBy': 'publishedAt'
+            'sortBy': 'publishedAt',
+            'from': start_date,
+            'to': end_date
         }
         
         try:
@@ -76,14 +100,14 @@ class NewsCollector:
                 logger.info(f"Successfully received {len(articles)} articles")
                 
                 if articles:
-                    # Save to file
-                    date_str = datetime.now().strftime("%Y%m%d")
-                    filename = f"{date_str}_news_articles.json"
+                    # Save to file with year and month in filename
+                    filename = f"news_{year}_{month:02d}_{datetime.now().strftime('%Y%m%d')}.json"
                     filepath = os.path.join(self.output_dir, filename)
                     
                     with open(filepath, 'w') as f:
                         json.dump({
                             "query": query,
+                            "target_period": f"{year}-{month:02d}",
                             "date_collected": datetime.now().isoformat(),
                             "articles": articles
                         }, f, indent=2)
@@ -109,11 +133,18 @@ class NewsCollector:
 
 
 def main():
-    # Get API key from environment variable
-    api_key = os.environ.get("NEWS_API_KEY")
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Collect news articles related to AI workforce impact')
+    parser.add_argument('--api-key', help='News API key')
+    parser.add_argument('--year', type=int, help='Target year')
+    parser.add_argument('--month', type=int, help='Target month (1-12)')
+    args = parser.parse_args()
+    
+    # Get API key from arguments or environment variable
+    api_key = args.api_key or os.environ.get("NEWS_API_KEY")
     
     collector = NewsCollector()
-    results = collector.collect_news(api_key=api_key)
+    results = collector.collect_news(api_key=api_key, year=args.year, month=args.month)
     
     logger.info(f"Collection complete. Collected {results['articles_collected']} articles.")
     logger.info(f"Created {len(results['files_created'])} files.")
