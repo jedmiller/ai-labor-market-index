@@ -37,11 +37,11 @@ jobs:
           mkdir -p data/raw/news
           mkdir -p data/processed
       
-      - name: Get current date
+      - name: Get previous month
         id: date
         run: |
-          echo "year=$(date +'%Y')" >> $GITHUB_OUTPUT
-          echo "month=$(date +'%-m')" >> $GITHUB_OUTPUT
+          echo "year=$(date -d 'last month' +'%Y')" >> $GITHUB_OUTPUT
+          echo "month=$(date -d 'last month' +'%-m')" >> $GITHUB_OUTPUT
       
       - name: Collect ArXiv data
         run: python scripts/collection/collect_arxiv.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
