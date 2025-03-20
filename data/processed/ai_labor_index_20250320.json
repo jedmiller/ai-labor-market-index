@@ -1,42 +1,142 @@
 {
-  "timestamp": "2025-03-20T15:53:08.473970",
-  "index_value": 0.0,
-  "interpretation": "Slight job creation from AI",
+  "timestamp": "2025-03-20T23:02:34.199421",
+  "index_value": 35.14903828105861,
+  "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
-      "score": 0,
+      "score": 10.0,
       "weight": 0.35,
-      "weighted_score": 0.0,
+      "weighted_score": 3.5,
       "details": {
-        "error": "No data available"
+        "count": 2,
+        "event_counts": {
+          "layoff": 1,
+          "hiring": 1,
+          "restructuring": 0,
+          "reskilling": 0
+        },
+        "ai_relation_counts": {
+          "Direct": 2,
+          "Indirect": 0,
+          "None": 0
+        },
+        "top_positive_companies": [
+          [
+            "Google",
+            2.5
+          ]
+        ],
+        "top_negative_companies": [
+          [
+            "Amazon",
+            -1.5
+          ]
+        ]
       }
     },
     "research_trends": {
-      "score": 0,
+      "score": 8.838821490467936,
       "weight": 0.1,
-      "weighted_score": 0.0,
+      "weighted_score": 0.8838821490467936,
       "details": {
-        "error": "No data available"
+        "paper_count": 550,
+        "positive_sentiment": 54.41941074523397
       }
     },
     "employment_stats": {
-      "score": 0,
+      "score": 19.217187106706046,
       "weight": 0.3,
-      "weighted_score": 0.0,
+      "weighted_score": 5.765156132011813,
       "details": {
-        "error": "No data available"
+        "avg_weighted_change": 0.7686874842682418,
+        "growing_industries": [
+          [
+            "Education and Health Services",
+            3.5202682109113077
+          ],
+          [
+            "Construction",
+            2.0429009193054135
+          ],
+          [
+            "Other Services",
+            1.6357130686658716
+          ],
+          [
+            "Government",
+            1.5497935027887768
+          ],
+          [
+            "Leisure and Hospitality",
+            1.532638371804418
+          ],
+          [
+            "Total Nonfarm",
+            1.2666098316101202
+          ],
+          [
+            "Financial Activities",
+            1.0334212840809147
+          ],
+          [
+            "Trade, Transportation, and Utilities",
+            0.9508827128124453
+          ]
+        ],
+        "declining_industries": [
+          [
+            "Manufacturing",
+            -0.6953125
+          ],
+          [
+            "Mining and Logging",
+            -0.6420545746388443
+          ],
+          [
+            "Professional and Business Services",
+            -0.35727045373347627
+          ],
+          [
+            "Information",
+            -0.27220142905750255
+          ]
+        ]
       }
     },
     "job_trends": {
-      "score": 0,
+      "score": 100.0,
       "weight": 0.25,
-      "weighted_score": 0.0,
+      "weighted_score": 25.0,
       "details": {
-        "error": "No data available"
+        "ai_job_growth_rate": 397.0873786407767,
+        "avg_emerging_role_growth": 54.0,
+        "current_posting_count": 2048,
+        "previous_posting_count": 412
       }
     }
   },
-  "news_events": [],
+  "news_events": [
+    {
+      "date": "2025-03-20T23:02:34.083562",
+      "source": "Tech News Daily",
+      "title": "Google Announces AI Transformation Initiative",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 2500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/google-ai"
+    },
+    {
+      "date": "2025-03-20T23:02:34.083566",
+      "source": "Business Weekly",
+      "title": "Retail Giant Implements Large-Scale Automation",
+      "company": "Amazon",
+      "event_type": "layoff",
+      "count": 1500,
+      "ai_relation": "Direct",
+      "url": "https://example.com/news/retail-automation"
+    }
+  ],
   "methodology": {
     "component_weights": {
       "news_events": 0.35,
