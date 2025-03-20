@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-03-16T02:57:06.892058",
+  "timestamp": "2025-03-14T19:40:11.854012",
   "index_value": 31.437793074686972,
   "interpretation": "Moderate job creation from AI",
   "components": {
@@ -112,9 +112,9 @@
       "weight": 0.25,
       "weighted_score": 25.0,
       "details": {
-        "ai_job_growth_rate": 378.88349514563106,
+        "ai_job_growth_rate": 373.05825242718447,
         "avg_emerging_role_growth": 54.0,
-        "current_posting_count": 1973,
+        "current_posting_count": 1949,
         "previous_posting_count": 412
       }
     }
@@ -243,10 +243,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_20250316.json",
-      "research_trends": "research_trends_20250316.json",
-      "employment_stats": "employment_stats_20250316.json",
-      "job_trends": "job_trends_20250316.json"
+      "news_events": "workforce_events_20250314.json",
+      "research_trends": "research_trends_20250314.json",
+      "employment_stats": "employment_stats_20250314.json",
+      "job_trends": "job_trends_20250314.json"
     }
   }
 }
