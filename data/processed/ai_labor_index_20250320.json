@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-03-20T15:53:08.473970",
+  "index_value": 0.0,
+  "interpretation": "Slight job creation from AI",
+  "components": {
+    "news_events": {
+      "score": 0,
+      "weight": 0.35,
+      "weighted_score": 0.0,
+      "details": {
+        "error": "No data available"
+      }
+    },
+    "research_trends": {
+      "score": 0,
+      "weight": 0.1,
+      "weighted_score": 0.0,
+      "details": {
+        "error": "No data available"
+      }
+    },
+    "employment_stats": {
+      "score": 0,
+      "weight": 0.3,
+      "weighted_score": 0.0,
+      "details": {
+        "error": "No data available"
+      }
+    },
+    "job_trends": {
+      "score": 0,
+      "weight": 0.25,
+      "weighted_score": 0.0,
+      "details": {
+        "error": "No data available"
+      }
+    }
+  },
+  "news_events": [],
+  "methodology": {
+    "component_weights": {
+      "news_events": 0.35,
+      "research_trends": 0.1,
+      "employment_stats": 0.3,
+      "job_trends": 0.25
+    },
+    "industry_weights": {
+      "Information": 2.0,
+      "Professional and Business Services": 1.5,
+      "Financial Activities": 1.2,
+      "Education and Health Services": 1.0,
+      "Manufacturing": 1.0,
+      "Trade, Transportation, and Utilities": 0.8,
+      "Construction": 0.5,
+      "Leisure and Hospitality": 0.5,
+      "Mining and Logging": 0.4,
+      "Other Services": 0.6,
+      "Government": 0.7,
+      "Total Nonfarm": 1.0
+    },
+    "data_sources": {
+      "news_events": "workforce_events_20250320.json",
+      "research_trends": "research_trends_20250320.json",
+      "employment_stats": "employment_stats_20250320.json",
+      "job_trends": "job_trends_20250320.json"
+    }
+  }
+}

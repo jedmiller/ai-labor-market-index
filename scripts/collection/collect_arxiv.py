@@ -3,7 +3,8 @@ import json
 import logging
 import os
 import sys
-from datetime import datetime
+import argparse
+from datetime import datetime, timedelta
 from urllib.parse import urlencode
 
 import requests
@@ -29,21 +30,42 @@ class ArxivCollector:
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
     
-    def collect_papers(self, search_terms, max_results=100):
+    def collect_papers(self, search_terms, max_results=100, year=None, month=None):
         """
-        Collect papers from ArXiv based on search terms.
+        Collect papers from ArXiv based on search terms for a specific month.
         
         Args:
             search_terms (list): List of search term dictionaries with 'primary' and 'secondary' keys
             max_results (int): Maximum number of results to retrieve per search term
+            year (int): Target year (defaults to current year)
+            month (int): Target month (defaults to current month)
             
         Returns:
             dict: Collection results with counts and file paths
         """
+        # Set year and month to current if not specified
+        if year is None or month is None:
+            today = datetime.now()
+            year = year or today.year
+            month = month or today.month
+        
+        # Calculate start and end dates for the month
+        start_date = datetime(year, month, 1)
+        if month == 12:
+            end_date = datetime(year + 1, 1, 1) - timedelta(days=1)
+        else:
+            end_date = datetime(year, month + 1, 1) - timedelta(days=1)
+        
+        logger.info(f"Collecting papers for period: {start_date.strftime('%Y-%m-%d')} to {end_date.strftime('%Y-%m-%d')}")
+        
         results = {
             "timestamp": datetime.now().isoformat(),
+            "target_period": f"{year}-{month:02d}",
+            "start_date": start_date.strftime('%Y-%m-%d'),
+            "end_date": end_date.strftime('%Y-%m-%d'),
             "search_terms": search_terms,
             "papers_collected": 0,
+            "filtered_papers": 0,
             "files_created": []
         }
         
@@ -55,10 +77,12 @@ class ArxivCollector:
             query = f"all:{primary} AND ({' OR '.join(secondary)})"
             logger.info(f"Collecting papers for query: {query}")
             
+            # Request more results than needed since we'll filter by date
+            adjusted_max = max_results * 3  # Request more to account for filtering
             params = {
                 "search_query": query,
                 "start": 0,
-                "max_results": max_results,
+                "max_results": adjusted_max,
                 "sortBy": "submittedDate",
                 "sortOrder": "descending"
             }
@@ -75,7 +99,8 @@ class ArxivCollector:
                     
                     if entries:
                         # Process the entries
-                        papers = []
+                        all_papers = []
+                        filtered_papers = []
                         
                         for entry in entries:
                             paper = {
@@ -90,24 +115,35 @@ class ArxivCollector:
                                 "primary_search_term": primary,
                                 "secondary_search_terms": secondary
                             }
-                            papers.append(paper)
+                            all_papers.append(paper)
+                            
+                            # Filter papers from the target month
+                            try:
+                                pub_date = datetime.strptime(paper["published"], "%Y-%m-%dT%H:%M:%SZ")
+                                if start_date <= pub_date <= end_date:
+                                    filtered_papers.append(paper)
+                            except ValueError as e:
+                                logger.warning(f"Could not parse date: {paper['published']} - {str(e)}")
                         
-                        # Save the papers to a JSON file
-                        date_str = datetime.now().strftime("%Y%m%d")
+                        logger.info(f"Filtered {len(filtered_papers)} papers from {len(all_papers)} total for {year}-{month:02d}")
+                        
+                        # Save the filtered papers to a JSON file
                         term_str = primary.replace(" ", "_")
-                        filename = f"{date_str}_{term_str}.json"
+                        filename = f"arxiv_{year}_{month:02d}_{term_str}.json"
                         filepath = os.path.join(self.output_dir, filename)
                         
                         with open(filepath, 'w') as f:
                             json.dump({
                                 "query": query,
+                                "target_period": f"{year}-{month:02d}",
                                 "date_collected": datetime.now().isoformat(),
-                                "papers": papers
+                                "papers": filtered_papers
                             }, f, indent=2)
                         
-                        results["papers_collected"] += len(papers)
+                        results["papers_collected"] += len(all_papers)
+                        results["filtered_papers"] += len(filtered_papers)
                         results["files_created"].append(filepath)
-                        logger.info(f"Saved {len(papers)} papers to {filepath}")
+                        logger.info(f"Saved {len(filtered_papers)} filtered papers to {filepath}")
                     
                 else:
                     logger.error(f"ArXiv API request failed with status code {response.status_code}")
@@ -120,6 +156,13 @@ class ArxivCollector:
 
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Collect research papers from ArXiv related to AI labor market impact')
+    parser.add_argument('--year', type=int, help='Target year')
+    parser.add_argument('--month', type=int, help='Target month (1-12)')
+    parser.add_argument('--max-results', type=int, default=50, help='Maximum results per query')
+    args = parser.parse_args()
+    
     # Define search terms related to AI and labor markets
     search_terms = [
         {
@@ -137,9 +180,15 @@ def main():
     ]
     
     collector = ArxivCollector()
-    results = collector.collect_papers(search_terms, max_results=50)
+    results = collector.collect_papers(
+        search_terms, 
+        max_results=args.max_results,
+        year=args.year,
+        month=args.month
+    )
     
-    logger.info(f"Collection complete. Collected {results['papers_collected']} papers.")
+    logger.info(f"Collection complete. Found {results['papers_collected']} papers total.")
+    logger.info(f"Filtered to {results['filtered_papers']} papers for target month.")
     logger.info(f"Created {len(results['files_created'])} files.")
 
 

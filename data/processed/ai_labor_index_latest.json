@@ -1,226 +1,42 @@
 {
-  "timestamp": "2025-03-16T02:57:06.892058",
-  "index_value": 31.437793074686972,
-  "interpretation": "Moderate job creation from AI",
+  "timestamp": "2025-03-20T15:53:08.473970",
+  "index_value": 0.0,
+  "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
-      "score": -0.0799999999999999,
+      "score": 0,
       "weight": 0.35,
-      "weighted_score": -0.027999999999999966,
+      "weighted_score": 0.0,
       "details": {
-        "count": 10,
-        "event_counts": {
-          "layoff": 4,
-          "hiring": 6,
-          "restructuring": 0,
-          "reskilling": 0
-        },
-        "ai_relation_counts": {
-          "Direct": 5,
-          "Indirect": 2,
-          "None": 3
-        },
-        "top_positive_companies": [
-          [
-            "Intel",
-            0.14
-          ]
-        ],
-        "top_negative_companies": [
-          [
-            "Unknown",
-            -0.12
-          ],
-          [
-            "Big",
-            -0.06
-          ]
-        ]
+        "error": "No data available"
       }
     },
     "research_trends": {
-      "score": 7.00636942675159,
+      "score": 0,
       "weight": 0.1,
-      "weighted_score": 0.7006369426751591,
+      "weighted_score": 0.0,
       "details": {
-        "paper_count": 150,
-        "positive_sentiment": 53.503184713375795
+        "error": "No data available"
       }
     },
     "employment_stats": {
-      "score": 19.217187106706046,
+      "score": 0,
       "weight": 0.3,
-      "weighted_score": 5.765156132011813,
+      "weighted_score": 0.0,
       "details": {
-        "avg_weighted_change": 0.7686874842682418,
-        "growing_industries": [
-          [
-            "Education and Health Services",
-            3.5202682109113077
-          ],
-          [
-            "Construction",
-            2.0429009193054135
-          ],
-          [
-            "Other Services",
-            1.6357130686658716
-          ],
-          [
-            "Government",
-            1.5497935027887768
-          ],
-          [
-            "Leisure and Hospitality",
-            1.532638371804418
-          ],
-          [
-            "Total Nonfarm",
-            1.2666098316101202
-          ],
-          [
-            "Financial Activities",
-            1.0334212840809147
-          ],
-          [
-            "Trade, Transportation, and Utilities",
-            0.9508827128124453
-          ]
-        ],
-        "declining_industries": [
-          [
-            "Manufacturing",
-            -0.6953125
-          ],
-          [
-            "Mining and Logging",
-            -0.6420545746388443
-          ],
-          [
-            "Professional and Business Services",
-            -0.35727045373347627
-          ],
-          [
-            "Information",
-            -0.27220142905750255
-          ]
-        ]
+        "error": "No data available"
       }
     },
     "job_trends": {
-      "score": 100.0,
+      "score": 0,
       "weight": 0.25,
-      "weighted_score": 25.0,
+      "weighted_score": 0.0,
       "details": {
-        "ai_job_growth_rate": 378.88349514563106,
-        "avg_emerging_role_growth": 54.0,
-        "current_posting_count": 1973,
-        "previous_posting_count": 412
+        "error": "No data available"
       }
     }
   },
-  "news_events": [
-    {
-      "date": "2025-03-13T09:30:00Z",
-      "source": "Forbes",
-      "title": "DOGE And High-Tech \u2013 Is The Hate Against Elon Musk Justified?",
-      "company": "Unknown",
-      "event_type": "layoff",
-      "count": 100,
-      "ai_relation": "Direct",
-      "url": "https://www.forbes.com/sites/emilsayegh/2025/03/13/doge-and-high-tech--is-the-hate-against-elon-musk-justified/"
-    },
-    {
-      "date": "2025-03-13T08:00:02Z",
-      "source": "Business Insider",
-      "title": "'Klarnageddon': Employees in limbo as fintech startup preps for IPO",
-      "company": "Unknown",
-      "event_type": "layoff",
-      "count": 100,
-      "ai_relation": "Direct",
-      "url": "https://www.businessinsider.com/klarna-ipo-employees-in-limbo-2025-3"
-    },
-    {
-      "date": "2025-03-12T23:46:52Z",
-      "source": "SiliconANGLE News",
-      "title": "Intel finally gets a new CEO in Lip-Bu Tan",
-      "company": "Intel",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "None",
-      "url": "https://siliconangle.com/2025/03/12/intel-finally-gets-new-ceo-lip-bu-tan/"
-    },
-    {
-      "date": "2025-03-12T23:46:52Z",
-      "source": "SiliconANGLE News",
-      "title": "Intel finally gets a new CEO: industry veteran Lip-Bu Tan",
-      "company": "Intel",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "None",
-      "url": "https://siliconangle.com/2025/03/12/intel-finally-gets-new-ceo-industry-veteran-lip-bu-tan/"
-    },
-    {
-      "date": "2025-03-12T18:29:12Z",
-      "source": "TechCrunch",
-      "title": "A comprehensive list of 2025 tech layoffs | TechCrunch",
-      "company": "Big",
-      "event_type": "layoff",
-      "count": 100,
-      "ai_relation": "Indirect",
-      "url": "https://techcrunch.com/2025/03/12/tech-layoffs-2025-list/"
-    },
-    {
-      "date": "2025-03-12T14:15:00Z",
-      "source": "Forbes",
-      "title": "Why You Should Upskill In 2025",
-      "company": "Unknown",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "None",
-      "url": "https://www.forbes.com/councils/forbesbusinesscouncil/2025/03/12/why-you-should-upskill-in-2025/"
-    },
-    {
-      "date": "2025-03-11T18:13:58Z",
-      "source": "Forbes",
-      "title": "Five Years On: How Covid Changed The Workplace",
-      "company": "Unknown",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "Direct",
-      "url": "https://www.forbes.com/sites/mariagraciasantillanalinares/2025/03/11/five-years-on-how-covid-changed-the-workplace/"
-    },
-    {
-      "date": "2025-03-11T17:00:17Z",
-      "source": "Forbes",
-      "title": "3 AI Side Hustles That Pay Up To $100,000+ In 2025",
-      "company": "Unknown",
-      "event_type": "layoff",
-      "count": 100,
-      "ai_relation": "Direct",
-      "url": "https://www.forbes.com/sites/rachelwells/2025/03/11/3-ai-side-hustles-that-pay-up-to-100000--in-2025/"
-    },
-    {
-      "date": "2025-03-11T11:10:03Z",
-      "source": "Forbes",
-      "title": "How \u201cHack For Hire\u201d Mercenaries Are Reshaping Cybersecurity Crime",
-      "company": "Unknown",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "Indirect",
-      "url": "https://www.forbes.com/sites/emilsayegh/2025/03/11/how-hack-for-hire-mercenaries-are-reshaping-cybersecurity-crime/"
-    },
-    {
-      "date": "2025-03-10T17:58:13Z",
-      "source": "Forbes",
-      "title": "Musk Replacing Workers with AI: Should You Be Worried?",
-      "company": "Intel",
-      "event_type": "hiring",
-      "count": 100,
-      "ai_relation": "Direct",
-      "url": "https://www.forbes.com/sites/jasonwingard/2025/03/10/musk-replacing-workers-with-ai-should-you-be-worried/"
-    }
-  ],
+  "news_events": [],
   "methodology": {
     "component_weights": {
       "news_events": 0.35,
@@ -243,10 +59,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_20250316.json",
-      "research_trends": "research_trends_20250316.json",
-      "employment_stats": "employment_stats_20250316.json",
-      "job_trends": "job_trends_20250316.json"
+      "news_events": "workforce_events_20250320.json",
+      "research_trends": "research_trends_20250320.json",
+      "employment_stats": "employment_stats_20250320.json",
+      "job_trends": "job_trends_20250320.json"
     }
   }
 }
