@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-03-21T14:55:01.823009",
-  "index_value": 4.784488865852172,
+  "timestamp": "2025-03-21T14:54:50.743649",
+  "index_value": 5.319636258142424,
   "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
@@ -55,12 +55,12 @@
       }
     },
     "research_trends": {
-      "score": 10.204081632653043,
+      "score": 15.555555555555543,
       "weight": 0.1,
-      "weighted_score": 1.0204081632653044,
+      "weighted_score": 1.5555555555555545,
       "details": {
         "paper_count": 150,
-        "positive_sentiment": 55.10204081632652
+        "positive_sentiment": 57.77777777777777
       }
     },
     "employment_stats": {
@@ -419,30 +419,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_202403.json",
-      "research_trends": "research_trends_202403.json",
-      "employment_stats": "employment_stats_202403.json",
-      "job_trends": "job_trends_202403.json"
+      "news_events": "workforce_events_202401.json",
+      "research_trends": "research_trends_202401.json",
+      "employment_stats": "employment_stats_202401.json",
+      "job_trends": "job_trends_202401.json"
     }
-  },
-  "history": [
-    {
-      "date": "2024-01",
-      "value": 5.319636258142424,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:50.743649"
-    },
-    {
-      "date": "2024-02",
-      "value": 3.834010772516937,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:56.501985"
-    },
-    {
-      "date": "2024-03",
-      "value": 4.784488865852172,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:55:01.823009"
-    }
-  ]
+  }
 }

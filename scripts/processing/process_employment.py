@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import sys
+import argparse
 from datetime import datetime
 import glob
 
@@ -73,7 +74,7 @@ class EmploymentProcessor:
         
         return {"missing": list(missing), "unexpected": list(unexpected)}
     
-    def process_employment_data(self):
+    def process_employment_data(self, year=None, month=None):
         """Process BLS employment data and calculate industry trends."""
         # Find all BLS data files
         bls_files = glob.glob(os.path.join(self.input_dir, "*_bls_employment_*.json"))
@@ -168,10 +169,17 @@ class EmploymentProcessor:
             logger.warning("Industry category mismatch detected - this may affect index calculation accuracy")
             stats["validation_warnings"] = validation_results
         
-        # Save stats to a file
+        # Determine output filename based on year and month parameters
+        if year and month:
+            # Format as YYYYMM for historical data
+            date_str = f"{year}{month:02d}"
+        else:
+            # Keep existing format for current data
+            date_str = datetime.now().strftime('%Y%m%d')
+            
         output_file = os.path.join(
             self.output_dir,
-            f"employment_stats_{datetime.now().strftime('%Y%m%d')}.json"
+            f"employment_stats_{date_str}.json"
         )
         
         with open(output_file, 'w') as f:
@@ -183,8 +191,14 @@ class EmploymentProcessor:
 
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Process employment data')
+    parser.add_argument('--year', type=int, help='Year to process (YYYY)')
+    parser.add_argument('--month', type=int, help='Month to process (1-12)')
+    args = parser.parse_args()
+    
     processor = EmploymentProcessor()
-    stats = processor.process_employment_data()
+    stats = processor.process_employment_data(args.year, args.month)
     
     if stats:
         logger.info(f"Processing complete. Analyzed employment data for {len(stats['industries'])} industries.")

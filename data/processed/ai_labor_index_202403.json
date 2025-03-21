@@ -424,25 +424,5 @@
       "employment_stats": "employment_stats_202403.json",
       "job_trends": "job_trends_202403.json"
     }
-  },
-  "history": [
-    {
-      "date": "2024-01",
-      "value": 5.319636258142424,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:50.743649"
-    },
-    {
-      "date": "2024-02",
-      "value": 3.834010772516937,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:56.501985"
-    },
-    {
-      "date": "2024-03",
-      "value": 4.784488865852172,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:55:01.823009"
-    }
-  ]
+  }
 }

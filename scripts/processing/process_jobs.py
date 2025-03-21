@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import sys
+import argparse
 from datetime import datetime
 import glob
 
@@ -26,20 +27,20 @@ class JobsProcessor:
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
     
-    def process_job_data(self):
+    def process_job_data(self, year=None, month=None):
         """Process job postings data and identify trends."""
-        # Find all AI job files
-        ai_job_files = glob.glob(os.path.join(self.input_dir, "*_ai_jobs.json"))
+        # Find all job files
+        job_files = glob.glob(os.path.join(self.input_dir, "jobs_*_*.json"))
         
-        if not ai_job_files:
-            logger.warning(f"No AI job files found in {self.input_dir}")
+        if not job_files:
+            logger.warning(f"No job files found in {self.input_dir}")
             return None
         
-        logger.info(f"Found {len(ai_job_files)} AI job files")
+        logger.info(f"Found {len(job_files)} AI job files")
         
         # Get most recent file for each category
         categories = {}
-        for file_path in ai_job_files:
+        for file_path in job_files:
             filename = os.path.basename(file_path)
             parts = filename.split('_')
             if len(parts) >= 3:
@@ -137,10 +138,17 @@ class JobsProcessor:
             ]
         }
         
-        # Save trends to a file
+        # Determine output filename based on year and month parameters
+        if year and month:
+            # Format as YYYYMM for historical data
+            date_str = f"{year}{month:02d}"
+        else:
+            # Keep existing format for current data
+            date_str = datetime.now().strftime('%Y%m%d')
+            
         output_file = os.path.join(
             self.output_dir,
-            f"job_trends_{datetime.now().strftime('%Y%m%d')}.json"
+            f"job_trends_{date_str}.json"
         )
         
         with open(output_file, 'w') as f:
@@ -152,8 +160,14 @@ class JobsProcessor:
 
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Process job posting data')
+    parser.add_argument('--year', type=int, help='Year to process (YYYY)')
+    parser.add_argument('--month', type=int, help='Month to process (1-12)')
+    args = parser.parse_args()
+    
     processor = JobsProcessor()
-    trends = processor.process_job_data()
+    trends = processor.process_job_data(args.year, args.month)
     
     if trends:
         logger.info(f"Processing complete. Analyzed {trends['ai_related_postings'][-1]['count']} AI-related jobs.")

@@ -1,8 +1,8 @@
-# scripts/analysis/calculate_index.py
 import json
 import logging
 import os
 import sys
+import argparse
 from datetime import datetime
 
 import numpy as np
@@ -23,22 +23,33 @@ class IndexCalculator:
     def __init__(self, 
                  input_dir="./data/processed", 
                  output_dir="./data/processed",
-                 news_file="workforce_events_{date}.json",
-                 research_file="research_trends_{date}.json",
-                 employment_file="employment_stats_{date}.json",
-                 job_file="job_trends_{date}.json"):
+                 year=None,
+                 month=None):
         self.input_dir = input_dir
         self.output_dir = output_dir
-        
-        # Get latest files if date placeholders are used
-        today = datetime.now().strftime('%Y%m%d')
-        self.news_file = news_file.format(date=today)
-        self.research_file = research_file.format(date=today)
-        self.employment_file = employment_file.format(date=today)
-        self.job_file = job_file.format(date=today)
+        self.year = year
+        self.month = month
         
         # Create output directory if it doesn't exist
         os.makedirs(output_dir, exist_ok=True)
+        
+        # Generate filenames based on year/month if provided, otherwise use current date
+        if year and month:
+            date_str = f"{year}{month:02d}"
+        else:
+            date_str = datetime.now().strftime('%Y%m%d')
+            
+        self.news_file = f"workforce_events_{date_str}.json"
+        self.research_file = f"research_trends_{date_str}.json"
+        self.employment_file = f"employment_stats_{date_str}.json"
+        self.job_file = f"job_trends_{date_str}.json"
+        
+        # Log the files we'll be using
+        logger.info(f"Using data files:")
+        logger.info(f"  News: {self.news_file}")
+        logger.info(f"  Research: {self.research_file}")
+        logger.info(f"  Employment: {self.employment_file}")
+        logger.info(f"  Jobs: {self.job_file}")
         
         # Component weights for the index
         self.weights = {
@@ -402,9 +413,15 @@ class IndexCalculator:
     
     def save_index(self, index):
         """Save the calculated index to a file."""
+        # Use year/month in filename if provided
+        if self.year and self.month:
+            date_str = f"{self.year}{self.month:02d}"
+        else:
+            date_str = datetime.now().strftime('%Y%m%d')
+            
         output_file = os.path.join(
             self.output_dir,
-            f"ai_labor_index_{datetime.now().strftime('%Y%m%d')}.json"
+            f"ai_labor_index_{date_str}.json"
         )
         
         with open(output_file, 'w') as f:
@@ -434,22 +451,44 @@ class IndexCalculator:
                     "history": []
                 }
             
-            # Add new entry
-            history["history"].append({
-                "timestamp": index["timestamp"],
-                "index_value": index["index_value"],
-                "interpretation": index["interpretation"]
-            })
+            # Format the date for this entry
+            if self.year and self.month:
+                date_str = f"{self.year}-{self.month:02d}"
+            else:
+                # Extract from timestamp in ISO format
+                date_str = index["timestamp"].split("T")[0][:7]  # YYYY-MM
             
-            # Sort by timestamp
+            # Add or update entry
+            new_entry = {
+                "date": date_str,
+                "value": index["index_value"],
+                "interpretation": index["interpretation"],
+                "timestamp": index["timestamp"]
+            }
+            
+            # Check if this date already exists in history
+            found = False
+            for i, entry in enumerate(history["history"]):
+                if entry.get("date") == date_str:
+                    history["history"][i] = new_entry
+                    found = True
+                    break
+            
+            if not found:
+                history["history"].append(new_entry)
+            
+            # Sort by date
             history["history"] = sorted(
                 history["history"],
-                key=lambda x: x["timestamp"]
+                key=lambda x: x.get("date", "")
             )
             
             # Save updated history
             with open(history_file, 'w') as f:
                 json.dump(history, f, indent=2)
+            
+            # Also add history to the index
+            index["history"] = history["history"]
             
             logger.info(f"Updated index history at {history_file}")
             
@@ -458,7 +497,20 @@ class IndexCalculator:
 
 
 def main():
-    calculator = IndexCalculator()
+    parser = argparse.ArgumentParser(description='Calculate AI Labor Market Impact Index')
+    parser.add_argument('--input-dir', default='./data/processed', help='Input directory containing processed data')
+    parser.add_argument('--output-dir', default='./data/processed', help='Output directory for index files')
+    parser.add_argument('--year', type=int, help='Year to calculate index for (optional)')
+    parser.add_argument('--month', type=int, help='Month to calculate index for (optional)')
+    
+    args = parser.parse_args()
+    
+    calculator = IndexCalculator(
+        input_dir=args.input_dir,
+        output_dir=args.output_dir,
+        year=args.year,
+        month=args.month
+    )
     
     # Calculate the index
     index = calculator.calculate_index()

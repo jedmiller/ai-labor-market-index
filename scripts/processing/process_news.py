@@ -4,6 +4,7 @@ import logging
 import os
 import sys
 import re
+import argparse
 from datetime import datetime
 import glob
 
@@ -67,12 +68,26 @@ class NewsProcessor:
                     return 500
                 
                 # Extract number and remove commas
-                num_str = match.group(1) if match.group(1).isdigit() else match.group(2)
-                return int(num_str.replace(',', ''))
+                # First check if group 1 contains digits
+                if match.group(1) and any(c.isdigit() for c in match.group(1)):
+                    num_str = match.group(1)
+                # Then check if group 2 contains digits
+                elif len(match.groups()) >= 2 and match.group(2) and any(c.isdigit() for c in match.group(2)):
+                    num_str = match.group(2)
+                else:
+                    # No numeric group found
+                    return 100
+                
+                try:
+                    # Try to convert to integer, handling commas
+                    return int(num_str.replace(',', ''))
+                except ValueError:
+                    # If conversion fails, return default
+                    return 100
         
         # Default count if not found
         return 100
-    
+
     def determine_event_type(self, text):
         """Determine if article is about hiring or layoffs."""
         hiring_terms = ['hire', 'hiring', 'recruit', 'add', 'create', 'expansion', 'grow']
@@ -110,7 +125,7 @@ class NewsProcessor:
         
         return "None"
     
-    def process_news_data(self):
+    def process_news_data(self, year=None, month=None):
         """Process news data and identify events."""
         # Find all news data files
         news_files = glob.glob(os.path.join(self.input_dir, "*.json"))
@@ -216,10 +231,17 @@ class NewsProcessor:
             "events": events
         }
         
-        # Save to file
+        # Determine output filename based on year and month parameters
+        if year and month:
+            # Format as YYYYMM for historical data
+            date_str = f"{year}{month:02d}"
+        else:
+            # Keep existing format for current data
+            date_str = datetime.now().strftime('%Y%m%d')
+            
         output_file = os.path.join(
             self.output_dir,
-            f"workforce_events_{datetime.now().strftime('%Y%m%d')}.json"
+            f"workforce_events_{date_str}.json"
         )
         
         with open(output_file, 'w') as f:
@@ -231,8 +253,14 @@ class NewsProcessor:
 
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Process news data')
+    parser.add_argument('--year', type=int, help='Year to process (YYYY)')
+    parser.add_argument('--month', type=int, help='Month to process (1-12)')
+    args = parser.parse_args()
+    
     processor = NewsProcessor()
-    result = processor.process_news_data()
+    result = processor.process_news_data(args.year, args.month)
     
     if result:
         logger.info(f"Processing complete. Processed {len(result['events'])} news events.")
