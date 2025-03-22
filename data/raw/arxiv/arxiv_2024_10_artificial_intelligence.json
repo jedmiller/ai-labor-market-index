@@ -1,0 +1,1574 @@
+{
+  "query": "all:artificial intelligence AND (labor market OR employment OR jobs OR workforce OR automation)",
+  "date_collected": "2025-03-21T23:03:09.606958",
+  "target_period": "2024-10",
+  "papers": [
+    {
+      "id": "http://arxiv.org/abs/2411.00217v1",
+      "title": "ADAPT: A Game-Theoretic and Neuro-Symbolic Framework for Automated\n  Distributed Adaptive Penetration Testing",
+      "published": "2024-10-31T21:32:17Z",
+      "updated": "2024-10-31T21:32:17Z",
+      "summary": "The integration of AI into modern critical infrastructure systems, such as\nhealthcare, has introduced new vulnerabilities that can significantly impact\nworkflow, efficiency, and safety. Additionally, the increased connectivity has\nmade traditional human-driven penetration testing insufficient for assessing\nrisks and developing remediation strategies. Consequently, there is a pressing\nneed for a distributed, adaptive, and efficient automated penetration testing\nframework that not only identifies vulnerabilities but also provides\ncountermeasures to enhance security posture. This work presents ADAPT, a\ngame-theoretic and neuro-symbolic framework for automated distributed adaptive\npenetration testing, specifically designed to address the unique cybersecurity\nchallenges of AI-enabled healthcare infrastructure networks. We use a\nhealthcare system case study to illustrate the methodologies within ADAPT. The\nproposed solution enables a learning-based risk assessment. Numerical\nexperiments are used to demonstrate effective countermeasures against various\ntactical techniques employed by adversarial AI.",
+      "authors": [
+        "Haozhe Lei",
+        "Yunfei Ge",
+        "Quanyan Zhu"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.GT"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00217v1",
+        "http://arxiv.org/pdf/2411.00217v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00208v2",
+      "title": "Using Large Language Models for a standard assessment mapping for\n  sustainable communities",
+      "published": "2024-10-31T21:07:58Z",
+      "updated": "2024-11-25T12:04:18Z",
+      "summary": "This paper presents a new approach to urban sustainability assessment through\nthe use of Large Language Models (LLMs) to streamline the use of the ISO 37101\nframework to automate and standardise the assessment of urban initiatives\nagainst the six \"sustainability purposes\" and twelve \"issues\" outlined in the\nstandard. The methodology includes the development of a custom prompt based on\nthe standard definitions and its application to two different datasets: 527\nprojects from the Paris Participatory Budget and 398 activities from the\nPROBONO Horizon 2020 project. The results show the effectiveness of LLMs in\nquickly and consistently categorising different urban initiatives according to\nsustainability criteria. The approach is particularly promising when it comes\nto breaking down silos in urban planning by providing a holistic view of the\nimpact of projects. The paper discusses the advantages of this method over\ntraditional human-led assessments, including significant time savings and\nimproved consistency. However, it also points out the importance of human\nexpertise in interpreting results and ethical considerations. This study\nhopefully can contribute to the growing body of work on AI applications in\nurban planning and provides a novel method for operationalising standardised\nsustainability frameworks in different urban contexts.",
+      "authors": [
+        "Luc Jonveaux"
+      ],
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "K.4.3"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00208v2",
+        "http://arxiv.org/pdf/2411.00208v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2412.19808v1",
+      "title": "AI-driven Automation as a Pre-condition for Eudaimonia",
+      "published": "2024-10-31T20:57:38Z",
+      "updated": "2024-10-31T20:57:38Z",
+      "summary": "The debate surrounding the 'future of work' is saturated with alarmist\nwarnings about the loss of work as an intrinsically valuable activity. Instead,\nthe present doctoral research approaches this debate from the perspective of\nhuman flourishing (eudaimonia). It articulates a neo-Aristotelian\ninterpretation according to which the prospect of mass AI-driven automation,\nfar from being a threat, is rather desirable insofar as it facilitates humans'\nflourishing and, subsequently, their engagement in leisure. Drawing on virtue\njurisprudence, this research further explores what this desirability may imply\nfor the current legal order.",
+      "authors": [
+        "Anastasia Siapka"
+      ],
+      "categories": [
+        "cs.CY",
+        "cs.AI"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1145/3600211.3604743",
+        "http://arxiv.org/abs/2412.19808v1",
+        "http://arxiv.org/pdf/2412.19808v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00196v1",
+      "title": "Whole-Herd Elephant Pose Estimation from Drone Data for Collective\n  Behavior Analysis",
+      "published": "2024-10-31T20:26:59Z",
+      "updated": "2024-10-31T20:26:59Z",
+      "summary": "This research represents a pioneering application of automated pose\nestimation from drone data to study elephant behavior in the wild, utilizing\nvideo footage captured from Samburu National Reserve, Kenya. The study\nevaluates two pose estimation workflows: DeepLabCut, known for its application\nin laboratory settings and emerging wildlife fieldwork, and YOLO-NAS-Pose, a\nnewly released pose estimation model not previously applied to wildlife\nbehavioral studies. These models are trained to analyze elephant herd behavior,\nfocusing on low-resolution ($\\sim$50 pixels) subjects to detect key points such\nas the head, spine, and ears of multiple elephants within a frame. Both\nworkflows demonstrated acceptable quality of pose estimation on the test set,\nfacilitating the automated detection of basic behaviors crucial for studying\nelephant herd dynamics. For the metrics selected for pose estimation evaluation\non the test set -- root mean square error (RMSE), percentage of correct\nkeypoints (PCK), and object keypoint similarity (OKS) -- the YOLO-NAS-Pose\nworkflow outperformed DeepLabCut. Additionally, YOLO-NAS-Pose exceeded\nDeepLabCut in object detection evaluation. This approach introduces a novel\nmethod for wildlife behavioral research, including the burgeoning field of\nwildlife drone monitoring, with significant implications for wildlife\nconservation.",
+      "authors": [
+        "Brody McNutt",
+        "Libby Zhang",
+        "Angus Carey-Douglas",
+        "Fritz Vollrath",
+        "Frank Pope",
+        "Leandra Brickson"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00196v1",
+        "http://arxiv.org/pdf/2411.00196v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00173v1",
+      "title": "Beyond Label Attention: Transparency in Language Models for Automated\n  Medical Coding via Dictionary Learning",
+      "published": "2024-10-31T19:39:40Z",
+      "updated": "2024-10-31T19:39:40Z",
+      "summary": "Medical coding, the translation of unstructured clinical text into\nstandardized medical codes, is a crucial but time-consuming healthcare\npractice. Though large language models (LLM) could automate the coding process\nand improve the efficiency of such tasks, interpretability remains paramount\nfor maintaining patient trust. Current efforts in interpretability of medical\ncoding applications rely heavily on label attention mechanisms, which often\nleads to the highlighting of extraneous tokens irrelevant to the ICD code. To\nfacilitate accurate interpretability in medical language models, this paper\nleverages dictionary learning that can efficiently extract sparsely activated\nrepresentations from dense language model embeddings in superposition. Compared\nwith common label attention mechanisms, our model goes beyond token-level\nrepresentations by building an interpretable dictionary which enhances the\nmechanistic-based explanations for each ICD code prediction, even when the\nhighlighted tokens are medically irrelevant. We show that dictionary features\ncan steer model behavior, elucidate the hidden meanings of upwards of 90% of\nmedically irrelevant tokens, and are human interpretable.",
+      "authors": [
+        "John Wu",
+        "David Wu",
+        "Jimeng Sun"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00173v1",
+        "http://arxiv.org/pdf/2411.00173v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00081v1",
+      "title": "PARTNR: A Benchmark for Planning and Reasoning in Embodied Multi-agent\n  Tasks",
+      "published": "2024-10-31T17:53:12Z",
+      "updated": "2024-10-31T17:53:12Z",
+      "summary": "We present a benchmark for Planning And Reasoning Tasks in humaN-Robot\ncollaboration (PARTNR) designed to study human-robot coordination in household\nactivities. PARTNR tasks exhibit characteristics of everyday tasks, such as\nspatial, temporal, and heterogeneous agent capability constraints. We employ a\nsemi-automated task generation pipeline using Large Language Models (LLMs),\nincorporating simulation in the loop for grounding and verification. PARTNR\nstands as the largest benchmark of its kind, comprising 100,000 natural\nlanguage tasks, spanning 60 houses and 5,819 unique objects. We analyze\nstate-of-the-art LLMs on PARTNR tasks, across the axes of planning, perception\nand skill execution. The analysis reveals significant limitations in SoTA\nmodels, such as poor coordination and failures in task tracking and recovery\nfrom errors. When LLMs are paired with real humans, they require 1.5x as many\nsteps as two humans collaborating and 1.1x more steps than a single human,\nunderscoring the potential for improvement in these models. We further show\nthat fine-tuning smaller LLMs with planning data can achieve performance on par\nwith models 9 times larger, while being 8.6x faster at inference. Overall,\nPARTNR highlights significant challenges facing collaborative embodied agents\nand aims to drive research in this direction.",
+      "authors": [
+        "Matthew Chang",
+        "Gunjan Chhablani",
+        "Alexander Clegg",
+        "Mikael Dallaire Cote",
+        "Ruta Desai",
+        "Michal Hlavac",
+        "Vladimir Karashchuk",
+        "Jacob Krantz",
+        "Roozbeh Mottaghi",
+        "Priyam Parashar",
+        "Siddharth Patki",
+        "Ishita Prasad",
+        "Xavier Puig",
+        "Akshara Rai",
+        "Ram Ramrakhya",
+        "Daniel Tran",
+        "Joanne Truong",
+        "John M. Turner",
+        "Eric Undersander",
+        "Tsung-Yen Yang"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00081v1",
+        "http://arxiv.org/pdf/2411.00081v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.24185v2",
+      "title": "DexMimicGen: Automated Data Generation for Bimanual Dexterous\n  Manipulation via Imitation Learning",
+      "published": "2024-10-31T17:48:45Z",
+      "updated": "2025-03-06T05:34:17Z",
+      "summary": "Imitation learning from human demonstrations is an effective means to teach\nrobots manipulation skills. But data acquisition is a major bottleneck in\napplying this paradigm more broadly, due to the amount of cost and human effort\ninvolved. There has been significant interest in imitation learning for\nbimanual dexterous robots, like humanoids. Unfortunately, data collection is\neven more challenging here due to the challenges of simultaneously controlling\nmultiple arms and multi-fingered hands. Automated data generation in simulation\nis a compelling, scalable alternative to fuel this need for data. To this end,\nwe introduce DexMimicGen, a large-scale automated data generation system that\nsynthesizes trajectories from a handful of human demonstrations for humanoid\nrobots with dexterous hands. We present a collection of simulation environments\nin the setting of bimanual dexterous manipulation, spanning a range of\nmanipulation behaviors and different requirements for coordination among the\ntwo arms. We generate 21K demos across these tasks from just 60 source human\ndemos and study the effect of several data generation and policy learning\ndecisions on agent performance. Finally, we present a real-to-sim-to-real\npipeline and deploy it on a real-world humanoid can sorting task. Generated\ndatasets, simulation environments and additional results are at\nhttps://dexmimicgen.github.io/",
+      "authors": [
+        "Zhenyu Jiang",
+        "Yuqi Xie",
+        "Kevin Lin",
+        "Zhenjia Xu",
+        "Weikang Wan",
+        "Ajay Mandlekar",
+        "Linxi Fan",
+        "Yuke Zhu"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.24185v2",
+        "http://arxiv.org/pdf/2410.24185v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.02429v1",
+      "title": "IdeaBench: Benchmarking Large Language Models for Research Idea\n  Generation",
+      "published": "2024-10-31T17:04:59Z",
+      "updated": "2024-10-31T17:04:59Z",
+      "summary": "Large Language Models (LLMs) have transformed how people interact with\nartificial intelligence (AI) systems, achieving state-of-the-art results in\nvarious tasks, including scientific discovery and hypothesis generation.\nHowever, the lack of a comprehensive and systematic evaluation framework for\ngenerating research ideas using LLMs poses a significant obstacle to\nunderstanding and assessing their generative capabilities in scientific\ndiscovery. To address this gap, we propose IdeaBench, a benchmark system that\nincludes a comprehensive dataset and an evaluation framework for standardizing\nthe assessment of research idea generation using LLMs. Our dataset comprises\ntitles and abstracts from a diverse range of influential papers, along with\ntheir referenced works. To emulate the human process of generating research\nideas, we profile LLMs as domain-specific researchers and ground them in the\nsame context considered by human researchers. This maximizes the utilization of\nthe LLMs' parametric knowledge to dynamically generate new research ideas. We\nalso introduce an evaluation framework for assessing the quality of generated\nresearch ideas. Our evaluation framework is a two-stage process: first, using\nGPT-4o to rank ideas based on user-specified quality indicators such as novelty\nand feasibility, enabling scalable personalization; and second, calculating\nrelative ranking based \"Insight Score\" to quantify the chosen quality\nindicator. The proposed benchmark system will be a valuable asset for the\ncommunity to measure and compare different LLMs, ultimately advancing the\nautomation of the scientific discovery process.",
+      "authors": [
+        "Sikun Guo",
+        "Amir Hassan Shariatmadari",
+        "Guangzhi Xiong",
+        "Albert Huang",
+        "Eric Xie",
+        "Stefan Bekiranov",
+        "Aidong Zhang"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CE"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.02429v1",
+        "http://arxiv.org/pdf/2411.02429v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.24119v2",
+      "title": "Leveraging Large Language Models for Code Translation and Software\n  Development in Scientific Computing",
+      "published": "2024-10-31T16:48:41Z",
+      "updated": "2025-03-17T02:38:43Z",
+      "summary": "The emergence of foundational models and generative artificial intelligence\n(GenAI) is poised to transform productivity in scientific computing, especially\nin code development, refactoring, and translating from one programming language\nto another. However, because the output of GenAI cannot be guaranteed to be\ncorrect, manual intervention remains necessary. Some of this intervention can\nbe automated through task-specific tools, alongside additional methodologies\nfor correctness verification and effective prompt development. We explored the\napplication of GenAI in assisting with code translation, language\ninteroperability, and codebase inspection within a legacy Fortran codebase used\nto simulate particle interactions at the Large Hadron Collider (LHC). In the\nprocess, we developed a tool, CodeScribe, which combines prompt engineering\nwith user supervision to establish an efficient process for code conversion. In\nthis paper, we demonstrate how CodeScribe assists in converting Fortran code to\nC++, generating Fortran-C APIs for integrating legacy systems with modern C++\nlibraries, and providing developer support for code organization and algorithm\nimplementation. We also address the challenges of AI-driven code translation\nand highlight its benefits for enhancing productivity in scientific computing\nworkflows.",
+      "authors": [
+        "Akash Dhruv",
+        "Anshu Dubey"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.24119v2",
+        "http://arxiv.org/pdf/2410.24119v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23916v1",
+      "title": "Transformer-based Model Predictive Control: Trajectory Optimization via\n  Sequence Modeling",
+      "published": "2024-10-31T13:23:10Z",
+      "updated": "2024-10-31T13:23:10Z",
+      "summary": "Model predictive control (MPC) has established itself as the primary\nmethodology for constrained control, enabling general-purpose robot autonomy in\ndiverse real-world scenarios. However, for most problems of interest, MPC\nrelies on the recursive solution of highly non-convex trajectory optimization\nproblems, leading to high computational complexity and strong dependency on\ninitialization. In this work, we present a unified framework to combine the\nmain strengths of optimization-based and learning-based methods for MPC. Our\napproach entails embedding high-capacity, transformer-based neural network\nmodels within the optimization process for trajectory generation, whereby the\ntransformer provides a near-optimal initial guess, or target plan, to a\nnon-convex optimization problem. Our experiments, performed in simulation and\nthe real world onboard a free flyer platform, demonstrate the capabilities of\nour framework to improve MPC convergence and runtime. Compared to purely\noptimization-based approaches, results show that our approach can improve\ntrajectory generation performance by up to 75%, reduce the number of solver\niterations by up to 45%, and improve overall MPC runtime by 7x without loss in\nperformance.",
+      "authors": [
+        "Davide Celestini",
+        "Daniele Gammelli",
+        "Tommaso Guffanti",
+        "Simone D'Amico",
+        "Elisa Capello",
+        "Marco Pavone"
+      ],
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "math.OC"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1109/LRA.2024.3466069",
+        "http://arxiv.org/abs/2410.23916v1",
+        "http://arxiv.org/pdf/2410.23916v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23894v1",
+      "title": "Metamorphic Malware Evolution: The Potential and Peril of Large Language\n  Models",
+      "published": "2024-10-31T12:53:56Z",
+      "updated": "2024-10-31T12:53:56Z",
+      "summary": "Code metamorphism refers to a computer programming exercise wherein the\nprogram modifies its own code (partial or entire) consistently and\nautomatically while retaining its core functionality. This technique is often\nused for online performance optimization and automated crash recovery in\ncertain mission-critical applications. However, the technique has been\nmisappropriated by malware creators to bypass signature-based detection\nmeasures instituted by anti-malware engines. However, current code mutation\nengines used by threat actors offer only a limited degree of mutation, which is\nfrequently detectable via static code analysis. The advent of large language\nmodels (LLMs), such as ChatGPT 4.0 and Google Bard may lead to a significant\nevolution in this landscape. These models have demonstrated a level of\nalgorithm comprehension and code synthesis capability that closely resembles\nhuman abilities. This advancement has sparked concerns among experts that such\nmodels could be exploited by threat actors to generate sophisticated\nmetamorphic malware. This paper explores the potential of several prominent\nLLMs for software code mutation that may be used to reconstruct (with mutation)\nexisting malware code bases or create new forms of embedded mutation engines\nfor next-gen metamorphic malwares. In this work, we introduce a framework for\ncreating self-testing program mutation engines based on LLM/Transformer-based\nmodels. The proposed framework serves as an essential tool in testing next-gen\nmetamorphic malware detection engines.",
+      "authors": [
+        "Pooria Madani"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1109/TPS-ISA58951.2023.00019",
+        "http://arxiv.org/abs/2410.23894v1",
+        "http://arxiv.org/pdf/2410.23894v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00876v1",
+      "title": "Resilience to the Flowing Unknown: an Open Set Recognition Framework for\n  Data Streams",
+      "published": "2024-10-31T11:06:54Z",
+      "updated": "2024-10-31T11:06:54Z",
+      "summary": "Modern digital applications extensively integrate Artificial Intelligence\nmodels into their core systems, offering significant advantages for automated\ndecision-making. However, these AI-based systems encounter reliability and\nsafety challenges when handling continuously generated data streams in complex\nand dynamic scenarios. This work explores the concept of resilient AI systems,\nwhich must operate in the face of unexpected events, including instances that\nbelong to patterns that have not been seen during the training process. This is\nan issue that regular closed-set classifiers commonly encounter in streaming\nscenarios, as they are designed to compulsory classify any new observation into\none of the training patterns (i.e., the so-called \\textit{over-occupied space}\nproblem). In batch learning, the Open Set Recognition research area has\nconsistently confronted this issue by requiring models to robustly uphold their\nclassification performance when processing query instances from unknown\npatterns. In this context, this work investigates the application of an Open\nSet Recognition framework that combines classification and clustering to\naddress the \\textit{over-occupied space} problem in streaming scenarios.\nSpecifically, we systematically devise a benchmark comprising different\nclassification datasets with varying ratios of known to unknown classes.\nExperiments are presented on this benchmark to compare the performance of the\nproposed hybrid framework with that of individual incremental classifiers.\nDiscussions held over the obtained results highlight situations where the\nproposed framework performs best, and delineate the limitations and hurdles\nencountered by incremental classifiers in effectively resolving the challenges\nposed by open-world streaming environments.",
+      "authors": [
+        "Marcos Barcina-Blanco",
+        "Jesus L. Lobo",
+        "Pablo Garcia-Bringas",
+        "Javier Del Ser"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "I.2.6"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1007/978-3-031-74183-8_12",
+        "http://arxiv.org/abs/2411.00876v1",
+        "http://arxiv.org/pdf/2411.00876v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23747v1",
+      "title": "A Comprehensive Review of Current Robot- Based Pollinators in Greenhouse\n  Farming",
+      "published": "2024-10-31T09:02:39Z",
+      "updated": "2024-10-31T09:02:39Z",
+      "summary": "The decline of bee and wind-based pollination systems in greenhouses due to\ncontrolled environments and limited access has boost the importance of finding\nalternative pollination methods. Robotic based pollination systems have emerged\nas a promising solution, ensuring adequate crop yield even in challenging\npollination scenarios. This paper presents a comprehensive review of the\ncurrent robotic-based pollinators employed in greenhouses. The review\ncategorizes pollinator technologies into major categories such as air-jet,\nwater-jet, linear actuator, ultrasonic wave, and air-liquid spray, each\nsuitable for specific crop pollination requirements. However, these\ntechnologies are often tailored to particular crops, limiting their\nversatility. The advancement of science and technology has led to the\nintegration of automated pollination technology, encompassing information\ntechnology, automatic perception, detection, control, and operation. This\nintegration not only reduces labor costs but also fosters the ongoing progress\nof modern agriculture by refining technology, enhancing automation, and\npromoting intelligence in agricultural practices. Finally, the challenges\nencountered in design of pollinator are addressed, and a forward-looking\nperspective is taken towards future developments, aiming to contribute to the\nsustainable advancement of this technology.",
+      "authors": [
+        "Rajmeet Singh",
+        "lakmal Seneviratne",
+        "Irfan Hussain"
+      ],
+      "categories": [
+        "cs.RO"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23747v1",
+        "http://arxiv.org/pdf/2410.23747v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23578v1",
+      "title": "Automating Quantum Software Maintenance: Flakiness Detection and Root\n  Cause Analysis",
+      "published": "2024-10-31T02:43:04Z",
+      "updated": "2024-10-31T02:43:04Z",
+      "summary": "Flaky tests, which pass or fail inconsistently without code changes, are a\nmajor challenge in software engineering in general and in quantum software\nengineering in particular due to their complexity and probabilistic nature,\nleading to hidden issues and wasted developer effort.\n  We aim to create an automated framework to detect flaky tests in quantum\nsoftware and an extended dataset of quantum flaky tests, overcoming the\nlimitations of manual methods.\n  Building on prior manual analysis of 14 quantum software repositories, we\nexpanded the dataset and automated flaky test detection using transformers and\ncosine similarity. We conducted experiments with Large Language Models (LLMs)\nfrom the OpenAI GPT and Meta LLaMA families to assess their ability to detect\nand classify flaky tests from code and issue descriptions.\n  Embedding transformers proved effective: we identified 25 new flaky tests,\nexpanding the dataset by 54%. Top LLMs achieved an F1-score of 0.8871 for\nflakiness detection but only 0.5839 for root cause identification.\n  We introduced an automated flaky test detection framework using machine\nlearning, showing promising results but highlighting the need for improved root\ncause detection and classification in large quantum codebases. Future work will\nfocus on improving detection techniques and developing automatic flaky test\nfixes.",
+      "authors": [
+        "Janakan Sivaloganathan",
+        "Ainaz Jamshidi",
+        "Andriy Miranskyy",
+        "Lei Zhang"
+      ],
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23578v1",
+        "http://arxiv.org/pdf/2410.23578v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23537v1",
+      "title": "ALISE: Accelerating Large Language Model Serving with Speculative\n  Scheduling",
+      "published": "2024-10-31T00:58:11Z",
+      "updated": "2024-10-31T00:58:11Z",
+      "summary": "Large Language Models (LLMs) represent a revolutionary advancement in the\ncontemporary landscape of artificial general intelligence (AGI). As exemplified\nby ChatGPT, LLM-based applications necessitate minimal response latency and\nmaximal throughput for inference serving. However, due to the unpredictability\nof LLM execution, the first-come-first-serve (FCFS) scheduling policy employed\nby current LLM serving systems suffers from head-of-line (HoL) blocking issues\nand long job response times.\n  In this paper, we propose a new efficient LLM inference serving framework,\nnamed ALISE. The key design paradigm of ALISE is to leverage a novel\nspeculative scheduler by estimating the execution time for each job and\nexploiting such prior knowledge to assign appropriate job priority orders, thus\nminimizing potential queuing delays for heterogeneous workloads. Furthermore,\nto mitigate the memory overhead of the intermediate key-value (KV) cache, we\nemploy a priority-based adaptive memory management protocol and\nquantization-based compression techniques. Evaluations demonstrate that in\ncomparison to the state-of-the-art solution vLLM, ALISE improves the throughput\nof inference serving by up to 1.8x and 2.1x under the same latency constraint\non the Alpaca and ShareGPT datasets, respectively.",
+      "authors": [
+        "Youpeng Zhao",
+        "Jun Wang"
+      ],
+      "categories": [
+        "cs.PF",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23537v1",
+        "http://arxiv.org/pdf/2410.23537v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23535v1",
+      "title": "Simulating User Agents for Embodied Conversational-AI",
+      "published": "2024-10-31T00:56:08Z",
+      "updated": "2024-10-31T00:56:08Z",
+      "summary": "Embodied agents designed to assist users with tasks must engage in natural\nlanguage interactions, interpret instructions, execute actions, and communicate\neffectively to resolve issues. However, collecting large-scale, diverse\ndatasets of situated human-robot dialogues to train and evaluate such agents is\nexpensive, labor-intensive, and time-consuming. To address this challenge, we\npropose building a large language model (LLM)-based user agent that can\nsimulate user behavior during interactions with an embodied agent in a virtual\nenvironment. Given a user goal (e.g., make breakfast), at each time step, the\nuser agent may observe\" the robot actions or speak\" to either intervene with\nthe robot or answer questions. Such a user agent assists in improving the\nscalability and efficiency of embodied dialogues dataset generation and is\ncritical for enhancing and evaluating the robot's interaction and task\ncompletion ability, as well as for research in reinforcement learning using AI\nfeedback. We evaluate our user agent's ability to generate human-like behaviors\nby comparing its simulated dialogues with the TEACh dataset. We perform three\nexperiments: zero-shot prompting to predict dialogue acts, few-shot prompting,\nand fine-tuning on the TEACh training subset. Results show the LLM-based user\nagent achieves an F-measure of 42% with zero-shot prompting and 43.4% with\nfew-shot prompting in mimicking human speaking behavior. Through fine-tuning,\nperformance in deciding when to speak remained stable, while deciding what to\nsay improved from 51.1% to 62.5%. These findings showcase the feasibility of\nthe proposed approach for assessing and enhancing the effectiveness of robot\ntask completion through natural language communication.",
+      "authors": [
+        "Daniel Philipov",
+        "Vardhan Dongre",
+        "Gokhan Tur",
+        "Dilek Hakkani-T\u00fcr"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23535v1",
+        "http://arxiv.org/pdf/2410.23535v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23207v2",
+      "title": "Enhancing Autonomous Driving Safety Analysis with Generative AI: A\n  Comparative Study on Automated Hazard and Risk Assessment",
+      "published": "2024-10-30T16:59:20Z",
+      "updated": "2024-10-31T21:05:22Z",
+      "summary": "The advent of autonomous driving technology has accentuated the need for\ncomprehensive hazard analysis and risk assessment (HARA) to ensure the safety\nand reliability of vehicular systems. Traditional HARA processes, while\nmeticulous, are inherently time-consuming and subject to human error,\nnecessitating a transformative approach to fortify safety engineering. This\npaper presents an integrative application of generative artificial intelligence\n(AI) as a means to enhance HARA in autonomous driving safety analysis.\nGenerative AI, renowned for its predictive modeling and data generation\ncapabilities, is leveraged to automate the labor-intensive elements of HARA,\nthus expediting the process and augmenting the thoroughness of the safety\nanalyses. Through empirical research, the study contrasts conventional HARA\npractices conducted by safety experts with those supplemented by generative AI\ntools. The benchmark comparisons focus on critical metrics such as analysis\ntime, error rates, and scope of risk identification. By employing generative\nAI, the research demonstrates a significant upturn in efficiency, evidenced by\nreduced timeframes and expanded analytical coverage. The AI-augmented processes\nalso deliver enhanced brainstorming support, stimulating creative\nproblem-solving and identifying previously unrecognized risk factors.",
+      "authors": [
+        "Alireza Abbaspour",
+        "Aliasghar Arab",
+        "Yashar Mousavi"
+      ],
+      "categories": [
+        "eess.SY",
+        "cs.SY"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23207v2",
+        "http://arxiv.org/pdf/2410.23207v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23166v2",
+      "title": "SciPIP: An LLM-based Scientific Paper Idea Proposer",
+      "published": "2024-10-30T16:18:22Z",
+      "updated": "2025-02-17T08:59:45Z",
+      "summary": "The rapid advancement of large language models (LLMs) has opened new\npossibilities for automating the proposal of innovative scientific ideas. This\nprocess involves two key phases: literature retrieval and idea generation.\nHowever, existing approaches often fall short due to their reliance on\nkeyword-based search tools during the retrieval phase, which neglects crucial\nsemantic information and frequently results in incomplete retrieval outcomes.\nSimilarly, in the idea generation phase, current methodologies tend to depend\nsolely on the internal knowledge of LLMs or metadata from retrieved papers,\nthereby overlooking significant valuable insights contained within the full\ntexts. To address these limitations, we introduce SciPIP, an innovative\nframework designed to enhance the LLM-based proposal of scientific ideas\nthrough improvements in both literature retrieval and idea generation. Our\napproach begins with the construction of a comprehensive literature database\nthat supports advanced retrieval based not only on keywords but also on\nsemantics and citation relationships. This is complemented by the introduction\nof a multi-granularity retrieval algorithm aimed at ensuring more thorough and\nexhaustive retrieval results. For the idea generation phase, we propose a\ndual-path framework that effectively integrates both the content of retrieved\npapers and the extensive internal knowledge of LLMs. This integration\nsignificantly boosts the novelty, feasibility, and practical value of proposed\nideas. Our experiments, conducted across various domains such as natural\nlanguage processing and computer vision, demonstrate SciPIP's capability to\ngenerate a multitude of innovative and useful ideas. These findings underscore\nSciPIP's potential as a valuable tool for researchers seeking to advance their\nfields with groundbreaking concepts.",
+      "authors": [
+        "Wenxiao Wang",
+        "Lihui Gu",
+        "Liye Zhang",
+        "Yunxiang Luo",
+        "Yi Dai",
+        "Chen Shen",
+        "Liang Xie",
+        "Binbin Lin",
+        "Xiaofei He",
+        "Jieping Ye"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23166v2",
+        "http://arxiv.org/pdf/2410.23166v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23161v1",
+      "title": "Energy-Efficient Intra-Domain Network Slicing for Multi-Layer\n  Orchestration in Intelligent-Driven Distributed 6G Networks: Learning Generic\n  Assignment Skills with Unsupervised Reinforcement Learning",
+      "published": "2024-10-30T16:14:27Z",
+      "updated": "2024-10-30T16:14:27Z",
+      "summary": "Since the 6th Generation (6G) of wireless networks is expected to provide a\nnew level of network services and meet the emerging expectations of the future,\nit will be a complex and intricate networking system. 6Gs sophistication and\nrobustness will be accompanied by complexities, which will require novel\nstrategies to tackle them. This research work focuses on decentralized and\nmulti-level system models for 6G networks and proposes an energy efficient\nautomation strategy for edge domain management and Network Slicing (NS) with\nthe main objective of reducing the networks complexity by leveraging\nscalability, efficiency, and generalization. Accordingly, we propose a\npre-train phase to discover useful assignment skills in network edge domains by\nutilizing unsupervised Reinforcement Learning (unsupervised RL). The suggested\ntechnique does not depend on the domain specifications and thus is applicable\nto all the edge domains. Our proposed approach not only enables scalability and\ndecentralization, but it also delivers efficiency by assisting domain\ncontrollers to provide various service types. We implemented the pre-training\nphase, and monitored that the discovered assignment skills span the entire\ninterval of possible resource assignment portions for every service type.",
+      "authors": [
+        "Navideh Ghafouri",
+        "John S. Vardakas",
+        "Kostas Ramantas",
+        "Christos Verikoukis"
+      ],
+      "categories": [
+        "cs.NI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23161v1",
+        "http://arxiv.org/pdf/2410.23161v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.23137v1",
+      "title": "Fair Division with Market Values",
+      "published": "2024-10-30T15:52:15Z",
+      "updated": "2024-10-30T15:52:15Z",
+      "summary": "We introduce a model of fair division with market values, where indivisible\ngoods must be partitioned among agents with (additive) subjective valuations,\nand each good additionally has a market value. The market valuation can be\nviewed as a separate additive valuation that holds identically across all the\nagents. We seek allocations that are simultaneously fair with respect to the\nsubjective valuations and with respect to the market valuation.\n  We show that an allocation that satisfies stochastically-dominant\nenvy-freeness up to one good (SD-EF1) with respect to both the subjective\nvaluations and the market valuation does not always exist, but the weaker\nguarantee of EF1 with respect to the subjective valuations along with SD-EF1\nwith respect to the market valuation can be guaranteed. We also study a number\nof other guarantees such as Pareto optimality, EFX, and MMS. In addition, we\nexplore non-additive valuations and extend our model to cake-cutting. Along the\nway, we identify several tantalizing open questions.",
+      "authors": [
+        "Siddharth Barman",
+        "Soroush Ebadian",
+        "Mohamad Latifian",
+        "Nisarg Shah"
+      ],
+      "categories": [
+        "cs.GT",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.23137v1",
+        "http://arxiv.org/pdf/2410.23137v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00856v1",
+      "title": "AI in Investment Analysis: LLMs for Equity Stock Ratings",
+      "published": "2024-10-30T15:06:57Z",
+      "updated": "2024-10-30T15:06:57Z",
+      "summary": "Investment Analysis is a cornerstone of the Financial Services industry. The\nrapid integration of advanced machine learning techniques, particularly Large\nLanguage Models (LLMs), offers opportunities to enhance the equity rating\nprocess. This paper explores the application of LLMs to generate multi-horizon\nstock ratings by ingesting diverse datasets. Traditional stock rating methods\nrely heavily on the expertise of financial analysts, and face several\nchallenges such as data overload, inconsistencies in filings, and delayed\nreactions to market events. Our study addresses these issues by leveraging LLMs\nto improve the accuracy and consistency of stock ratings. Additionally, we\nassess the efficacy of using different data modalities with LLMs for the\nfinancial domain.\n  We utilize varied datasets comprising fundamental financial, market, and news\ndata from January 2022 to June 2024, along with GPT-4-32k (v0613) (with a\ntraining cutoff in Sep. 2021 to prevent information leakage). Our results show\nthat our benchmark method outperforms traditional stock rating methods when\nassessed by forward returns, specially when incorporating financial\nfundamentals. While integrating news data improves short-term performance,\nsubstituting detailed news summaries with sentiment scores reduces token use\nwithout loss of performance. In many cases, omitting news data entirely\nenhances performance by reducing bias.\n  Our research shows that LLMs can be leveraged to effectively utilize large\namounts of multimodal financial data, as showcased by their effectiveness at\nthe stock rating prediction task. Our work provides a reproducible and\nefficient framework for generating accurate stock ratings, serving as a\ncost-effective alternative to traditional methods. Future work will extend to\nlonger timeframes, incorporate diverse data, and utilize newer models for\nenhanced insights.",
+      "authors": [
+        "Kassiani Papasotiriou",
+        "Srijan Sood",
+        "Shayleen Reynolds",
+        "Tucker Balch"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "q-fin.CP",
+        "68T50, 91G60 (Primary) 68T07 (Secondary)",
+        "I.2.7"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1145/3677052.3698694",
+        "http://arxiv.org/abs/2411.00856v1",
+        "http://arxiv.org/pdf/2411.00856v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22995v1",
+      "title": "VisAidMath: Benchmarking Visual-Aided Mathematical Reasoning",
+      "published": "2024-10-30T13:19:44Z",
+      "updated": "2024-10-30T13:19:44Z",
+      "summary": "Although previous research on large language models (LLMs) and large\nmulti-modal models (LMMs) has systematically explored mathematical\nproblem-solving (MPS) within visual contexts, the analysis of how these models\nprocess visual information during problem-solving remains insufficient. To\naddress this gap, we present VisAidMath, a benchmark for evaluating the MPS\nprocess related to visual information. We follow a rigorous data curation\npipeline involving both automated processes and manual annotations to ensure\ndata quality and reliability. Consequently, this benchmark includes 1,200\nchallenging problems from various mathematical branches, vision-aid\nformulations, and difficulty levels, collected from diverse sources such as\ntextbooks, examination papers, and Olympiad problems. Based on the proposed\nbenchmark, we conduct comprehensive evaluations on ten mainstream LLMs and\nLMMs, highlighting deficiencies in the visual-aided reasoning process. For\nexample, GPT-4V only achieves 45.33% accuracy in the visual-aided reasoning\ntask, even with a drop of 2 points when provided with golden visual aids.\nIn-depth analysis reveals that the main cause of deficiencies lies in\nhallucination regarding the implicit visual reasoning process, shedding light\non future research directions in the visual-aided MPS process.",
+      "authors": [
+        "Jingkun Ma",
+        "Runzhe Zhan",
+        "Derek F. Wong",
+        "Yang Li",
+        "Di Sun",
+        "Hou Pong Chan",
+        "Lidia S. Chao"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22995v1",
+        "http://arxiv.org/pdf/2410.22995v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22946v1",
+      "title": "KALAM: toolKit for Automating high-Level synthesis of Analog computing\n  systeMs",
+      "published": "2024-10-30T12:04:22Z",
+      "updated": "2024-10-30T12:04:22Z",
+      "summary": "Diverse computing paradigms have emerged to meet the growing needs for\nintelligent energy-efficient systems. The Margin Propagation (MP) framework,\nbeing one such initiative in the analog computing domain, stands out due to its\nscalability across biasing conditions, temperatures, and diminishing process\ntechnology nodes. However, the lack of digital-like automation tools for\ndesigning analog systems (including that of MP analog) hinders their adoption\nfor designing large systems. The inherent scalability and modularity of MP\nsystems present a unique opportunity in this regard. This paper introduces\nKALAM (toolKit for Automating high-Level synthesis of Analog computing\nsysteMs), which leverages factor graphs as the foundational paradigm for\nsynthesizing MP-based analog computing systems. Factor graphs are the basis of\nvarious signal processing tasks and, when coupled with MP, can be used to\ndesign scalable and energy-efficient analog signal processors. Using Python\nscripting language, the KALAM automation flow translates an input factor graph\nto its equivalent SPICE-compatible circuit netlist that can be used to validate\nthe intended functionality. KALAM also allows the integration of design\noptimization strategies such as precision tuning, variable elimination, and\nmathematical simplification. We demonstrate KALAM's versatility for tasks such\nas Bayesian inference, Low-Density Parity Check (LDPC) decoding, and Artificial\nNeural Networks (ANN). Simulation results of the netlists align closely with\nsoftware implementations, affirming the efficacy of our proposed automation\ntool.",
+      "authors": [
+        "Ankita Nandi",
+        "Krishil Gandhi",
+        "Mahendra Pratap Singh",
+        "Shantanu Chakrabartty",
+        "Chetan Singh Thakur"
+      ],
+      "categories": [
+        "eess.SY",
+        "cs.AR",
+        "cs.ET",
+        "cs.LG",
+        "cs.SY",
+        "eess.SP"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22946v1",
+        "http://arxiv.org/pdf/2410.22946v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00852v2",
+      "title": "EF-LLM: Energy Forecasting LLM with AI-assisted Automation, Enhanced\n  Sparse Prediction, Hallucination Detection",
+      "published": "2024-10-30T11:22:37Z",
+      "updated": "2024-12-24T03:24:55Z",
+      "summary": "Accurate prediction helps to achieve supply-demand balance in energy systems,\nsupporting decision-making and scheduling. Traditional models, lacking\nAI-assisted automation, rely on experts, incur high costs, and struggle with\nsparse data prediction. To address these challenges, we propose the Energy\nForecasting Large Language Model (EF-LLM), which integrates domain knowledge\nand temporal data for time-series forecasting, supporting both pre-forecast\noperations and post-forecast decision-support. EF-LLM's human-AI interaction\ncapabilities lower the entry barrier in forecasting tasks, reducing the need\nfor extra expert involvement. To achieve this, we propose a continual learning\napproach with updatable LoRA and a multi-channel architecture for aligning\nheterogeneous multimodal data, enabling EF-LLM to continually learn\nheterogeneous multimodal knowledge. In addition, EF-LLM enables accurate\npredictions under sparse data conditions through its ability to process\nmultimodal data. We propose Fusion Parameter-Efficient Fine-Tuning (F-PEFT)\nmethod to effectively leverage both time-series data and text for this purpose.\nEF-LLM is also the first energy-specific LLM to detect hallucinations and\nquantify their occurrence rate, achieved via multi-task learning, semantic\nsimilarity analysis, and ANOVA. We have achieved success in energy prediction\nscenarios for load, photovoltaic, and wind power forecast.",
+      "authors": [
+        "Zihang Qiu",
+        "Chaojie Li",
+        "Zhongyang Wang",
+        "Renyou Xie",
+        "Borui Zhang",
+        "Huadong Mo",
+        "Guo Chen",
+        "Zhaoyang Dong"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00852v2",
+        "http://arxiv.org/pdf/2411.00852v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22895v1",
+      "title": "Combining psychoanalysis and computer science: an empirical study of the\n  relationship between emotions and the Lacanian discourses",
+      "published": "2024-10-30T10:49:33Z",
+      "updated": "2024-10-30T10:49:33Z",
+      "summary": "This research explores the interdisciplinary interaction between\npsychoanalysis and computer science, suggesting a mutually beneficial exchange.\nIndeed, psychoanalytic concepts can enrich technological applications involving\nunconscious, elusive aspects of the human factor, such as social media and\nother interactive digital platforms. Conversely, computer science, especially\nArtificial Intelligence (AI), can contribute quantitative concepts and methods\nto psychoanalysis, identifying patterns and emotional cues in human expression.\nIn particular, this research aims to apply computer science methods to\nestablish fundamental relationships between emotions and Lacanian discourses.\nSuch relations are discovered in our approach via empirical investigation and\nstatistical analysis, and are eventually validated in a theoretical\n(psychoanalytic) way. It is worth noting that, although emotions have been\nsporadically studied in Lacanian theory, to the best of our knowledge a\nsystematic, detailed investigation of their role is missing. Such fine-grained\nunderstanding of the role of emotions can also make the identification of\nLacanian discourses more effective and easy in practise. In particular, our\nmethods indicate the emotions with highest differentiation power in terms of\ncorresponding discourses; conversely, we identify for each discourse the most\ncharacteristic emotions it admits. As a matter of fact, we develop a method\nwhich we call Lacanian Discourse Discovery (LDD), that simplifies (via\nsystematizing) the identification of Lacanian discourses in texts. Although the\nmain contribution of this paper is inherently theoretical (psychoanalytic), it\ncan also facilitate major practical applications in the realm of interactive\ndigital systems. Indeed, our approach can be automated through Artificial\nIntelligence methods that effectively identify emotions (and corresponding\ndiscourses) in texts.",
+      "authors": [
+        "Minas Gadalla",
+        "Sotiris Nikoletseas",
+        "Jos\u00e9 Roberto de A. Amazonas"
+      ],
+      "categories": [
+        "cs.CL"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22895v1",
+        "http://arxiv.org/pdf/2410.22895v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22854v1",
+      "title": "Hyperparameter Optimization in Machine Learning",
+      "published": "2024-10-30T09:39:22Z",
+      "updated": "2024-10-30T09:39:22Z",
+      "summary": "Hyperparameters are configuration variables controlling the behavior of\nmachine learning algorithms. They are ubiquitous in machine learning and\nartificial intelligence and the choice of their values determine the\neffectiveness of systems based on these technologies. Manual hyperparameter\nsearch is often unsatisfactory and becomes unfeasible when the number of\nhyperparameters is large. Automating the search is an important step towards\nautomating machine learning, freeing researchers and practitioners alike from\nthe burden of finding a good set of hyperparameters by trial and error. In this\nsurvey, we present a unified treatment of hyperparameter optimization,\nproviding the reader with examples and insights into the state-of-the-art. We\ncover the main families of techniques to automate hyperparameter search, often\nreferred to as hyperparameter optimization or tuning, including random and\nquasi-random search, bandit-, model- and gradient- based approaches. We further\ndiscuss extensions, including online, constrained, and multi-objective\nformulations, touch upon connections with other fields such as meta-learning\nand neural architecture search, and conclude with open questions and future\nresearch directions.",
+      "authors": [
+        "Luca Franceschi",
+        "Michele Donini",
+        "Valerio Perrone",
+        "Aaron Klein",
+        "C\u00e9dric Archambeau",
+        "Matthias Seeger",
+        "Massimiliano Pontil",
+        "Paolo Frasconi"
+      ],
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22854v1",
+        "http://arxiv.org/pdf/2410.22854v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22767v1",
+      "title": "Beyond Ontology in Dialogue State Tracking for Goal-Oriented Chatbot",
+      "published": "2024-10-30T07:36:23Z",
+      "updated": "2024-10-30T07:36:23Z",
+      "summary": "Goal-oriented chatbots are essential for automating user tasks, such as\nbooking flights or making restaurant reservations. A key component of these\nsystems is Dialogue State Tracking (DST), which interprets user intent and\nmaintains the dialogue state. However, existing DST methods often rely on fixed\nontologies and manually compiled slot values, limiting their adaptability to\nopen-domain dialogues. We propose a novel approach that leverages instruction\ntuning and advanced prompt strategies to enhance DST performance, without\nrelying on any predefined ontologies. Our method enables Large Language Model\n(LLM) to infer dialogue states through carefully designed prompts and includes\nan anti-hallucination mechanism to ensure accurate tracking in diverse\nconversation contexts. Additionally, we employ a Variational Graph Auto-Encoder\n(VGAE) to model and predict subsequent user intent. Our approach achieved\nstate-of-the-art with a JGA of 42.57% outperforming existing ontology-less DST\nmodels, and performed well in open-domain real-world conversations. This work\npresents a significant advancement in creating more adaptive and accurate\ngoal-oriented chatbots.",
+      "authors": [
+        "Sejin Lee",
+        "Dongha Kim",
+        "Min Song"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22767v1",
+        "http://arxiv.org/pdf/2410.22767v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.05025v1",
+      "title": "LLMs as Research Tools: A Large Scale Survey of Researchers' Usage and\n  Perceptions",
+      "published": "2024-10-30T04:25:23Z",
+      "updated": "2024-10-30T04:25:23Z",
+      "summary": "The rise of large language models (LLMs) has led many researchers to consider\ntheir usage for scientific work. Some have found benefits using LLMs to augment\nor automate aspects of their research pipeline, while others have urged caution\ndue to risks and ethical concerns. Yet little work has sought to quantify and\ncharacterize how researchers use LLMs and why. We present the first large-scale\nsurvey of 816 verified research article authors to understand how the research\ncommunity leverages and perceives LLMs as research tools. We examine\nparticipants' self-reported LLM usage, finding that 81% of researchers have\nalready incorporated LLMs into different aspects of their research workflow. We\nalso find that traditionally disadvantaged groups in academia (non-White,\njunior, and non-native English speaking researchers) report higher LLM usage\nand perceived benefits, suggesting potential for improved research equity.\nHowever, women, non-binary, and senior researchers have greater ethical\nconcerns, potentially hindering adoption.",
+      "authors": [
+        "Zhehui Liao",
+        "Maria Antoniak",
+        "Inyoung Cheong",
+        "Evie Yu-Yen Cheng",
+        "Ai-Heng Lee",
+        "Kyle Lo",
+        "Joseph Chee Chang",
+        "Amy X. Zhang"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CY",
+        "cs.DL",
+        "cs.HC"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.05025v1",
+        "http://arxiv.org/pdf/2411.05025v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22584v1",
+      "title": "BENCHAGENTS: Automated Benchmark Creation with Agent Interaction",
+      "published": "2024-10-29T22:56:18Z",
+      "updated": "2024-10-29T22:56:18Z",
+      "summary": "Evaluations are limited by benchmark availability. As models evolve, there is\na need to create benchmarks that can measure progress on new generative\ncapabilities. However, creating new benchmarks through human annotations is\nslow and expensive, restricting comprehensive evaluations for any capability.\nWe introduce BENCHAGENTS, a framework that methodically leverages large\nlanguage models (LLMs) to automate benchmark creation for complex capabilities\nwhile inherently ensuring data and metric quality. BENCHAGENTS decomposes the\nbenchmark creation process into planning, generation, data verification, and\nevaluation, each of which is executed by an LLM agent. These agents interact\nwith each other and utilize human-in-the-loop feedback from benchmark\ndevelopers to explicitly improve and flexibly control data diversity and\nquality. We use BENCHAGENTS to create benchmarks to evaluate capabilities\nrelated to planning and constraint satisfaction during text generation. We then\nuse these benchmarks to study seven state-of-the-art models and extract new\ninsights on common failure modes and model differences.",
+      "authors": [
+        "Natasha Butt",
+        "Varun Chandrasekaran",
+        "Neel Joshi",
+        "Besmira Nushi",
+        "Vidhisha Balachandran"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22584v1",
+        "http://arxiv.org/pdf/2410.22584v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22552v1",
+      "title": "Auto-Intent: Automated Intent Discovery and Self-Exploration for Large\n  Language Model Web Agents",
+      "published": "2024-10-29T21:37:04Z",
+      "updated": "2024-10-29T21:37:04Z",
+      "summary": "In this paper, we introduce Auto-Intent, a method to adapt a pre-trained\nlarge language model (LLM) as an agent for a target domain without direct\nfine-tuning, where we empirically focus on web navigation tasks. Our approach\nfirst discovers the underlying intents from target domain demonstrations\nunsupervisedly, in a highly compact form (up to three words). With the\nextracted intents, we train our intent predictor to predict the next intent\ngiven the agent's past observations and actions. In particular, we propose a\nself-exploration approach where top-k probable intent predictions are provided\nas a hint to the pre-trained LLM agent, which leads to enhanced decision-making\ncapabilities. Auto-Intent substantially improves the performance of GPT-{3.5,\n4} and Llama-3.1-{70B, 405B} agents on the large-scale real-website navigation\nbenchmarks from Mind2Web and online navigation tasks from WebArena with its\ncross-benchmark generalization from Mind2Web.",
+      "authors": [
+        "Jaekyeom Kim",
+        "Dong-Ki Kim",
+        "Lajanugen Logeswaran",
+        "Sungryull Sohn",
+        "Honglak Lee"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22552v1",
+        "http://arxiv.org/pdf/2410.22552v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.22457v1",
+      "title": "Advancing Agentic Systems: Dynamic Task Decomposition, Tool Integration\n  and Evaluation using Novel Metrics and Dataset",
+      "published": "2024-10-29T18:45:13Z",
+      "updated": "2024-10-29T18:45:13Z",
+      "summary": "Advancements in Large Language Models (LLMs) are revolutionizing the\ndevelopment of autonomous agentic systems by enabling dynamic, context-aware\ntask decomposition and automated tool selection. These sophisticated systems\npossess significant automation potential across various industries, managing\ncomplex tasks, interacting with external systems to enhance knowledge, and\nexecuting actions independently. This paper presents three primary\ncontributions to advance this field:\n  - Advanced Agentic Framework: A system that handles multi-hop queries,\ngenerates and executes task graphs, selects appropriate tools, and adapts to\nreal-time changes.\n  - Novel Evaluation Metrics: Introduction of Node F1 Score, Structural\nSimilarity Index (SSI), and Tool F1 Score to comprehensively assess agentic\nsystems.\n  - Specialized Dataset: Development of an AsyncHow-based dataset for analyzing\nagent behavior across different task complexities.\n  Our findings reveal that asynchronous and dynamic task graph decomposition\nsignificantly enhances system responsiveness and scalability, particularly for\ncomplex, multi-step tasks. Detailed analysis shows that structural and\nnode-level metrics are crucial for sequential tasks, while tool-related metrics\nare more important for parallel tasks. Specifically, the Structural Similarity\nIndex (SSI) is the most significant predictor of performance in sequential\ntasks, and the Tool F1 Score is essential for parallel tasks. These insights\nhighlight the need for balanced evaluation methods that capture both structural\nand operational dimensions of agentic systems. Additionally, our evaluation\nframework, validated through empirical analysis and statistical testing,\nprovides valuable insights for improving the adaptability and reliability of\nagentic systems in dynamic environments.",
+      "authors": [
+        "Adrian Garret Gabriel",
+        "Alaa Alameer Ahmad",
+        "Shankar Kumar Jeyakumar"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.22457v1",
+        "http://arxiv.org/pdf/2410.22457v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.08910v1",
+      "title": "Automated Feedback in Math Education: A Comparative Analysis of LLMs for\n  Open-Ended Responses",
+      "published": "2024-10-29T16:57:45Z",
+      "updated": "2024-10-29T16:57:45Z",
+      "summary": "The effectiveness of feedback in enhancing learning outcomes is well\ndocumented within Educational Data Mining (EDM). Various prior research has\nexplored methodologies to enhance the effectiveness of feedback. Recent\ndevelopments in Large Language Models (LLMs) have extended their utility in\nenhancing automated feedback systems. This study aims to explore the potential\nof LLMs in facilitating automated feedback in math education. We examine the\neffectiveness of LLMs in evaluating student responses by comparing 3 different\nmodels: Llama, SBERT-Canberra, and GPT4 model. The evaluation requires the\nmodel to provide both a quantitative score and qualitative feedback on the\nstudent's responses to open-ended math problems. We employ Mistral, a version\nof Llama catered to math, and fine-tune this model for evaluating student\nresponses by leveraging a dataset of student responses and teacher-written\nfeedback for middle-school math problems. A similar approach was taken for\ntraining the SBERT model as well, while the GPT4 model used a zero-shot\nlearning approach. We evaluate the model's performance in scoring accuracy and\nthe quality of feedback by utilizing judgments from 2 teachers. The teachers\nutilized a shared rubric in assessing the accuracy and relevance of the\ngenerated feedback. We conduct both quantitative and qualitative analyses of\nthe model performance. By offering a detailed comparison of these methods, this\nstudy aims to further the ongoing development of automated feedback systems and\noutlines potential future directions for leveraging generative LLMs to create\nmore personalized learning experiences.",
+      "authors": [
+        "Sami Baral",
+        "Eamon Worden",
+        "Wen-Chiang Lim",
+        "Zhuang Luo",
+        "Christopher Santorelli",
+        "Ashish Gurung",
+        "Neil Heffernan"
+      ],
+      "categories": [
+        "cs.CY",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.08910v1",
+        "http://arxiv.org/pdf/2411.08910v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00832v1",
+      "title": "Advanced Hybrid Deep Learning Model for Enhanced Classification of\n  Osteosarcoma Histopathology Images",
+      "published": "2024-10-29T13:54:08Z",
+      "updated": "2024-10-29T13:54:08Z",
+      "summary": "Recent advances in machine learning are transforming medical image analysis,\nparticularly in cancer detection and classification. Techniques such as deep\nlearning, especially convolutional neural networks (CNNs) and vision\ntransformers (ViTs), are now enabling the precise analysis of complex\nhistopathological images, automating detection, and enhancing classification\naccuracy across various cancer types. This study focuses on osteosarcoma (OS),\nthe most common bone cancer in children and adolescents, which affects the long\nbones of the arms and legs. Early and accurate detection of OS is essential for\nimproving patient outcomes and reducing mortality. However, the increasing\nprevalence of cancer and the demand for personalized treatments create\nchallenges in achieving precise diagnoses and customized therapies. We propose\na novel hybrid model that combines convolutional neural networks (CNN) and\nvision transformers (ViT) to improve diagnostic accuracy for OS using\nhematoxylin and eosin (H&E) stained histopathological images. The CNN model\nextracts local features, while the ViT captures global patterns from\nhistopathological images. These features are combined and classified using a\nMulti-Layer Perceptron (MLP) into four categories: non-tumor (NT), non-viable\ntumor (NVT), viable tumor (VT), and none-viable ratio (NVR). Using the Cancer\nImaging Archive (TCIA) dataset, the model achieved an accuracy of 99.08%,\nprecision of 99.10%, recall of 99.28%, and an F1-score of 99.23%. This is the\nfirst successful four-class classification using this dataset, setting a new\nbenchmark in OS research and offering promising potential for future diagnostic\nadvancements.",
+      "authors": [
+        "Arezoo Borji",
+        "Gernot Kronreif",
+        "Bernhard Angermayr",
+        "Sepideh Hatamikia"
+      ],
+      "categories": [
+        "eess.IV",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00832v1",
+        "http://arxiv.org/pdf/2411.00832v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00034v1",
+      "title": "Is Our Chatbot Telling Lies? Assessing Correctness of an LLM-based Dutch\n  Support Chatbot",
+      "published": "2024-10-29T12:02:14Z",
+      "updated": "2024-10-29T12:02:14Z",
+      "summary": "Companies support their customers using live chats and chatbots to gain their\nloyalty. AFAS is a Dutch company aiming to leverage the opportunity large\nlanguage models (LLMs) offer to answer customer queries with minimal to no\ninput from its customer support team. Adding to its complexity, it is unclear\nwhat makes a response correct, and that too in Dutch. Further, with minimal\ndata available for training, the challenge is to identify whether an answer\ngenerated by a large language model is correct and do it on the fly.\n  This study is the first to define the correctness of a response based on how\nthe support team at AFAS makes decisions. It leverages literature on natural\nlanguage generation and automated answer grading systems to automate the\ndecision-making of the customer support team. We investigated questions\nrequiring a binary response (e.g., Would it be possible to adjust tax rates\nmanually?) or instructions (e.g., How would I adjust tax rate manually?) to\ntest how close our automated approach reaches support rating. Our approach can\nidentify wrong messages in 55\\% of the cases. This work shows the viability of\nautomatically assessing when our chatbot tell lies.",
+      "authors": [
+        "Herman Lassche",
+        "Michiel Overeem",
+        "Ayushi Rastogi"
+      ],
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "I.2.7; I.7.0"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00034v1",
+        "http://arxiv.org/pdf/2411.00034v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21968v1",
+      "title": "Automated Vulnerability Detection Using Deep Learning Technique",
+      "published": "2024-10-29T11:51:51Z",
+      "updated": "2024-10-29T11:51:51Z",
+      "summary": "Our work explores the utilization of deep learning, specifically leveraging\nthe CodeBERT model, to enhance code security testing for Python applications by\ndetecting SQL injection vulnerabilities. Unlike traditional security testing\nmethods that may be slow and error-prone, our approach transforms source code\ninto vector representations and trains a Long Short-Term Memory (LSTM) model to\nidentify vulnerable patterns. When compared with existing static application\nsecurity testing (SAST) tools, our model displays superior performance,\nachieving higher precision, recall, and F1-score. The study demonstrates that\ndeep learning techniques, particularly with CodeBERT's advanced contextual\nunderstanding, can significantly improve vulnerability detection, presenting a\nscalable methodology applicable to various programming languages and\nvulnerability types.",
+      "authors": [
+        "Guan-Yan Yang",
+        "Yi-Heng Ko",
+        "Farn Wang",
+        "Kuo-Hui Yeh",
+        "Haw-Shiang Chang",
+        "Hsueh-Yi Chen"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE",
+        "D.2.4; D.2.5"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21968v1",
+        "http://arxiv.org/pdf/2410.21968v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21939v2",
+      "title": "AI Cyber Risk Benchmark: Automated Exploitation Capabilities",
+      "published": "2024-10-29T10:57:11Z",
+      "updated": "2024-12-09T15:29:55Z",
+      "summary": "We introduce a new benchmark for assessing AI models' capabilities and risks\nin automated software exploitation, focusing on their ability to detect and\nexploit vulnerabilities in real-world software systems. Using DARPA's AI Cyber\nChallenge (AIxCC) framework and the Nginx challenge project, a deliberately\nmodified version of the widely used Nginx web server, we evaluate several\nleading language models, including OpenAI's o1-preview and o1-mini, Anthropic's\nClaude-3.5-sonnet-20241022 and Claude-3.5-sonnet-20240620, Google DeepMind's\nGemini-1.5-pro, and OpenAI's earlier GPT-4o model. Our findings reveal that\nthese models vary significantly in their success rates and efficiency, with\no1-preview achieving the highest success rate of 64.71 percent and o1-mini and\nClaude-3.5-sonnet-20241022 providing cost-effective but less successful\nalternatives. This benchmark establishes a foundation for systematically\nevaluating the AI cyber risk posed by automated exploitation tools.",
+      "authors": [
+        "Dan Ristea",
+        "Vasilios Mavroudis",
+        "Chris Hicks"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21939v2",
+        "http://arxiv.org/pdf/2410.21939v2"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21934v1",
+      "title": "Data streaming platform for crowd-sourced vehicle dataset generation",
+      "published": "2024-10-29T10:50:27Z",
+      "updated": "2024-10-29T10:50:27Z",
+      "summary": "Vehicles are sophisticated machines equipped with sensors that provide\nreal-time data for onboard driving assistance systems. Due to the wide variety\nof traffic, road, and weather conditions, continuous system enhancements are\nessential. Connectivity allows vehicles to transmit previously unknown data,\nexpanding datasets and accelerating the development of new data models. This\nenables faster identification and integration of novel data, improving system\nreliability and reducing time to market. Data Spaces aim to create a\ndata-driven, interconnected, and innovative data economy, where edge and cloud\ninfrastructures support a virtualised IoT platform that connects data sources\nand development servers. This paper proposes an edge-cloud data platform to\nconnect car data producers with multiple and heterogeneous services, addressing\nkey challenges in Data Spaces, such as data sovereignty, governance,\ninteroperability, and privacy. The paper also evaluates the data platform's\nperformance limits for text, image, and video data workloads, examines the\nimpact of connectivity technologies, and assesses latencies. The results show\nthat latencies drop to 33ms with 5G connectivity when pipelining data to\nconsuming applications hosted at the edge, compared to around 77ms when\ncrossing both edge and cloud processing infrastructures. The results offer\nguidance on the necessary processing assets to avoid bottlenecks in car data\nplatforms.",
+      "authors": [
+        "Felipe Mogollon",
+        "Zaloa Fernandez",
+        "Angel Martin",
+        "Juan Diego Ortega",
+        "Gorka Velez"
+      ],
+      "categories": [
+        "cs.NI"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1109/TIV.2024.3486926",
+        "http://arxiv.org/abs/2410.21934v1",
+        "http://arxiv.org/pdf/2410.21934v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21886v1",
+      "title": "Bayesian Optimization for Hyperparameters Tuning in Neural Networks",
+      "published": "2024-10-29T09:23:24Z",
+      "updated": "2024-10-29T09:23:24Z",
+      "summary": "This study investigates the application of Bayesian Optimization (BO) for the\nhyperparameter tuning of neural networks, specifically targeting the\nenhancement of Convolutional Neural Networks (CNN) for image classification\ntasks. Bayesian Optimization is a derivative-free global optimization method\nsuitable for expensive black-box functions with continuous inputs and limited\nevaluation budgets. The BO algorithm leverages Gaussian Process regression and\nacquisition functions like Upper Confidence Bound (UCB) and Expected\nImprovement (EI) to identify optimal configurations effectively. Using the Ax\nand BOTorch frameworks, this work demonstrates the efficiency of BO in reducing\nthe number of hyperparameter tuning trials while achieving competitive model\nperformance. Experimental outcomes reveal that BO effectively balances\nexploration and exploitation, converging rapidly towards optimal settings for\nCNN architectures. This approach underlines the potential of BO in automating\nneural network tuning, contributing to improved accuracy and computational\nefficiency in machine learning pipelines.",
+      "authors": [
+        "Gabriele Onorato"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21886v1",
+        "http://arxiv.org/pdf/2410.21886v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.00827v3",
+      "title": "IDEATOR: Jailbreaking and Benchmarking Large Vision-Language Models\n  Using Themselves",
+      "published": "2024-10-29T07:15:56Z",
+      "updated": "2025-03-08T17:39:57Z",
+      "summary": "As large Vision-Language Models (VLMs) gain prominence, ensuring their safe\ndeployment has become critical. Recent studies have explored VLM robustness\nagainst jailbreak attacks-techniques that exploit model vulnerabilities to\nelicit harmful outputs. However, the limited availability of diverse multimodal\ndata has constrained current approaches to rely heavily on adversarial or\nmanually crafted images derived from harmful text datasets, which often lack\neffectiveness and diversity across different contexts. In this paper, we\npropose IDEATOR, a novel jailbreak method that autonomously generates malicious\nimage-text pairs for black-box jailbreak attacks. IDEATOR is grounded in the\ninsight that VLMs themselves could serve as powerful red team models for\ngenerating multimodal jailbreak prompts. Specifically, IDEATOR leverages a VLM\nto create targeted jailbreak texts and pairs them with jailbreak images\ngenerated by a state-of-the-art diffusion model. Extensive experiments\ndemonstrate IDEATOR's high effectiveness and transferability, achieving a 94%\nattack success rate (ASR) in jailbreaking MiniGPT-4 with an average of only\n5.34 queries, and high ASRs of 82%, 88%, and 75% when transferred to LLaVA,\nInstructBLIP, and Chameleon, respectively. Building on IDEATOR's strong\ntransferability and automated process, we introduce the VLBreakBench, a safety\nbenchmark comprising 3,654 multimodal jailbreak samples. Our benchmark results\non 11 recently released VLMs reveal significant gaps in safety alignment. For\ninstance, our challenge set achieves ASRs of 46.31% on GPT-4o and 19.65% on\nClaude-3.5-Sonnet, underscoring the urgent need for stronger defenses.",
+      "authors": [
+        "Ruofan Wang",
+        "Juncheng Li",
+        "Yixu Wang",
+        "Bo Wang",
+        "Xiaosen Wang",
+        "Yan Teng",
+        "Yingchun Wang",
+        "Xingjun Ma",
+        "Yu-Gang Jiang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.00827v3",
+        "http://arxiv.org/pdf/2411.00827v3"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21784v1",
+      "title": "MARCO: Multi-Agent Real-time Chat Orchestration",
+      "published": "2024-10-29T06:42:27Z",
+      "updated": "2024-10-29T06:42:27Z",
+      "summary": "Large language model advancements have enabled the development of multi-agent\nframeworks to tackle complex, real-world problems such as to automate tasks\nthat require interactions with diverse tools, reasoning, and human\ncollaboration. We present MARCO, a Multi-Agent Real-time Chat Orchestration\nframework for automating tasks using LLMs. MARCO addresses key challenges in\nutilizing LLMs for complex, multi-step task execution. It incorporates robust\nguardrails to steer LLM behavior, validate outputs, and recover from errors\nthat stem from inconsistent output formatting, function and parameter\nhallucination, and lack of domain knowledge. Through extensive experiments we\ndemonstrate MARCO's superior performance with 94.48% and 92.74% accuracy on\ntask execution for Digital Restaurant Service Platform conversations and Retail\nconversations datasets respectively along with 44.91% improved latency and\n33.71% cost reduction. We also report effects of guardrails in performance gain\nalong with comparisons of various LLM models, both open-source and proprietary.\nThe modular and generic design of MARCO allows it to be adapted for automating\ntasks across domains and to execute complex usecases through multi-turn\ninteractions.",
+      "authors": [
+        "Anubhav Shrimal",
+        "Stanley Kanagaraj",
+        "Kriti Biswas",
+        "Swarnalatha Raghuraman",
+        "Anish Nediyanchath",
+        "Yi Zhang",
+        "Promod Yenigalla"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.MA"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21784v1",
+        "http://arxiv.org/pdf/2410.21784v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.08900v1",
+      "title": "RNA-GPT: Multimodal Generative System for RNA Sequence Understanding",
+      "published": "2024-10-29T06:19:56Z",
+      "updated": "2024-10-29T06:19:56Z",
+      "summary": "RNAs are essential molecules that carry genetic information vital for life,\nwith profound implications for drug development and biotechnology. Despite this\nimportance, RNA research is often hindered by the vast literature available on\nthe topic. To streamline this process, we introduce RNA-GPT, a multi-modal RNA\nchat model designed to simplify RNA discovery by leveraging extensive RNA\nliterature. RNA-GPT integrates RNA sequence encoders with linear projection\nlayers and state-of-the-art large language models (LLMs) for precise\nrepresentation alignment, enabling it to process user-uploaded RNA sequences\nand deliver concise, accurate responses. Built on a scalable training pipeline,\nRNA-GPT utilizes RNA-QA, an automated system that gathers RNA annotations from\nRNACentral using a divide-and-conquer approach with GPT-4o and latent Dirichlet\nallocation (LDA) to efficiently handle large datasets and generate\ninstruction-tuning samples. Our experiments indicate that RNA-GPT effectively\naddresses complex RNA queries, thereby facilitating RNA research. Additionally,\nwe present RNA-QA, a dataset of 407,616 RNA samples for modality alignment and\ninstruction tuning, further advancing the potential of RNA research tools.",
+      "authors": [
+        "Yijia Xiao",
+        "Edward Sun",
+        "Yiqiao Jin",
+        "Wei Wang"
+      ],
+      "categories": [
+        "q-bio.GN",
+        "cs.AI",
+        "cs.CE",
+        "cs.LG",
+        "q-bio.BM"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.08900v1",
+        "http://arxiv.org/pdf/2411.08900v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.11848v1",
+      "title": "Robust Graph Neural Networks for Stability Analysis in Dynamic Networks",
+      "published": "2024-10-29T06:11:36Z",
+      "updated": "2024-10-29T06:11:36Z",
+      "summary": "In the current context of accelerated globalization and digitalization, the\ncomplexity and uncertainty of financial markets are increasing, and the\nidentification and prevention of economic risks have become a key link in\nmaintaining the stability of the financial system. Traditional risk\nidentification methods often have limitations because they are difficult to\ncope with the multi-level and dynamically changing complex relationships in\nfinancial networks. With the rapid development of financial technology, graph\nneural network (GNN) technology, as an emerging deep learning method, has\ngradually shown great potential in the field of financial risk management. GNN\ncan map transaction behaviors, financial institutions, individuals, and their\ninteractive relationships in financial networks into graph structures, and\neffectively capture potential patterns and abnormal signals in financial data\nthrough embedded representation learning. Using this technology, financial\ninstitutions can extract valuable information from complex transaction\nnetworks, identify hidden dangers or abnormal behaviors that may cause systemic\nrisks in a timely manner, optimize decision-making processes, and improve the\naccuracy of risk warnings. This paper explores the economic risk identification\nalgorithm based on the GNN algorithm, aiming to provide financial institutions\nand regulators with more intelligent technical tools to help maintain the\nsecurity and stability of the financial market. Improving the efficiency of\neconomic risk identification through innovative technical means is expected to\nfurther enhance the risk resistance of the financial system and lay the\nfoundation for building a robust global financial system.",
+      "authors": [
+        "Xin Zhang",
+        "Zhen Xu",
+        "Yue Liu",
+        "Mengfang Sun",
+        "Tong Zhou",
+        "Wenying Sun"
+      ],
+      "categories": [
+        "q-fin.ST",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2411.11848v1",
+        "http://arxiv.org/pdf/2411.11848v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2411.08899v1",
+      "title": "FinVision: A Multi-Agent Framework for Stock Market Prediction",
+      "published": "2024-10-29T06:02:28Z",
+      "updated": "2024-10-29T06:02:28Z",
+      "summary": "Financial trading has been a challenging task, as it requires the integration\nof vast amounts of data from various modalities. Traditional deep learning and\nreinforcement learning methods require large training data and often involve\nencoding various data types into numerical formats for model input, which\nlimits the explainability of model behavior. Recently, LLM-based agents have\ndemonstrated remarkable advancements in handling multi-modal data, enabling\nthem to execute complex, multi-step decision-making tasks while providing\ninsights into their thought processes. This research introduces a multi-modal\nmulti-agent system designed specifically for financial trading tasks. Our\nframework employs a team of specialized LLM-based agents, each adept at\nprocessing and interpreting various forms of financial data, such as textual\nnews reports, candlestick charts, and trading signal charts. A key feature of\nour approach is the integration of a reflection module, which conducts analyses\nof historical trading signals and their outcomes. This reflective process is\ninstrumental in enhancing the decision-making capabilities of the system for\nfuture trading scenarios. Furthermore, the ablation studies indicate that the\nvisual reflection module plays a crucial role in enhancing the decision-making\ncapabilities of our framework.",
+      "authors": [
+        "Sorouralsadat Fatemi",
+        "Yuheng Hu"
+      ],
+      "categories": [
+        "q-fin.TR",
+        "cs.AI"
+      ],
+      "links": [
+        "http://dx.doi.org/10.1145/3677052.3698688",
+        "http://arxiv.org/abs/2411.08899v1",
+        "http://arxiv.org/pdf/2411.08899v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21640v1",
+      "title": "A Tutorial on Clinical Speech AI Development: From Data Collection to\n  Model Validation",
+      "published": "2024-10-29T00:58:15Z",
+      "updated": "2024-10-29T00:58:15Z",
+      "summary": "There has been a surge of interest in leveraging speech as a marker of health\nfor a wide spectrum of conditions. The underlying premise is that any\nneurological, mental, or physical deficits that impact speech production can be\nobjectively assessed via automated analysis of speech. Recent advances in\nspeech-based Artificial Intelligence (AI) models for diagnosing and tracking\nmental health, cognitive, and motor disorders often use supervised learning,\nsimilar to mainstream speech technologies like recognition and verification.\nHowever, clinical speech AI has distinct challenges, including the need for\nspecific elicitation tasks, small available datasets, diverse speech\nrepresentations, and uncertain diagnostic labels. As a result, application of\nthe standard supervised learning paradigm may lead to models that perform well\nin controlled settings but fail to generalize in real-world clinical\ndeployments. With translation into real-world clinical scenarios in mind, this\ntutorial paper provides an overview of the key components required for robust\ndevelopment of clinical speech AI. Specifically, this paper will cover the\ndesign of speech elicitation tasks and protocols most appropriate for different\nclinical conditions, collection of data and verification of hardware,\ndevelopment and validation of speech representations designed to measure\nclinical constructs of interest, development of reliable and robust clinical\nprediction models, and ethical and participant considerations for clinical\nspeech AI. The goal is to provide comprehensive guidance on building models\nwhose inputs and outputs link to the more interpretable and clinically\nmeaningful aspects of speech, that can be interrogated and clinically validated\non clinical datasets, and that adhere to ethical, privacy, and security\nconsiderations by design.",
+      "authors": [
+        "Si-Ioi Ng",
+        "Lingfeng Xu",
+        "Ingo Siegert",
+        "Nicholas Cummins",
+        "Nina R. Benway",
+        "Julie Liss",
+        "Visar Berisha"
+      ],
+      "categories": [
+        "eess.AS",
+        "cs.AI",
+        "cs.SD"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21640v1",
+        "http://arxiv.org/pdf/2410.21640v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21591v1",
+      "title": "Can Large Language Models Replace Data Scientists in Clinical Research?",
+      "published": "2024-10-28T22:48:06Z",
+      "updated": "2024-10-28T22:48:06Z",
+      "summary": "Data science plays a critical role in clinical research, but it requires\nprofessionals with expertise in coding and medical data analysis. Large\nlanguage models (LLMs) have shown great potential in supporting medical tasks\nand performing well in general coding tests. However, these tests do not assess\nLLMs' ability to handle data science tasks in medicine, nor do they explore\ntheir practical utility in clinical research. To address this, we developed a\ndataset consisting of 293 real-world data science coding tasks, based on 39\npublished clinical studies, covering 128 tasks in Python and 165 tasks in R.\nThis dataset simulates realistic clinical research scenarios using patient\ndata. Our findings reveal that cutting-edge LLMs struggle to generate perfect\nsolutions, frequently failing to follow input instructions, understand target\ndata, and adhere to standard analysis practices. Consequently, LLMs are not yet\nready to fully automate data science tasks. We benchmarked advanced adaptation\nmethods and found two to be particularly effective: chain-of-thought prompting,\nwhich provides a step-by-step plan for data analysis, which led to a 60%\nimprovement in code accuracy; and self-reflection, enabling LLMs to iteratively\nrefine their code, yielding a 38% accuracy improvement. Building on these\ninsights, we developed a platform that integrates LLMs into the data science\nworkflow for medical professionals. In a user study with five medical doctors,\nwe found that while LLMs cannot fully automate coding tasks, they significantly\nstreamline the programming process. We found that 80% of their submitted code\nsolutions were incorporated from LLM-generated code, with up to 96% reuse in\nsome cases. Our analysis highlights the potential of LLMs, when integrated into\nexpert workflows, to enhance data science efficiency in clinical research.",
+      "authors": [
+        "Zifeng Wang",
+        "Benjamin Danek",
+        "Ziwei Yang",
+        "Zheng Chen",
+        "Jimeng Sun"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "q-bio.GN",
+        "q-bio.QM"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21591v1",
+        "http://arxiv.org/pdf/2410.21591v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21539v1",
+      "title": "Bayesian Regression for Predicting Subscription to Bank Term Deposits in\n  Direct Marketing Campaigns",
+      "published": "2024-10-28T21:04:58Z",
+      "updated": "2024-10-28T21:04:58Z",
+      "summary": "In the highly competitive environment of the banking industry, it is\nessential to precisely forecast the behavior of customers in order to maximize\nthe effectiveness of marketing initiatives and improve financial consequences.\nThe purpose of this research is to examine the efficacy of logit and probit\nmodels in predicting term deposit subscriptions using a Portuguese bank's\ndirect marketing data. There are several demographic, economic, and behavioral\ncharacteristics in the dataset that affect the probability of subscribing. To\nincrease model performance and provide an unbiased evaluation, the target\nvariable was balanced, considering the inherent imbalance in the dataset. The\ntwo model's prediction abilities were evaluated using Bayesian techniques and\nLeave-One-Out Cross-Validation (LOO-CV). The logit model performed better than\nthe probit model in handling this classification problem. The results highlight\nthe relevance of model selection when dealing with complicated decision-making\nprocesses in the financial services industry and imbalanced datasets. Findings\nfrom this study shed light on how banks can optimize their decision-making\nprocesses, improve their client segmentation, and boost their marketing\ncampaigns by utilizing machine learning models.",
+      "authors": [
+        "Muhammad Farhan Tanvir",
+        "Md Maruf Hossain",
+        "Md Asifuzzaman Jishan"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21539v1",
+        "http://arxiv.org/pdf/2410.21539v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21494v1",
+      "title": "Towards Multi-dimensional Explanation Alignment for Medical\n  Classification",
+      "published": "2024-10-28T20:03:19Z",
+      "updated": "2024-10-28T20:03:19Z",
+      "summary": "The lack of interpretability in the field of medical image analysis has\nsignificant ethical and legal implications. Existing interpretable methods in\nthis domain encounter several challenges, including dependency on specific\nmodels, difficulties in understanding and visualization, as well as issues\nrelated to efficiency. To address these limitations, we propose a novel\nframework called Med-MICN (Medical Multi-dimensional Interpretable Concept\nNetwork). Med-MICN provides interpretability alignment for various angles,\nincluding neural symbolic reasoning, concept semantics, and saliency maps,\nwhich are superior to current interpretable methods. Its advantages include\nhigh prediction accuracy, interpretability across multiple dimensions, and\nautomation through an end-to-end concept labeling process that reduces the need\nfor extensive human training effort when working with new datasets. To\ndemonstrate the effectiveness and interpretability of Med-MICN, we apply it to\nfour benchmark datasets and compare it with baselines. The results clearly\ndemonstrate the superior performance and interpretability of our Med-MICN.",
+      "authors": [
+        "Lijie Hu",
+        "Songning Lai",
+        "Wenshuo Chen",
+        "Hongru Xiao",
+        "Hongbin Lin",
+        "Lu Yu",
+        "Jingfeng Zhang",
+        "Di Wang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21494v1",
+        "http://arxiv.org/pdf/2410.21494v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21418v1",
+      "title": "Large Language Models for Manufacturing",
+      "published": "2024-10-28T18:13:47Z",
+      "updated": "2024-10-28T18:13:47Z",
+      "summary": "The rapid advances in Large Language Models (LLMs) have the potential to\ntransform manufacturing industry, offering new opportunities to optimize\nprocesses, improve efficiency, and drive innovation. This paper provides a\ncomprehensive exploration of the integration of LLMs into the manufacturing\ndomain, focusing on their potential to automate and enhance various aspects of\nmanufacturing, from product design and development to quality control, supply\nchain optimization, and talent management. Through extensive evaluations across\nmultiple manufacturing tasks, we demonstrate the remarkable capabilities of\nstate-of-the-art LLMs, such as GPT-4V, in understanding and executing complex\ninstructions, extracting valuable insights from vast amounts of data, and\nfacilitating knowledge sharing. We also delve into the transformative potential\nof LLMs in reshaping manufacturing education, automating coding processes,\nenhancing robot control systems, and enabling the creation of immersive,\ndata-rich virtual environments through the industrial metaverse. By\nhighlighting the practical applications and emerging use cases of LLMs in\nmanufacturing, this paper aims to provide a valuable resource for\nprofessionals, researchers, and decision-makers seeking to harness the power of\nthese technologies to address real-world challenges, drive operational\nexcellence, and unlock sustainable growth in an increasingly competitive\nlandscape.",
+      "authors": [
+        "Yiwei Li",
+        "Huaqin Zhao",
+        "Hanqi Jiang",
+        "Yi Pan",
+        "Zhengliang Liu",
+        "Zihao Wu",
+        "Peng Shu",
+        "Jie Tian",
+        "Tianze Yang",
+        "Shaochen Xu",
+        "Yanjun Lyu",
+        "Parker Blenk",
+        "Jacob Pence",
+        "Jason Rupram",
+        "Eliza Banu",
+        "Ninghao Liu",
+        "Linbing Wang",
+        "Wenzhan Song",
+        "Xiaoming Zhai",
+        "Kenan Song",
+        "Dajiang Zhu",
+        "Beiwen Li",
+        "Xianqiao Wang",
+        "Tianming Liu"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21418v1",
+        "http://arxiv.org/pdf/2410.21418v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21259v4",
+      "title": "AutoBench-V: Can Large Vision-Language Models Benchmark Themselves?",
+      "published": "2024-10-28T17:55:08Z",
+      "updated": "2025-03-06T03:31:32Z",
+      "summary": "Large Vision-Language Models (LVLMs) have become essential for advancing the\nintegration of visual and linguistic information. However, the evaluation of\nLVLMs presents significant challenges as the evaluation benchmark always\ndemands lots of human cost for its construction, and remains static, lacking\nflexibility once constructed. Even though automatic evaluation has been\nexplored in textual modality, the visual modality remains under-explored. As a\nresult, in this work, we address a question: \"Can LVLMs themselves be used to\nbenchmark each other in the visual automatically domain?\". We introduce\nAutoBench-V, an automated framework for serving evaluation on demand, i.e.,\nbenchmarking LVLMs based on specific aspects of model capability. AutoBench-V\nleverages text-to-image models to generate relevant image samples and then\nutilizes LVLMs to orchestrate visual question-answering (VQA) tasks, completing\nthe evaluation process efficiently and flexibly. Through an extensive\nevaluation of nine popular LVLMs across five demanded user inputs (i.e.,\nevaluation capabilities), the framework shows effectiveness and reliability.",
+      "authors": [
+        "Han Bao",
+        "Yue Huang",
+        "Yanbo Wang",
+        "Jiayi Ye",
+        "Xiangqi Wang",
+        "Xiuying Chen",
+        "Yue Zhao",
+        "Tianyi Zhou",
+        "Mohamed Elhoseiny",
+        "Xiangliang Zhang"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21259v4",
+        "http://arxiv.org/pdf/2410.21259v4"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2410.21237v1",
+      "title": "Hierarchical Knowledge Graph Construction from Images for Scalable\n  E-Commerce",
+      "published": "2024-10-28T17:34:05Z",
+      "updated": "2024-10-28T17:34:05Z",
+      "summary": "Knowledge Graph (KG) is playing an increasingly important role in various AI\nsystems. For e-commerce, an efficient and low-cost automated knowledge graph\nconstruction method is the foundation of enabling various successful downstream\napplications. In this paper, we propose a novel method for constructing\nstructured product knowledge graphs from raw product images. The method\ncooperatively leverages recent advances in the vision-language model (VLM) and\nlarge language model (LLM), fully automating the process and allowing timely\ngraph updates. We also present a human-annotated e-commerce product dataset for\nbenchmarking product property extraction in knowledge graph construction. Our\nmethod outperforms our baseline in all metrics and evaluated properties,\ndemonstrating its effectiveness and bright usage potential.",
+      "authors": [
+        "Zhantao Yang",
+        "Han Zhang",
+        "Fangyi Chen",
+        "Anudeepsekhar Bolimera",
+        "Marios Savvides"
+      ],
+      "categories": [
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2410.21237v1",
+        "http://arxiv.org/pdf/2410.21237v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    }
+  ]
+}

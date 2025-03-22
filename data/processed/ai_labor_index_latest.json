@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-03-21T14:55:01.823009",
-  "index_value": 4.784488865852172,
+  "timestamp": "2025-03-21T23:04:37.197927",
+  "index_value": 7.7548829509261665,
   "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
@@ -55,12 +55,12 @@
       }
     },
     "research_trends": {
-      "score": 10.204081632653043,
+      "score": 1.3157894736842053,
       "weight": 0.1,
-      "weighted_score": 1.0204081632653044,
+      "weighted_score": 0.13157894736842055,
       "details": {
         "paper_count": 150,
-        "positive_sentiment": 55.10204081632652
+        "positive_sentiment": 50.6578947368421
       }
     },
     "employment_stats": {
@@ -124,13 +124,13 @@
       }
     },
     "job_trends": {
-      "score": -43.8873786407767,
+      "score": -28.45048543689319,
       "weight": 0.25,
-      "weighted_score": -10.971844660194176,
+      "weighted_score": -7.112621359223297,
       "details": {
-        "ai_job_growth_rate": -72.57281553398059,
+        "ai_job_growth_rate": -59.70873786407766,
         "avg_emerging_role_growth": 54.0,
-        "current_posting_count": 113,
+        "current_posting_count": 166,
         "previous_posting_count": 412
       }
     }
@@ -419,30 +419,24 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_202403.json",
-      "research_trends": "research_trends_202403.json",
-      "employment_stats": "employment_stats_202403.json",
-      "job_trends": "job_trends_202403.json"
+      "news_events": "workforce_events_202502.json",
+      "research_trends": "research_trends_202502.json",
+      "employment_stats": "employment_stats_202502.json",
+      "job_trends": "job_trends_202502.json"
     }
   },
   "history": [
     {
-      "date": "2024-01",
-      "value": 5.319636258142424,
+      "date": "2025-01",
+      "value": 7.954429831372316,
       "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:50.743649"
+      "timestamp": "2025-03-21T23:04:31.779340"
     },
     {
-      "date": "2024-02",
-      "value": 3.834010772516937,
+      "date": "2025-02",
+      "value": 7.7548829509261665,
       "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:54:56.501985"
-    },
-    {
-      "date": "2024-03",
-      "value": 4.784488865852172,
-      "interpretation": "Slight job creation from AI",
-      "timestamp": "2025-03-21T14:55:01.823009"
+      "timestamp": "2025-03-21T23:04:37.197927"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-03-21T14:55:01.823009",
-  "index_value": 4.784488865852172,
+  "timestamp": "2025-03-21T22:58:08.615893",
+  "index_value": 4.930119933813337,
   "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
@@ -124,13 +124,13 @@
       }
     },
     "job_trends": {
-      "score": -43.8873786407767,
+      "score": -43.30485436893204,
       "weight": 0.25,
-      "weighted_score": -10.971844660194176,
+      "weighted_score": -10.82621359223301,
       "details": {
-        "ai_job_growth_rate": -72.57281553398059,
+        "ai_job_growth_rate": -72.0873786407767,
         "avg_emerging_role_growth": 54.0,
-        "current_posting_count": 113,
+        "current_posting_count": 115,
         "previous_posting_count": 412
       }
     }
