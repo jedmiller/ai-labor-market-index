@@ -1,0 +1,27 @@
+name: Verify Index History
+
+on:
+  workflow_run:
+    workflows: ["Calculate Monthly Index"]
+    types: [completed]
+
+jobs:
+  verify-history:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Verify and update history
+        run: python scripts/history_manager.py update
+      - name: Commit changes
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'actions@github.com'
+          git add data/processed/
+          git commit -m "Verify and update history" || echo "No changes"
+          git push
