@@ -443,22 +443,25 @@ class IndexCalculator:
         history_file = os.path.join(self.output_dir, "index_history.json")
         
         try:
+            # Load existing history, ensuring we preserve it
             if os.path.exists(history_file):
                 with open(history_file, 'r') as f:
                     history = json.load(f)
+                    logger.info(f"Loaded existing history with {len(history.get('history', []))} entries")
             else:
                 history = {
+                    "generated_at": datetime.now().isoformat(),
                     "history": []
                 }
+                logger.info("No existing history found, creating new history")
             
-            # Format the date for this entry
+            # Format date for this entry
             if self.year and self.month:
                 date_str = f"{self.year}-{self.month:02d}"
             else:
-                # Extract from timestamp in ISO format
                 date_str = index["timestamp"].split("T")[0][:7]  # YYYY-MM
             
-            # Add or update entry
+            # Create new entry
             new_entry = {
                 "date": date_str,
                 "value": index["index_value"],
@@ -466,15 +469,17 @@ class IndexCalculator:
                 "timestamp": index["timestamp"]
             }
             
-            # Check if this date already exists in history
+            # Update or add entry for current month only
             found = False
-            for i, entry in enumerate(history["history"]):
+            for i, entry in enumerate(history.get("history", [])):
                 if entry.get("date") == date_str:
                     history["history"][i] = new_entry
                     found = True
                     break
             
             if not found:
+                if "history" not in history:
+                    history["history"] = []
                 history["history"].append(new_entry)
             
             # Sort by date
@@ -483,14 +488,13 @@ class IndexCalculator:
                 key=lambda x: x.get("date", "")
             )
             
-            # Save updated history
+            # Update generation timestamp and save
+            history["generated_at"] = datetime.now().isoformat()
             with open(history_file, 'w') as f:
                 json.dump(history, f, indent=2)
             
-            # Also add history to the index
+            # Critical fix: Add history to index AFTER sorting
             index["history"] = history["history"]
-            
-            logger.info(f"Updated index history at {history_file}")
             
         except Exception as e:
             logger.error(f"Error updating index history: {str(e)}")
