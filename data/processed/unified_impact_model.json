@@ -1,0 +1,125 @@
+{
+  "date_calculated": "2025-04-13T20:56:15.029500",
+  "impact_by_occupation": {
+    "Software Developers": {
+      "automation_rate": 29.333333333333336,
+      "augmentation_rate": 70.66666666666666,
+      "net_impact": 41.72082340932289,
+      "employment_change": -0.27220142905750255
+    },
+    "Data Scientists": {
+      "automation_rate": 25.333333333333332,
+      "augmentation_rate": 74.66666666666667,
+      "net_impact": 49.49904729499831,
+      "employment_change": -0.27220142905750255
+    },
+    "Financial Analysts": {
+      "automation_rate": 49.333333333333336,
+      "augmentation_rate": 50.666666666666664,
+      "net_impact": 1.3471122837877405,
+      "employment_change": 1.0334212840809147
+    },
+    "Content Writers": {
+      "automation_rate": 49.333333333333336,
+      "augmentation_rate": 50.666666666666664,
+      "net_impact": 1.5297039809458954,
+      "employment_change": -0.27220142905750255
+    },
+    "Customer Service Representatives": {
+      "automation_rate": 53.333333333333336,
+      "augmentation_rate": 46.666666666666664,
+      "net_impact": -6.6428486364177735,
+      "employment_change": -0.35727045373347627
+    },
+    "Graphic Designers": {
+      "automation_rate": 48.0,
+      "augmentation_rate": 52.0,
+      "net_impact": 3.9891119428376998,
+      "employment_change": -0.27220142905750255
+    },
+    "Marketing Specialists": {
+      "automation_rate": 58.66666666666667,
+      "augmentation_rate": 41.33333333333333,
+      "net_impact": -17.298153003554166,
+      "employment_change": 0.9508827128124453
+    },
+    "Human Resources Specialists": {
+      "automation_rate": 49.333333333333336,
+      "augmentation_rate": 50.666666666666664,
+      "net_impact": 1.3471122837877405,
+      "employment_change": 1.0334212840809147
+    },
+    "Accountants": {
+      "automation_rate": 52.0,
+      "augmentation_rate": 48.0,
+      "net_impact": -4.041336851363236,
+      "employment_change": 1.0334212840809147
+    },
+    "Legal Assistants": {
+      "automation_rate": 42.666666666666664,
+      "augmentation_rate": 57.333333333333336,
+      "net_impact": 14.614267000119096,
+      "employment_change": -0.35727045373347627
+    },
+    "Teachers": {
+      "automation_rate": 24.0,
+      "augmentation_rate": 76.0,
+      "net_impact": 53.83053946967388,
+      "employment_change": 3.5202682109113077
+    },
+    "Nurses": {
+      "automation_rate": 20.666666666666668,
+      "augmentation_rate": 79.33333333333333,
+      "net_impact": 60.731890683734626,
+      "employment_change": 3.5202682109113077
+    },
+    "Product Managers": {
+      "automation_rate": 41.333333333333336,
+      "augmentation_rate": 58.666666666666664,
+      "net_impact": 17.7714064546862,
+      "employment_change": -0.35727045373347627
+    },
+    "Sales Representatives": {
+      "automation_rate": 50.666666666666664,
+      "augmentation_rate": 49.333333333333336,
+      "net_impact": -1.246011769504161,
+      "employment_change": 0.9508827128124453
+    },
+    "Research Scientists": {
+      "automation_rate": 24.666666666666668,
+      "augmentation_rate": 75.33333333333333,
+      "net_impact": 50.48564963677503,
+      "employment_change": -0.35727045373347627
+    },
+    "Physicians": {
+      "automation_rate": 29.333333333333336,
+      "augmentation_rate": 70.66666666666666,
+      "net_impact": 42.788377527176664,
+      "employment_change": 3.5202682109113077
+    },
+    "Administrative Assistants": {
+      "automation_rate": 48.0,
+      "augmentation_rate": 52.0,
+      "net_impact": 3.985709181850661,
+      "employment_change": -0.35727045373347627
+    },
+    "Social Media Managers": {
+      "automation_rate": 42.666666666666664,
+      "augmentation_rate": 57.333333333333336,
+      "net_impact": 14.626743790404904,
+      "employment_change": -0.27220142905750255
+    },
+    "Mechanical Engineers": {
+      "automation_rate": 20.666666666666668,
+      "augmentation_rate": 79.33333333333333,
+      "net_impact": 58.65706800047636,
+      "employment_change": -0.35727045373347627
+    },
+    "Project Managers": {
+      "automation_rate": 58.66666666666667,
+      "augmentation_rate": 41.33333333333333,
+      "net_impact": -17.171406454686206,
+      "employment_change": -0.35727045373347627
+    }
+  }
+}

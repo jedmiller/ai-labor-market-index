@@ -30,13 +30,18 @@ GITHUB_BRANCH = "main"
 
 # File patterns to sync - now with year/month placeholders
 DATA_FILES = [
-    "data/processed/job_trends_{year}_{month:02d}_*.json",
-    "data/processed/employment_stats_{year}_{month:02d}_*.json",
-    "data/processed/research_trends_{year}_{month:02d}_*.json",
-    "data/processed/workforce_events_{year}_{month:02d}_*.json",
-    "data/processed/ai_jobs_{year}_{month:02d}_*.json",
-    "data/processed/news_{year}_{month:02d}_*.json",
-    "data/processed/arxiv_{year}_{month:02d}_*.json",
+    "data/processed/job_trends_{year}{month:02d}.json",
+    "data/processed/job_trends_{year}_{month:02d}.json",
+    "data/processed/employment_stats_{year}{month:02d}.json",
+    "data/processed/employment_stats_{year}_{month:02d}.json",
+    "data/processed/research_trends_{year}{month:02d}.json",
+    "data/processed/research_trends_{year}_{month:02d}.json",
+    "data/processed/workforce_events_{year}{month:02d}.json",
+    "data/processed/workforce_events_{year}_{month:02d}.json",
+    "data/processed/ai_labor_index_{year}{month:02d}.json",
+    "data/processed/ai_labor_index_{year}_{month:02d}.json",
+    "data/processed/ai_labor_index_latest.json",
+    "data/raw/anthropic_index/anthropic_index_{year}{month:02d}_*.json",
     "data/processed/index_history.json"
 ]
 
@@ -167,15 +172,35 @@ def collect_monthly_data(year, month):
         )
         logger.info(f"ArXiv collection output: {arxiv_result.stdout.strip()}")
         
-        # Collect job postings
-        logger.info("Running jobs collection...")
+        # Collect Anthropic Economic Index data (primary job trends source)
+        logger.info("Running Anthropic Economic Index collection...")
+        anthropic_cmd = ["python3", "scripts/collection/collect_anthropic_index.py", 
+                        f"--year={year}", f"--month={month}"]
+        anthropic_result = subprocess.run(
+            anthropic_cmd,
+            check=True, capture_output=True, text=True
+        )
+        logger.info(f"Anthropic Economic Index collection output: {anthropic_result.stdout.strip()}")
+        
+        # Process Anthropic Index data to generate job trends
+        logger.info("Processing Anthropic Economic Index data...")
+        process_anthropic_cmd = ["python3", "scripts/processing/process_anthropic_index.py", 
+                                f"--year={year}", f"--month={month}"]
+        process_anthropic_result = subprocess.run(
+            process_anthropic_cmd,
+            check=True, capture_output=True, text=True
+        )
+        logger.info(f"Anthropic Economic Index processing output: {process_anthropic_result.stdout.strip()}")
+        
+        # Collect job postings from legacy source (for backwards compatibility)
+        logger.info("Running legacy jobs collection (for backwards compatibility)...")
         jobs_cmd = ["python3", "scripts/collection/collect_jobs.py", 
                    f"--year={year}", f"--month={month}"]
         jobs_result = subprocess.run(
             jobs_cmd,
             check=True, capture_output=True, text=True
         )
-        logger.info(f"Jobs collection output: {jobs_result.stdout.strip()}")
+        logger.info(f"Legacy jobs collection output: {jobs_result.stdout.strip()}")
         
         logger.info(f"All data collection tasks completed for {year}-{month:02d}")
         return True

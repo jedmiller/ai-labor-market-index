@@ -1,0 +1,248 @@
+{
+  "date_analyzed": "2025-04-14T03:34:18.318382",
+  "industries": {
+    "Total Nonfarm": {
+      "current_employment": 157983.0,
+      "year_ago_employment": 156007.0,
+      "change": 1976.0,
+      "change_percentage": 1.2666098316101202,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "moderate_growth"
+    },
+    "Mining and Logging": {
+      "current_employment": 619.0,
+      "year_ago_employment": 623.0,
+      "change": -4.0,
+      "change_percentage": -0.6420545746388443,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "slight_decline"
+    },
+    "Construction": {
+      "current_employment": 7992.0,
+      "year_ago_employment": 7832.0,
+      "change": 160.0,
+      "change_percentage": 2.0429009193054135,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "moderate_growth"
+    },
+    "Manufacturing": {
+      "current_employment": 12711.0,
+      "year_ago_employment": 12800.0,
+      "change": -89.0,
+      "change_percentage": -0.6953125,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "slight_decline"
+    },
+    "Trade, Transportation, and Utilities": {
+      "current_employment": 28877.0,
+      "year_ago_employment": 28605.0,
+      "change": 272.0,
+      "change_percentage": 0.9508827128124453,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "ai_impact": {
+        "occupations": [
+          {
+            "occupation": "Marketing Specialists",
+            "automation_rate": 58.66666666666667,
+            "augmentation_rate": 41.33333333333333
+          },
+          {
+            "occupation": "Sales Representatives",
+            "automation_rate": 50.666666666666664,
+            "augmentation_rate": 49.333333333333336
+          }
+        ],
+        "average_automation_rate": 54.66666666666667,
+        "average_augmentation_rate": 45.33333333333333,
+        "automation_augmentation_ratio": 1.2058823529411766
+      },
+      "growth_category": "slow_growth"
+    },
+    "Information": {
+      "current_employment": 2931.0,
+      "year_ago_employment": 2939.0,
+      "change": -8.0,
+      "change_percentage": -0.27220142905750255,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "ai_impact": {
+        "occupations": [
+          {
+            "occupation": "Software Developers",
+            "automation_rate": 29.333333333333336,
+            "augmentation_rate": 70.66666666666666
+          },
+          {
+            "occupation": "Data Scientists",
+            "automation_rate": 25.333333333333332,
+            "augmentation_rate": 74.66666666666667
+          },
+          {
+            "occupation": "Content Writers",
+            "automation_rate": 49.333333333333336,
+            "augmentation_rate": 50.666666666666664
+          },
+          {
+            "occupation": "Graphic Designers",
+            "automation_rate": 48.0,
+            "augmentation_rate": 52.0
+          },
+          {
+            "occupation": "Social Media Managers",
+            "automation_rate": 42.666666666666664,
+            "augmentation_rate": 57.333333333333336
+          }
+        ],
+        "average_automation_rate": 38.93333333333333,
+        "average_augmentation_rate": 61.06666666666666,
+        "automation_augmentation_ratio": 0.6375545851528384
+      },
+      "growth_category": "slight_decline"
+    },
+    "Financial Activities": {
+      "current_employment": 9190.0,
+      "year_ago_employment": 9096.0,
+      "change": 94.0,
+      "change_percentage": 1.0334212840809147,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "ai_impact": {
+        "occupations": [
+          {
+            "occupation": "Financial Analysts",
+            "automation_rate": 49.333333333333336,
+            "augmentation_rate": 50.666666666666664
+          },
+          {
+            "occupation": "Human Resources Specialists",
+            "automation_rate": 49.333333333333336,
+            "augmentation_rate": 50.666666666666664
+          },
+          {
+            "occupation": "Accountants",
+            "automation_rate": 52.0,
+            "augmentation_rate": 48.0
+          }
+        ],
+        "average_automation_rate": 50.22222222222223,
+        "average_augmentation_rate": 49.77777777777777,
+        "automation_augmentation_ratio": 1.0089285714285716
+      },
+      "growth_category": "moderate_growth"
+    },
+    "Professional and Business Services": {
+      "current_employment": 22312.0,
+      "year_ago_employment": 22392.0,
+      "change": -80.0,
+      "change_percentage": -0.35727045373347627,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "ai_impact": {
+        "occupations": [
+          {
+            "occupation": "Customer Service Representatives",
+            "automation_rate": 53.333333333333336,
+            "augmentation_rate": 46.666666666666664
+          },
+          {
+            "occupation": "Legal Assistants",
+            "automation_rate": 42.666666666666664,
+            "augmentation_rate": 57.333333333333336
+          },
+          {
+            "occupation": "Product Managers",
+            "automation_rate": 41.333333333333336,
+            "augmentation_rate": 58.666666666666664
+          },
+          {
+            "occupation": "Research Scientists",
+            "automation_rate": 24.666666666666668,
+            "augmentation_rate": 75.33333333333333
+          },
+          {
+            "occupation": "Administrative Assistants",
+            "automation_rate": 48.0,
+            "augmentation_rate": 52.0
+          },
+          {
+            "occupation": "Mechanical Engineers",
+            "automation_rate": 20.666666666666668,
+            "augmentation_rate": 79.33333333333333
+          },
+          {
+            "occupation": "Project Managers",
+            "automation_rate": 58.66666666666667,
+            "augmentation_rate": 41.33333333333333
+          }
+        ],
+        "average_automation_rate": 41.33333333333333,
+        "average_augmentation_rate": 58.666666666666664,
+        "automation_augmentation_ratio": 0.7045454545454545
+      },
+      "growth_category": "slight_decline"
+    },
+    "Education and Health Services": {
+      "current_employment": 27172.0,
+      "year_ago_employment": 26248.0,
+      "change": 924.0,
+      "change_percentage": 3.5202682109113077,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "ai_impact": {
+        "occupations": [
+          {
+            "occupation": "Teachers",
+            "automation_rate": 24.0,
+            "augmentation_rate": 76.0
+          },
+          {
+            "occupation": "Nurses",
+            "automation_rate": 20.666666666666668,
+            "augmentation_rate": 79.33333333333333
+          },
+          {
+            "occupation": "Physicians",
+            "automation_rate": 29.333333333333336,
+            "augmentation_rate": 70.66666666666666
+          }
+        ],
+        "average_automation_rate": 24.666666666666668,
+        "average_augmentation_rate": 75.33333333333333,
+        "automation_augmentation_ratio": 0.3274336283185841
+      },
+      "growth_category": "rapid_growth"
+    },
+    "Leisure and Hospitality": {
+      "current_employment": 16363.0,
+      "year_ago_employment": 16116.0,
+      "change": 247.0,
+      "change_percentage": 1.532638371804418,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "moderate_growth"
+    },
+    "Other Services": {
+      "current_employment": 5965.0,
+      "year_ago_employment": 5869.0,
+      "change": 96.0,
+      "change_percentage": 1.6357130686658716,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "moderate_growth"
+    },
+    "Government": {
+      "current_employment": 23851.0,
+      "year_ago_employment": 23487.0,
+      "change": 364.0,
+      "change_percentage": 1.5497935027887768,
+      "current_period": "2025-M02",
+      "year_ago_period": "2024-M02",
+      "growth_category": "moderate_growth"
+    }
+  }
+}

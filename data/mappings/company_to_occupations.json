@@ -1,0 +1,694 @@
+{
+  "Google": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    }
+  },
+  "Meta": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Content Writers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Microsoft": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Amazon": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Apple": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Graphic Designers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Tesla": {
+    "Mechanical Engineers": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Netflix": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Content Writers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "IBM": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Intel": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Mechanical Engineers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Salesforce": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    }
+  },
+  "Oracle": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    }
+  },
+  "Adobe": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Graphic Designers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Twitter": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Content Writers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    }
+  },
+  "LinkedIn": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Cisco": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    }
+  },
+  "HP": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Mechanical Engineers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "JPMorgan Chase": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Bank of America": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Accountants": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Wells Fargo": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Accountants": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Citigroup": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Accountants": {
+      "relevance": "secondary",
+      "ai_impact": "high"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Goldman Sachs": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Morgan Stanley": {
+    "Financial Analysts": {
+      "relevance": "primary",
+      "ai_impact": "high"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "UnitedHealth Group": {
+    "Nurses": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Physicians": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Software Developers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "CVS Health": {
+    "Pharmacists": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Sales Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Johnson & Johnson": {
+    "Research Scientists": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Physicians": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Pfizer": {
+    "Research Scientists": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Merck": {
+    "Research Scientists": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Novartis": {
+    "Research Scientists": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Data Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "University": {
+    "Teachers": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Research Scientists": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "College": {
+    "Teachers": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "School": {
+    "Teachers": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Social Media Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Walmart": {
+    "Sales Representatives": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Target": {
+    "Sales Representatives": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Costco": {
+    "Sales Representatives": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Administrative Assistants": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    }
+  },
+  "Home Depot": {
+    "Sales Representatives": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Lowe's": {
+    "Sales Representatives": {
+      "relevance": "primary",
+      "ai_impact": "low"
+    },
+    "Customer Service Representatives": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "Big": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  },
+  "India": {
+    "Software Developers": {
+      "relevance": "primary",
+      "ai_impact": "medium"
+    },
+    "Product Managers": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Marketing Specialists": {
+      "relevance": "secondary",
+      "ai_impact": "medium"
+    },
+    "Project Managers": {
+      "relevance": "secondary",
+      "ai_impact": "low"
+    }
+  }
+}

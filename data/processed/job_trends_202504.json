@@ -1,0 +1,315 @@
+{
+  "date_analyzed": "2025-04-13T20:44:17.340128",
+  "source": "Anthropic Economic Index",
+  "is_simulated_data": false,
+  "statistics": {
+    "total_occupations_analyzed": 20,
+    "average_automation_rate": 40.89999999999999,
+    "average_augmentation_rate": 59.09999999999999,
+    "automation_augmentation_ratio": 0.6920473773265652
+  },
+  "categories": {
+    "data": [
+      {
+        "category": "Management",
+        "count": 16640
+      },
+      {
+        "category": "Business and Financial Operations",
+        "count": 23680
+      },
+      {
+        "category": "Computer and Mathematical",
+        "count": 28000
+      },
+      {
+        "category": "Architecture and Engineering",
+        "count": 17760
+      },
+      {
+        "category": "Life, Physical, and Social Science",
+        "count": 9120
+      },
+      {
+        "category": "Community and Social Service",
+        "count": 9240
+      },
+      {
+        "category": "Legal",
+        "count": 11840
+      },
+      {
+        "category": "Educational Instruction and Library",
+        "count": 13020
+      },
+      {
+        "category": "Arts, Design, Entertainment, Sports, and Media",
+        "count": 8000
+      },
+      {
+        "category": "Healthcare Practitioners and Technical",
+        "count": 22300
+      },
+      {
+        "category": "Healthcare Support",
+        "count": 22100
+      },
+      {
+        "category": "Protective Service",
+        "count": 8240
+      },
+      {
+        "category": "Food Preparation and Serving Related",
+        "count": 9640
+      },
+      {
+        "category": "Building and Grounds Cleaning and Maintenance",
+        "count": 10240
+      },
+      {
+        "category": "Personal Care and Service",
+        "count": 11360
+      },
+      {
+        "category": "Sales and Related",
+        "count": 8520
+      },
+      {
+        "category": "Office and Administrative Support",
+        "count": 8520
+      },
+      {
+        "category": "Farming, Fishing, and Forestry",
+        "count": 10120
+      },
+      {
+        "category": "Construction and Extraction",
+        "count": 9560
+      },
+      {
+        "category": "Installation, Maintenance, and Repair",
+        "count": 8960
+      },
+      {
+        "category": "Production",
+        "count": 11040
+      },
+      {
+        "category": "Transportation and Material Moving",
+        "count": 11040
+      },
+      {
+        "category": "Military Specific",
+        "count": 8880
+      }
+    ]
+  },
+  "top_augmented_roles": [
+    {
+      "title": "Nurses",
+      "augmentation_rate": 79.33333333333333
+    },
+    {
+      "title": "Mechanical Engineers",
+      "augmentation_rate": 79.33333333333333
+    },
+    {
+      "title": "Teachers",
+      "augmentation_rate": 76.0
+    },
+    {
+      "title": "Research Scientists",
+      "augmentation_rate": 75.33333333333333
+    },
+    {
+      "title": "Data Scientists",
+      "augmentation_rate": 74.66666666666667
+    },
+    {
+      "title": "Software Developers",
+      "augmentation_rate": 70.66666666666666
+    },
+    {
+      "title": "Physicians",
+      "augmentation_rate": 70.66666666666666
+    },
+    {
+      "title": "Product Managers",
+      "augmentation_rate": 58.666666666666664
+    },
+    {
+      "title": "Legal Assistants",
+      "augmentation_rate": 57.333333333333336
+    },
+    {
+      "title": "Social Media Managers",
+      "augmentation_rate": 57.333333333333336
+    }
+  ],
+  "top_automated_roles": [
+    {
+      "title": "Marketing Specialists",
+      "automation_rate": 58.66666666666667
+    },
+    {
+      "title": "Project Managers",
+      "automation_rate": 58.66666666666667
+    },
+    {
+      "title": "Customer Service Representatives",
+      "automation_rate": 53.333333333333336
+    },
+    {
+      "title": "Accountants",
+      "automation_rate": 52.0
+    },
+    {
+      "title": "Sales Representatives",
+      "automation_rate": 50.666666666666664
+    },
+    {
+      "title": "Financial Analysts",
+      "automation_rate": 49.333333333333336
+    },
+    {
+      "title": "Content Writers",
+      "automation_rate": 49.333333333333336
+    },
+    {
+      "title": "Human Resources Specialists",
+      "automation_rate": 49.333333333333336
+    },
+    {
+      "title": "Graphic Designers",
+      "automation_rate": 48.0
+    },
+    {
+      "title": "Administrative Assistants",
+      "automation_rate": 48.0
+    }
+  ],
+  "top_tasks": [
+    {
+      "task": "modify existing software to correct errors, to adapt it to new hardware, or to upgrade interfaces and improve performance.",
+      "count": 66507
+    },
+    {
+      "task": "diagnose, troubleshoot, and resolve hardware, software, or other network and system problems, and replace defective components when necessary.",
+      "count": 28159
+    },
+    {
+      "task": "modify existing software to correct errors, allow it to adapt to new hardware, or to improve its performance.",
+      "count": 26786
+    },
+    {
+      "task": "correct errors by making appropriate changes and rechecking the program to ensure that the desired results are produced.",
+      "count": 24551
+    },
+    {
+      "task": "write, update, and maintain computer programs or software packages to handle specific jobs such as tracking inventory, storing or retrieving data, or controlling other equipment.",
+      "count": 23979
+    },
+    {
+      "task": "design, build, or maintain web sites, using authoring or scripting languages, content creation tools, management tools, and digital media.",
+      "count": 23617
+    },
+    {
+      "task": "write, analyze, review, and rewrite programs, using workflow chart and diagram, and applying knowledge of computer capabilities, subject matter, and symbolic logic.",
+      "count": 21901
+    },
+    {
+      "task": "none",
+      "count": 17816
+    },
+    {
+      "task": "write original or adapted material for dramas, comedies, puppet shows, narration, or other performances.",
+      "count": 8925
+    },
+    {
+      "task": "review class material with students by discussing text, working solutions to problems, or reviewing worksheets or other assignments.",
+      "count": 8740
+    },
+    {
+      "task": "determine sources of web page or server problems, and take action to correct such problems.",
+      "count": 8577
+    },
+    {
+      "task": "develop or apply data mining and machine learning algorithms.",
+      "count": 7919
+    },
+    {
+      "task": "select and edit documents for publication and display, applying knowledge of subject, literary expression, and presentation techniques.",
+      "count": 7805
+    },
+    {
+      "task": "conduct logical analyses of business, scientific, engineering, and other technical problems, formulating mathematical models of problems for solution by computers.",
+      "count": 7552
+    },
+    {
+      "task": "prepare, rewrite and edit copy to improve readability, or supervise others who do this work.",
+      "count": 7391
+    }
+  ],
+  "top_skills": [
+    {
+      "skill": "Programming",
+      "count": 358000
+    },
+    {
+      "skill": "Analysis",
+      "count": 236500
+    },
+    {
+      "skill": "Design",
+      "count": 112000
+    },
+    {
+      "skill": "Research",
+      "count": 99500
+    },
+    {
+      "skill": "Writing",
+      "count": 85500
+    },
+    {
+      "skill": "Sales",
+      "count": 26000
+    },
+    {
+      "skill": "Engineering",
+      "count": 24000
+    },
+    {
+      "skill": "Marketing",
+      "count": 19500
+    },
+    {
+      "skill": "Communication",
+      "count": 10500
+    },
+    {
+      "skill": "Administrative",
+      "count": 10000
+    },
+    {
+      "skill": "Teaching",
+      "count": 9500
+    },
+    {
+      "skill": "Editing",
+      "count": 4000
+    },
+    {
+      "skill": "Customer Service",
+      "count": 3500
+    },
+    {
+      "skill": "Data Analysis",
+      "count": 2000
+    },
+    {
+      "skill": "Healthcare",
+      "count": 1500
+    }
+  ]
+}

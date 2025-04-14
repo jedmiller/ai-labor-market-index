@@ -1,0 +1,99 @@
+{
+  "dataset": "occupation_categories",
+  "date_collected": "2025-04-13T20:03:12.253704",
+  "target_period": null,
+  "data": {
+    "Management": {
+      "count": 18720,
+      "description": "Occupations in Management"
+    },
+    "Business and Financial Operations": {
+      "count": 21760,
+      "description": "Occupations in Business and Financial Operations"
+    },
+    "Computer and Mathematical": {
+      "count": 39200,
+      "description": "Occupations in Computer and Mathematical"
+    },
+    "Architecture and Engineering": {
+      "count": 13140,
+      "description": "Occupations in Architecture and Engineering"
+    },
+    "Life, Physical, and Social Science": {
+      "count": 9920,
+      "description": "Occupations in Life, Physical, and Social Science"
+    },
+    "Community and Social Service": {
+      "count": 11920,
+      "description": "Occupations in Community and Social Service"
+    },
+    "Legal": {
+      "count": 8880,
+      "description": "Occupations in Legal"
+    },
+    "Educational Instruction and Library": {
+      "count": 14820,
+      "description": "Occupations in Educational Instruction and Library"
+    },
+    "Arts, Design, Entertainment, Sports, and Media": {
+      "count": 10400,
+      "description": "Occupations in Arts, Design, Entertainment, Sports, and Media"
+    },
+    "Healthcare Practitioners and Technical": {
+      "count": 28700,
+      "description": "Occupations in Healthcare Practitioners and Technical"
+    },
+    "Healthcare Support": {
+      "count": 23100,
+      "description": "Occupations in Healthcare Support"
+    },
+    "Protective Service": {
+      "count": 9160,
+      "description": "Occupations in Protective Service"
+    },
+    "Food Preparation and Serving Related": {
+      "count": 10600,
+      "description": "Occupations in Food Preparation and Serving Related"
+    },
+    "Building and Grounds Cleaning and Maintenance": {
+      "count": 10080,
+      "description": "Occupations in Building and Grounds Cleaning and Maintenance"
+    },
+    "Personal Care and Service": {
+      "count": 8560,
+      "description": "Occupations in Personal Care and Service"
+    },
+    "Sales and Related": {
+      "count": 10560,
+      "description": "Occupations in Sales and Related"
+    },
+    "Office and Administrative Support": {
+      "count": 11600,
+      "description": "Occupations in Office and Administrative Support"
+    },
+    "Farming, Fishing, and Forestry": {
+      "count": 10680,
+      "description": "Occupations in Farming, Fishing, and Forestry"
+    },
+    "Construction and Extraction": {
+      "count": 11320,
+      "description": "Occupations in Construction and Extraction"
+    },
+    "Installation, Maintenance, and Repair": {
+      "count": 11920,
+      "description": "Occupations in Installation, Maintenance, and Repair"
+    },
+    "Production": {
+      "count": 9600,
+      "description": "Occupations in Production"
+    },
+    "Transportation and Material Moving": {
+      "count": 9240,
+      "description": "Occupations in Transportation and Material Moving"
+    },
+    "Military Specific": {
+      "count": 8840,
+      "description": "Occupations in Military Specific"
+    }
+  }
+}
