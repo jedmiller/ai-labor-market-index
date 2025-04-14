@@ -1,4 +1,9 @@
 # scripts/collection/collect_jobs.py
+# 
+# DEPRECATED: This module is maintained for backwards compatibility but is no longer 
+# the primary data source for job trends. The Anthropic Economic Index 
+# (see collect_anthropic_index.py) is now used as the primary source for job market data.
+#
 import json
 import logging
 import os
