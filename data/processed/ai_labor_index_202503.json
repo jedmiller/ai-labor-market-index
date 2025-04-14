@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-03-28T23:11:19.798664",
-  "index_value": 7.7548829509261665,
+  "timestamp": "2025-04-13T04:05:42.760628",
+  "index_value": 7.632990449117223,
   "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
@@ -55,70 +55,70 @@
       }
     },
     "research_trends": {
-      "score": 1.3157894736842053,
+      "score": 9.523809523809533,
       "weight": 0.1,
-      "weighted_score": 0.13157894736842055,
+      "weighted_score": 0.9523809523809533,
       "details": {
-        "paper_count": 150,
-        "positive_sentiment": 50.6578947368421
+        "paper_count": 400,
+        "positive_sentiment": 54.761904761904766
       }
     },
     "employment_stats": {
-      "score": 19.217187106706046,
+      "score": 16.074872083967794,
       "weight": 0.3,
-      "weighted_score": 5.765156132011813,
+      "weighted_score": 4.822461625190338,
       "details": {
-        "avg_weighted_change": 0.7686874842682418,
+        "avg_weighted_change": 0.6429948833587118,
         "growing_industries": [
           [
             "Education and Health Services",
-            3.5202682109113077
+            3.4453941120607787
           ],
           [
             "Construction",
-            2.0429009193054135
+            1.7634462778687494
           ],
           [
             "Other Services",
-            1.6357130686658716
+            1.5410668924640136
           ],
           [
             "Government",
-            1.5497935027887768
+            1.2872083668543846
           ],
           [
             "Leisure and Hospitality",
-            1.532638371804418
+            1.2834616795012834
           ],
           [
             "Total Nonfarm",
-            1.2666098316101202
-          ],
-          [
-            "Financial Activities",
-            1.0334212840809147
+            1.209358159017189
           ],
           [
             "Trade, Transportation, and Utilities",
-            0.9508827128124453
+            1.037953449360453
+          ],
+          [
+            "Financial Activities",
+            1.0336485594897735
           ]
         ],
         "declining_industries": [
           [
-            "Manufacturing",
-            -0.6953125
-          ],
-          [
             "Mining and Logging",
-            -0.6420545746388443
+            -1.9047619047619049
           ],
           [
-            "Professional and Business Services",
-            -0.35727045373347627
+            "Manufacturing",
+            -0.6254886630179828
           ],
           [
             "Information",
-            -0.27220142905750255
+            -0.6122448979591837
+          ],
+          [
+            "Professional and Business Services",
+            -0.17413823897124486
           ]
         ]
       }
@@ -419,10 +419,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_202502.json",
-      "research_trends": "research_trends_202502.json",
-      "employment_stats": "employment_stats_202502.json",
-      "job_trends": "job_trends_202502.json"
+      "news_events": "workforce_events_202503.json",
+      "research_trends": "research_trends_202503.json",
+      "employment_stats": "employment_stats_202503.json",
+      "job_trends": "job_trends_202503.json"
     }
   }
 }
