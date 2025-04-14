@@ -3,3 +3,4 @@ beautifulsoup4==4.12.2
 pandas==2.0.0
 numpy==1.24.3
 nltk==3.8.1
+huggingface_hub==0.19.4

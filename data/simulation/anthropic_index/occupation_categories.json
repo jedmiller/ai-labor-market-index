@@ -1,0 +1,34 @@
+{
+  "Business": {
+    "count": 27850,
+    "description": "Business roles including management, finance, and administrative positions"
+  },
+  "Technology": {
+    "count": 35620,
+    "description": "Technical roles in software, hardware, and IT infrastructure"
+  },
+  "Healthcare": {
+    "count": 18370,
+    "description": "Healthcare roles including medical practitioners and support staff"
+  },
+  "Education": {
+    "count": 12450,
+    "description": "Education roles including teaching and academic positions"
+  },
+  "Creative": {
+    "count": 9240,
+    "description": "Creative roles in design, writing, and arts"
+  },
+  "Service": {
+    "count": 14920,
+    "description": "Service roles in customer service, retail, and hospitality"
+  },
+  "Manufacturing": {
+    "count": 8130,
+    "description": "Manufacturing roles in production and assembly"
+  },
+  "Legal": {
+    "count": 6750,
+    "description": "Legal roles including attorneys and legal support"
+  }
+}

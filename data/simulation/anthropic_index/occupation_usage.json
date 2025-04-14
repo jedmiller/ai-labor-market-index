@@ -1,0 +1,102 @@
+{
+  "Software Developers": {
+    "count": 8250,
+    "usage_score": 85,
+    "tasks": ["code generation", "debugging", "code explanation", "requirements analysis"]
+  },
+  "Data Scientists": {
+    "count": 7640,
+    "usage_score": 88,
+    "tasks": ["data analysis", "model building", "data visualization", "insights generation"]
+  },
+  "Financial Analysts": {
+    "count": 6320,
+    "usage_score": 72,
+    "tasks": ["financial modeling", "report creation", "trend analysis", "forecasting"]
+  },
+  "Content Writers": {
+    "count": 5980,
+    "usage_score": 83,
+    "tasks": ["content creation", "editing", "research", "ideation"]
+  },
+  "Customer Service Representatives": {
+    "count": 5420,
+    "usage_score": 65,
+    "tasks": ["query resolution", "information retrieval", "email drafting", "documentation"]
+  },
+  "Graphic Designers": {
+    "count": 4820,
+    "usage_score": 70,
+    "tasks": ["design ideation", "prompt engineering", "layout assistance", "style guidance"]
+  },
+  "Marketing Specialists": {
+    "count": 5680,
+    "usage_score": 76,
+    "tasks": ["campaign planning", "content strategy", "market analysis", "copywriting"]
+  },
+  "Human Resources Specialists": {
+    "count": 4380,
+    "usage_score": 68,
+    "tasks": ["job description creation", "policy drafting", "interview question generation", "onboarding material creation"]
+  },
+  "Accountants": {
+    "count": 4750,
+    "usage_score": 62,
+    "tasks": ["financial statement preparation", "tax analysis", "audit preparation", "reconciliation"]
+  },
+  "Legal Assistants": {
+    "count": 3950,
+    "usage_score": 74,
+    "tasks": ["document drafting", "legal research", "case summarization", "citation checking"]
+  },
+  "Teachers": {
+    "count": 6280,
+    "usage_score": 77,
+    "tasks": ["lesson planning", "educational content creation", "assessment design", "personalized learning"]
+  },
+  "Nurses": {
+    "count": 4120,
+    "usage_score": 58,
+    "tasks": ["documentation", "patient education material", "protocol research", "continuous education"]
+  },
+  "Product Managers": {
+    "count": 5240,
+    "usage_score": 80,
+    "tasks": ["requirement documentation", "market research", "feature prioritization", "product roadmapping"]
+  },
+  "Sales Representatives": {
+    "count": 5860,
+    "usage_score": 71,
+    "tasks": ["pitch creation", "email drafting", "proposal development", "competitor analysis"]
+  },
+  "Research Scientists": {
+    "count": 4950,
+    "usage_score": 84,
+    "tasks": ["literature review", "experimental design", "data analysis", "paper drafting"]
+  },
+  "Physicians": {
+    "count": 3780,
+    "usage_score": 63,
+    "tasks": ["research review", "documentation", "treatment planning", "continuing education"]
+  },
+  "Administrative Assistants": {
+    "count": 5120,
+    "usage_score": 69,
+    "tasks": ["email drafting", "scheduling", "document preparation", "information organization"]
+  },
+  "Social Media Managers": {
+    "count": 4840,
+    "usage_score": 82,
+    "tasks": ["content creation", "campaign planning", "trend analysis", "audience engagement"]
+  },
+  "Mechanical Engineers": {
+    "count": 4250,
+    "usage_score": 73,
+    "tasks": ["design specifications", "documentation", "problem solving", "process optimization"]
+  },
+  "Project Managers": {
+    "count": 5580,
+    "usage_score": 79,
+    "tasks": ["planning documentation", "status reporting", "risk assessment", "team coordination"]
+  }
+}

@@ -159,6 +159,11 @@ class IndexCalculator:
             logger.warning("No job trends data available")
             return 0, {"error": "No data available"}
         
+        # Check if this is Anthropic Economic Index data
+        if job_data.get("source") == "Anthropic Economic Index":
+            return self.calculate_anthropic_index_score(job_data)
+        
+        # Original logic for Remotive API data
         ai_postings = job_data.get("ai_related_postings", [])
         
         if not ai_postings or len(ai_postings) < 2:
@@ -191,6 +196,66 @@ class IndexCalculator:
             "avg_emerging_role_growth": avg_role_growth,
             "current_posting_count": current,
             "previous_posting_count": previous
+        }
+    
+    def calculate_anthropic_index_score(self, job_data):
+        """Calculate score from Anthropic Economic Index data."""
+        if not job_data or "statistics" not in job_data:
+            logger.warning("No Anthropic Index statistics available")
+            return 0, {"error": "No Anthropic data available"}
+            
+        # Check if data is simulated
+        is_simulated = job_data.get("is_simulated_data", False)
+        
+        # Extract key metrics from the Anthropic data
+        statistics = job_data.get("statistics", {})
+        avg_augmentation = statistics.get("average_augmentation_rate", 0)
+        avg_automation = statistics.get("average_automation_rate", 0)
+        ratio = statistics.get("automation_augmentation_ratio", 1)
+        
+        # Extract top roles data
+        top_augmented = job_data.get("top_augmented_roles", [])
+        top_automated = job_data.get("top_automated_roles", [])
+        
+        # Calculate augmentation impact (positive factor)
+        augmentation_score = avg_augmentation * 1.5  # Scale to appropriate range
+        
+        # Calculate automation impact (negative factor)
+        automation_score = -avg_automation  # Negative impact
+        
+        # Calculate role diversity impact
+        role_diversity = len(top_augmented) + len(top_automated)
+        diversity_factor = min(role_diversity / 10, 1.0)  # Cap at 1.0
+        
+        # Combined score calculation
+        # Higher augmentation and lower automation ratio = more positive score
+        combined_score = (augmentation_score * 0.6) + (automation_score * 0.4)
+        
+        # Adjust for healthy automation/augmentation ratio
+        if ratio < 1:  # More augmentation than automation
+            ratio_bonus = (1 - ratio) * 20  # Bonus for more augmentation
+        else:
+            ratio_bonus = -(ratio - 1) * 10  # Penalty for more automation
+            
+        combined_score += ratio_bonus
+        
+        # Apply diversity factor
+        combined_score *= (0.8 + (0.2 * diversity_factor))
+        
+        # Normalize to -100 to +100 scale
+        normalized_score = np.clip(combined_score * 1.5, -100, 100)  # Scale and clip
+        
+        logger.info(f"Anthropic Index Score: Aug={avg_augmentation:.2f}, Auto={avg_automation:.2f}, Ratio={ratio:.2f}")
+        logger.info(f"Combined score: {combined_score:.2f}, Normalized: {normalized_score:.2f}")
+        
+        return normalized_score, {
+            "augmentation_rate": avg_augmentation,
+            "automation_rate": avg_automation,
+            "automation_augmentation_ratio": ratio,
+            "top_augmented_roles_count": len(top_augmented),
+            "top_automated_roles_count": len(top_automated),
+            "source": "Anthropic Economic Index",
+            "is_simulated_data": is_simulated
         }
     
     def calculate_research_trends_score(self, research_data):

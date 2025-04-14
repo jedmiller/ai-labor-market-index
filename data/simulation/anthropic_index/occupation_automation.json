@@ -1,0 +1,102 @@
+{
+  "Software Developers": {
+    "automation_rate": 32,
+    "augmentation_rate": 68,
+    "description": "Develop applications and systems using programming languages"
+  },
+  "Data Scientists": {
+    "automation_rate": 28,
+    "augmentation_rate": 72,
+    "description": "Analyze and interpret complex data to inform business decisions"
+  },
+  "Financial Analysts": {
+    "automation_rate": 45,
+    "augmentation_rate": 55,
+    "description": "Analyze financial data and make recommendations"
+  },
+  "Content Writers": {
+    "automation_rate": 52,
+    "augmentation_rate": 48,
+    "description": "Create written content for various platforms"
+  },
+  "Customer Service Representatives": {
+    "automation_rate": 58,
+    "augmentation_rate": 42,
+    "description": "Assist customers with inquiries and resolve issues"
+  },
+  "Graphic Designers": {
+    "automation_rate": 34,
+    "augmentation_rate": 66,
+    "description": "Create visual concepts for various media"
+  },
+  "Marketing Specialists": {
+    "automation_rate": 41,
+    "augmentation_rate": 59,
+    "description": "Develop and implement marketing strategies"
+  },
+  "Human Resources Specialists": {
+    "automation_rate": 47,
+    "augmentation_rate": 53,
+    "description": "Manage employee relations and recruitment"
+  },
+  "Accountants": {
+    "automation_rate": 55,
+    "augmentation_rate": 45,
+    "description": "Prepare and examine financial records"
+  },
+  "Legal Assistants": {
+    "automation_rate": 49,
+    "augmentation_rate": 51,
+    "description": "Support lawyers with research and documentation"
+  },
+  "Teachers": {
+    "automation_rate": 29,
+    "augmentation_rate": 71,
+    "description": "Provide instruction and guidance to students"
+  },
+  "Nurses": {
+    "automation_rate": 18,
+    "augmentation_rate": 82,
+    "description": "Provide patient care and support"
+  },
+  "Product Managers": {
+    "automation_rate": 31,
+    "augmentation_rate": 69,
+    "description": "Oversee product development and strategy"
+  },
+  "Sales Representatives": {
+    "automation_rate": 42,
+    "augmentation_rate": 58,
+    "description": "Sell products and services to customers"
+  },
+  "Research Scientists": {
+    "automation_rate": 24,
+    "augmentation_rate": 76,
+    "description": "Conduct research to advance knowledge in a field"
+  },
+  "Physicians": {
+    "automation_rate": 22,
+    "augmentation_rate": 78,
+    "description": "Diagnose and treat patients"
+  },
+  "Administrative Assistants": {
+    "automation_rate": 62,
+    "augmentation_rate": 38,
+    "description": "Provide administrative support to individuals or teams"
+  },
+  "Social Media Managers": {
+    "automation_rate": 38,
+    "augmentation_rate": 62,
+    "description": "Manage organization's presence on social media platforms"
+  },
+  "Mechanical Engineers": {
+    "automation_rate": 33,
+    "augmentation_rate": 67,
+    "description": "Design and develop mechanical systems"
+  },
+  "Project Managers": {
+    "automation_rate": 36,
+    "augmentation_rate": 64,
+    "description": "Plan, execute, and close projects"
+  }
+}
