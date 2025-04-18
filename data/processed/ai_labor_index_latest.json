@@ -1,48 +1,402 @@
 {
-  "timestamp": "2025-04-13T20:44:25.393392",
-  "index_value": 16.120894670050756,
+  "timestamp": "2025-04-17T04:33:40.435265",
+  "index_value": 8.575684955938698,
   "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
-      "score": 0,
+      "score": 25.630769230769232,
       "weight": 0.35,
-      "weighted_score": 0.0,
+      "weighted_score": 8.97076923076923,
       "details": {
-        "error": "No data available"
+        "count": 26,
+        "event_counts": {
+          "layoff": 9,
+          "hiring": 17,
+          "restructuring": 0,
+          "reskilling": 0
+        },
+        "ai_relation_counts": {
+          "Direct": 13,
+          "Indirect": 4,
+          "None": 9
+        },
+        "top_positive_companies": [
+          [
+            "Unknown",
+            32.72
+          ],
+          [
+            "Intel",
+            0.24000000000000002
+          ],
+          [
+            "Meta",
+            0.2
+          ],
+          [
+            "India",
+            0.1
+          ],
+          [
+            "Google",
+            0.1
+          ]
+        ],
+        "top_negative_companies": [
+          [
+            "Big",
+            -0.12
+          ],
+          [
+            "Tesla",
+            -0.020000000000000004
+          ]
+        ]
       }
     },
     "research_trends": {
-      "score": 0,
+      "score": 9.523809523809533,
       "weight": 0.1,
-      "weighted_score": 0.0,
+      "weighted_score": 0.9523809523809533,
       "details": {
-        "error": "No data available"
+        "paper_count": 400,
+        "positive_sentiment": 54.761904761904766
       }
     },
     "employment_stats": {
-      "score": 0,
+      "score": 19.217187106706046,
       "weight": 0.3,
-      "weighted_score": 0.0,
+      "weighted_score": 5.765156132011813,
       "details": {
-        "error": "No data available"
+        "avg_weighted_change": 0.7686874842682418,
+        "growing_industries": [
+          [
+            "Education and Health Services",
+            3.5202682109113077
+          ],
+          [
+            "Construction",
+            2.0429009193054135
+          ],
+          [
+            "Other Services",
+            1.6357130686658716
+          ],
+          [
+            "Government",
+            1.5497935027887768
+          ],
+          [
+            "Leisure and Hospitality",
+            1.532638371804418
+          ],
+          [
+            "Total Nonfarm",
+            1.2666098316101202
+          ],
+          [
+            "Financial Activities",
+            1.0334212840809147
+          ],
+          [
+            "Trade, Transportation, and Utilities",
+            0.9508827128124453
+          ]
+        ],
+        "declining_industries": [
+          [
+            "Manufacturing",
+            -0.6953125
+          ],
+          [
+            "Mining and Logging",
+            -0.6420545746388443
+          ],
+          [
+            "Professional and Business Services",
+            -0.35727045373347627
+          ],
+          [
+            "Information",
+            -0.27220142905750255
+          ]
+        ]
       }
     },
     "job_trends": {
-      "score": 64.48357868020302,
+      "score": -28.45048543689319,
       "weight": 0.25,
-      "weighted_score": 16.120894670050756,
+      "weighted_score": -7.112621359223297,
       "details": {
-        "augmentation_rate": 59.09999999999999,
-        "automation_rate": 40.89999999999999,
-        "automation_augmentation_ratio": 0.6920473773265652,
-        "top_augmented_roles_count": 10,
-        "top_automated_roles_count": 10,
-        "source": "Anthropic Economic Index",
-        "is_simulated_data": false
+        "ai_job_growth_rate": -59.70873786407766,
+        "avg_emerging_role_growth": 54.0,
+        "current_posting_count": 166,
+        "previous_posting_count": 412
       }
     }
   },
-  "news_events": [],
+  "news_events": [
+    {
+      "date": "2025-03-19T14:50:06Z",
+      "source": "TheWrap",
+      "title": "Video Game Workers Launch Union in Partnership With Communications Workers of America",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 10500,
+      "ai_relation": "None",
+      "url": "https://www.thewrap.com/video-game-union-communications-workers-of-america/"
+    },
+    {
+      "date": "2025-03-19T11:35:30Z",
+      "source": "TechCrunch",
+      "title": "A comprehensive list of 2025 tech layoffs | TechCrunch",
+      "company": "Big",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://techcrunch.com/2025/03/19/tech-layoffs-2025-list/"
+    },
+    {
+      "date": "2025-03-19T07:00:34Z",
+      "source": "Livemint",
+      "title": "Bengaluru\u2019s real estate market faces strain amid IT layoffs and AI push; Reddit user asks, \u2018Who\u2019s left to buy?\u2019",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.livemint.com/money/personal-finance/bengalurus-real-estate-market-faces-strain-amid-it-layoffs-and-ai-push-reddit-user-asks-who-s-left-to-buy-11742363708670.html"
+    },
+    {
+      "date": "2025-03-18T04:06:00Z",
+      "source": "Food Safety News",
+      "title": "Food safety leaders express concerns about recent cuts in FDA workforce",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.foodsafetynews.com/2025/03/food-safety-leaders-express-concerns-about-recent-cuts-in-fda-workforce/"
+    },
+    {
+      "date": "2025-03-16T22:56:00Z",
+      "source": "Bangkok Post",
+      "title": "Developing the future workforce",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.bangkokpost.com/business/general/2981471/developing-the-future-workforce"
+    },
+    {
+      "date": "2025-03-16T11:59:17Z",
+      "source": "Seangoedecke.com",
+      "title": "The good times in tech are over",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://www.seangoedecke.com/good-times-are-over/"
+    },
+    {
+      "date": "2025-03-15T15:17:14Z",
+      "source": "CNBC",
+      "title": "Y Combinator startups are fastest growing, most profitable in fund history because of AI",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.cnbc.com/2025/03/15/y-combinator-startups-are-fastest-growing-in-fund-history-because-of-ai.html"
+    },
+    {
+      "date": "2025-03-13T09:30:00Z",
+      "source": "Forbes",
+      "title": "DOGE And High-Tech \u2013 Is The Hate Against Elon Musk Justified?",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/emilsayegh/2025/03/13/doge-and-high-tech--is-the-hate-against-elon-musk-justified/"
+    },
+    {
+      "date": "2025-03-13T08:00:02Z",
+      "source": "Business Insider",
+      "title": "'Klarnageddon': Employees in limbo as fintech startup preps for IPO",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.businessinsider.com/klarna-ipo-employees-in-limbo-2025-3"
+    },
+    {
+      "date": "2025-03-12T23:46:52Z",
+      "source": "SiliconANGLE News",
+      "title": "Intel finally gets a new CEO in Lip-Bu Tan",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://siliconangle.com/2025/03/12/intel-finally-gets-new-ceo-lip-bu-tan/"
+    },
+    {
+      "date": "2025-03-12T23:46:52Z",
+      "source": "SiliconANGLE News",
+      "title": "Intel finally gets a new CEO: industry veteran Lip-Bu Tan",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://siliconangle.com/2025/03/12/intel-finally-gets-new-ceo-industry-veteran-lip-bu-tan/"
+    },
+    {
+      "date": "2025-03-12T18:29:12Z",
+      "source": "TechCrunch",
+      "title": "A comprehensive list of 2025 tech layoffs | TechCrunch",
+      "company": "Big",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://techcrunch.com/2025/03/12/tech-layoffs-2025-list/"
+    },
+    {
+      "date": "2025-03-12T14:15:00Z",
+      "source": "Forbes",
+      "title": "Why You Should Upskill In 2025",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.forbes.com/councils/forbesbusinesscouncil/2025/03/12/why-you-should-upskill-in-2025/"
+    },
+    {
+      "date": "2025-03-11T18:13:58Z",
+      "source": "Forbes",
+      "title": "Five Years On: How Covid Changed The Workplace",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/mariagraciasantillanalinares/2025/03/11/five-years-on-how-covid-changed-the-workplace/"
+    },
+    {
+      "date": "2025-03-11T17:00:17Z",
+      "source": "Forbes",
+      "title": "3 AI Side Hustles That Pay Up To $100,000+ In 2025",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/rachelwells/2025/03/11/3-ai-side-hustles-that-pay-up-to-100000--in-2025/"
+    },
+    {
+      "date": "2025-03-11T11:10:03Z",
+      "source": "Forbes",
+      "title": "How \u201cHack For Hire\u201d Mercenaries Are Reshaping Cybersecurity Crime",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://www.forbes.com/sites/emilsayegh/2025/03/11/how-hack-for-hire-mercenaries-are-reshaping-cybersecurity-crime/"
+    },
+    {
+      "date": "2025-03-10T17:58:13Z",
+      "source": "Forbes",
+      "title": "Musk Replacing Workers with AI: Should You Be Worried?",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/jasonwingard/2025/03/10/musk-replacing-workers-with-ai-should-you-be-worried/"
+    },
+    {
+      "date": "2025-03-07T19:40:22Z",
+      "source": "New York Post",
+      "title": "Meta keeps secret \u2018do not rehire\u2019 list of ex-employees \u2014 despite exceptional performance reviews: report",
+      "company": "Meta",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://nypost.com/2025/03/07/business/meta-keeps-a-secret-do-not-rehire-list-of-ex-employees-report/"
+    },
+    {
+      "date": "2025-03-06T17:49:04Z",
+      "source": "The Times of India",
+      "title": "India Inc's attrition rates hit lowest point since 2020 amid hiring slowdown",
+      "company": "India",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://economictimes.indiatimes.com/jobs/mid-career/india-incs-attrition-rates-hit-lowest-point-since-2020-amid-hiring-slowdown/articleshow/118767184.cms"
+    },
+    {
+      "date": "2025-03-06T17:21:43Z",
+      "source": "Business Insider",
+      "title": "Software engineers at Google, Microsoft, and more share their best tips for landing a coding job in tech",
+      "company": "Google",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.businessinsider.com/software-engineer-job-market-hiring-skills"
+    },
+    {
+      "date": "2025-03-05T16:20:56Z",
+      "source": "NBC News",
+      "title": "Private employers added just 77,000 jobs in February, far below expectations, ADP says",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 77000,
+      "ai_relation": "None",
+      "url": "https://www.nbcnews.com/business/economy/private-employers-added-just-77000-jobs-february-far-expectations-adp-rcna194888"
+    },
+    {
+      "date": "2025-03-05T16:14:02Z",
+      "source": "Business Insider",
+      "title": "Meta keeps secret 'block' lists of ex-employees \u2014 and even help from its C-suite can't get you off them",
+      "company": "Meta",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.businessinsider.com/meta-secret-block-lists-bar-rehiring-some-former-employees-2025-2"
+    },
+    {
+      "date": "2025-03-05T13:28:00Z",
+      "source": "CNBC",
+      "title": "Private employers added just 77,000 jobs in February, far below expectations, ADP says",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 77000,
+      "ai_relation": "None",
+      "url": "https://www.cnbc.com/2025/03/05/adp-jobs-report-february-2025-.html"
+    },
+    {
+      "date": "2025-03-04T22:14:43Z",
+      "source": "Newsweek",
+      "title": "Map Shows States With the Most Layoffs in 2025",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.newsweek.com/map-shows-states-having-most-layoffs-2025-2039603"
+    },
+    {
+      "date": "2025-03-02T16:01:16Z",
+      "source": "Forbes",
+      "title": "How Letting Go Of Federal Government Workers Will Impact The Job Market",
+      "company": "Tesla",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.forbes.com/sites/jackkelly/2025/03/02/how-letting-go-of-federal-government-workers-will-impact-the-job-market/"
+    },
+    {
+      "date": "2025-03-01T02:41:53Z",
+      "source": "Computerworld",
+      "title": "Two AI developer strategies: Hire engineers or let AI do the work",
+      "company": "Salesforce",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.computerworld.com/article/3836092/two-ai-developer-strategies-hire-engineers-or-let-ai-do-the-work.html"
+    }
+  ],
   "methodology": {
     "component_weights": {
       "news_events": 0.35,
@@ -65,10 +419,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_202504.json",
-      "research_trends": "research_trends_202504.json",
-      "employment_stats": "employment_stats_202504.json",
-      "job_trends": "job_trends_202504.json"
+      "news_events": "workforce_events_202503.json",
+      "research_trends": "research_trends_202503.json",
+      "employment_stats": "employment_stats_202503.json",
+      "job_trends": "job_trends_202503.json"
     }
   }
 }
