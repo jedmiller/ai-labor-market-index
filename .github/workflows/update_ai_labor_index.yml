@@ -70,7 +70,6 @@ jobs:
           python scripts/processing/process_anthropic_index.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
           python scripts/processing/process_research.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
           python scripts/processing/process_employment.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
-          python scripts/processing/process_jobs.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
           python scripts/processing/process_news.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
       
       - name: Calculate index
