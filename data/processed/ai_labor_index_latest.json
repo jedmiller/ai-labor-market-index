@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-04-18T03:33:47.799397",
-  "index_value": 7.632990449117223,
-  "interpretation": "Slight job creation from AI",
+  "timestamp": "2025-04-20T03:05:20.351442",
+  "index_value": 32.0661986918436,
+  "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
       "score": 25.630769230769232,
@@ -64,74 +64,77 @@
       }
     },
     "employment_stats": {
-      "score": 16.074872083967794,
+      "score": 19.217187106706046,
       "weight": 0.3,
-      "weighted_score": 4.822461625190338,
+      "weighted_score": 5.765156132011813,
       "details": {
-        "avg_weighted_change": 0.6429948833587118,
+        "avg_weighted_change": 0.7686874842682418,
         "growing_industries": [
           [
             "Education and Health Services",
-            3.4453941120607787
+            3.5202682109113077
           ],
           [
             "Construction",
-            1.7634462778687494
+            2.0429009193054135
           ],
           [
             "Other Services",
-            1.5410668924640136
+            1.6357130686658716
           ],
           [
             "Government",
-            1.2872083668543846
+            1.5497935027887768
           ],
           [
             "Leisure and Hospitality",
-            1.2834616795012834
+            1.532638371804418
           ],
           [
             "Total Nonfarm",
-            1.209358159017189
-          ],
-          [
-            "Trade, Transportation, and Utilities",
-            1.037953449360453
+            1.2666098316101202
           ],
           [
             "Financial Activities",
-            1.0336485594897735
+            1.0334212840809147
+          ],
+          [
+            "Trade, Transportation, and Utilities",
+            0.9508827128124453
           ]
         ],
         "declining_industries": [
           [
-            "Mining and Logging",
-            -1.9047619047619049
-          ],
-          [
             "Manufacturing",
-            -0.6254886630179828
+            -0.6953125
           ],
           [
-            "Information",
-            -0.6122448979591837
+            "Mining and Logging",
+            -0.6420545746388443
           ],
           [
             "Professional and Business Services",
-            -0.17413823897124486
+            -0.35727045373347627
+          ],
+          [
+            "Information",
+            -0.27220142905750255
           ]
         ]
       }
     },
     "job_trends": {
-      "score": -28.45048543689319,
+      "score": 65.51156950672643,
       "weight": 0.25,
-      "weighted_score": -7.112621359223297,
+      "weighted_score": 16.377892376681608,
       "details": {
-        "ai_job_growth_rate": -59.70873786407766,
-        "avg_emerging_role_growth": 54.0,
-        "current_posting_count": 166,
-        "previous_posting_count": 412
+        "augmentation_rate": 59.466666666666654,
+        "automation_rate": 40.53333333333333,
+        "automation_augmentation_ratio": 0.6816143497757848,
+        "top_augmented_roles_count": 10,
+        "top_automated_roles_count": 10,
+        "source": "Anthropic Economic Index",
+        "is_simulated_data": false
       }
     }
   },
