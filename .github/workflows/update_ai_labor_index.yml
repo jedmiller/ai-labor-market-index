@@ -44,10 +44,128 @@ jobs:
         run: |
           echo "year=$(date -d 'last month' +'%Y')" >> $GITHUB_OUTPUT
           echo "month=$(date -d 'last month' +'%-m')" >> $GITHUB_OUTPUT
+          echo "month_padded=$(date -d 'last month' +'%m')" >> $GITHUB_OUTPUT
       
-      # Add new step to collect Anthropic Economic Index data
+      # Add check for existing Anthropic data
+      - name: Check for Anthropic data availability
+        id: check_anthropic
+        run: |
+          # Create a simple script to check if Anthropic has released data for the target period
+          cat > check_anthropic_data.py << 'EOF'
+          import requests
+          import sys
+          import os
+          import glob
+          from datetime import datetime
+          
+          def check_anthropic_data(year, month):
+              # Format month with leading zero
+              month_str = str(month).zfill(2)
+              year_str = str(year)
+              
+              # First check if we already have the data locally
+              raw_dir = "./data/raw/anthropic_index"
+              pattern = f"anthropic_index_{year_str}_{month_str}_combined.json"
+              matching_files = glob.glob(os.path.join(raw_dir, pattern))
+              
+              if matching_files:
+                  print(f"Found local data for {year_str}-{month_str}")
+                  return True
+                  
+              # If no local files, check Hugging Face
+              try:
+                  # Define the URL for the Anthropic Economic Index repository
+                  url = f"https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_{year_str}_{month_str}"
+                  
+                  response = requests.get(url, timeout=10)
+                  if response.status_code == 200:
+                      print(f"Anthropic data for {year_str}-{month_str} appears to be available")
+                      return True
+                  else:
+                      # Try to find previous month data
+                      if int(month) == 1:
+                          prev_month = "12"
+                          prev_year = str(int(year) - 1)
+                      else:
+                          prev_month = str(int(month) - 1).zfill(2)
+                          prev_year = year_str
+                      
+                      # Check if we have local data for previous month
+                      prev_pattern = f"anthropic_index_{prev_year}_{prev_month}_combined.json"
+                      prev_files = glob.glob(os.path.join(raw_dir, prev_pattern))
+                      
+                      if prev_files:
+                          print(f"Found local data for previous month {prev_year}-{prev_month}")
+                          print(f"::set-output name=available_year::{prev_year}")
+                          print(f"::set-output name=available_month::{int(prev_month)}")
+                          return False
+                      
+                      # Check if previous month data is available on Hugging Face
+                      prev_url = f"https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_{prev_year}_{prev_month}"
+                      prev_response = requests.get(prev_url, timeout=10)
+                      
+                      if prev_response.status_code == 200:
+                          print(f"Found previous month data on Hugging Face: {prev_year}-{prev_month}")
+                          print(f"::set-output name=available_year::{prev_year}")
+                          print(f"::set-output name=available_month::{int(prev_month)}")
+                          return False
+                      
+                      # If all else fails, try looking for the most recent data we have locally
+                      existing_files = glob.glob(os.path.join(raw_dir, "anthropic_index_*_combined.json"))
+                      if existing_files:
+                          newest_file = max(existing_files, key=os.path.getmtime)
+                          filename = os.path.basename(newest_file)
+                          parts = filename.split('_')
+                          if len(parts) >= 3:
+                              latest_year = parts[1]
+                              latest_month = parts[2]
+                              print(f"Found most recent local data: {latest_year}-{latest_month}")
+                              print(f"::set-output name=available_year::{latest_year}")
+                              print(f"::set-output name=available_month::{int(latest_month)}")
+                              return False
+                      
+                      print(f"No Anthropic data found for {year_str}-{month_str}")
+                      return False
+              except Exception as e:
+                  print(f"Error checking Anthropic data availability: {e}")
+                  # If we encounter an error, just return True to continue with requested date
+                  return True
+          
+          if __name__ == "__main__":
+              if len(sys.argv) != 3:
+                  print("Usage: python check_anthropic_data.py <year> <month>")
+                  sys.exit(1)
+                  
+              year = sys.argv[1]
+              month = sys.argv[2]
+              
+              result = check_anthropic_data(year, month)
+              sys.exit(0 if result else 1)
+          EOF
+          
+          python check_anthropic_data.py ${{ steps.date.outputs.year }} ${{ steps.date.outputs.month_padded }}
+          exit_code=$?
+          
+          if [ $exit_code -eq 0 ]; then
+            echo "anthropic_data_available=true" >> $GITHUB_OUTPUT
+            echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
+            echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
+          else
+            echo "anthropic_data_available=false" >> $GITHUB_OUTPUT
+            # Use available data if set by the script
+            if [ -n "$available_year" ] && [ -n "$available_month" ]; then
+              echo "use_year=$available_year" >> $GITHUB_OUTPUT
+              echo "use_month=$available_month" >> $GITHUB_OUTPUT
+            else
+              # Otherwise, still try with the requested date
+              echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
+              echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
+            fi
+          fi
+      
+      # Add new step to collect Anthropic Economic Index data with validated date
       - name: Collect Anthropic Economic Index data
-        run: python scripts/collection/collect_anthropic_index.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
+        run: python scripts/collection/collect_anthropic_index.py --year=${{ steps.check_anthropic.outputs.use_year || steps.date.outputs.year }} --month=${{ steps.check_anthropic.outputs.use_month || steps.date.outputs.month }}
       
       - name: Collect ArXiv data
         run: python scripts/collection/collect_arxiv.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
@@ -67,7 +185,10 @@ jobs:
       
       - name: Process data
         run: |
-          python scripts/processing/process_anthropic_index.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
+          # Process Anthropic data using validated date
+          python scripts/processing/process_anthropic_index.py --year=${{ steps.check_anthropic.outputs.use_year || steps.date.outputs.year }} --month=${{ steps.check_anthropic.outputs.use_month || steps.date.outputs.month }}
+          
+          # Process other data sources with the requested date
           python scripts/processing/process_research.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
           python scripts/processing/process_employment.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}
           python scripts/processing/process_news.py --year=${{ steps.date.outputs.year }} --month=${{ steps.date.outputs.month }}

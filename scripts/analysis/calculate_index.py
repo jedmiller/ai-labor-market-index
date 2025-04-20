@@ -442,6 +442,33 @@ class IndexCalculator:
         else:
             interpretation = "Severe job displacement from AI"
         
+        # Check for any data source period mismatches or fallback data
+        notes = []
+        data_sources = {
+            "news_events": self.news_file,
+            "research_trends": self.research_file,
+            "employment_stats": self.employment_file,
+            "job_trends": self.job_file
+        }
+        
+        actual_periods = {}
+        target_period = f"{self.year}-{self.month:02d}" if self.year and self.month else None
+        
+        # Check for Anthropic data source mismatches
+        if job_data and "source" in job_data and job_data["source"] == "Anthropic Economic Index":
+            anthropic_source_period = job_data.get("source_period")
+            using_fallback = job_data.get("using_fallback_data", False)
+            
+            if anthropic_source_period and target_period and anthropic_source_period != target_period:
+                notes.append(f"Note: Anthropic Economic Index data is from {anthropic_source_period} instead of the requested period {target_period}")
+                actual_periods["anthropic_index"] = anthropic_source_period
+                
+            if using_fallback:
+                notes.append(f"Note: Using fallback Anthropic data due to unavailability of data for {target_period}")
+                
+            if job_data.get("is_simulated_data", False):
+                notes.append("Warning: Using simulated Anthropic data instead of actual data")
+        
         # Create the index object
         index = {
             "timestamp": datetime.now().isoformat(),
@@ -449,6 +476,7 @@ class IndexCalculator:
             "interpretation": interpretation,
             "components": components,
             "news_events": news_data.get("events", []) if news_data else [],
+            "notes": notes,
             "methodology": {
                 "component_weights": self.weights,
                 "industry_weights": {
@@ -465,12 +493,8 @@ class IndexCalculator:
                     "Government": 0.7,
                     "Total Nonfarm": 1.0
                 },
-                "data_sources": {
-                    "news_events": self.news_file,
-                    "research_trends": self.research_file,
-                    "employment_stats": self.employment_file,
-                    "job_trends": self.job_file
-                }
+                "data_sources": data_sources,
+                "actual_data_periods": actual_periods
             }
         }
         
@@ -569,10 +593,12 @@ def main():
     parser = argparse.ArgumentParser(description='Calculate AI Labor Market Impact Index')
     parser.add_argument('--input-dir', default='./data/processed', help='Input directory containing processed data')
     parser.add_argument('--output-dir', default='./data/processed', help='Output directory for index files')
-    parser.add_argument('--year', type=int, help='Year to calculate index for (optional)')
-    parser.add_argument('--month', type=int, help='Month to calculate index for (optional)')
+    parser.add_argument('--year', type=int, required=True, help='Year to calculate index for')
+    parser.add_argument('--month', type=int, required=True, help='Month to calculate index for')
     
     args = parser.parse_args()
+    
+    logger.info(f"Calculating AI Labor Market Index for {args.year}-{args.month:02d}")
     
     calculator = IndexCalculator(
         input_dir=args.input_dir,
@@ -592,7 +618,22 @@ def main():
     
     logger.info(f"Index calculation complete. Index value: {index['index_value']:.2f}")
     logger.info(f"Interpretation: {index['interpretation']}")
+    
+    # Log any notes about data source mismatches
+    if index.get("notes"):
+        logger.warning("Important notes about data sources:")
+        for note in index.get("notes", []):
+            logger.warning(f"  - {note}")
+    
+    # Log the actual data periods used
+    actual_periods = index.get("methodology", {}).get("actual_data_periods", {})
+    if actual_periods:
+        logger.info("Actual data periods used:")
+        for source, period in actual_periods.items():
+            logger.info(f"  - {source}: {period}")
+    
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

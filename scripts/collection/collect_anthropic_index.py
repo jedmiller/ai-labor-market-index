@@ -635,14 +635,29 @@ def main():
     # Parse command line arguments
     import argparse
     parser = argparse.ArgumentParser(description='Collect data from Anthropic Economic Index')
-    parser.add_argument('--year', type=int, help='Target year')
-    parser.add_argument('--month', type=int, help='Target month (1-12)')
+    parser.add_argument('--year', type=int, required=True, help='Target year')
+    parser.add_argument('--month', type=int, required=True, help='Target month (1-12)')
     parser.add_argument('--output', type=str, help='Output directory', default="./data/raw/anthropic_index")
     parser.add_argument('--simulation', type=str, choices=['yes', 'no'], 
                         help='Whether to use simulation data (yes/no). If not specified, auto-detection is used.')
     parser.add_argument('--simulation-dir', type=str, default="./data/simulation/anthropic_index",
                         help='Directory containing simulation data')
     args = parser.parse_args()
+    
+    # Validate that we're not trying to collect future data
+    current_date = datetime.now()
+    current_year = current_date.year
+    current_month = current_date.month
+    
+    # Convert to integers for validation
+    year = args.year
+    month = args.month
+    
+    if (year > current_year) or (year == current_year and month > current_month):
+        logger.error(f"Error: Cannot collect future data for {year}-{month:02d}")
+        logger.error(f"Current date is {current_year}-{current_month:02d}")
+        logger.error("Exiting without collecting data")
+        return 1
     
     # Determine simulation mode from args
     use_simulation = None
@@ -657,7 +672,7 @@ def main():
     )
     
     # Run collection
-    results = collector.collect_data(year=args.year, month=args.month)
+    results = collector.collect_data(year=year, month=month)
     
     logger.info(f"Collection complete. Collected {results['datasets_collected']} datasets.")
     logger.info(f"Created {len(results['files_created'])} files.")
