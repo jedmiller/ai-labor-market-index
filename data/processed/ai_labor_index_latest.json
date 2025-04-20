@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-04-19T22:04:57.380228",
-  "index_value": 32.36868820163946,
+  "timestamp": "2025-04-20T03:05:20.351442",
+  "index_value": 32.0661986918436,
   "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
@@ -124,13 +124,13 @@
       }
     },
     "job_trends": {
-      "score": 66.72152754590984,
+      "score": 65.51156950672643,
       "weight": 0.25,
-      "weighted_score": 16.68038188647746,
+      "weighted_score": 16.377892376681608,
       "details": {
-        "augmentation_rate": 59.9,
-        "automation_rate": 40.10000000000001,
-        "automation_augmentation_ratio": 0.6694490818030052,
+        "augmentation_rate": 59.466666666666654,
+        "automation_rate": 40.53333333333333,
+        "automation_augmentation_ratio": 0.6816143497757848,
         "top_augmented_roles_count": 10,
         "top_automated_roles_count": 10,
         "source": "Anthropic Economic Index",
