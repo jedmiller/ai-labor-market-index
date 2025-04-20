@@ -1,0 +1,102 @@
+{
+  "dataset": "skill_presence",
+  "date_collected": "2025-03-13T20:44:15.893163",
+  "target_period": "2025-03",
+  "data": {
+    "Programming": {
+      "count": 358000,
+      "automation_impact": 0.5555684726796091,
+      "augmentation_impact": 0.44443152732039104
+    },
+    "Data Analysis": {
+      "count": 2000,
+      "automation_impact": 0.5689781021,
+      "augmentation_impact": 0.4310218979
+    },
+    "Writing": {
+      "count": 85500,
+      "automation_impact": 0.5705252700364913,
+      "augmentation_impact": 0.4294747299635088
+    },
+    "Research": {
+      "count": 99500,
+      "automation_impact": 0.5462227945246232,
+      "augmentation_impact": 0.4537772054753769
+    },
+    "Financial Modeling": {
+      "count": 500,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Design": {
+      "count": 112000,
+      "automation_impact": 0.5482707298196429,
+      "augmentation_impact": 0.4517292701803572
+    },
+    "Marketing": {
+      "count": 19500,
+      "automation_impact": 0.514446362,
+      "augmentation_impact": 0.485553638
+    },
+    "Customer Service": {
+      "count": 3500,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Project Management": {
+      "count": 500,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Teaching": {
+      "count": 9500,
+      "automation_impact": 0.6042040832315789,
+      "augmentation_impact": 0.3957959167684211
+    },
+    "Healthcare": {
+      "count": 1500,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Sales": {
+      "count": 26000,
+      "automation_impact": 0.5157845252692308,
+      "augmentation_impact": 0.4842154747307692
+    },
+    "Administrative": {
+      "count": 10000,
+      "automation_impact": 0.52815354413,
+      "augmentation_impact": 0.47184645587
+    },
+    "Engineering": {
+      "count": 24000,
+      "automation_impact": 0.5453842884,
+      "augmentation_impact": 0.4546157116
+    },
+    "Social Media": {
+      "count": 1500,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Data Entry": {
+      "count": 1500,
+      "automation_impact": 0.581027668,
+      "augmentation_impact": 0.41897233199999995
+    },
+    "Editing": {
+      "count": 4000,
+      "automation_impact": 0.5,
+      "augmentation_impact": 0.5
+    },
+    "Analysis": {
+      "count": 236500,
+      "automation_impact": 0.5508737442262157,
+      "augmentation_impact": 0.44912625577378434
+    },
+    "Communication": {
+      "count": 10500,
+      "automation_impact": 0.5121742,
+      "augmentation_impact": 0.4878258
+    }
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-04-20T03:05:20.351442",
+  "timestamp": "2025-04-19T21:37:22.058453",
   "index_value": 32.0661986918436,
   "interpretation": "Moderate job creation from AI",
   "components": {
@@ -400,6 +400,7 @@
       "url": "https://www.computerworld.com/article/3836092/two-ai-developer-strategies-hire-engineers-or-let-ai-do-the-work.html"
     }
   ],
+  "notes": [],
   "methodology": {
     "component_weights": {
       "news_events": 0.35,
@@ -426,6 +427,7 @@
       "research_trends": "research_trends_202503.json",
       "employment_stats": "employment_stats_202503.json",
       "job_trends": "job_trends_202503.json"
-    }
+    },
+    "actual_data_periods": {}
   }
 }
