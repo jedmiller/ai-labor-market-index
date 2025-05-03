@@ -127,8 +127,15 @@ class NewsProcessor:
     
     def process_news_data(self, year=None, month=None):
         """Process news data and identify events."""
-        # Find all news data files
-        news_files = glob.glob(os.path.join(self.input_dir, "*.json"))
+        # Find news data files for the specified period
+        if year and month:
+            # Look for files matching the pattern for the specified year and month
+            pattern = f"news_{year}_{month:02d}_*.json"
+            news_files = glob.glob(os.path.join(self.input_dir, pattern))
+            logger.info(f"Looking for files matching {pattern}")
+        else:
+            # If no year/month specified, use all available files
+            news_files = glob.glob(os.path.join(self.input_dir, "*.json"))
         
         if not news_files:
             logger.warning(f"No news data files found in {self.input_dir}")
@@ -156,16 +163,31 @@ class NewsProcessor:
                     "url": "https://example.com/news/retail-automation"
                 }
             ]
+            
+            # Note about using sample data
+            metadata = {
+                "data_source": "sample",
+                "reason": "No news data files found for the requested period"
+            }
         else:
             logger.info(f"Found {len(news_files)} news files")
             events = []
+            actual_date_ranges = []
             
             # Process each news file
             for file_path in news_files:
                 try:
                     with open(file_path, 'r') as f:
                         data = json.load(f)
+                        
+                        # Check for adjusted date range in the data
+                        if "actual_date_range" in data:
+                            date_range = data["actual_date_range"]
+                            logger.info(f"File {os.path.basename(file_path)} has adjusted date range: {date_range['from']} to {date_range['to']}")
+                            actual_date_ranges.append(date_range)
+                        
                         articles = data.get("articles", [])
+                        logger.info(f"Processing {len(articles)} articles from {os.path.basename(file_path)}")
                         
                         for article in articles:
                             title = article.get("title", "")
@@ -224,10 +246,28 @@ class NewsProcessor:
                         "url": "https://example.com/news/retail-automation"
                     }
                 ]
+                
+                metadata = {
+                    "data_source": "sample",
+                    "reason": "No events extracted from available data"
+                }
+            else:
+                # Actual data metadata
+                metadata = {
+                    "data_source": "News API",
+                    "files_processed": [os.path.basename(f) for f in news_files],
+                    "events_found": len(events)
+                }
+                
+                # Include date range adjustments in metadata
+                if actual_date_ranges:
+                    metadata["actual_date_ranges"] = actual_date_ranges
         
         # Create output object
         output = {
             "date_processed": datetime.now().isoformat(),
+            "target_period": f"{year}-{month:02d}" if year and month else "current",
+            "metadata": metadata,
             "events": events
         }
         

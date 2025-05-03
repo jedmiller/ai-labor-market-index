@@ -72,62 +72,117 @@ class NewsCollector:
             logger.warning("No NEWS_API_KEY found in environment variables")
             return results
         
-        # Set up request parameters with date filtering
-        params = {
-            'q': query,
-            'apiKey': api_key,
-            'pageSize': 100,  # Increased to get more articles for the month
-            'language': 'en',
-            'sortBy': 'publishedAt',
-            'from': start_date,
-            'to': end_date
-        }
+        articles_collected = False
+        max_retries = 3
+        retry_count = 0
+        adjusted_start_date = start_date
         
-        try:
-            # Log request details
-            logger.info(f"Making request to News API: {self.api_url}")
+        while not articles_collected and retry_count < max_retries:
+            # Set up request parameters with date filtering
+            params = {
+                'q': query,
+                'apiKey': api_key,
+                'pageSize': 100,  # Increased to get more articles for the month
+                'language': 'en',
+                'sortBy': 'publishedAt',
+                'from': adjusted_start_date,
+                'to': end_date
+            }
             
-            # Make the API call
-            response = requests.get(self.api_url, params=params, timeout=30)
-            
-            # Log response status
-            logger.info(f"News API response status: {response.status_code}")
-            
-            if response.status_code == 200:
-                data = response.json()
-                articles = data.get("articles", [])
+            try:
+                # Log request details
+                logger.info(f"Making request to News API: {self.api_url}")
+                logger.info(f"Date range: {adjusted_start_date} to {end_date}")
                 
-                logger.info(f"Successfully received {len(articles)} articles")
+                # Make the API call
+                response = requests.get(self.api_url, params=params, timeout=30)
                 
-                if articles:
-                    # Save to file with year and month in filename
-                    filename = f"news_{year}_{month:02d}_{datetime.now().strftime('%Y%m%d')}.json"
-                    filepath = os.path.join(self.output_dir, filename)
+                # Log response status
+                logger.info(f"News API response status: {response.status_code}")
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    articles = data.get("articles", [])
                     
-                    with open(filepath, 'w') as f:
-                        json.dump({
-                            "query": query,
-                            "target_period": f"{year}-{month:02d}",
-                            "date_collected": datetime.now().isoformat(),
-                            "articles": articles
-                        }, f, indent=2)
+                    logger.info(f"Successfully received {len(articles)} articles")
+                    articles_collected = True
                     
-                    results["articles_collected"] = len(articles)
-                    results["files_created"].append(filepath)
-                    logger.info(f"Saved {len(articles)} articles to {filepath}")
+                    if articles:
+                        # Include adjusted date range in the filename and metadata
+                        filename = f"news_{year}_{month:02d}_{datetime.now().strftime('%Y%m%d')}.json"
+                        filepath = os.path.join(self.output_dir, filename)
+                        
+                        with open(filepath, 'w') as f:
+                            json.dump({
+                                "query": query,
+                                "target_period": f"{year}-{month:02d}",
+                                "actual_date_range": {
+                                    "from": adjusted_start_date,
+                                    "to": end_date
+                                },
+                                "date_collected": datetime.now().isoformat(),
+                                "articles": articles
+                            }, f, indent=2)
+                        
+                        results["articles_collected"] = len(articles)
+                        results["files_created"].append(filepath)
+                        # Update results with actual date range
+                        results["actual_start_date"] = adjusted_start_date
+                        results["actual_end_date"] = end_date
+                        
+                        logger.info(f"Saved {len(articles)} articles to {filepath}")
+                    else:
+                        logger.warning("No articles found in the API response")
+                        
+                elif response.status_code == 426:  # API limitation error
+                    # Try to parse error message for date limit information
+                    try:
+                        error_data = response.json()
+                        error_message = error_data.get('message', '')
+                        logger.error(f"Error code: {error_data.get('code')}, Message: {error_message}")
+                        
+                        # Try to extract the earliest allowed date from the error message
+                        # Example message: "You are trying to request results too far in the past. Your plan permits you to request articles as far back as 2025-04-02"
+                        import re
+                        date_match = re.search(r'as far back as (\d{4}-\d{2}-\d{2})', error_message)
+                        
+                        if date_match:
+                            earliest_date = date_match.group(1)
+                            logger.info(f"API limitation: earliest allowed date is {earliest_date}")
+                            
+                            # Adjust start date to the earliest allowed
+                            adjusted_start_date = earliest_date
+                            logger.info(f"Adjusting date range to: {adjusted_start_date} to {end_date}")
+                            retry_count += 1
+                            continue  # Try again with the adjusted date
+                        else:
+                            logger.warning(f"Could not extract date limitation from API error: {error_message}")
+                            break  # Exit the retry loop if we can't parse the date
+                    except Exception as e:
+                        logger.error(f"Error parsing API response: {e}")
+                        break  # Exit the retry loop
                 else:
-                    logger.warning("No articles found in the API response")
-            else:
-                logger.error(f"News API error: {response.text}")
-                # Try to parse error message
-                try:
-                    error_data = response.json()
-                    logger.error(f"Error code: {error_data.get('code')}, Message: {error_data.get('message')}")
-                except:
-                    logger.error(f"Could not parse error response: {response.text[:200]}")
+                    logger.error(f"News API error: {response.text}")
+                    # Try to parse error message
+                    try:
+                        error_data = response.json()
+                        logger.error(f"Error code: {error_data.get('code')}, Message: {error_data.get('message')}")
+                    except:
+                        logger.error(f"Could not parse error response: {response.text[:200]}")
+                    break  # Exit the retry loop
+            
+            except Exception as e:
+                logger.error(f"Exception during News API request: {str(e)}")
+                break  # Exit the retry loop
+            
+            retry_count += 1
         
-        except Exception as e:
-            logger.error(f"Exception during News API request: {str(e)}")
+        if not articles_collected:
+            logger.warning(f"Failed to collect articles after {retry_count} attempts")
+            
+        # Update results with adjusted date range for reporting
+        if adjusted_start_date != start_date:
+            results["note"] = f"Date range adjusted due to API limitations: {adjusted_start_date} to {end_date}"
         
         return results
 
@@ -148,6 +203,20 @@ def main():
     
     logger.info(f"Collection complete. Collected {results['articles_collected']} articles.")
     logger.info(f"Created {len(results['files_created'])} files.")
+    
+    # Report any date adjustments made due to API limitations
+    if "note" in results:
+        logger.info(results["note"])
+    
+    if "actual_start_date" in results and "actual_end_date" in results:
+        original_range = f"{results.get('start_date', 'unknown')} to {results.get('end_date', 'unknown')}"
+        actual_range = f"{results['actual_start_date']} to {results['actual_end_date']}"
+        
+        if original_range != actual_range:
+            logger.info(f"Original date range ({original_range}) was adjusted to ({actual_range})")
+            
+    # Return success if we collected any articles, regardless of date adjustment
+    return 0 if results['articles_collected'] > 0 else 1
 
 
 if __name__ == "__main__":
