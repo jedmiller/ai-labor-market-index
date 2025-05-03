@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-05-03T02:36:57.032586",
-  "index_value": 25.51289577620937,
+  "timestamp": "2025-05-03T02:54:21.971769",
+  "index_value": 24.53176096392267,
   "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
@@ -104,13 +104,13 @@
       }
     },
     "job_trends": {
-      "score": 67.00000000000003,
+      "score": 63.07546075085323,
       "weight": 0.25,
-      "weighted_score": 16.750000000000007,
+      "weighted_score": 15.768865187713308,
       "details": {
-        "augmentation_rate": 60.000000000000014,
-        "automation_rate": 40.00000000000001,
-        "automation_augmentation_ratio": 0.6666666666666666,
+        "augmentation_rate": 58.59999999999999,
+        "automation_rate": 41.4,
+        "automation_augmentation_ratio": 0.7064846416382254,
         "top_augmented_roles_count": 10,
         "top_automated_roles_count": 10,
         "source": "Anthropic Economic Index",
@@ -120,7 +120,7 @@
   },
   "news_events": [
     {
-      "date": "2025-05-03T02:36:56.859106",
+      "date": "2025-05-03T02:54:21.850676",
       "source": "Tech News Daily",
       "title": "Google Announces AI Transformation Initiative",
       "company": "Google",
@@ -130,7 +130,7 @@
       "url": "https://example.com/news/google-ai"
     },
     {
-      "date": "2025-05-03T02:36:56.859113",
+      "date": "2025-05-03T02:54:21.850681",
       "source": "Business Weekly",
       "title": "Retail Giant Implements Large-Scale Automation",
       "company": "Amazon",
