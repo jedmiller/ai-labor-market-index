@@ -7,6 +7,9 @@ from datetime import datetime, timedelta
 
 import requests
 
+# Import these at the module level to avoid local variable conflicts
+from datetime import datetime as dt_class, timedelta as td_class
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -152,9 +155,8 @@ class NewsCollector:
                             
                             # Adjust start date to one day after the earliest allowed date
                             # to work around the API behavior
-                            from datetime import datetime, timedelta
-                            earliest_date_obj = datetime.strptime(earliest_date, '%Y-%m-%d')
-                            adjusted_date_obj = earliest_date_obj + timedelta(days=1)
+                            earliest_date_obj = dt_class.strptime(earliest_date, '%Y-%m-%d')
+                            adjusted_date_obj = earliest_date_obj + td_class(days=1)
                             adjusted_start_date = adjusted_date_obj.strftime('%Y-%m-%d')
                             logger.info(f"Adjusting date range to: {adjusted_start_date} to {end_date} (one day after API limitation)")
                             retry_count += 1
@@ -188,9 +190,8 @@ class NewsCollector:
             logger.info("Attempting final fallback: collecting news for the most recent week only")
             try:
                 # Calculate a date range for just the last week of the month
-                from datetime import datetime, timedelta
-                end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
-                start_date_obj = end_date_obj - timedelta(days=7)
+                end_date_obj = dt_class.strptime(end_date, '%Y-%m-%d')
+                start_date_obj = end_date_obj - td_class(days=7)
                 recent_start_date = start_date_obj.strftime('%Y-%m-%d')
                 
                 logger.info(f"Final attempt with date range: {recent_start_date} to {end_date}")
