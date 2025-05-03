@@ -100,8 +100,8 @@ class ArxivCollector:
                 response = requests.get(f"{self.api_url}?{urlencode(params)}", timeout=30)
                 
                 if response.status_code == 200:
-                    # Parse XML response
-                    soup = BeautifulSoup(response.text, "xml")
+                    # Parse XML response using lxml parser
+                    soup = BeautifulSoup(response.text, "lxml-xml")  # Explicitly use lxml-xml parser
                     entries = soup.find_all("entry")
                     
                     logger.info(f"Found {len(entries)} papers for query: {query}")
@@ -151,6 +151,12 @@ class ArxivCollector:
             
             except Exception as e:
                 logger.error(f"Error collecting papers for query {query}: {str(e)}")
+                # Add more detailed error information
+                import traceback
+                logger.error(f"Detailed traceback: {traceback.format_exc()}")
+                if "No module named 'lxml'" in str(e):
+                    logger.critical("CRITICAL ERROR: lxml module not found. Please install it with 'pip install lxml'")
+                    sys.exit(1)
         
         return results
 
