@@ -1,6 +1,6 @@
 {
-  "timestamp": "2025-04-19T21:37:22.058453",
-  "index_value": 32.0661986918436,
+  "timestamp": "2025-05-03T01:53:56.517558",
+  "index_value": 31.679988245886566,
   "interpretation": "Moderate job creation from AI",
   "components": {
     "news_events": {
@@ -55,82 +55,82 @@
       }
     },
     "research_trends": {
-      "score": 9.523809523809533,
+      "score": 12.820512820512818,
       "weight": 0.1,
-      "weighted_score": 0.9523809523809533,
+      "weighted_score": 1.282051282051282,
       "details": {
-        "paper_count": 400,
-        "positive_sentiment": 54.761904761904766
+        "paper_count": 150,
+        "positive_sentiment": 56.41025641025641
       }
     },
     "employment_stats": {
-      "score": 19.217187106706046,
+      "score": 17.921773799485752,
       "weight": 0.3,
-      "weighted_score": 5.765156132011813,
+      "weighted_score": 5.376532139845725,
       "details": {
-        "avg_weighted_change": 0.7686874842682418,
+        "avg_weighted_change": 0.7168709519794301,
         "growing_industries": [
           [
             "Education and Health Services",
-            3.5202682109113077
+            3.382903848336928
           ],
           [
             "Construction",
-            2.0429009193054135
+            1.6936580541476078
           ],
           [
             "Other Services",
-            1.6357130686658716
-          ],
-          [
-            "Government",
-            1.5497935027887768
+            1.3124684502776376
           ],
           [
             "Leisure and Hospitality",
-            1.532638371804418
+            1.3040865384615385
+          ],
+          [
+            "Government",
+            1.2905136667512906
           ],
           [
             "Total Nonfarm",
-            1.2666098316101202
+            1.1928505189344378
           ],
           [
             "Financial Activities",
-            1.0334212840809147
+            1.1542266681323514
           ],
           [
             "Trade, Transportation, and Utilities",
-            0.9508827128124453
+            0.903824678950307
           ]
         ],
         "declining_industries": [
           [
             "Manufacturing",
-            -0.6953125
+            -0.6640106241699867
           ],
           [
             "Mining and Logging",
-            -0.6420545746388443
-          ],
-          [
-            "Professional and Business Services",
-            -0.35727045373347627
+            -0.641025641025641
           ],
           [
             "Information",
-            -0.27220142905750255
+            -0.408997955010225
+          ],
+          [
+            "Professional and Business Services",
+            -0.07081839507812154
           ]
         ]
       }
     },
     "job_trends": {
-      "score": 65.51156950672643,
+      "score": 64.20254237288131,
       "weight": 0.25,
-      "weighted_score": 16.377892376681608,
+      "weighted_score": 16.050635593220328,
       "details": {
-        "augmentation_rate": 59.466666666666654,
-        "automation_rate": 40.53333333333333,
-        "automation_augmentation_ratio": 0.6816143497757848,
+        "augmentation_rate": 58.999999999999986,
+        "automation_rate": 41.000000000000014,
+        "automation_augmentation_ratio": 0.6949152542372885,
         "top_augmented_roles_count": 10,
         "top_automated_roles_count": 10,
         "source": "Anthropic Economic Index",
@@ -400,7 +400,9 @@
       "url": "https://www.computerworld.com/article/3836092/two-ai-developer-strategies-hire-engineers-or-let-ai-do-the-work.html"
     }
   ],
-  "notes": [],
+  "notes": [
+    "Note: Using fallback Anthropic data due to unavailability of data for 2025-04"
+  ],
   "methodology": {
     "component_weights": {
       "news_events": 0.35,
@@ -423,10 +425,10 @@
       "Total Nonfarm": 1.0
     },
     "data_sources": {
-      "news_events": "workforce_events_202503.json",
-      "research_trends": "research_trends_202503.json",
-      "employment_stats": "employment_stats_202503.json",
-      "job_trends": "job_trends_202503.json"
+      "news_events": "workforce_events_202504.json",
+      "research_trends": "research_trends_202504.json",
+      "employment_stats": "employment_stats_202504.json",
+      "job_trends": "job_trends_202504.json"
     },
     "actual_data_periods": {}
   }
