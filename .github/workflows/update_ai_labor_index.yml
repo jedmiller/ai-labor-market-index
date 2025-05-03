@@ -96,8 +96,10 @@ jobs:
                       
                       if prev_files:
                           print(f"Found local data for previous month {prev_year}-{prev_month}")
-                          print(f"::set-output name=available_year::{prev_year}")
-                          print(f"::set-output name=available_month::{int(prev_month)}")
+                          # Write to environment file for GitHub Actions
+                          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                              f.write(f"available_year={prev_year}\n")
+                              f.write(f"available_month={int(prev_month)}\n")
                           return False
                       
                       # Check if previous month data is available on Hugging Face
@@ -106,8 +108,10 @@ jobs:
                       
                       if prev_response.status_code == 200:
                           print(f"Found previous month data on Hugging Face: {prev_year}-{prev_month}")
-                          print(f"::set-output name=available_year::{prev_year}")
-                          print(f"::set-output name=available_month::{int(prev_month)}")
+                          # Write to environment file for GitHub Actions
+                          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                              f.write(f"available_year={prev_year}\n")
+                              f.write(f"available_month={int(prev_month)}\n")
                           return False
                       
                       # If all else fails, try looking for the most recent data we have locally
@@ -120,8 +124,10 @@ jobs:
                               latest_year = parts[1]
                               latest_month = parts[2]
                               print(f"Found most recent local data: {latest_year}-{latest_month}")
-                              print(f"::set-output name=available_year::{latest_year}")
-                              print(f"::set-output name=available_month::{int(latest_month)}")
+                              # Write to environment file for GitHub Actions
+                              with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+                                  f.write(f"available_year={latest_year}\n")
+                                  f.write(f"available_month={int(latest_month)}\n")
                               return False
                       
                       print(f"No Anthropic data found for {year_str}-{month_str}")
@@ -152,12 +158,11 @@ jobs:
             echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
           else
             echo "anthropic_data_available=false" >> $GITHUB_OUTPUT
-            # Use available data if set by the script
-            if [ -n "$available_year" ] && [ -n "$available_month" ]; then
-              echo "use_year=$available_year" >> $GITHUB_OUTPUT
-              echo "use_month=$available_month" >> $GITHUB_OUTPUT
+            # Check if available_year and available_month were set by the Python script
+            if [ -f "$GITHUB_OUTPUT" ] && grep -q "available_year" "$GITHUB_OUTPUT"; then
+              echo "Using available year and month from Python script"
             else
-              # Otherwise, still try with the requested date
+              # If not set by Python script, use the requested date
               echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
               echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
             fi
