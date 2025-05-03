@@ -255,9 +255,33 @@ jobs:
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
-          git add data/raw/
+          
+          # Explicitly add each type of raw data file
+          echo "Adding raw data files..."
+          if [ -d "data/raw/news" ]; then
+            find data/raw/news -type f -name "*.json" -print -exec git add {} \;
+          fi
+          
+          if [ -d "data/raw/arxiv" ]; then
+            find data/raw/arxiv -type f -name "*.json" -print -exec git add {} \;
+          fi
+          
+          if [ -d "data/raw/bls" ]; then
+            find data/raw/bls -type f -name "*.json" -print -exec git add {} \;
+          fi
+          
+          if [ -d "data/raw/anthropic_index" ]; then
+            find data/raw/anthropic_index -type f -name "*.json" -not -name "*.bak" -print -exec git add {} \;
+          fi
+          
+          # Add processed data
+          echo "Adding processed data files..."
           git add data/processed/
+          
+          # Show what will be committed
           echo "Files to be committed:"
           git status
+          
+          # Commit and push
           git commit -m "Update AI Labor Market Index for ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }} ($(date +'%Y-%m-%d'))" || echo "No changes to commit"
           git push

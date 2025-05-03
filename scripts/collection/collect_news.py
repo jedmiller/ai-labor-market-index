@@ -150,9 +150,13 @@ class NewsCollector:
                             earliest_date = date_match.group(1)
                             logger.info(f"API limitation: earliest allowed date is {earliest_date}")
                             
-                            # Adjust start date to the earliest allowed
-                            adjusted_start_date = earliest_date
-                            logger.info(f"Adjusting date range to: {adjusted_start_date} to {end_date}")
+                            # Adjust start date to one day after the earliest allowed date
+                            # to work around the API behavior
+                            from datetime import datetime, timedelta
+                            earliest_date_obj = datetime.strptime(earliest_date, '%Y-%m-%d')
+                            adjusted_date_obj = earliest_date_obj + timedelta(days=1)
+                            adjusted_start_date = adjusted_date_obj.strftime('%Y-%m-%d')
+                            logger.info(f"Adjusting date range to: {adjusted_start_date} to {end_date} (one day after API limitation)")
                             retry_count += 1
                             continue  # Try again with the adjusted date
                         else:
@@ -180,9 +184,72 @@ class NewsCollector:
         if not articles_collected:
             logger.warning(f"Failed to collect articles after {retry_count} attempts")
             
+            # Final fallback: try with the most recent week only
+            logger.info("Attempting final fallback: collecting news for the most recent week only")
+            try:
+                # Calculate a date range for just the last week of the month
+                from datetime import datetime, timedelta
+                end_date_obj = datetime.strptime(end_date, '%Y-%m-%d')
+                start_date_obj = end_date_obj - timedelta(days=7)
+                recent_start_date = start_date_obj.strftime('%Y-%m-%d')
+                
+                logger.info(f"Final attempt with date range: {recent_start_date} to {end_date}")
+                
+                # Set up new parameters with the short date range
+                params = {
+                    'q': query,
+                    'apiKey': api_key,
+                    'pageSize': 100,
+                    'language': 'en',
+                    'sortBy': 'publishedAt',
+                    'from': recent_start_date,
+                    'to': end_date
+                }
+                
+                response = requests.get(self.api_url, params=params, timeout=30)
+                logger.info(f"News API response status: {response.status_code}")
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    articles = data.get("articles", [])
+                    
+                    logger.info(f"Successfully received {len(articles)} articles in fallback mode")
+                    
+                    if articles:
+                        # Include adjusted date range in the filename and metadata
+                        filename = f"news_{year}_{month:02d}_{datetime.now().strftime('%Y%m%d')}_fallback.json"
+                        filepath = os.path.join(self.output_dir, filename)
+                        
+                        with open(filepath, 'w') as f:
+                            json.dump({
+                                "query": query,
+                                "target_period": f"{year}-{month:02d}",
+                                "actual_date_range": {
+                                    "from": recent_start_date,
+                                    "to": end_date
+                                },
+                                "date_collected": datetime.now().isoformat(),
+                                "fallback_mode": True,
+                                "articles": articles
+                            }, f, indent=2)
+                        
+                        results["articles_collected"] = len(articles)
+                        results["files_created"].append(filepath)
+                        results["actual_start_date"] = recent_start_date
+                        results["actual_end_date"] = end_date
+                        results["fallback_mode"] = True
+                        
+                        logger.info(f"Saved {len(articles)} articles to {filepath} in fallback mode")
+                        articles_collected = True
+            except Exception as e:
+                logger.error(f"Error in fallback mode: {str(e)}")
+            
         # Update results with adjusted date range for reporting
-        if adjusted_start_date != start_date:
-            results["note"] = f"Date range adjusted due to API limitations: {adjusted_start_date} to {end_date}"
+        if adjusted_start_date != start_date or "fallback_mode" in results:
+            if "fallback_mode" in results:
+                results["note"] = f"Limited date range due to API restrictions: {results['actual_start_date']} to {results['actual_end_date']} (fallback mode)"
+            else:
+                results["note"] = f"Date range adjusted due to API limitations: {adjusted_start_date} to {end_date}"
         
         return results
 
