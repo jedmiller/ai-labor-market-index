@@ -1,34 +1,34 @@
 {
-  "paper_count": 150,
-  "date_analyzed": "2025-05-03T04:45:44.664803",
+  "paper_count": 120,
+  "date_analyzed": "2025-05-04T03:13:40.141671",
   "top_categories": [
     [
       "cs.AI",
-      79
+      66
     ],
     [
       "cs.LG",
-      58
+      40
     ],
     [
       "cs.CV",
-      24
+      21
     ],
     [
       "cs.CL",
-      22
-    ],
-    [
-      "cs.SE",
       17
     ],
     [
+      "cs.SE",
+      14
+    ],
+    [
       "cs.CR",
-      13
+      12
     ],
     [
       "cs.RO",
-      12
+      9
     ],
     [
       "cs.CY",
@@ -36,16 +36,16 @@
     ],
     [
       "econ.GN",
-      6
+      5
     ],
     [
       "q-fin.EC",
-      6
+      5
     ]
   ],
-  "positive_sentiment": 49.43181818181818,
+  "positive_sentiment": 48.59154929577465,
   "sentiment_details": {
-    "positive_mentions": 87,
-    "negative_mentions": 89
+    "positive_mentions": 69,
+    "negative_mentions": 73
   }
 }

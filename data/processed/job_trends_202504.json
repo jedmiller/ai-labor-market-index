@@ -1,5 +1,5 @@
 {
-  "date_analyzed": "2025-05-03T04:45:44.619390",
+  "date_analyzed": "2025-05-04T03:13:40.097784",
   "source": "Anthropic Economic Index",
   "source_period": "2025-04",
   "requested_period": "2025-04",
@@ -7,188 +7,188 @@
   "using_fallback_data": true,
   "statistics": {
     "total_occupations_analyzed": 20,
-    "average_automation_rate": 41.4,
-    "average_augmentation_rate": 58.59999999999999,
-    "automation_augmentation_ratio": 0.7064846416382254
+    "average_automation_rate": 40.43333333333334,
+    "average_augmentation_rate": 59.56666666666665,
+    "automation_augmentation_ratio": 0.6787912702853948
   },
   "categories": {
     "data": [
       {
         "category": "Management",
-        "count": 16080
+        "count": 22480
       },
       {
         "category": "Business and Financial Operations",
-        "count": 22800
+        "count": 19840
       },
       {
         "category": "Computer and Mathematical",
-        "count": 34440
+        "count": 37520
       },
       {
         "category": "Architecture and Engineering",
-        "count": 17820
+        "count": 17880
       },
       {
         "category": "Life, Physical, and Social Science",
-        "count": 10880
+        "count": 9840
       },
       {
         "category": "Community and Social Service",
-        "count": 10800
+        "count": 11920
       },
       {
         "category": "Legal",
-        "count": 8840
-      },
-      {
-        "category": "Educational Instruction and Library",
-        "count": 12000
-      },
-      {
-        "category": "Arts, Design, Entertainment, Sports, and Media",
-        "count": 9480
-      },
-      {
-        "category": "Healthcare Practitioners and Technical",
-        "count": 26700
-      },
-      {
-        "category": "Healthcare Support",
-        "count": 22900
-      },
-      {
-        "category": "Protective Service",
-        "count": 10400
-      },
-      {
-        "category": "Food Preparation and Serving Related",
-        "count": 9400
-      },
-      {
-        "category": "Building and Grounds Cleaning and Maintenance",
         "count": 10080
       },
       {
+        "category": "Educational Instruction and Library",
+        "count": 15720
+      },
+      {
+        "category": "Arts, Design, Entertainment, Sports, and Media",
+        "count": 9160
+      },
+      {
+        "category": "Healthcare Practitioners and Technical",
+        "count": 23300
+      },
+      {
+        "category": "Healthcare Support",
+        "count": 20300
+      },
+      {
+        "category": "Protective Service",
+        "count": 9200
+      },
+      {
+        "category": "Food Preparation and Serving Related",
+        "count": 10440
+      },
+      {
+        "category": "Building and Grounds Cleaning and Maintenance",
+        "count": 9560
+      },
+      {
         "category": "Personal Care and Service",
-        "count": 10280
+        "count": 10440
       },
       {
         "category": "Sales and Related",
-        "count": 10040
-      },
-      {
-        "category": "Office and Administrative Support",
-        "count": 11680
-      },
-      {
-        "category": "Farming, Fishing, and Forestry",
-        "count": 10960
-      },
-      {
-        "category": "Construction and Extraction",
-        "count": 10000
-      },
-      {
-        "category": "Installation, Maintenance, and Repair",
         "count": 8280
       },
       {
+        "category": "Office and Administrative Support",
+        "count": 9680
+      },
+      {
+        "category": "Farming, Fishing, and Forestry",
+        "count": 11000
+      },
+      {
+        "category": "Construction and Extraction",
+        "count": 8480
+      },
+      {
+        "category": "Installation, Maintenance, and Repair",
+        "count": 8440
+      },
+      {
         "category": "Production",
-        "count": 11280
+        "count": 9240
       },
       {
         "category": "Transportation and Material Moving",
-        "count": 9760
+        "count": 10000
       },
       {
         "category": "Military Specific",
-        "count": 11240
+        "count": 11760
       }
     ]
   },
   "top_augmented_roles": [
     {
-      "title": "Mechanical Engineers",
-      "augmentation_rate": 79.33333333333333
-    },
-    {
-      "title": "Physicians",
+      "title": "Research Scientists",
       "augmentation_rate": 78.66666666666667
     },
     {
-      "title": "Research Scientists",
-      "augmentation_rate": 76.0
+      "title": "Teachers",
+      "augmentation_rate": 76.66666666666667
+    },
+    {
+      "title": "Physicians",
+      "augmentation_rate": 76.66666666666667
     },
     {
       "title": "Software Developers",
-      "augmentation_rate": 74.66666666666667
+      "augmentation_rate": 75.33333333333333
     },
     {
-      "title": "Nurses",
+      "title": "Mechanical Engineers",
       "augmentation_rate": 74.66666666666667
-    },
-    {
-      "title": "Teachers",
-      "augmentation_rate": 71.33333333333334
     },
     {
       "title": "Data Scientists",
-      "augmentation_rate": 70.66666666666666
+      "augmentation_rate": 73.33333333333333
+    },
+    {
+      "title": "Nurses",
+      "augmentation_rate": 72.0
+    },
+    {
+      "title": "Accountants",
+      "augmentation_rate": 60.0
+    },
+    {
+      "title": "Product Managers",
+      "augmentation_rate": 58.666666666666664
     },
     {
       "title": "Sales Representatives",
       "augmentation_rate": 58.666666666666664
-    },
-    {
-      "title": "Legal Assistants",
-      "augmentation_rate": 57.333333333333336
-    },
-    {
-      "title": "Social Media Managers",
-      "augmentation_rate": 57.333333333333336
     }
   ],
   "top_automated_roles": [
     {
-      "title": "Financial Analysts",
+      "title": "Social Media Managers",
       "automation_rate": 58.66666666666667
     },
     {
-      "title": "Project Managers",
-      "automation_rate": 58.66666666666667
+      "title": "Content Writers",
+      "automation_rate": 57.33333333333333
     },
     {
-      "title": "Human Resources Specialists",
-      "automation_rate": 56.0
-    },
-    {
-      "title": "Product Managers",
+      "title": "Legal Assistants",
       "automation_rate": 56.0
     },
     {
       "title": "Administrative Assistants",
-      "automation_rate": 54.666666666666664
-    },
-    {
-      "title": "Graphic Designers",
       "automation_rate": 52.0
     },
     {
       "title": "Marketing Specialists",
-      "automation_rate": 52.0
+      "automation_rate": 50.666666666666664
+    },
+    {
+      "title": "Human Resources Specialists",
+      "automation_rate": 50.666666666666664
+    },
+    {
+      "title": "Project Managers",
+      "automation_rate": 50.666666666666664
+    },
+    {
+      "title": "Graphic Designers",
+      "automation_rate": 48.0
     },
     {
       "title": "Customer Service Representatives",
-      "automation_rate": 49.333333333333336
+      "automation_rate": 46.666666666666664
     },
     {
-      "title": "Content Writers",
-      "automation_rate": 45.333333333333336
-    },
-    {
-      "title": "Accountants",
-      "automation_rate": 44.0
+      "title": "Financial Analysts",
+      "automation_rate": 42.666666666666664
     }
   ],
   "top_tasks": [
