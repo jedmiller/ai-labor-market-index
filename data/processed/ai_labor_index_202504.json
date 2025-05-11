@@ -1,136 +1,136 @@
 {
-  "timestamp": "2025-05-04T03:13:40.355220",
-  "index_value": 20.04720292640564,
-  "interpretation": "Moderate job creation from AI",
+  "timestamp": "2025-05-11T03:11:44.748688",
+  "index_value": 18.116367837872385,
+  "interpretation": "Slight job creation from AI",
   "components": {
     "news_events": {
-      "score": -4.272727272727272,
+      "score": -4.847457627118642,
       "weight": 0.35,
-      "weighted_score": -1.495454545454545,
+      "weighted_score": -1.6966101694915245,
       "details": {
-        "count": 88,
+        "count": 118,
         "event_counts": {
-          "layoff": 36,
-          "hiring": 52,
+          "layoff": 49,
+          "hiring": 69,
           "restructuring": 0,
           "reskilling": 0
         },
         "ai_relation_counts": {
-          "Direct": 50,
-          "Indirect": 10,
-          "None": 28
+          "Direct": 66,
+          "Indirect": 13,
+          "None": 39
         },
         "top_positive_companies": [
           [
             "Unknown",
-            5.239999999999998
+            7.559999999999997
           ],
           [
             "Intel",
-            0.44000000000000006
+            0.56
           ],
           [
             "Business",
-            0.2
+            0.30000000000000004
           ]
         ],
         "top_negative_companies": [
           [
             "Google",
-            -24.32
+            -36.480000000000004
           ],
           [
             "Meta",
-            -0.2
+            -0.30000000000000004
           ],
           [
             "Big",
-            -0.12
+            -0.18
           ],
           [
             "Apple",
-            -0.04000000000000001
+            -0.06000000000000001
           ]
         ]
       }
     },
     "research_trends": {
-      "score": -2.816901408450704,
+      "score": -1.734104046242777,
       "weight": 0.1,
-      "weighted_score": -0.28169014084507044,
+      "weighted_score": -0.1734104046242777,
       "details": {
-        "paper_count": 120,
-        "positive_sentiment": 48.59154929577465
+        "paper_count": 150,
+        "positive_sentiment": 49.13294797687861
       }
     },
     "employment_stats": {
-      "score": 17.921773799485752,
+      "score": 19.217187106706046,
       "weight": 0.3,
-      "weighted_score": 5.376532139845725,
+      "weighted_score": 5.765156132011813,
       "details": {
-        "avg_weighted_change": 0.7168709519794301,
+        "avg_weighted_change": 0.7686874842682418,
         "growing_industries": [
           [
             "Education and Health Services",
-            3.382903848336928
+            3.5202682109113077
           ],
           [
             "Construction",
-            1.6936580541476078
+            2.0429009193054135
           ],
           [
             "Other Services",
-            1.3124684502776376
-          ],
-          [
-            "Leisure and Hospitality",
-            1.3040865384615385
+            1.6357130686658716
           ],
           [
             "Government",
-            1.2905136667512906
+            1.5497935027887768
+          ],
+          [
+            "Leisure and Hospitality",
+            1.532638371804418
           ],
           [
             "Total Nonfarm",
-            1.1928505189344378
+            1.2666098316101202
           ],
           [
             "Financial Activities",
-            1.1542266681323514
+            1.0334212840809147
           ],
           [
             "Trade, Transportation, and Utilities",
-            0.903824678950307
+            0.9508827128124453
           ]
         ],
         "declining_industries": [
           [
             "Manufacturing",
-            -0.6640106241699867
+            -0.6953125
           ],
           [
             "Mining and Logging",
-            -0.641025641025641
-          ],
-          [
-            "Information",
-            -0.408997955010225
+            -0.6420545746388443
           ],
           [
             "Professional and Business Services",
-            -0.07081839507812154
+            -0.35727045373347627
+          ],
+          [
+            "Information",
+            -0.27220142905750255
           ]
         ]
       }
     },
     "job_trends": {
-      "score": 65.79126189143811,
+      "score": 56.88492911990549,
       "weight": 0.25,
-      "weighted_score": 16.447815472859528,
+      "weighted_score": 14.221232279976373,
       "details": {
-        "augmentation_rate": 59.56666666666665,
-        "automation_rate": 40.43333333333334,
-        "automation_augmentation_ratio": 0.6787912702853948,
+        "augmentation_rate": 56.43333333333334,
+        "automation_rate": 43.56666666666666,
+        "automation_augmentation_ratio": 0.7720023626698168,
         "top_augmented_roles_count": 10,
         "top_automated_roles_count": 10,
         "source": "Anthropic Economic Index",
@@ -1018,6 +1018,306 @@
       "count": 100,
       "ai_relation": "Direct",
       "url": "https://www.forbes.com/sites/emilsayegh/2025/04/07/cisas-cyber-workforce-cuts-a-strategic-shift-or-impending-disaster/"
+    },
+    {
+      "date": "2025-04-30T23:47:00Z",
+      "source": "Forbes",
+      "title": "Skill Stacking Secrets: How Women Can Future-Proof Careers (2025 Guide)",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.forbes.com/sites/elizabethpearson/2025/04/30/skill-stacking-secrets-how-women-can-future-proof-careers-2025-guide/"
+    },
+    {
+      "date": "2025-04-29T23:51:35Z",
+      "source": "Freerepublic.com",
+      "title": "100 DAYS OF HOAXES: Cutting Through the Fake News",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://freerepublic.com/focus/f-news/4314074/posts"
+    },
+    {
+      "date": "2025-04-29T12:00:00Z",
+      "source": "GlobeNewswire",
+      "title": "Employ\u2019s Latest Report on Job Seeker Insights Helps Recruiters Fine-Tune Processes, Personalize Outreach and Stay Ahead of Hiring Trends",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.globenewswire.com/news-release/2025/04/29/3070091/0/en/Employ-s-Latest-Report-on-Job-Seeker-Insights-Helps-Recruiters-Fine-Tune-Processes-Personalize-Outreach-and-Stay-Ahead-of-Hiring-Trends.html"
+    },
+    {
+      "date": "2025-04-28T11:00:00Z",
+      "source": "Time",
+      "title": "Exclusive: Biden Hired an Army of AI-Savvy Workers. Under Trump, Most of Them Are Gone",
+      "company": "Intel",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://time.com/7280528/trump-ai-experts-musk/"
+    },
+    {
+      "date": "2025-04-23T12:39:09Z",
+      "source": "Biztoc.com",
+      "title": "Philip Morris Stock Rises on Earnings Beat. The Smoke-Free Business Is on Fire",
+      "company": "Apple",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://biztoc.com/x/3183ec91ce43516e"
+    },
+    {
+      "date": "2025-04-22T15:00:46Z",
+      "source": "Help Net Security",
+      "title": "54% of tech hiring managers expect layoffs in 2025",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.helpnetsecurity.com/2025/04/22/tech-layoffs-2025/"
+    },
+    {
+      "date": "2025-04-22T12:25:53Z",
+      "source": "Forbes",
+      "title": "Why White-Collar Workers And Hiring Managers Are Both Frozen In Place",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/jackkelly/2025/04/22/why-white-collar-workers-and-hiring-managers-are-both-frozen-in-place/"
+    },
+    {
+      "date": "2025-04-22T10:43:00Z",
+      "source": "Yahoo Entertainment",
+      "title": "Tech hiring managers say layoffs are coming \u2014 and workers who can be replaced by AI will be first to go",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://consent.yahoo.com/v2/collectConsent?sessionId=1_cc-session_cd52d103-f1f2-4322-9c53-a8c45b929d9d"
+    },
+    {
+      "date": "2025-04-22T09:39:55Z",
+      "source": "TechNode",
+      "title": "After hardware team layoffs, Thin Red Line resumes hiring for AI roles",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "http://technode.com/2025/04/22/after-hardware-team-layoffs-thin-red-line-resumes-hiring-for-ai-roles/"
+    },
+    {
+      "date": "2025-04-21T13:14:01Z",
+      "source": "CNBC",
+      "title": "I became an AI prompt engineer after a layoff from Meta: Now I'm 'on the cutting edge of the newest tech obsession'",
+      "company": "Meta",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.cnbc.com/2025/04/21/ai-prompt-engineer-how-i-rebounded-after-getting-laid-off-from-meta.html"
+    },
+    {
+      "date": "2025-04-19T13:59:52Z",
+      "source": "Forbes",
+      "title": "4 Ways Gen Z Can Build A Brand To Avoid \u2018Career Apocalypse\u2019",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/bryanrobinson/2025/04/19/4-ways-gen-z-can-build-a-brand-to-avoid-career-apocalypse/"
+    },
+    {
+      "date": "2025-04-19T05:15:24Z",
+      "source": "The Times of India",
+      "title": "Techies hired and fired: TCS, Infosys, Wipro add 1,400 jobs, but trade turmoil keeps IT headcount in check",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 1400,
+      "ai_relation": "Direct",
+      "url": "https://economictimes.indiatimes.com/jobs/hr-policies-trends/techies-hired-and-fired-tcs-infosys-wipro-add-1400-jobs-but-trade-turmoil-keeps-it-headcount-in-check/articleshow/120424294.cms"
+    },
+    {
+      "date": "2025-04-18T23:23:57Z",
+      "source": "TechCrunch",
+      "title": "A comprehensive list of 2025 tech layoffs | TechCrunch",
+      "company": "Big",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://techcrunch.com/2025/04/18/tech-layoffs-2025-list/"
+    },
+    {
+      "date": "2025-04-18T10:00:00Z",
+      "source": "Forbes",
+      "title": "Background Screening Compliance Updates Employers Need In Q1 2025",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/alonzomartinez/2025/04/18/background-screening-compliance-updates-employers-need-in-q1-2025/"
+    },
+    {
+      "date": "2025-04-17T15:31:49Z",
+      "source": "TechCrunch",
+      "title": "Here are all the tech companies rolling back DEI or still committed to it \u2014 so far | TechCrunch",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://techcrunch.com/2025/04/17/here-are-all-the-tech-companies-rolling-back-dei-or-still-committed-to-it-so-far/"
+    },
+    {
+      "date": "2025-04-17T14:12:08Z",
+      "source": "TechRadar",
+      "title": "Why AI won\u2019t eliminate software engineering jobs",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.techradar.com/pro/why-ai-wont-eliminate-software-engineering-jobs"
+    },
+    {
+      "date": "2025-04-16T22:08:37Z",
+      "source": "Newsweek",
+      "title": "Gen Z Is Most Likely to 'Stretch the Truth' in Job Interviews: Survey",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.newsweek.com/gen-z-most-likely-lie-during-job-interviews-2060713"
+    },
+    {
+      "date": "2025-04-16T10:56:18Z",
+      "source": "The Times of India",
+      "title": "Conversational AI platform Gupshup lays off 300 employees",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 300,
+      "ai_relation": "Direct",
+      "url": "https://economictimes.indiatimes.com/tech/technology/conversational-ai-platform-gupshup-lays-off-300-employees/articleshow/120342855.cms"
+    },
+    {
+      "date": "2025-04-14T22:15:11Z",
+      "source": "CNN",
+      "title": "IRS employees expect to learn their layoff fate around Tax Day, their busiest time of the year | CNN Politics",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.cnn.com/2025/04/14/politics/irs-layoffs-tax-season/index.html"
+    },
+    {
+      "date": "2025-04-14T15:11:31Z",
+      "source": "BusinessLine",
+      "title": "Green card delays and visa backlog feared amid reported USCIS staff cuts",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.thehindubusinessline.com/news/green-card-delays-and-visa-backlog-feared-amid-reported-uscis-staff-cuts/article69449855.ece"
+    },
+    {
+      "date": "2025-04-14T10:51:00Z",
+      "source": "Hrdive.com",
+      "title": "Tech CEOs: Show why AI can\u2019t do the job or we won\u2019t hire more people",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.hrdive.com/news/tech-ceos-show-why-ai-cant-do-the-job-or-we-wont-hire-more-people/745238/"
+    },
+    {
+      "date": "2025-04-13T16:45:08Z",
+      "source": "Wnd.com",
+      "title": "Major layoffs at \u2018luxurious\u2019 federal agency",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.wnd.com/2025/04/major-layoffs-at-luxurious-federal-agency/"
+    },
+    {
+      "date": "2025-04-13T11:00:00Z",
+      "source": "Forbes",
+      "title": "Business Tech News: Shopify CEO Says AI First Before Employees",
+      "company": "Business",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://www.forbes.com/sites/quickerbettertech/2025/04/13/business-tech-news-shopify-ceo-says-ai-first-before-employees/"
+    },
+    {
+      "date": "2025-04-11T17:18:43Z",
+      "source": "The Punch",
+      "title": "Google announces new layoffs in android, chrome, pixel unit",
+      "company": "Google",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Indirect",
+      "url": "https://punchng.com/google-announces-new-layoffs-in-android-chrome-pixel-unit/"
+    },
+    {
+      "date": "2025-04-11T17:00:00Z",
+      "source": "VentureBeat",
+      "title": "GamesBeat Summit 2025 speakers will help us navigate back to growth | The DeanBeat",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://venturebeat.com/games/gamesbeat-summit-2025-speakers-will-help-us-navigate-back-to-growth-the-deanbeat/"
+    },
+    {
+      "date": "2025-04-11T15:54:19Z",
+      "source": "Mozilla.org",
+      "title": "Inside the newsletter making layoffs feel less bleak and more like a group chat",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://blog.mozilla.org/en/internet-culture/laid-off-newsletter/"
+    },
+    {
+      "date": "2025-04-11T13:31:47Z",
+      "source": "The Times of India",
+      "title": "TCS defers wage hikes; Google layoffs",
+      "company": "Google",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "Direct",
+      "url": "https://economictimes.indiatimes.com/tech/newsletters/tech-top-5/tcs-defers-wage-hikes-google-layoffs/articleshow/120209009.cms"
+    },
+    {
+      "date": "2025-04-11T13:30:00Z",
+      "source": "Forbes",
+      "title": "Why Smart Hiring Is Key To Future-Proofing Your Workforce",
+      "company": "Unknown",
+      "event_type": "hiring",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.forbes.com/councils/forbesbusinesscouncil/2025/04/11/why-smart-hiring-is-key-to-future-proofing-your-workforce/"
+    },
+    {
+      "date": "2025-04-11T13:26:10Z",
+      "source": "The Times of India",
+      "title": "Google lays off hundreds from Android, Pixel teams in latest round of job cuts: Report",
+      "company": "Google",
+      "event_type": "layoff",
+      "count": 12000,
+      "ai_relation": "Direct",
+      "url": "https://economictimes.indiatimes.com/tech/technology/google-lays-off-hundreds-from-android-pixel-teams-in-latest-round-of-job-cuts-report/articleshow/120209126.cms"
+    },
+    {
+      "date": "2025-04-11T02:45:16Z",
+      "source": "Realclearinvestigations.com",
+      "title": "Layoffs at 'Luxurious' Federal Agency",
+      "company": "Unknown",
+      "event_type": "layoff",
+      "count": 100,
+      "ai_relation": "None",
+      "url": "https://www.realclearinvestigations.com/articles/2025/04/08/waste_of_the_day_layoffs_at_luxurious_federal_agency_1101602.html"
     }
   ],
   "notes": [

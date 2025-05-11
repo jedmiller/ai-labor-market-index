@@ -1,6 +1,6 @@
 {
   "query": "all:large language models AND (labor market OR employment OR jobs OR workforce OR automation)",
-  "date_collected": "2025-05-04T03:13:32.135711",
+  "date_collected": "2025-05-11T03:11:33.955204",
   "target_period": "2025-04",
   "papers": [
     {
@@ -100,10 +100,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2505.00174v1",
+      "id": "http://arxiv.org/abs/2505.00174v2",
       "title": "Real-World Gaps in AI Governance Research",
       "published": "2025-04-30T20:44:42Z",
-      "updated": "2025-04-30T20:44:42Z",
+      "updated": "2025-05-05T21:12:46Z",
       "summary": "Drawing on 1,178 safety and reliability papers from 9,439 generative AI\npapers (January 2020 - March 2025), we compare research outputs of leading AI\ncompanies (Anthropic, Google DeepMind, Meta, Microsoft, and OpenAI) and AI\nuniversities (CMU, MIT, NYU, Stanford, UC Berkeley, and University of\nWashington). We find that corporate AI research increasingly concentrates on\npre-deployment areas -- model alignment and testing & evaluation -- while\nattention to deployment-stage issues such as model bias has waned. Significant\nresearch gaps exist in high-risk deployment domains, including healthcare,\nfinance, misinformation, persuasive and addictive features, hallucinations, and\ncopyright. Without improved observability into deployed AI, growing corporate\nconcentration could deepen knowledge deficits. We recommend expanding external\nresearcher access to deployment data and systematic observability of in-market\nAI behaviors.",
       "authors": [
         "Ilan Strauss",
@@ -116,8 +116,38 @@
       ],
       "links": [
         "http://dx.doi.org/10.35650/AIDP.4112.d.2025",
-        "http://arxiv.org/abs/2505.00174v1",
-        "http://arxiv.org/pdf/2505.00174v1"
+        "http://arxiv.org/abs/2505.00174v2",
+        "http://arxiv.org/pdf/2505.00174v2"
+      ],
+      "primary_search_term": "large language models",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2505.03787v1",
+      "title": "ArrhythmiaVision: Resource-Conscious Deep Learning Models with Visual\n  Explanations for ECG Arrhythmia Classification",
+      "published": "2025-04-30T18:22:45Z",
+      "updated": "2025-04-30T18:22:45Z",
+      "summary": "Cardiac arrhythmias are a leading cause of life-threatening cardiac events,\nhighlighting the urgent need for accurate and timely detection.\nElectrocardiography (ECG) remains the clinical gold standard for arrhythmia\ndiagnosis; however, manual interpretation is time-consuming, dependent on\nclinical expertise, and prone to human error. Although deep learning has\nadvanced automated ECG analysis, many existing models abstract away the\nsignal's intrinsic temporal and morphological features, lack interpretability,\nand are computationally intensive-hindering their deployment on\nresource-constrained platforms. In this work, we propose two novel lightweight\n1D convolutional neural networks, ArrhythmiNet V1 and V2, optimized for\nefficient, real-time arrhythmia classification on edge devices. Inspired by\nMobileNet's depthwise separable convolutional design, these models maintain\nmemory footprints of just 302.18 KB and 157.76 KB, respectively, while\nachieving classification accuracies of 0.99 (V1) and 0.98 (V2) on the MIT-BIH\nArrhythmia Dataset across five classes: Normal Sinus Rhythm, Left Bundle Branch\nBlock, Right Bundle Branch Block, Atrial Premature Contraction, and Premature\nVentricular Contraction. In order to ensure clinical transparency and\nrelevance, we integrate Shapley Additive Explanations and Gradient-weighted\nClass Activation Mapping, enabling both local and global interpretability.\nThese techniques highlight physiologically meaningful patterns such as the QRS\ncomplex and T-wave that contribute to the model's predictions. We also discuss\nperformance-efficiency trade-offs and address current limitations related to\ndataset diversity and generalizability. Overall, our findings demonstrate the\nfeasibility of combining interpretability, predictive accuracy, and\ncomputational efficiency in practical, wearable, and embedded ECG monitoring\nsystems.",
+      "authors": [
+        "Zuraiz Baig",
+        "Sidra Nasir",
+        "Rizwan Ahmed Khan",
+        "Muhammad Zeeshan Ul Haque"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "eess.SP"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2505.03787v1",
+        "http://arxiv.org/pdf/2505.03787v1"
       ],
       "primary_search_term": "large language models",
       "secondary_search_terms": [
@@ -183,6 +213,33 @@
       "links": [
         "http://arxiv.org/abs/2504.21789v1",
         "http://arxiv.org/pdf/2504.21789v1"
+      ],
+      "primary_search_term": "large language models",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2505.03785v1",
+      "title": "mAIstro: an open-source multi-agentic system for automated end-to-end\n  development of radiomics and deep learning models for medical imaging",
+      "published": "2025-04-30T16:25:51Z",
+      "updated": "2025-04-30T16:25:51Z",
+      "summary": "Agentic systems built on large language models (LLMs) offer promising\ncapabilities for automating complex workflows in healthcare AI. We introduce\nmAIstro, an open-source, autonomous multi-agentic framework for end-to-end\ndevelopment and deployment of medical AI models. The system orchestrates\nexploratory data analysis, radiomic feature extraction, image segmentation,\nclassification, and regression through a natural language interface, requiring\nno coding from the user. Built on a modular architecture, mAIstro supports both\nopen- and closed-source LLMs, and was evaluated using a large and diverse set\nof prompts across 16 open-source datasets, covering a wide range of imaging\nmodalities, anatomical regions, and data types. The agents successfully\nexecuted all tasks, producing interpretable outputs and validated models. This\nwork presents the first agentic framework capable of unifying data analysis, AI\nmodel development, and inference across varied healthcare applications,\noffering a reproducible and extensible foundation for clinical and research AI\nintegration. The code is available at: https://github.com/eltzanis/mAIstro",
+      "authors": [
+        "Eleftherios Tzanis",
+        "Michail E. Klontzas"
+      ],
+      "categories": [
+        "cs.LG",
+        "eess.IV"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2505.03785v1",
+        "http://arxiv.org/pdf/2505.03785v1"
       ],
       "primary_search_term": "large language models",
       "secondary_search_terms": [
@@ -277,6 +334,39 @@
       "links": [
         "http://arxiv.org/abs/2504.21694v1",
         "http://arxiv.org/pdf/2504.21694v1"
+      ],
+      "primary_search_term": "large language models",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2505.03781v1",
+      "title": "ALFRED: Ask a Large-language model For Reliable ECG Diagnosis",
+      "published": "2025-04-30T12:59:06Z",
+      "updated": "2025-04-30T12:59:06Z",
+      "summary": "Leveraging Large Language Models (LLMs) with Retrieval-Augmented Generation\n(RAG) for analyzing medical data, particularly Electrocardiogram (ECG), offers\nhigh accuracy and convenience. However, generating reliable, evidence-based\nresults in specialized fields like healthcare remains a challenge, as RAG alone\nmay not suffice. We propose a Zero-shot ECG diagnosis framework based on RAG\nfor ECG analysis that incorporates expert-curated knowledge to enhance\ndiagnostic accuracy and explainability. Evaluation on the PTB-XL dataset\ndemonstrates the framework's effectiveness, highlighting the value of\nstructured domain expertise in automated ECG interpretation. Our framework is\ndesigned to support comprehensive ECG analysis, addressing diverse diagnostic\nneeds with potential applications beyond the tested dataset.",
+      "authors": [
+        "Jin Yu",
+        "JaeHo Park",
+        "TaeJun Park",
+        "Gyurin Kim",
+        "JiHyun Lee",
+        "Min Sung Lee",
+        "Joon-myoung Kwon",
+        "Jeong Min Son",
+        "Yong-Yeon Jo"
+      ],
+      "categories": [
+        "cs.LG"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2505.03781v1",
+        "http://arxiv.org/pdf/2505.03781v1"
       ],
       "primary_search_term": "large language models",
       "secondary_search_terms": [
@@ -1101,17 +1191,17 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2504.20898v1",
+      "id": "http://arxiv.org/abs/2504.20898v2",
       "title": "CBM-RAG: Demonstrating Enhanced Interpretability in Radiology Report\n  Generation with Multi-Agent RAG and Concept Bottleneck Models",
       "published": "2025-04-29T16:14:55Z",
-      "updated": "2025-04-29T16:14:55Z",
+      "updated": "2025-05-04T22:38:21Z",
       "summary": "Advancements in generative Artificial Intelligence (AI) hold great promise\nfor automating radiology workflows, yet challenges in interpretability and\nreliability hinder clinical adoption. This paper presents an automated\nradiology report generation framework that combines Concept Bottleneck Models\n(CBMs) with a Multi-Agent Retrieval-Augmented Generation (RAG) system to bridge\nAI performance with clinical explainability. CBMs map chest X-ray features to\nhuman-understandable clinical concepts, enabling transparent disease\nclassification. Meanwhile, the RAG system integrates multi-agent collaboration\nand external knowledge to produce contextually rich, evidence-based reports.\nOur demonstration showcases the system's ability to deliver interpretable\npredictions, mitigate hallucinations, and generate high-quality, tailored\nreports with an interactive interface addressing accuracy, trust, and usability\nchallenges. This framework provides a pathway to improving diagnostic\nconsistency and empowering radiologists with actionable insights.",
       "authors": [
         "Hasan Md Tusfiqur Alam",
         "Devansh Srivastav",
         "Abdulrahman Mohamed Selim",
         "Md Abdul Kadir",
-        "Md Moktadiurl Hoque Shuvo",
+        "Md Moktadirul Hoque Shuvo",
         "Daniel Sonntag"
       ],
       "categories": [
@@ -1121,8 +1211,8 @@
       ],
       "links": [
         "http://dx.doi.org/10.1145/3731406.3731970",
-        "http://arxiv.org/abs/2504.20898v1",
-        "http://arxiv.org/pdf/2504.20898v1"
+        "http://arxiv.org/abs/2504.20898v2",
+        "http://arxiv.org/pdf/2504.20898v2"
       ],
       "primary_search_term": "large language models",
       "secondary_search_terms": [
@@ -1420,104 +1510,6 @@
       "links": [
         "http://arxiv.org/abs/2504.21062v1",
         "http://arxiv.org/pdf/2504.21062v1"
-      ],
-      "primary_search_term": "large language models",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2504.20510v1",
-      "title": "SteelBlastQC: Shot-blasted Steel Surface Dataset with Interpretable\n  Detection of Surface Defects",
-      "published": "2025-04-29T07:51:58Z",
-      "updated": "2025-04-29T07:51:58Z",
-      "summary": "Automating the quality control of shot-blasted steel surfaces is crucial for\nimproving manufacturing efficiency and consistency. This study presents a\ndataset of 1654 labeled RGB images (512x512) of steel surfaces, classified as\neither \"ready for paint\" or \"needs shot-blasting.\" The dataset captures\nreal-world surface defects, including discoloration, welding lines, scratches\nand corrosion, making it well-suited for training computer vision models.\nAdditionally, three classification approaches were evaluated: Compact\nConvolutional Transformers (CCT), Support Vector Machines (SVM) with ResNet-50\nfeature extraction, and a Convolutional Autoencoder (CAE). The supervised\nmethods (CCT and SVM) achieve 95% classification accuracy on the test set, with\nCCT leveraging transformer-based attention mechanisms and SVM offering a\ncomputationally efficient alternative. The CAE approach, while less effective,\nestablishes a baseline for unsupervised quality control. We present\ninterpretable decision-making by all three neural networks, allowing industry\nusers to visually pinpoint problematic regions and understand the model's\nrationale. By releasing the dataset and baseline codes, this work aims to\nsupport further research in defect detection, advance the development of\ninterpretable computer vision models for quality control, and encourage the\nadoption of automated inspection systems in industrial applications.",
-      "authors": [
-        "Irina Ruzavina",
-        "Lisa Sophie Theis",
-        "Jesse Lemeer",
-        "Rutger de Groen",
-        "Leo Ebeling",
-        "Andrej Hulak",
-        "Jouaria Ali",
-        "Guangzhi Tang",
-        "Rico Mockel"
-      ],
-      "categories": [
-        "cs.CV",
-        "cs.NE"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2504.20510v1",
-        "http://arxiv.org/pdf/2504.20510v1"
-      ],
-      "primary_search_term": "large language models",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2504.20501v1",
-      "title": "SAM-Guided Robust Representation Learning for One-Shot 3D Medical Image\n  Segmentation",
-      "published": "2025-04-29T07:43:37Z",
-      "updated": "2025-04-29T07:43:37Z",
-      "summary": "One-shot medical image segmentation (MIS) is crucial for medical analysis due\nto the burden of medical experts on manual annotation. The recent emergence of\nthe segment anything model (SAM) has demonstrated remarkable adaptation in MIS\nbut cannot be directly applied to one-shot medical image segmentation (MIS) due\nto its reliance on labor-intensive user interactions and the high computational\ncost. To cope with these limitations, we propose a novel SAM-guided robust\nrepresentation learning framework, named RRL-MedSAM, to adapt SAM to one-shot\n3D MIS, which exploits the strong generalization capabilities of the SAM\nencoder to learn better feature representation. We devise a dual-stage\nknowledge distillation (DSKD) strategy to distill general knowledge between\nnatural and medical images from the foundation model to train a lightweight\nencoder, and then adopt a mutual exponential moving average (mutual-EMA) to\nupdate the weights of the general lightweight encoder and medical-specific\nencoder. Specifically, pseudo labels from the registration network are used to\nperform mutual supervision for such two encoders. Moreover, we introduce an\nauto-prompting (AP) segmentation decoder which adopts the mask generated from\nthe general lightweight model as a prompt to assist the medical-specific model\nin boosting the final segmentation performance. Extensive experiments conducted\non three public datasets, i.e., OASIS, CT-lung demonstrate that the proposed\nRRL-MedSAM outperforms state-of-the-art one-shot MIS methods for both\nsegmentation and registration tasks. Especially, our lightweight encoder uses\nonly 3\\% of the parameters compared to the encoder of SAM-Base.",
-      "authors": [
-        "Jia Wang",
-        "Yunan Mei",
-        "Jiarui Liu",
-        "Xin Fan"
-      ],
-      "categories": [
-        "eess.IV",
-        "cs.CV"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2504.20501v1",
-        "http://arxiv.org/pdf/2504.20501v1"
-      ],
-      "primary_search_term": "large language models",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2504.20471v1",
-      "title": "The Estimation of Continual Causal Effect for Dataset Shifting Streams",
-      "published": "2025-04-29T07:13:28Z",
-      "updated": "2025-04-29T07:13:28Z",
-      "summary": "Causal effect estimation has been widely used in marketing optimization. The\nframework of an uplift model followed by a constrained optimization algorithm\nis popular in practice. To enhance performance in the online environment, the\nframework needs to be improved to address the complexities caused by temporal\ndataset shift. This paper focuses on capturing the dataset shift from user\nbehavior and domain distribution changing over time. We propose an Incremental\nCausal Effect with Proxy Knowledge Distillation (ICE-PKD) framework to tackle\nthis challenge. The ICE-PKD framework includes two components: (i) a\nmulti-treatment uplift network that eliminates confounding bias using\ncounterfactual regression; (ii) an incremental training strategy that adapts to\nthe temporal dataset shift by updating with the latest data and protects\ngeneralization via replay-based knowledge distillation. We also revisit the\nuplift modeling metrics and introduce a novel metric for more precise online\nevaluation in multiple treatment scenarios. Extensive experiments on both\nsimulated and online datasets show that the proposed framework achieves better\nperformance. The ICE-PKD framework has been deployed in the marketing system of\nHuaxiaozhu, a ride-hailing platform in China.",
-      "authors": [
-        "Baining Chen",
-        "Yiming Zhang",
-        "Yuqiao Han",
-        "Ruyue Zhang",
-        "Ruihuan Du",
-        "Zhishuo Zhou",
-        "Zhengdan Zhu",
-        "Xun Liu",
-        "Jiecheng Guo"
-      ],
-      "categories": [
-        "cs.LG",
-        "cs.AI",
-        "stat.ME"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2504.20471v1",
-        "http://arxiv.org/pdf/2504.20471v1"
       ],
       "primary_search_term": "large language models",
       "secondary_search_terms": [
