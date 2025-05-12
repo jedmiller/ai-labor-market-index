@@ -1,26 +1,26 @@
 {
   "dataset": "occupation_categories",
-  "date_collected": "2025-05-03T02:54:16.151009",
+  "date_collected": "2025-05-11T03:11:29.332338",
   "target_period": "2025-04",
   "data": {
     "Management": {
-      "count": 18640,
+      "count": 16640,
       "description": "Occupations in Management"
     },
     "Business and Financial Operations": {
-      "count": 18400,
+      "count": 17440,
       "description": "Occupations in Business and Financial Operations"
     },
     "Computer and Mathematical": {
-      "count": 40880,
+      "count": 31080,
       "description": "Occupations in Computer and Mathematical"
     },
     "Architecture and Engineering": {
-      "count": 14460,
+      "count": 12120,
       "description": "Occupations in Architecture and Engineering"
     },
     "Life, Physical, and Social Science": {
-      "count": 9600,
+      "count": 8480,
       "description": "Occupations in Life, Physical, and Social Science"
     },
     "Community and Social Service": {
@@ -28,71 +28,71 @@
       "description": "Occupations in Community and Social Service"
     },
     "Legal": {
-      "count": 9440,
+      "count": 8240,
       "description": "Occupations in Legal"
     },
     "Educational Instruction and Library": {
-      "count": 13740,
+      "count": 15360,
       "description": "Occupations in Educational Instruction and Library"
     },
     "Arts, Design, Entertainment, Sports, and Media": {
-      "count": 11080,
+      "count": 8920,
       "description": "Occupations in Arts, Design, Entertainment, Sports, and Media"
     },
     "Healthcare Practitioners and Technical": {
-      "count": 29700,
+      "count": 20400,
       "description": "Occupations in Healthcare Practitioners and Technical"
     },
     "Healthcare Support": {
-      "count": 25500,
+      "count": 24500,
       "description": "Occupations in Healthcare Support"
     },
     "Protective Service": {
-      "count": 8360,
+      "count": 10040,
       "description": "Occupations in Protective Service"
     },
     "Food Preparation and Serving Related": {
-      "count": 9680,
+      "count": 11600,
       "description": "Occupations in Food Preparation and Serving Related"
     },
     "Building and Grounds Cleaning and Maintenance": {
-      "count": 9480,
+      "count": 10520,
       "description": "Occupations in Building and Grounds Cleaning and Maintenance"
     },
     "Personal Care and Service": {
-      "count": 9320,
+      "count": 9800,
       "description": "Occupations in Personal Care and Service"
     },
     "Sales and Related": {
-      "count": 8520,
+      "count": 10880,
       "description": "Occupations in Sales and Related"
     },
     "Office and Administrative Support": {
-      "count": 10520,
+      "count": 9800,
       "description": "Occupations in Office and Administrative Support"
     },
     "Farming, Fishing, and Forestry": {
-      "count": 11560,
+      "count": 8120,
       "description": "Occupations in Farming, Fishing, and Forestry"
     },
     "Construction and Extraction": {
-      "count": 10920,
+      "count": 8360,
       "description": "Occupations in Construction and Extraction"
     },
     "Installation, Maintenance, and Repair": {
-      "count": 8000,
+      "count": 8160,
       "description": "Occupations in Installation, Maintenance, and Repair"
     },
     "Production": {
-      "count": 10160,
+      "count": 10640,
       "description": "Occupations in Production"
     },
     "Transportation and Material Moving": {
-      "count": 8600,
+      "count": 10200,
       "description": "Occupations in Transportation and Material Moving"
     },
     "Military Specific": {
-      "count": 10520,
+      "count": 11320,
       "description": "Occupations in Military Specific"
     }
   }

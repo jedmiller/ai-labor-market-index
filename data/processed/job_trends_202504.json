@@ -1,5 +1,5 @@
 {
-  "date_analyzed": "2025-05-03T02:54:21.725220",
+  "date_analyzed": "2025-05-11T03:11:44.483142",
   "source": "Anthropic Economic Index",
   "source_period": "2025-04",
   "requested_period": "2025-04",
@@ -7,31 +7,31 @@
   "using_fallback_data": true,
   "statistics": {
     "total_occupations_analyzed": 20,
-    "average_automation_rate": 41.4,
-    "average_augmentation_rate": 58.59999999999999,
-    "automation_augmentation_ratio": 0.7064846416382254
+    "average_automation_rate": 43.56666666666666,
+    "average_augmentation_rate": 56.43333333333334,
+    "automation_augmentation_ratio": 0.7720023626698168
   },
   "categories": {
     "data": [
       {
         "category": "Management",
-        "count": 18640
+        "count": 16640
       },
       {
         "category": "Business and Financial Operations",
-        "count": 18400
+        "count": 17440
       },
       {
         "category": "Computer and Mathematical",
-        "count": 40880
+        "count": 31080
       },
       {
         "category": "Architecture and Engineering",
-        "count": 14460
+        "count": 12120
       },
       {
         "category": "Life, Physical, and Social Science",
-        "count": 9600
+        "count": 8480
       },
       {
         "category": "Community and Social Service",
@@ -39,131 +39,135 @@
       },
       {
         "category": "Legal",
-        "count": 9440
+        "count": 8240
       },
       {
         "category": "Educational Instruction and Library",
-        "count": 13740
+        "count": 15360
       },
       {
         "category": "Arts, Design, Entertainment, Sports, and Media",
-        "count": 11080
+        "count": 8920
       },
       {
         "category": "Healthcare Practitioners and Technical",
-        "count": 29700
+        "count": 20400
       },
       {
         "category": "Healthcare Support",
-        "count": 25500
+        "count": 24500
       },
       {
         "category": "Protective Service",
-        "count": 8360
+        "count": 10040
       },
       {
         "category": "Food Preparation and Serving Related",
-        "count": 9680
+        "count": 11600
       },
       {
         "category": "Building and Grounds Cleaning and Maintenance",
-        "count": 9480
+        "count": 10520
       },
       {
         "category": "Personal Care and Service",
-        "count": 9320
+        "count": 9800
       },
       {
         "category": "Sales and Related",
-        "count": 8520
+        "count": 10880
       },
       {
         "category": "Office and Administrative Support",
-        "count": 10520
+        "count": 9800
       },
       {
         "category": "Farming, Fishing, and Forestry",
-        "count": 11560
+        "count": 8120
       },
       {
         "category": "Construction and Extraction",
-        "count": 10920
+        "count": 8360
       },
       {
         "category": "Installation, Maintenance, and Repair",
-        "count": 8000
+        "count": 8160
       },
       {
         "category": "Production",
-        "count": 10160
+        "count": 10640
       },
       {
         "category": "Transportation and Material Moving",
-        "count": 8600
+        "count": 10200
       },
       {
         "category": "Military Specific",
-        "count": 10520
+        "count": 11320
       }
     ]
   },
   "top_augmented_roles": [
     {
-      "title": "Nurses",
-      "augmentation_rate": 80.0
-    },
-    {
       "title": "Mechanical Engineers",
-      "augmentation_rate": 79.33333333333333
-    },
-    {
-      "title": "Data Scientists",
-      "augmentation_rate": 76.66666666666667
-    },
-    {
-      "title": "Teachers",
-      "augmentation_rate": 76.0
+      "augmentation_rate": 78.0
     },
     {
       "title": "Software Developers",
-      "augmentation_rate": 74.66666666666667
+      "augmentation_rate": 76.66666666666667
+    },
+    {
+      "title": "Nurses",
+      "augmentation_rate": 76.66666666666667
     },
     {
       "title": "Research Scientists",
+      "augmentation_rate": 75.33333333333333
+    },
+    {
+      "title": "Teachers",
       "augmentation_rate": 74.66666666666667
     },
     {
       "title": "Physicians",
+      "augmentation_rate": 71.33333333333334
+    },
+    {
+      "title": "Data Scientists",
       "augmentation_rate": 70.66666666666666
     },
     {
-      "title": "Administrative Assistants",
-      "augmentation_rate": 60.0
+      "title": "Financial Analysts",
+      "augmentation_rate": 53.333333333333336
+    },
+    {
+      "title": "Project Managers",
+      "augmentation_rate": 53.333333333333336
     },
     {
       "title": "Social Media Managers",
-      "augmentation_rate": 57.333333333333336
-    },
-    {
-      "title": "Customer Service Representatives",
       "augmentation_rate": 52.0
     }
   ],
   "top_automated_roles": [
     {
-      "title": "Financial Analysts",
-      "automation_rate": 58.66666666666667
-    },
-    {
       "title": "Graphic Designers",
       "automation_rate": 58.66666666666667
     },
     {
-      "title": "Sales Representatives",
-      "automation_rate": 56.0
+      "title": "Legal Assistants",
+      "automation_rate": 58.66666666666667
     },
     {
-      "title": "Project Managers",
+      "title": "Administrative Assistants",
+      "automation_rate": 58.66666666666667
+    },
+    {
+      "title": "Accountants",
+      "automation_rate": 57.33333333333333
+    },
+    {
+      "title": "Customer Service Representatives",
       "automation_rate": 56.0
     },
     {
@@ -172,23 +176,19 @@
     },
     {
       "title": "Marketing Specialists",
-      "automation_rate": 49.333333333333336
-    },
-    {
-      "title": "Accountants",
-      "automation_rate": 49.333333333333336
-    },
-    {
-      "title": "Legal Assistants",
-      "automation_rate": 49.333333333333336
+      "automation_rate": 53.333333333333336
     },
     {
       "title": "Product Managers",
-      "automation_rate": 49.333333333333336
+      "automation_rate": 53.333333333333336
     },
     {
-      "title": "Customer Service Representatives",
-      "automation_rate": 48.0
+      "title": "Sales Representatives",
+      "automation_rate": 52.0
+    },
+    {
+      "title": "Human Resources Specialists",
+      "automation_rate": 50.666666666666664
     }
   ],
   "top_tasks": [
