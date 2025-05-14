@@ -252,10 +252,19 @@ jobs:
           fi
       
       - name: Update files in repository
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Update AI Labor Market Index for ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }} ($(date +'%Y-%m-%d'))"
-          file_pattern: 'data/raw/**/*.json !data/raw/**/*.bak data/processed/**/*.json'
-          commit_user_name: 'github-actions'
-          commit_user_email: 'github-actions@github.com'
-          commit_author: 'GitHub Actions <github-actions@github.com>'
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+
+          # Set remote URL with PAT
+          git remote set-url origin https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/jedmiller/ai-labor-market-index.git
+
+          # Check if there are changes to commit
+          if [[ -n $(git status --porcelain) ]]; then
+            git add data/raw/**/*.json
+            git add data/processed/**/*.json
+            git commit -m "Update AI Labor Market Index for ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }} ($(date +'%Y-%m-%d'))"
+            git push
+          else
+            echo "No changes to commit"
+          fi
