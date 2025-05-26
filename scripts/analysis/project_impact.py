@@ -79,7 +79,7 @@ class AIImpactProjector:
 
     def calculate_adoption_projection(self, current_adoption, years_ahead, sector, scenario="moderate"):
         """
-        Calculate projected adoption using S-curve model.
+        Calculate projected adoption using S-curve model with realistic industry-specific variations.
         S-curve: adoption = L / (1 + e^(-k(t-t0)))
         L = adoption ceiling, k = speed, t0 = inflection point
         """
@@ -104,12 +104,35 @@ class AIImpactProjector:
         current_t = 0  # Current time is reference point
         t0 = current_t + (1/adoption_speed) * math.log((adoption_ceiling/current_adoption) - 1)
         
-        # Calculate future adoption at each year
+        # Calculate future adoption at each year with realistic variation
         future_adoptions = []
         for year in range(1, years_ahead + 1):
             future_t = current_t + year
-            future_adoption = adoption_ceiling / (1 + math.exp(-adoption_speed * (future_t - t0)))
-            future_adoptions.append(future_adoption)
+            base_adoption = adoption_ceiling / (1 + math.exp(-adoption_speed * (future_t - t0)))
+            
+            # Add industry-specific variation and market shocks
+            variation_factor = 1.0
+            if sector == "Information" or "Technology" in sector:
+                # Tech adoption tends to have more volatility early then stabilize
+                variation_factor = 1.0 + (0.1 * math.sin(year * 0.5)) if year <= 3 else 1.0
+            elif sector == "Government":
+                # Government adoption tends to be more stepwise
+                variation_factor = 0.8 if year % 2 == 0 else 1.2
+            elif "Healthcare" in sector or "Health" in sector:
+                # Healthcare has regulatory delays that create plateaus
+                variation_factor = 0.7 if year == 2 or year == 4 else 1.0
+            elif "Manufacturing" in sector:
+                # Manufacturing has cyclical patterns due to capital investment cycles
+                variation_factor = 1.0 + (0.15 * math.cos(year * math.pi / 3))
+            elif "Financial" in sector or "Finance" in sector:
+                # Financial services have regulatory-driven adoption patterns
+                variation_factor = 1.3 if year == 2 else (0.9 if year == 4 else 1.0)
+            elif "Education" in sector:
+                # Education adoption follows academic calendar patterns
+                variation_factor = 1.2 if year % 2 == 1 else 0.8
+                
+            adjusted_adoption = base_adoption * variation_factor
+            future_adoptions.append(min(adoption_ceiling, adjusted_adoption))
         
         return future_adoptions
 

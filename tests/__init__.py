@@ -1,0 +1,1 @@
+# Tests for AI Labor Market Index
