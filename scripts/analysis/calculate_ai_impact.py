@@ -312,9 +312,99 @@ class AIImpactCalculator:
 
     def calculate_displacement_effect(self, industry_data, anthropic_data):
         """
-        Calculate the overall Displacement Effect.
-        Displacement Effect = Pure Automation Impact + Capacity Augmentation Impact
+        Calculate displacement effect using occupation-to-industry mapping when available,
+        with fallback to simplified calculation for backward compatibility.
         """
+        # Try occupation-based mapping first
+        try:
+            return self.calculate_displacement_effect_with_occupation_mapping(industry_data, anthropic_data)
+        except Exception as e:
+            logger.warning(f"Occupation mapping failed: {e}")
+            logger.info("Falling back to simplified displacement calculation")
+            return self.calculate_displacement_effect_fallback(industry_data, anthropic_data)
+
+    def calculate_displacement_effect_with_occupation_mapping(self, industry_data, anthropic_data):
+        """
+        Calculate displacement effect using proper occupation-to-industry mapping.
+        """
+        from .occupation_industry_mapper import OccupationIndustryMapper
+        
+        # Initialize the mapper
+        mapper = OccupationIndustryMapper(input_dir=self.input_dir)
+        
+        # Try to load occupation mapping data
+        mapping_success = mapper.load_data_sources(auto_discover=True)
+        
+        if not mapping_success:
+            raise ValueError("Could not load occupation mapping data sources")
+        
+        # Calculate industry-specific rates using occupation mapping
+        industry_rates = mapper.calculate_industry_automation_rates()
+        
+        if not industry_rates:
+            raise ValueError("No industry rates calculated from occupation mapping")
+        
+        logger.info("Using occupation-based displacement calculation")
+        
+        # Calculate displacement effects using mapped rates
+        displacement_effects = {}
+        
+        for industry, data in industry_data.items():
+            # Get industry-specific rates from mapping
+            rates = industry_rates.get(industry, {})
+            auto_rate = rates.get('automation_rate', 0.30)  # Default if not found
+            aug_rate = rates.get('augmentation_rate', 0.70)
+            confidence = rates.get('confidence', 0.5)
+            data_coverage = rates.get('data_coverage', 0.0)
+            
+            # Convert rates to percentages for existing calculation methods
+            auto_pct = auto_rate * 100
+            aug_pct = aug_rate * 100
+            
+            # Calculate displacement components using existing methods
+            pure_automation = self.calculate_pure_automation_impact(auto_pct, industry)
+            capacity_augmentation = self.calculate_capacity_augmentation_impact(aug_pct, industry, industry_data)
+            
+            # Total displacement effect
+            displacement_effect = pure_automation + capacity_augmentation
+            displacement_effect = np.clip(displacement_effect, 0, 0.8)
+            
+            displacement_effects[industry] = {
+                "effect": displacement_effect,
+                "confidence": confidence,
+                "data_coverage": data_coverage,
+                "calculation_method": "occupation_mapped",
+                "components": {
+                    "pure_automation": pure_automation,
+                    "capacity_augmentation": capacity_augmentation,
+                    "automation_rate": auto_rate,
+                    "augmentation_rate": aug_rate
+                }
+            }
+        
+        # Calculate weighted average displacement
+        total_employment = sum(data.get("current", 0) for data in industry_data.values())
+        if total_employment > 0:
+            weighted_displacement = sum(
+                displacement_effects[industry]["effect"] * industry_data[industry].get("current", 0)
+                for industry in displacement_effects
+                if industry in industry_data
+            ) / total_employment
+        else:
+            weighted_displacement = np.mean([data["effect"] for data in displacement_effects.values()])
+        
+        # Add methodology metadata
+        for industry_effect in displacement_effects.values():
+            industry_effect["methodology"] = "occupation_weighted_aggregation"
+        
+        return weighted_displacement, displacement_effects
+
+    def calculate_displacement_effect_fallback(self, industry_data, anthropic_data):
+        """
+        Fallback displacement calculation using simplified approach (original methodology).
+        """
+        logger.info("Using simplified displacement calculation (fallback)")
+        
         # Extract automation and augmentation percentages from Anthropic data
         industry_automation = {}
         industry_augmentation = {}
@@ -347,9 +437,14 @@ class AIImpactCalculator:
             
             displacement_effects[industry] = {
                 "effect": displacement_effect,
+                "confidence": 0.5,  # Medium confidence for simplified approach
+                "data_coverage": 0.0,  # No detailed occupation data used
+                "calculation_method": "simplified_uniform",
                 "components": {
                     "pure_automation": pure_automation,
-                    "capacity_augmentation": capacity_augmentation
+                    "capacity_augmentation": capacity_augmentation,
+                    "automation_rate": auto_pct / 100,
+                    "augmentation_rate": aug_pct / 100
                 }
             }
         
@@ -775,14 +870,16 @@ class AIImpactCalculator:
                 "news_events_count": news_events['total_events']
             },
             "data_quality": {
-                "calculation_method": "component_based",
+                "calculation_method": self._determine_calculation_method(displacement_by_industry),
                 "data_completeness": self.assess_data_completeness(employment_data, job_data),
                 "last_updated": datetime.now().isoformat(),
                 "confidence_factors": {
                     "has_anthropic_data": job_data is not None,
                     "has_recent_employment": employment_data is not None,
-                    "has_industry_breakdown": len(industries) > 5
-                }
+                    "has_industry_breakdown": len(industries) > 5,
+                    "uses_occupation_mapping": self._uses_occupation_mapping(displacement_by_industry)
+                },
+                "methodology_details": self._get_methodology_details(displacement_by_industry)
             },
             "validation": {
                 "employment_coverage": total_employment / total_nonfarm_employment if total_nonfarm_employment > 0 else 0,
@@ -898,6 +995,61 @@ class AIImpactCalculator:
         if job_data: score += 0.3
         if employment_data and len(employment_data.get("industries", {})) > 8: score += 0.3
         return score
+
+    def _determine_calculation_method(self, displacement_by_industry):
+        """Determine which calculation method was used based on displacement data"""
+        if not displacement_by_industry:
+            return "component_based"
+        
+        # Check if any industry used occupation mapping
+        for industry_data in displacement_by_industry.values():
+            if industry_data.get("calculation_method") == "occupation_mapped":
+                return "occupation_weighted_component_based"
+        
+        return "component_based"
+
+    def _uses_occupation_mapping(self, displacement_by_industry):
+        """Check if occupation mapping was used for any industries"""
+        if not displacement_by_industry:
+            return False
+        
+        return any(
+            industry_data.get("calculation_method") == "occupation_mapped"
+            for industry_data in displacement_by_industry.values()
+        )
+
+    def _get_methodology_details(self, displacement_by_industry):
+        """Get detailed methodology information"""
+        details = {
+            "displacement_calculation": "fallback",
+            "occupation_mapping_coverage": 0.0,
+            "average_data_coverage": 0.0,
+            "average_confidence": 0.0
+        }
+        
+        if not displacement_by_industry:
+            return details
+        
+        # Analyze methodology used
+        occupation_mapped_count = 0
+        total_coverage = 0.0
+        total_confidence = 0.0
+        
+        for industry_data in displacement_by_industry.values():
+            if industry_data.get("calculation_method") == "occupation_mapped":
+                occupation_mapped_count += 1
+                total_coverage += industry_data.get("data_coverage", 0.0)
+                total_confidence += industry_data.get("confidence", 0.0)
+        
+        total_industries = len(displacement_by_industry)
+        
+        if occupation_mapped_count > 0:
+            details["displacement_calculation"] = "occupation_mapped"
+            details["occupation_mapping_coverage"] = occupation_mapped_count / total_industries
+            details["average_data_coverage"] = total_coverage / occupation_mapped_count
+            details["average_confidence"] = total_confidence / occupation_mapped_count
+        
+        return details
 
     def save_results(self, results):
         """Save the calculation results to a file."""
