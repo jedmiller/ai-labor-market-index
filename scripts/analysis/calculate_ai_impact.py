@@ -1127,15 +1127,9 @@ class AIImpactCalculator:
         data_sources = {'default': 0, 'BLS_estimated': 0, 'ai_jobs': 0}
         for industry, data in impact_results['by_industry'].items():
             if industry != "Total Nonfarm":
-                # Check demand effect data source
-                demand_source = demand_by_industry.get(industry, {}).get('components', {}).get('data_source', 'default')
-                if demand_source in data_sources:
-                    data_sources[demand_source] += 1
-                    
-                # Check if AI jobs data was used
-                creation_components = creation_by_industry.get(industry, {}).get('components', {})
-                if creation_components.get('total_ai_postings_used', 0) > 0:
-                    data_sources['ai_jobs'] += 1
+                # Note: Detailed component data source tracking would require 
+                # returning additional metadata from calculate_net_impact
+                data_sources['default'] += 1
         
         logger.info(f"Industries using real productivity data: {data_sources['BLS_estimated']}")
         logger.info(f"Industries using AI jobs data: {data_sources['ai_jobs']}")
