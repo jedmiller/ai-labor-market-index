@@ -36,7 +36,12 @@ jobs:
     - name: Generate AI Impact Analysis
       run: |
         echo "Running AI impact calculation..."
-        python scripts/analysis/calculate_ai_impact.py
+        # Use previous month since economic data has ~1 month lag
+        PREV_MONTH_DATE=$(date -d "1 month ago" +%Y-%m)
+        PREV_YEAR=$(echo $PREV_MONTH_DATE | cut -d'-' -f1)
+        PREV_MONTH=$(echo $PREV_MONTH_DATE | cut -d'-' -f2)
+        echo "Calculating for previous month: $PREV_YEAR-$PREV_MONTH"
+        python scripts/analysis/calculate_ai_impact.py --year $PREV_YEAR --month $PREV_MONTH
         
     - name: Generate Impact Projections
       run: |
