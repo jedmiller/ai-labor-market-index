@@ -1,0 +1,176 @@
+{
+  "date": "2025-04",
+  "total_impact": 0,
+  "jobs_affected": 0,
+  "total_employment": 0,
+  "transformation_rate": 0,
+  "transformation_by_industry": {
+    "Total Nonfarm": 0.129623,
+    "Mining and Logging": 0.128725,
+    "Construction": 0.12308799999999999,
+    "Manufacturing": 0.166544,
+    "Trade, Transportation, and Utilities": 0.127051,
+    "Information": 0.143228,
+    "Financial Activities": 0.128958,
+    "Professional and Business Services": 0.140465,
+    "Education and Health Services": 0.12293899999999999,
+    "Leisure and Hospitality": 0.12606599999999998,
+    "Other Services": 0.108795,
+    "Government": 0.11278200000000001
+  },
+  "by_industry": {
+    "Total Nonfarm": {
+      "impact": -0.06662299999999999,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.09062299999999998,
+        "creation_effect": 0.015,
+        "demand_effect": 0.009
+      }
+    },
+    "Mining and Logging": {
+      "impact": -0.11072499999999996,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.102325,
+        "creation_effect": 0.006,
+        "demand_effect": -0.0144
+      }
+    },
+    "Construction": {
+      "impact": -0.10058800000000001,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.099088,
+        "creation_effect": 0.0075,
+        "demand_effect": -0.009
+      }
+    },
+    "Manufacturing": {
+      "impact": -0.12154399999999999,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.109544,
+        "creation_effect": 0.015,
+        "demand_effect": -0.027
+      }
+    },
+    "Trade, Transportation, and Utilities": {
+      "impact": -0.09105099999999999,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.09585099999999999,
+        "creation_effect": 0.012,
+        "demand_effect": -0.0072
+      }
+    },
+    "Information": {
+      "impact": -0.01722799999999991,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.065228,
+        "creation_effect": 0.03,
+        "demand_effect": 0.018
+      }
+    },
+    "Financial Activities": {
+      "impact": -0.053357999999999906,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.082158,
+        "creation_effect": 0.018,
+        "demand_effect": 0.0108
+      }
+    },
+    "Professional and Business Services": {
+      "impact": -0.01896500000000001,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.068465,
+        "creation_effect": 0.0225,
+        "demand_effect": 0.026999999999999996
+      }
+    },
+    "Education and Health Services": {
+      "impact": -0.04193899999999995,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.07493899999999999,
+        "creation_effect": 0.015,
+        "demand_effect": 0.018
+      }
+    },
+    "Leisure and Hospitality": {
+      "impact": -0.09006599999999998,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.10431599999999999,
+        "creation_effect": 0.0075,
+        "demand_effect": 0.00675
+      }
+    },
+    "Other Services": {
+      "impact": -0.07099500000000003,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.085395,
+        "creation_effect": 0.009,
+        "demand_effect": 0.0054
+      }
+    },
+    "Government": {
+      "impact": -0.0749820000000001,
+      "jobs_affected": 0,
+      "components": {
+        "displacement_effect": -0.088632,
+        "creation_effect": 0.010499999999999999,
+        "demand_effect": 0.00315
+      }
+    }
+  },
+  "components": {
+    "displacement_effect": -0.08888033333333333,
+    "creation_effect": 0,
+    "market_maturity": 0.5,
+    "adjusted_market_maturity": 0.5,
+    "demand_effect": 0.003375,
+    "momentum_factor": 1.0,
+    "news_events_count": 0
+  },
+  "data_quality": {
+    "calculation_method": "component_based",
+    "data_completeness": 1.0,
+    "last_updated": "2025-05-28T05:24:04.009721",
+    "confidence_factors": {
+      "has_anthropic_data": true,
+      "has_recent_employment": true,
+      "has_industry_breakdown": true,
+      "uses_occupation_mapping": false
+    },
+    "methodology_details": {
+      "displacement_calculation": "fallback",
+      "occupation_mapping_coverage": 0.0,
+      "average_data_coverage": 0.0,
+      "average_confidence": 0.0
+    }
+  },
+  "validation": {
+    "employment_coverage": 0,
+    "bls_total_nonfarm": 0,
+    "validation_passed": true,
+    "warnings": [],
+    "errors": []
+  },
+  "metadata": {
+    "calculation_type": "component_based",
+    "components_included": [
+      "displacement",
+      "creation",
+      "maturity",
+      "demand"
+    ],
+    "transformation_rate_included": true,
+    "confidence_intervals_available": true,
+    "last_calculation": "2025-05-28T05:24:04.010172"
+  }
+}
