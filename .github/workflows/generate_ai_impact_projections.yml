@@ -1,0 +1,68 @@
+name: Generate AI Impact Projections
+
+on:
+  schedule:
+    # Run on the 7th of each month at 6 AM UTC (gives time for previous month's data)
+    - cron: '0 6 7 * *'
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: 'Force run even if data is recent'
+        required: false
+        default: 'false'
+
+jobs:
+  generate_projections:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Create output directories
+      run: |
+        mkdir -p data/processed/projections
+        
+    - name: Generate AI Impact Analysis
+      run: |
+        echo "Running AI impact calculation..."
+        python scripts/analysis/calculate_ai_impact.py
+        
+    - name: Generate Impact Projections
+      run: |
+        echo "Running impact projections..."
+        python scripts/analysis/project_impact.py
+        
+    - name: Generate Confidence Intervals
+      run: |
+        echo "Running confidence interval analysis..."
+        python scripts/analysis/confidence_intervals.py
+        
+    - name: Verify generated files
+      run: |
+        echo "Verifying generated files..."
+        ls -la data/processed/ai_labor_impact_latest.json
+        ls -la data/processed/projections/ai_impact_projections_latest.json
+        ls -la data/processed/projections/ai_impact_confidence_latest.json
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/processed/
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Generate AI impact projections data - $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git push
+        fi
