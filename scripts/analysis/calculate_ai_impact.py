@@ -1026,6 +1026,10 @@ class AIImpactCalculator:
             if current_employment == 0:
                 current_employment = data.get("employment", 0)
             
+            # Convert employment from thousands to actual worker count
+            # BLS data is typically reported in thousands
+            current_employment_actual = current_employment * 1000
+            
             # Get effects for this industry
             displacement = displacement_by_industry.get(industry, {"effect": displacement_avg})["effect"]
             creation = creation_by_industry.get(industry, {"effect": creation_avg})["effect"]
@@ -1034,8 +1038,8 @@ class AIImpactCalculator:
             # Calculate net impact percentage
             net_impact_pct = 1 - displacement + (creation * adjusted_market_maturity) + demand
             
-            # Calculate jobs affected
-            jobs_affected = current_employment * (net_impact_pct - 1)
+            # Calculate jobs affected using actual worker count
+            jobs_affected = current_employment_actual * (net_impact_pct - 1)
             
             # Store results
             net_impact_by_industry[industry] = {
@@ -1061,19 +1065,23 @@ class AIImpactCalculator:
                 employment = data.get("employment", 0)
             return employment
         
-        total_employment = sum([get_employment(data) for industry, data in industries.items() if industry != "Total Nonfarm"])
+        # Convert to actual worker counts (from thousands)
+        total_employment_thousands = sum([get_employment(data) for industry, data in industries.items() if industry != "Total Nonfarm"])
+        total_employment = total_employment_thousands * 1000  # Convert to actual workers
         weighted_impact = sum([data["impact"] * get_employment(industries[industry]) for industry, data in net_impact_by_industry.items() if industry != "Total Nonfarm"])
         
         # Validate that total employment matches BLS total nonfarm if available
         total_nonfarm_data = industries.get("Total Nonfarm", {})
-        total_nonfarm_employment = get_employment(total_nonfarm_data)
+        total_nonfarm_employment_thousands = get_employment(total_nonfarm_data)
+        total_nonfarm_employment = total_nonfarm_employment_thousands * 1000  # Convert to actual workers
+        
         if total_nonfarm_employment > 0:
             employment_ratio = total_employment / total_nonfarm_employment
             if abs(employment_ratio - 1.0) > 0.1:  # More than 10% difference
-                logger.warning(f"Employment sum mismatch: industries total={total_employment}, BLS total nonfarm={total_nonfarm_employment}, ratio={employment_ratio:.3f}")
+                logger.warning(f"Employment sum mismatch: industries total={total_employment:,}, BLS total nonfarm={total_nonfarm_employment:,}, ratio={employment_ratio:.3f}")
         
-        if total_employment > 0:
-            overall_impact = weighted_impact / total_employment
+        if total_employment_thousands > 0:
+            overall_impact = weighted_impact / total_employment_thousands
         else:
             overall_impact = 0
         
@@ -1107,7 +1115,8 @@ class AIImpactCalculator:
             "date": f"{self.year}-{self.month:02d}" if self.year and self.month else datetime.now().strftime("%Y-%m"),
             "total_impact": overall_impact,
             "jobs_affected": total_jobs_affected,
-            "total_employment": total_employment,
+            "total_employment": total_employment,  # Now in actual worker count
+            "total_employment_thousands": total_employment_thousands,  # Also provide thousands for reference
             "transformation_rate": overall_transformation_rate,
             "transformation_by_industry": transformation_effects,
             "by_industry": net_impact_by_industry,
@@ -1134,7 +1143,8 @@ class AIImpactCalculator:
             },
             "validation": {
                 "employment_coverage": total_employment / total_nonfarm_employment if total_nonfarm_employment > 0 else 0,
-                "bls_total_nonfarm": total_nonfarm_employment
+                "bls_total_nonfarm": total_nonfarm_employment,  # Now in actual worker count
+                "bls_total_nonfarm_thousands": total_nonfarm_employment_thousands  # Also provide thousands
             }
         }
         
