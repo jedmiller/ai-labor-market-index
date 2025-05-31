@@ -1017,6 +1017,9 @@ class AIImpactCalculator:
         # Calculate net impact for each industry
         net_impact_by_industry = {}
         total_jobs_affected = 0
+        total_jobs_displaced = 0
+        total_jobs_created = 0
+        total_jobs_demand_effect = 0
         
         for industry, data in industries.items():
             # Fix employment data access - check multiple possible field names
@@ -1041,10 +1044,18 @@ class AIImpactCalculator:
             # Calculate jobs affected using actual worker count
             jobs_affected = current_employment_actual * (net_impact_pct - 1)
             
+            # Calculate individual component job impacts for transparency
+            jobs_displaced = current_employment_actual * displacement
+            jobs_created = current_employment_actual * creation * adjusted_market_maturity
+            jobs_demand_effect = current_employment_actual * demand
+            
             # Store results
             net_impact_by_industry[industry] = {
                 "impact": net_impact_pct - 1,  # Convert to percentage change (-0.06 = 6% job loss)
                 "jobs_affected": int(jobs_affected),
+                "jobs_displaced": int(jobs_displaced),
+                "jobs_created": int(jobs_created),
+                "jobs_demand_effect": int(jobs_demand_effect),
                 "components": {
                     "displacement_effect": -displacement,
                     "creation_effect": creation * adjusted_market_maturity,
@@ -1055,6 +1066,9 @@ class AIImpactCalculator:
             # Add to total (excluding "Total Nonfarm" to avoid double counting)
             if industry != "Total Nonfarm":
                 total_jobs_affected += int(jobs_affected)
+                total_jobs_displaced += int(jobs_displaced)
+                total_jobs_created += int(jobs_created)
+                total_jobs_demand_effect += int(jobs_demand_effect)
         
         # Calculate overall impact percentage (weighted by employment)
         def get_employment(data):
@@ -1115,6 +1129,9 @@ class AIImpactCalculator:
             "date": f"{self.year}-{self.month:02d}" if self.year and self.month else datetime.now().strftime("%Y-%m"),
             "total_impact": overall_impact,
             "jobs_affected": total_jobs_affected,
+            "jobs_displaced": total_jobs_displaced,
+            "jobs_created": total_jobs_created,
+            "jobs_demand_effect": total_jobs_demand_effect,
             "total_employment": total_employment,  # Now in actual worker count
             "total_employment_thousands": total_employment_thousands,  # Also provide thousands for reference
             "transformation_rate": overall_transformation_rate,
@@ -1461,7 +1478,10 @@ class AIImpactCalculator:
         logger.info(f"\n=== CALCULATION SUMMARY ===")
         logger.info(f"AI Labor Market Impact calculation complete.")
         logger.info(f"Overall impact: {impact_results['total_impact']:.4f} ({impact_results['total_impact']*100:.2f}%)")
-        logger.info(f"Total jobs affected: {impact_results['jobs_affected']:,}")
+        logger.info(f"Total jobs affected (NET): {impact_results['jobs_affected']:,}")
+        logger.info(f"Jobs displaced: {impact_results['jobs_displaced']:,}")
+        logger.info(f"Jobs created: {impact_results['jobs_created']:,}")
+        logger.info(f"Jobs from demand effect: {impact_results['jobs_demand_effect']:,}")
         logger.info(f"Total employment analyzed: {impact_results['total_employment']:,}")
         
         validation = impact_results.get('validation', {})
