@@ -269,8 +269,16 @@ class AIImpactCalculator:
         # Try to calculate from employment growth data if available
         if employment_data and industry in employment_data:
             try:
-                current = employment_data[industry].get("current", 0)
-                previous = employment_data[industry].get("previous", current)
+                data = employment_data[industry]
+                current = data.get("current", 0)
+                if current == 0:
+                    current = data.get("current_employment", 0)
+                if current == 0:
+                    current = data.get("employment", 0)
+                
+                previous = data.get("previous", current)
+                if previous == 0:
+                    previous = data.get("year_ago_employment", current)
                 
                 if previous > 0:
                     growth_rate = (current - previous) / previous
@@ -327,7 +335,12 @@ class AIImpactCalculator:
         """
         Calculate displacement effect using proper occupation-to-industry mapping.
         """
-        from .occupation_industry_mapper import OccupationIndustryMapper
+        try:
+            from .occupation_industry_mapper import OccupationIndustryMapper
+        except ImportError:
+            # Fallback if the mapper isn't available
+            logger.warning("OccupationIndustryMapper not available, using manual mapping")
+            return self.calculate_displacement_with_manual_mapping(industry_data, anthropic_data)
         
         # Initialize the mapper
         mapper = OccupationIndustryMapper(input_dir=self.input_dir)
@@ -383,10 +396,18 @@ class AIImpactCalculator:
             }
         
         # Calculate weighted average displacement
-        total_employment = sum(data.get("current", 0) for data in industry_data.values())
+        def get_employment(data):
+            employment = data.get("current", 0)
+            if employment == 0:
+                employment = data.get("current_employment", 0)
+            if employment == 0:
+                employment = data.get("employment", 0)
+            return employment
+        
+        total_employment = sum(get_employment(data) for data in industry_data.values())
         if total_employment > 0:
             weighted_displacement = sum(
-                displacement_effects[industry]["effect"] * industry_data[industry].get("current", 0)
+                displacement_effects[industry]["effect"] * get_employment(industry_data[industry])
                 for industry in displacement_effects
                 if industry in industry_data
             ) / total_employment
@@ -396,6 +417,149 @@ class AIImpactCalculator:
         # Add methodology metadata
         for industry_effect in displacement_effects.values():
             industry_effect["methodology"] = "occupation_weighted_aggregation"
+        
+        return weighted_displacement, displacement_effects
+    
+    def calculate_displacement_with_manual_mapping(self, industry_data, anthropic_data):
+        """
+        Calculate displacement effect using manual occupation-to-industry mapping.
+        This is a simplified version when the full OccupationIndustryMapper isn't available.
+        """
+        logger.info("Using manual occupation-to-industry mapping")
+        
+        # Load occupation mapping manually
+        mapping_file = os.path.join(os.path.dirname(self.input_dir), "mappings", "occupation_to_industry.json")
+        if not os.path.exists(mapping_file):
+            logger.warning(f"Mapping file not found: {mapping_file}")
+            raise ValueError("No occupation mapping available")
+        
+        with open(mapping_file, 'r') as f:
+            occupation_mapping = json.load(f)
+        
+        # Extract occupation automation data from Anthropic data
+        if not anthropic_data or "datasets" not in anthropic_data:
+            raise ValueError("No Anthropic occupation data available")
+        
+        occupation_automation = anthropic_data["datasets"].get("occupation_automation", {})
+        if not occupation_automation:
+            raise ValueError("No occupation automation data in Anthropic dataset")
+        
+        # Calculate industry-level rates by aggregating occupation data
+        industry_rates = {}
+        
+        for industry in industry_data.keys():
+            # Find occupations mapped to this industry
+            industry_occupations = []
+            for occupation, mapping_data in occupation_mapping.items():
+                if mapping_data.get("primary_industry") == industry:
+                    industry_occupations.append(occupation)
+                elif industry in mapping_data.get("secondary_industries", []):
+                    industry_occupations.append(occupation)
+            
+            if industry_occupations:
+                # Calculate weighted average automation/augmentation rates
+                automation_rates = []
+                augmentation_rates = []
+                
+                for occupation in industry_occupations:
+                    if occupation in occupation_automation:
+                        auto_rate = occupation_automation[occupation].get("automation_rate", 0) / 100
+                        aug_rate = occupation_automation[occupation].get("augmentation_rate", 0) / 100
+                        automation_rates.append(auto_rate)
+                        augmentation_rates.append(aug_rate)
+                
+                if automation_rates and augmentation_rates:
+                    avg_automation = np.mean(automation_rates)
+                    avg_augmentation = np.mean(augmentation_rates)
+                    coverage = len(automation_rates) / max(1, len(industry_occupations))
+                    
+                    industry_rates[industry] = {
+                        'automation_rate': avg_automation,
+                        'augmentation_rate': avg_augmentation,
+                        'confidence': min(1.0, coverage * 0.8 + 0.2),  # Scale confidence
+                        'data_coverage': coverage,
+                        'occupations_mapped': len(automation_rates)
+                    }
+                    
+                    logger.info(f"{industry}: {len(automation_rates)} occupations, auto={avg_automation:.3f}, aug={avg_augmentation:.3f}")
+                else:
+                    logger.warning(f"No automation data for {industry} occupations")
+            else:
+                logger.warning(f"No occupations mapped to {industry}")
+        
+        if not industry_rates:
+            raise ValueError("No industry rates calculated from occupation mapping")
+        
+        # Calculate displacement effects using mapped rates (similar to occupation_mapping version)
+        displacement_effects = {}
+        
+        for industry, data in industry_data.items():
+            if industry in industry_rates:
+                rates = industry_rates[industry]
+                auto_rate = rates['automation_rate']
+                aug_rate = rates['augmentation_rate']
+                confidence = rates['confidence']
+                data_coverage = rates['data_coverage']
+                
+                # Convert to percentages for existing calculation methods
+                auto_pct = auto_rate * 100
+                aug_pct = aug_rate * 100
+                
+                # Calculate displacement components
+                pure_automation = self.calculate_pure_automation_impact(auto_pct, industry)
+                capacity_augmentation = self.calculate_capacity_augmentation_impact(aug_pct, industry, industry_data)
+                
+                displacement_effect = pure_automation + capacity_augmentation
+                displacement_effect = np.clip(displacement_effect, 0, 0.8)
+                
+                displacement_effects[industry] = {
+                    "effect": displacement_effect,
+                    "confidence": confidence,
+                    "data_coverage": data_coverage,
+                    "calculation_method": "manual_occupation_mapped",
+                    "components": {
+                        "pure_automation": pure_automation,
+                        "capacity_augmentation": capacity_augmentation,
+                        "automation_rate": auto_rate,
+                        "augmentation_rate": aug_rate
+                    }
+                }
+            else:
+                # Use fallback for unmapped industries
+                displacement_effects[industry] = {
+                    "effect": 0.1,  # Conservative default
+                    "confidence": 0.3,
+                    "data_coverage": 0.0,
+                    "calculation_method": "default_fallback",
+                    "components": {
+                        "pure_automation": 0.05,
+                        "capacity_augmentation": 0.05,
+                        "automation_rate": 0.3,
+                        "augmentation_rate": 0.7
+                    }
+                }
+        
+        # Calculate weighted average displacement  
+        def get_employment(data):
+            employment = data.get("current", 0)
+            if employment == 0:
+                employment = data.get("current_employment", 0)
+            if employment == 0:
+                employment = data.get("employment", 0)
+            return employment
+        
+        total_employment = sum(get_employment(industry_data[industry]) for industry in displacement_effects.keys() if industry in industry_data and industry != "Total Nonfarm")
+        
+        if total_employment > 0:
+            weighted_displacement = sum(
+                displacement_effects[industry]["effect"] * get_employment(industry_data[industry])
+                for industry in displacement_effects.keys()
+                if industry in industry_data and industry != "Total Nonfarm"
+            ) / total_employment
+            logger.info(f"Manual mapping weighted displacement: {weighted_displacement:.4f}")
+        else:
+            weighted_displacement = np.mean([data["effect"] for data in displacement_effects.values()])
+            logger.warning("No employment data for manual mapping, using simple average")
         
         return weighted_displacement, displacement_effects
 
@@ -410,14 +574,40 @@ class AIImpactCalculator:
         industry_augmentation = {}
         
         # Get data from Anthropic Economic Index if available
-        if anthropic_data and "statistics" in anthropic_data:
-            avg_automation = anthropic_data["statistics"].get("average_automation_rate", 0)
-            avg_augmentation = anthropic_data["statistics"].get("average_augmentation_rate", 0)
+        if anthropic_data:
+            logger.info(f"Anthropic data structure: {list(anthropic_data.keys())}")
             
-            # Use as default values for all industries
-            for industry in industry_data:
-                industry_automation[industry] = avg_automation
-                industry_augmentation[industry] = avg_augmentation
+            # Try to extract automation/augmentation data from various possible structures
+            if "statistics" in anthropic_data:
+                avg_automation = anthropic_data["statistics"].get("average_automation_rate", 0)
+                avg_augmentation = anthropic_data["statistics"].get("average_augmentation_rate", 0)
+                logger.info(f"Found statistics: automation={avg_automation}, augmentation={avg_augmentation}")
+            elif "datasets" in anthropic_data and "occupation_automation" in anthropic_data["datasets"]:
+                # Calculate averages from occupation data
+                occupation_data = anthropic_data["datasets"]["occupation_automation"]
+                automation_rates = [data.get("automation_rate", 0) for data in occupation_data.values()]
+                augmentation_rates = [data.get("augmentation_rate", 0) for data in occupation_data.values()]
+                
+                if automation_rates and augmentation_rates:
+                    avg_automation = sum(automation_rates) / len(automation_rates)
+                    avg_augmentation = sum(augmentation_rates) / len(augmentation_rates)
+                    logger.info(f"Calculated from occupation data: automation={avg_automation:.1f}%, augmentation={avg_augmentation:.1f}%")
+                else:
+                    avg_automation = 0
+                    avg_augmentation = 0
+            else:
+                avg_automation = 0
+                avg_augmentation = 0
+                logger.warning("No valid automation/augmentation data found in Anthropic data")
+            
+            # Use as default values for all industries if we found data
+            if avg_automation > 0 or avg_augmentation > 0:
+                for industry in industry_data:
+                    industry_automation[industry] = avg_automation
+                    industry_augmentation[industry] = avg_augmentation
+                logger.info(f"Applied Anthropic data to {len(industry_data)} industries")
+            else:
+                logger.warning("Anthropic data available but no valid rates found")
         
         # Calculate displacement effect for each industry
         displacement_effects = {}
@@ -448,9 +638,30 @@ class AIImpactCalculator:
                 }
             }
         
-        # Calculate overall average displacement effect
+        # Calculate employment-weighted average displacement effect instead of simple average
         if displacement_effects:
-            avg_displacement = np.mean([data["effect"] for data in displacement_effects.values()])
+            def get_employment(data):
+                employment = data.get("current", 0)
+                if employment == 0:
+                    employment = data.get("current_employment", 0)
+                if employment == 0:
+                    employment = data.get("employment", 0)
+                return employment
+            
+            total_employment = sum(get_employment(industry_data[industry]) for industry in displacement_effects.keys() if industry in industry_data and industry != "Total Nonfarm")
+            
+            if total_employment > 0:
+                weighted_displacement = sum(
+                    displacement_effects[industry]["effect"] * get_employment(industry_data[industry])
+                    for industry in displacement_effects.keys()
+                    if industry in industry_data and industry != "Total Nonfarm"
+                ) / total_employment
+                logger.info(f"Used employment-weighted displacement average: {weighted_displacement:.4f} (total employment: {total_employment:,})")
+            else:
+                weighted_displacement = np.mean([data["effect"] for data in displacement_effects.values()])
+                logger.warning("No employment data available, using simple average for displacement")
+            
+            avg_displacement = weighted_displacement
         else:
             avg_displacement = 0
             
@@ -530,8 +741,16 @@ class AIImpactCalculator:
         industry_employment = {}
         total_employment = 0
         
-        for industry, data in industry_data.items():
+        def get_employment(data):
             employment = data.get("current", 0)
+            if employment == 0:
+                employment = data.get("current_employment", 0)
+            if employment == 0:
+                employment = data.get("employment", 0)
+            return employment
+        
+        for industry, data in industry_data.items():
+            employment = get_employment(data)
             industry_employment[industry] = employment
             if industry != "Total Nonfarm":  # Avoid double counting
                 total_employment += employment
@@ -574,7 +793,7 @@ class AIImpactCalculator:
                 }
             }
         
-        # Calculate overall average creation effect
+        # Calculate employment-weighted average creation effect
         if creation_effects:
             # Weight by employment size (excluding Total Nonfarm)
             weighted_sum = sum([data["effect"] * industry_employment[industry] 
@@ -583,9 +802,16 @@ class AIImpactCalculator:
             total_emp_weight = sum([industry_employment[industry] 
                                   for industry in creation_effects.keys() 
                                   if industry != "Total Nonfarm" and industry in industry_employment])
-            avg_creation = weighted_sum / total_emp_weight if total_emp_weight > 0 else 0
+            
+            if total_emp_weight > 0:
+                avg_creation = weighted_sum / total_emp_weight
+                logger.info(f"Used employment-weighted creation average: {avg_creation:.4f} (total employment: {total_emp_weight:,})")
+            else:
+                avg_creation = np.mean([data["effect"] for data in creation_effects.values()])
+                logger.warning("No employment data available for creation effect, using simple average")
         else:
             avg_creation = 0
+            logger.warning("No creation effects calculated")
             
         return avg_creation, creation_effects
 
@@ -715,18 +941,29 @@ class AIImpactCalculator:
                 }
             }
         
-        # Calculate overall average demand effect (weighted by employment)
+        # Calculate employment-weighted average demand effect 
         if demand_effects:
-            total_employment = sum([data.get("current", 0) for industry, data in industry_data.items() if industry != "Total Nonfarm"])
+            def get_employment(data):
+                employment = data.get("current", 0)
+                if employment == 0:
+                    employment = data.get("current_employment", 0)
+                if employment == 0:
+                    employment = data.get("employment", 0)
+                return employment
+            
+            total_employment = sum([get_employment(data) for industry, data in industry_data.items() if industry != "Total Nonfarm"])
             if total_employment > 0:
-                weighted_sum = sum([demand_effects[industry]["effect"] * industry_data[industry].get("current", 0) 
+                weighted_sum = sum([demand_effects[industry]["effect"] * get_employment(industry_data[industry]) 
                                   for industry in demand_effects.keys() 
                                   if industry != "Total Nonfarm" and industry in industry_data])
                 avg_demand = weighted_sum / total_employment
+                logger.info(f"Used employment-weighted demand average: {avg_demand:.4f} (total employment: {total_employment:,})")
             else:
                 avg_demand = np.mean([data["effect"] for data in demand_effects.values()])
+                logger.warning("No employment data available for demand effect, using simple average")
         else:
             avg_demand = 0
+            logger.warning("No demand effects calculated")
             
         return avg_demand, demand_effects
 
@@ -782,7 +1019,12 @@ class AIImpactCalculator:
         total_jobs_affected = 0
         
         for industry, data in industries.items():
+            # Fix employment data access - check multiple possible field names
             current_employment = data.get("current", 0)
+            if current_employment == 0:
+                current_employment = data.get("current_employment", 0)
+            if current_employment == 0:
+                current_employment = data.get("employment", 0)
             
             # Get effects for this industry
             displacement = displacement_by_industry.get(industry, {"effect": displacement_avg})["effect"]
@@ -811,11 +1053,20 @@ class AIImpactCalculator:
                 total_jobs_affected += int(jobs_affected)
         
         # Calculate overall impact percentage (weighted by employment)
-        total_employment = sum([data.get("current", 0) for industry, data in industries.items() if industry != "Total Nonfarm"])
-        weighted_impact = sum([data["impact"] * industries[industry].get("current", 0) for industry, data in net_impact_by_industry.items() if industry != "Total Nonfarm"])
+        def get_employment(data):
+            employment = data.get("current", 0)
+            if employment == 0:
+                employment = data.get("current_employment", 0)
+            if employment == 0:
+                employment = data.get("employment", 0)
+            return employment
+        
+        total_employment = sum([get_employment(data) for industry, data in industries.items() if industry != "Total Nonfarm"])
+        weighted_impact = sum([data["impact"] * get_employment(industries[industry]) for industry, data in net_impact_by_industry.items() if industry != "Total Nonfarm"])
         
         # Validate that total employment matches BLS total nonfarm if available
-        total_nonfarm_employment = industries.get("Total Nonfarm", {}).get("current", 0)
+        total_nonfarm_data = industries.get("Total Nonfarm", {})
+        total_nonfarm_employment = get_employment(total_nonfarm_data)
         if total_nonfarm_employment > 0:
             employment_ratio = total_employment / total_nonfarm_employment
             if abs(employment_ratio - 1.0) > 0.1:  # More than 10% difference
@@ -831,7 +1082,7 @@ class AIImpactCalculator:
         total_transformation = 0
         
         for industry, data in industries.items():
-            current_employment = data.get("current", 0)
+            current_employment = get_employment(data)
             
             # Get effects for this industry
             displacement = displacement_by_industry.get(industry, {"effect": displacement_avg})["effect"]
@@ -848,7 +1099,7 @@ class AIImpactCalculator:
                 total_transformation += industry_transformation * current_employment
 
         # Calculate overall transformation rate
-        total_employment_calc = sum([data.get("current", 0) for industry, data in industries.items() if industry != "Total Nonfarm"])
+        total_employment_calc = sum([get_employment(data) for industry, data in industries.items() if industry != "Total Nonfarm"])
         overall_transformation_rate = total_transformation / total_employment_calc if total_employment_calc > 0 else 0
 
         # Prepare result object
@@ -1083,6 +1334,82 @@ class AIImpactCalculator:
         
         return output_file
 
+    def load_anthropic_data(self):
+        """Load Anthropic Economic Index data with fallback search."""
+        # Try multiple possible filenames for Anthropic data
+        anthropic_filenames = [
+            f"anthropic_index_{self.date_str}_combined.json",
+            f"anthropic_index_{self.year}_{self.month:02d}_combined.json",
+            "anthropic_index_20250413_combined.json",  # Latest known file
+            "anthropic_index_2025_04_combined.json"
+        ]
+        
+        for filename in anthropic_filenames:
+            anthropic_data = self.load_data(filename, search_subdirs=True)
+            if anthropic_data:
+                logger.info(f"Loaded Anthropic data from: {filename}")
+                return anthropic_data
+        
+        logger.warning("No Anthropic Economic Index data found, will use defaults")
+        return None
+
+    def validate_data_sources(self, employment_data, anthropic_data, job_data):
+        """Validate data sources and log data quality metrics."""
+        validation_results = {
+            "employment_data_valid": False,
+            "anthropic_data_valid": False,
+            "job_data_valid": False,
+            "total_employment": 0,
+            "industry_count": 0,
+            "automation_data_coverage": 0.0
+        }
+        
+        # Validate employment data
+        if employment_data and "industries" in employment_data:
+            industries = employment_data["industries"]
+            validation_results["industry_count"] = len(industries)
+            
+            def get_employment(data):
+                employment = data.get("current", 0)
+                if employment == 0:
+                    employment = data.get("current_employment", 0)
+                if employment == 0:
+                    employment = data.get("employment", 0)
+                return employment
+            
+            total_emp = sum(get_employment(data) for industry, data in industries.items() if industry != "Total Nonfarm")
+            validation_results["total_employment"] = total_emp
+            
+            if total_emp > 0 and len(industries) > 5:
+                validation_results["employment_data_valid"] = True
+                logger.info(f"✓ Employment data valid: {len(industries)} industries, {total_emp:,} total employment")
+            else:
+                logger.error(f"✗ Employment data invalid: {len(industries)} industries, {total_emp:,} total employment")
+        
+        # Validate Anthropic data
+        if anthropic_data:
+            if "datasets" in anthropic_data and "occupation_automation" in anthropic_data["datasets"]:
+                occupation_data = anthropic_data["datasets"]["occupation_automation"]
+                if len(occupation_data) > 0:
+                    validation_results["anthropic_data_valid"] = True
+                    validation_results["automation_data_coverage"] = len(occupation_data)
+                    logger.info(f"✓ Anthropic data valid: {len(occupation_data)} occupations")
+                else:
+                    logger.warning(f"✗ Anthropic data empty: {len(occupation_data)} occupations")
+            else:
+                logger.warning("✗ Anthropic data missing expected structure")
+        else:
+            logger.warning("✗ No Anthropic data loaded")
+        
+        # Validate job data
+        if job_data:
+            validation_results["job_data_valid"] = True
+            logger.info("✓ Job trends data available")
+        else:
+            logger.warning("✗ No job trends data available")
+        
+        return validation_results
+
     def calculate_impact(self):
         """Main method to calculate the AI Labor Market Impact index."""
         # Load required data
@@ -1091,17 +1418,31 @@ class AIImpactCalculator:
         events_data = self.load_data(self.workforce_events_file)
         research_data = self.load_data(self.research_trends_file)
         
+        # Load Anthropic data separately with better search
+        anthropic_data = self.load_anthropic_data()
+        
+        # Validate all data sources
+        validation_results = self.validate_data_sources(employment_data, anthropic_data, job_data)
+        
         # Check if we have the required data
         if not employment_data:
             logger.error(f"Missing required employment data file: {self.employment_file}")
             return None
+        
+        if not validation_results["employment_data_valid"]:
+            logger.error("Employment data validation failed - cannot proceed")
+            return None
             
         if not job_data:
             logger.warning(f"Missing job trends data file: {self.job_trends_file}")
-            logger.warning("Proceeding with default values for automation/augmentation")
+            
+        if not anthropic_data:
+            logger.warning("No Anthropic data found - will use default automation/augmentation rates")
+        elif not validation_results["anthropic_data_valid"]:
+            logger.warning("Anthropic data validation failed - will use default rates")
         
-        # Calculate the impact
-        impact_results = self.calculate_net_impact(employment_data, job_data, events_data, research_data)
+        # Calculate the impact using Anthropic data
+        impact_results = self.calculate_net_impact(employment_data, anthropic_data, events_data, research_data)
         
         # Save results
         self.save_results(impact_results)
@@ -1117,23 +1458,44 @@ class AIImpactCalculator:
         logger.info(f"Employment coverage: {validation.get('employment_coverage', 0):.3f}")
         logger.info(f"BLS Total Nonfarm: {validation.get('bls_total_nonfarm', 0):,}")
         
-        # Log data source usage
+        # Log detailed data source usage
         components = impact_results['components']
         logger.info(f"\n=== DATA SOURCES USED ===")
         logger.info(f"News events: {components.get('news_events_count', 0)} articles (momentum: {components.get('momentum_factor', 1.0):.3f})")
         logger.info(f"Market maturity: {components.get('market_maturity', 0):.3f} -> {components.get('adjusted_market_maturity', 0):.3f}")
         
-        # Count data source usage
-        data_sources = {'default': 0, 'BLS_estimated': 0, 'ai_jobs': 0}
-        for industry, data in impact_results['by_industry'].items():
-            if industry != "Total Nonfarm":
-                # Note: Detailed component data source tracking would require 
-                # returning additional metadata from calculate_net_impact
-                data_sources['default'] += 1
+        # Count data source usage by type
+        data_sources = {
+            'anthropic_automation': 0,
+            'default_automation': 0, 
+            'real_productivity': 0,
+            'default_productivity': 0,
+            'ai_jobs_data': 0,
+            'default_ai_jobs': 0
+        }
         
-        logger.info(f"Industries using real productivity data: {data_sources['BLS_estimated']}")
-        logger.info(f"Industries using AI jobs data: {data_sources['ai_jobs']}")
-        logger.info(f"Industries using defaults: {data_sources['default']}")
+        # Track which data sources were actually used
+        methodology = impact_results.get('data_quality', {}).get('methodology_details', {})
+        if methodology.get('displacement_calculation') == 'occupation_mapped':
+            logger.info(f"✓ Using occupation-mapped displacement calculation")
+            logger.info(f"  - Occupation mapping coverage: {methodology.get('occupation_mapping_coverage', 0):.1%}")
+            logger.info(f"  - Average data coverage: {methodology.get('average_data_coverage', 0):.1%}")
+            logger.info(f"  - Average confidence: {methodology.get('average_confidence', 0):.1%}")
+        else:
+            logger.info(f"⚠ Using fallback displacement calculation")
+        
+        # Log employment data coverage
+        validation = impact_results.get('validation', {})
+        logger.info(f"Employment coverage: {validation.get('employment_coverage', 0):.1%}")
+        logger.info(f"BLS Total Nonfarm: {validation.get('bls_total_nonfarm', 0):,}")
+        
+        # Log confidence factors
+        confidence = impact_results.get('data_quality', {}).get('confidence_factors', {})
+        logger.info(f"\n=== DATA QUALITY CONFIDENCE ===")
+        logger.info(f"Has Anthropic data: {confidence.get('has_anthropic_data', False)}")
+        logger.info(f"Has recent employment: {confidence.get('has_recent_employment', False)}")
+        logger.info(f"Has industry breakdown: {confidence.get('has_industry_breakdown', False)}")
+        logger.info(f"Uses occupation mapping: {confidence.get('uses_occupation_mapping', False)}")
         
         # Return results
         return impact_results
