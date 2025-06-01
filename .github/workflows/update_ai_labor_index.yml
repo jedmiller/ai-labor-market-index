@@ -104,7 +104,7 @@ jobs:
                           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                               f.write(f"available_year={prev_year}\n")
                               f.write(f"available_month={int(prev_month)}\n")
-                          return False
+                          return True
                       
                       # Check if previous month data is available on Hugging Face
                       prev_url = f"https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_{prev_year}_{prev_month}"
@@ -116,7 +116,7 @@ jobs:
                           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                               f.write(f"available_year={prev_year}\n")
                               f.write(f"available_month={int(prev_month)}\n")
-                          return False
+                          return True
                       
                       # If all else fails, try looking for the most recent data we have locally
                       existing_files = glob.glob(os.path.join(raw_dir, "anthropic_index_*_combined.json"))
@@ -132,7 +132,7 @@ jobs:
                               with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
                                   f.write(f"available_year={latest_year}\n")
                                   f.write(f"available_month={int(latest_month)}\n")
-                              return False
+                              return True
                       
                       print(f"No Anthropic data found for {year_str}-{month_str}")
                       return False
@@ -158,18 +158,26 @@ jobs:
           
           if [ $exit_code -eq 0 ]; then
             echo "anthropic_data_available=true" >> $GITHUB_OUTPUT
-            echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
-            echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
-          else
-            echo "anthropic_data_available=false" >> $GITHUB_OUTPUT
-            # Check if available_year and available_month were set by the Python script
+            # Check if alternative year/month were set by Python script
             if [ -f "$GITHUB_OUTPUT" ] && grep -q "available_year" "$GITHUB_OUTPUT"; then
-              echo "Using available year and month from Python script"
+              # Extract the alternative year and month from the Python script output
+              available_year=$(grep "available_year=" "$GITHUB_OUTPUT" | cut -d'=' -f2)
+              available_month=$(grep "available_month=" "$GITHUB_OUTPUT" | cut -d'=' -f2)
+              echo "use_year=$available_year" >> $GITHUB_OUTPUT
+              echo "use_month=$available_month" >> $GITHUB_OUTPUT
+              echo "Using alternative Anthropic data: $available_year-$available_month"
             else
-              # If not set by Python script, use the requested date
+              # Use requested date if no alternative was found
               echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
               echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
+              echo "Using requested date: ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }}"
             fi
+          else
+            echo "anthropic_data_available=false" >> $GITHUB_OUTPUT
+            # If script failed completely, use the requested date as fallback
+            echo "use_year=${{ steps.date.outputs.year }}" >> $GITHUB_OUTPUT
+            echo "use_month=${{ steps.date.outputs.month }}" >> $GITHUB_OUTPUT
+            echo "Using fallback date: ${{ steps.date.outputs.year }}-${{ steps.date.outputs.month }}"
           fi
       
       # Add new step to collect Anthropic Economic Index data with validated date
