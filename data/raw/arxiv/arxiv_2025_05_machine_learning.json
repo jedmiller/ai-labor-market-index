@@ -1,6 +1,6 @@
 {
   "query": "all:machine learning AND (labor market OR employment OR jobs OR workforce OR automation)",
-  "date_collected": "2025-06-08T03:20:52.356078",
+  "date_collected": "2025-06-15T03:21:29.575149",
   "target_period": "2025-05",
   "papers": [
     {
@@ -253,6 +253,35 @@
       ]
     },
     {
+      "id": "http://arxiv.org/abs/2506.05378v1",
+      "title": "A Compendium of Autonomous Navigation using Object Detection and\n  Tracking in Unmanned Aerial Vehicles",
+      "published": "2025-05-31T09:13:43Z",
+      "updated": "2025-05-31T09:13:43Z",
+      "summary": "Unmanned Aerial Vehicles (UAVs) are one of the most revolutionary inventions\nof 21st century. At the core of a UAV lies the central processing system that\nuses wireless signals to control their movement. The most popular UAVs are\nquadcopters that use a set of four motors, arranged as two on either side with\nopposite spin. An autonomous UAV is called a drone. Drones have been in service\nin the US army since the 90's for covert missions critical to national\nsecurity. It would not be wrong to claim that drones make up an integral part\nof the national security and provide the most valuable service during\nsurveillance operations. While UAVs are controlled using wireless signals,\nthere reside some challenges that disrupt the operation of such vehicles such\nas signal quality and range, real time processing, human expertise, robust\nhardware and data security. These challenges can be solved by programming UAVs\nto be autonomous, using object detection and tracking, through Computer Vision\nalgorithms. Computer Vision is an interdisciplinary field that seeks the use of\ndeep learning to gain a high-level understanding of digital images and videos\nfor the purpose of automating the task of human visual system. Using computer\nvision, algorithms for detecting and tracking various objects can be developed\nsuitable to the hardware so as to allow real time processing for immediate\njudgement. This paper attempts to review the various approaches several authors\nhave proposed for the purpose of autonomous navigation of UAVs by through\nvarious algorithms of object detection and tracking in real time, for the\npurpose of applications in various fields such as disaster management, dense\narea exploration, traffic vehicle surveillance etc.",
+      "authors": [
+        "Mohit Arora",
+        "Pratyush Shukla",
+        "Shivali Chopra"
+      ],
+      "categories": [
+        "cs.CV",
+        "cs.RO",
+        "eess.IV"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2506.05378v1",
+        "http://arxiv.org/pdf/2506.05378v1"
+      ],
+      "primary_search_term": "machine learning",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
       "id": "http://arxiv.org/abs/2506.00467v1",
       "title": "SST: Self-training with Self-adaptive Thresholding for Semi-supervised\n  Learning",
       "published": "2025-05-31T08:34:04Z",
@@ -313,14 +342,15 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.00436v1",
+      "id": "http://arxiv.org/abs/2506.00436v2",
       "title": "Learning from Double Positive and Unlabeled Data for Potential-Customer\n  Identification",
       "published": "2025-05-31T07:33:48Z",
-      "updated": "2025-05-31T07:33:48Z",
+      "updated": "2025-06-09T09:56:53Z",
       "summary": "In this study, we propose a method for identifying potential customers in\ntargeted marketing by applying learning from positive and unlabeled data (PU\nlearning). We consider a scenario in which a company sells a product and can\nobserve only the customers who purchased it. Decision-makers seek to market\nproducts effectively based on whether people have loyalty to the company.\nIndividuals with loyalty are those who are likely to remain interested in the\ncompany even without additional advertising. Consequently, those loyal\ncustomers would likely purchase from the company if they are interested in the\nproduct. In contrast, people with lower loyalty may overlook the product or buy\nsimilar products from other companies unless they receive marketing attention.\nTherefore, by focusing marketing efforts on individuals who are interested in\nthe product but do not have strong loyalty, we can achieve more efficient\nmarketing. To achieve this goal, we consider how to learn, from limited data, a\nclassifier that identifies potential customers who (i) have interest in the\nproduct and (ii) do not have loyalty to the company. Although our algorithm\ncomprises a single-stage optimization, its objective function implicitly\ncontains two losses derived from standard PU learning settings. For this\nreason, we refer to our approach as double PU learning. We verify the validity\nof the proposed algorithm through numerical experiments, confirming that it\nfunctions appropriately for the problem at hand.",
       "authors": [
         "Masahiro Kato",
-        "Yuki Ikeda abd Kentaro Baba",
+        "Yuki Ikeda",
+        "Kentaro Baba",
         "Takashi Imai",
         "Ryo Inokuchi"
       ],
@@ -332,8 +362,8 @@
         "stat.ML"
       ],
       "links": [
-        "http://arxiv.org/abs/2506.00436v1",
-        "http://arxiv.org/pdf/2506.00436v1"
+        "http://arxiv.org/abs/2506.00436v2",
+        "http://arxiv.org/pdf/2506.00436v2"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [
@@ -814,6 +844,35 @@
       ]
     },
     {
+      "id": "http://arxiv.org/abs/2506.08026v1",
+      "title": "TIP-Search: Time-Predictable Inference Scheduling for Market Prediction\n  under Uncertain Load",
+      "published": "2025-05-30T14:52:01Z",
+      "updated": "2025-05-30T14:52:01Z",
+      "summary": "This paper proposes TIP-Search, a time-predictable inference scheduling\nframework for real-time market prediction under uncertain workloads. Motivated\nby the strict latency demands in high-frequency financial systems, TIP-Search\ndynamically selects a deep learning model from a heterogeneous pool, aiming to\nmaximize predictive accuracy while satisfying per-task deadline constraints.\nOur approach profiles latency and generalization performance offline, then\nperforms online task-aware selection without relying on explicit input domain\nlabels. We evaluate TIP-Search on three real-world limit order book datasets\n(FI-2010, Binance BTC/USDT, LOBSTER AAPL) and demonstrate that it outperforms\nstatic baselines with up to 8.5% improvement in accuracy and 100% deadline\nsatisfaction. Our results highlight the effectiveness of TIP-Search in robust\nlow-latency financial inference under uncertainty.",
+      "authors": [
+        "Xibai Wang"
+      ],
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SY",
+        "eess.SY",
+        "q-fin.CP"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2506.08026v1",
+        "http://arxiv.org/pdf/2506.08026v1"
+      ],
+      "primary_search_term": "machine learning",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
       "id": "http://arxiv.org/abs/2505.24640v1",
       "title": "Efficient Text Encoders for Labor Market Analysis",
       "published": "2025-05-30T14:27:25Z",
@@ -1210,10 +1269,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2505.24247v1",
+      "id": "http://arxiv.org/abs/2505.24247v2",
       "title": "50 Years of Automated Face Recognition",
       "published": "2025-05-30T06:10:48Z",
-      "updated": "2025-05-30T06:10:48Z",
+      "updated": "2025-06-09T05:47:23Z",
       "summary": "Over the past 50 years, automated face recognition has evolved from\nrudimentary, handcrafted systems into sophisticated deep learning models that\nrival and often surpass human performance. This paper chronicles the history\nand technological progression of FR, from early geometric and statistical\nmethods to modern deep neural architectures leveraging massive real and\nAI-generated datasets. We examine key innovations that have shaped the field,\nincluding developments in dataset, loss function, neural network design and\nfeature fusion. We also analyze how the scale and diversity of training data\ninfluence model generalization, drawing connections between dataset growth and\nbenchmark improvements. Recent advances have achieved remarkable milestones:\nstate-of-the-art face verification systems now report False Negative\nIdentification Rates of 0.13% against a 12.4 million gallery in NIST FRVT\nevaluations for 1:N visa-to-border matching. While recent advances have enabled\nremarkable accuracy in high- and low-quality face scenarios, numerous\nchallenges persist. While remarkable progress has been achieved, several open\nresearch problems remain. We outline critical challenges and promising\ndirections for future face recognition research, including scalability,\nmulti-modal fusion, synthetic identity generation, and explainable systems.",
       "authors": [
         "Minchul Kim",
@@ -1224,8 +1283,8 @@
         "cs.CV"
       ],
       "links": [
-        "http://arxiv.org/abs/2505.24247v1",
-        "http://arxiv.org/pdf/2505.24247v1"
+        "http://arxiv.org/abs/2505.24247v2",
+        "http://arxiv.org/pdf/2505.24247v2"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [
@@ -1473,69 +1532,6 @@
       "links": [
         "http://arxiv.org/abs/2505.24068v1",
         "http://arxiv.org/pdf/2505.24068v1"
-      ],
-      "primary_search_term": "machine learning",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2505.24062v1",
-      "title": "Exploring Domain Wall Pinning in Ferroelectrics via Automated High\n  Throughput AFM",
-      "published": "2025-05-29T23:11:40Z",
-      "updated": "2025-05-29T23:11:40Z",
-      "summary": "Domain-wall dynamics in ferroelectric materials are strongly\nposition-dependent since each polar interface is locked into a unique local\nmicrostructure. This necessitates spatially resolved studies of the\nwall-pinning using scanning-probe microscopy techniques. The pinning centers\nand preexisting domain walls are usually sparse within image plane, precluding\nthe use of dense hyperspectral imaging modes and requiring time-consuming human\nexperimentation. Here, a large area epitaxial PbTiO$_3$ film on cubic KTaO$_3$\nwere investigated to quantify the electric field driven dynamics of the\npolar-strain domain structures using ML-controlled automated Piezoresponse\nForce Microscopy. Analysis of 1500 switching events reveals that domain wall\ndisplacement depends not only on field parameters but also on the local\nferroelectric-ferroelastic configuration. For example, twin boundaries in\npolydomains regions like a$_1^-$/$c^+$ $\\parallel$ a$_2^-$/$c^-$ stay pinned up\nto a certain level of bias magnitude and change only marginally as the bias\nincreases from 20V to 30V, whereas single variant boundaries like a$_2^+$/$c^+$\n$\\parallel$ a$_2^-$/$c^-$ stack are already activated at 20V. These statistics\non the possible ferroelectric and ferroelastic wall orientations, together with\nthe automated, high-throughput AFM workflow, can be distilled into a predictive\nmap that links domain configurations to pulse parameters. This\nmicrostructure-specific rule set forms the foundation for designing\nferroelectric memories.",
-      "authors": [
-        "Kamyar Barakati",
-        "Yu Liu",
-        "Hiroshi Funakubo",
-        "Sergei V. Kalinin"
-      ],
-      "categories": [
-        "cond-mat.mtrl-sci",
-        "cs.CV",
-        "cs.LG",
-        "physics.app-ph"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2505.24062v1",
-        "http://arxiv.org/pdf/2505.24062v1"
-      ],
-      "primary_search_term": "machine learning",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2506.00076v1",
-      "title": "Optimizing Storytelling, Improving Audience Retention, and Reducing\n  Waste in the Entertainment Industry",
-      "published": "2025-05-29T23:01:54Z",
-      "updated": "2025-05-29T23:01:54Z",
-      "summary": "Television networks face high financial risk when making programming\ndecisions, often relying on limited historical data to forecast episodic\nviewership. This study introduces a machine learning framework that integrates\nnatural language processing (NLP) features from over 25000 television episodes\nwith traditional viewership data to enhance predictive accuracy. By extracting\nemotional tone, cognitive complexity, and narrative structure from episode\ndialogue, we evaluate forecasting performance using SARIMAX, rolling XGBoost,\nand feature selection models. While prior viewership remains a strong baseline\npredictor, NLP features contribute meaningful improvements for some series. We\nalso introduce a similarity scoring method based on Euclidean distance between\naggregate dialogue vectors to compare shows by content. Tested across diverse\ngenres, including Better Call Saul and Abbott Elementary, our framework reveals\ngenre-specific performance and offers interpretable metrics for writers,\nexecutives, and marketers seeking data-driven insight into audience behavior.",
-      "authors": [
-        "Andrew Cornfeld",
-        "Ashley Miller",
-        "Mercedes Mora-Figueroa",
-        "Kurt Samuels",
-        "Anthony Palomba"
-      ],
-      "categories": [
-        "cs.CY",
-        "cs.AI",
-        "cs.CL",
-        "cs.LG"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2506.00076v1",
-        "http://arxiv.org/pdf/2506.00076v1"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [

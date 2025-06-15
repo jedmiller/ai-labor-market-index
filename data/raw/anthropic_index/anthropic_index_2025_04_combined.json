@@ -1,106 +1,106 @@
 {
-  "date_collected": "2025-06-08T03:20:49.851206",
+  "date_collected": "2025-06-15T03:21:19.348272",
   "target_period": "2025-04",
   "datasets": {
     "occupation_automation": {
       "Software Developers": {
-        "automation_rate": 25.333333333333332,
-        "augmentation_rate": 74.66666666666667,
+        "automation_rate": 20.666666666666668,
+        "augmentation_rate": 79.33333333333333,
         "description": "Tasks related to Software Developers"
       },
       "Data Scientists": {
-        "automation_rate": 20.0,
-        "augmentation_rate": 80.0,
+        "automation_rate": 29.333333333333336,
+        "augmentation_rate": 70.66666666666666,
         "description": "Tasks related to Data Scientists"
       },
       "Financial Analysts": {
-        "automation_rate": 50.666666666666664,
-        "augmentation_rate": 49.333333333333336,
+        "automation_rate": 53.333333333333336,
+        "augmentation_rate": 46.666666666666664,
         "description": "Tasks related to Financial Analysts"
       },
       "Content Writers": {
-        "automation_rate": 49.333333333333336,
-        "augmentation_rate": 50.666666666666664,
+        "automation_rate": 42.666666666666664,
+        "augmentation_rate": 57.333333333333336,
         "description": "Tasks related to Content Writers"
       },
       "Customer Service Representatives": {
-        "automation_rate": 56.0,
-        "augmentation_rate": 44.0,
+        "automation_rate": 45.333333333333336,
+        "augmentation_rate": 54.666666666666664,
         "description": "Tasks related to Customer Service Representatives"
       },
       "Graphic Designers": {
-        "automation_rate": 53.333333333333336,
-        "augmentation_rate": 46.666666666666664,
+        "automation_rate": 41.333333333333336,
+        "augmentation_rate": 58.666666666666664,
         "description": "Tasks related to Graphic Designers"
       },
       "Marketing Specialists": {
-        "automation_rate": 48.0,
-        "augmentation_rate": 52.0,
+        "automation_rate": 53.333333333333336,
+        "augmentation_rate": 46.666666666666664,
         "description": "Tasks related to Marketing Specialists"
       },
       "Human Resources Specialists": {
-        "automation_rate": 48.0,
-        "augmentation_rate": 52.0,
+        "automation_rate": 44.0,
+        "augmentation_rate": 56.0,
         "description": "Tasks related to Human Resources Specialists"
       },
       "Accountants": {
-        "automation_rate": 58.66666666666667,
-        "augmentation_rate": 41.33333333333333,
+        "automation_rate": 42.666666666666664,
+        "augmentation_rate": 57.333333333333336,
         "description": "Tasks related to Accountants"
       },
       "Legal Assistants": {
-        "automation_rate": 42.666666666666664,
-        "augmentation_rate": 57.333333333333336,
+        "automation_rate": 58.66666666666667,
+        "augmentation_rate": 41.33333333333333,
         "description": "Tasks related to Legal Assistants"
       },
       "Teachers": {
-        "automation_rate": 23.333333333333332,
-        "augmentation_rate": 76.66666666666667,
+        "automation_rate": 26.666666666666668,
+        "augmentation_rate": 73.33333333333333,
         "description": "Tasks related to Teachers"
       },
       "Nurses": {
-        "automation_rate": 26.0,
-        "augmentation_rate": 74.0,
+        "automation_rate": 26.666666666666668,
+        "augmentation_rate": 73.33333333333333,
         "description": "Tasks related to Nurses"
       },
       "Product Managers": {
-        "automation_rate": 49.333333333333336,
-        "augmentation_rate": 50.666666666666664,
+        "automation_rate": 40.0,
+        "augmentation_rate": 60.0,
         "description": "Tasks related to Product Managers"
       },
       "Sales Representatives": {
-        "automation_rate": 56.0,
-        "augmentation_rate": 44.0,
+        "automation_rate": 53.333333333333336,
+        "augmentation_rate": 46.666666666666664,
         "description": "Tasks related to Sales Representatives"
       },
       "Research Scientists": {
-        "automation_rate": 24.0,
-        "augmentation_rate": 76.0,
+        "automation_rate": 22.666666666666668,
+        "augmentation_rate": 77.33333333333333,
         "description": "Tasks related to Research Scientists"
       },
       "Physicians": {
-        "automation_rate": 20.0,
-        "augmentation_rate": 80.0,
+        "automation_rate": 23.333333333333332,
+        "augmentation_rate": 76.66666666666667,
         "description": "Tasks related to Physicians"
       },
       "Administrative Assistants": {
-        "automation_rate": 50.666666666666664,
-        "augmentation_rate": 49.333333333333336,
+        "automation_rate": 44.0,
+        "augmentation_rate": 56.0,
         "description": "Tasks related to Administrative Assistants"
       },
       "Social Media Managers": {
-        "automation_rate": 46.666666666666664,
-        "augmentation_rate": 53.333333333333336,
+        "automation_rate": 58.66666666666667,
+        "augmentation_rate": 41.33333333333333,
         "description": "Tasks related to Social Media Managers"
       },
       "Mechanical Engineers": {
-        "automation_rate": 28.0,
-        "augmentation_rate": 72.0,
+        "automation_rate": 25.333333333333332,
+        "augmentation_rate": 74.66666666666667,
         "description": "Tasks related to Mechanical Engineers"
       },
       "Project Managers": {
-        "automation_rate": 54.666666666666664,
-        "augmentation_rate": 45.333333333333336,
+        "automation_rate": 50.666666666666664,
+        "augmentation_rate": 49.333333333333336,
         "description": "Tasks related to Project Managers"
       }
     },
@@ -16933,163 +16933,163 @@
     },
     "occupation_categories": {
       "Management": {
-        "count": 21040,
+        "count": 19920,
         "description": "Occupations in Management"
       },
       "Business and Financial Operations": {
-        "count": 23200,
+        "count": 19120,
         "description": "Occupations in Business and Financial Operations"
       },
       "Computer and Mathematical": {
-        "count": 30940,
+        "count": 35140,
         "description": "Occupations in Computer and Mathematical"
       },
       "Architecture and Engineering": {
-        "count": 16380,
+        "count": 13680,
         "description": "Occupations in Architecture and Engineering"
       },
       "Life, Physical, and Social Science": {
-        "count": 8920,
+        "count": 8600,
         "description": "Occupations in Life, Physical, and Social Science"
       },
       "Community and Social Service": {
-        "count": 9240,
+        "count": 8160,
         "description": "Occupations in Community and Social Service"
       },
       "Legal": {
-        "count": 11680,
+        "count": 10240,
         "description": "Occupations in Legal"
       },
       "Educational Instruction and Library": {
-        "count": 14700,
+        "count": 17220,
         "description": "Occupations in Educational Instruction and Library"
       },
       "Arts, Design, Entertainment, Sports, and Media": {
-        "count": 11520,
+        "count": 8320,
         "description": "Occupations in Arts, Design, Entertainment, Sports, and Media"
       },
       "Healthcare Practitioners and Technical": {
-        "count": 27400,
+        "count": 27100,
         "description": "Occupations in Healthcare Practitioners and Technical"
       },
       "Healthcare Support": {
-        "count": 24500,
+        "count": 20800,
         "description": "Occupations in Healthcare Support"
       },
       "Protective Service": {
-        "count": 11360,
+        "count": 10080,
         "description": "Occupations in Protective Service"
       },
       "Food Preparation and Serving Related": {
-        "count": 9120,
+        "count": 11520,
         "description": "Occupations in Food Preparation and Serving Related"
       },
       "Building and Grounds Cleaning and Maintenance": {
-        "count": 11720,
+        "count": 9200,
         "description": "Occupations in Building and Grounds Cleaning and Maintenance"
       },
       "Personal Care and Service": {
-        "count": 9440,
+        "count": 8680,
         "description": "Occupations in Personal Care and Service"
       },
       "Sales and Related": {
-        "count": 11800,
+        "count": 11000,
         "description": "Occupations in Sales and Related"
       },
       "Office and Administrative Support": {
-        "count": 11160,
+        "count": 9960,
         "description": "Occupations in Office and Administrative Support"
       },
       "Farming, Fishing, and Forestry": {
-        "count": 9200,
+        "count": 9520,
         "description": "Occupations in Farming, Fishing, and Forestry"
       },
       "Construction and Extraction": {
-        "count": 9280,
+        "count": 9520,
         "description": "Occupations in Construction and Extraction"
       },
       "Installation, Maintenance, and Repair": {
-        "count": 8280,
+        "count": 10640,
         "description": "Occupations in Installation, Maintenance, and Repair"
       },
       "Production": {
-        "count": 8040,
+        "count": 11120,
         "description": "Occupations in Production"
       },
       "Transportation and Material Moving": {
-        "count": 10040,
+        "count": 9880,
         "description": "Occupations in Transportation and Material Moving"
       },
       "Military Specific": {
-        "count": 10360,
+        "count": 11880,
         "description": "Occupations in Military Specific"
       }
     },
     "occupation_usage": {
-      "Nurses": {
-        "count": 48600,
+      "Mechanical Engineers": {
+        "count": 27200,
         "usage_score": 80,
         "tasks": [
           "act as advisers to student organizations.",
           "adapt translations to students' cognitive and grade levels, collaborating with educational team members as necessary.",
-          "administer standardized ability and achievement tests and interpret results to determine students' strengths and areas of need.",
-          "administer treatments or therapies, such as homeopathy, hydrotherapy, oriental or ayurvedic medicine, electrotherapy and diathermy, using physical agents including air, heat, cold, water, sound, or ultraviolet light to catalyze the body to heal itself.",
-          "advise animal owners regarding sanitary measures, feeding, general care, medical conditions, or treatment options."
-        ]
-      },
-      "Product Managers": {
-        "count": 122400,
-        "usage_score": 80,
-        "tasks": [
-          "act as advisers to student organizations.",
-          "act as liaisons between on-site managers or tenants and owners.",
-          "advise client on interior design factors such as space planning, layout and use of furnishings or equipment, and color coordination.",
-          "advise construction firms or government agencies on dam or road construction, foundation design, land use, or resource management.",
-          "advise farmers or growers of development programs or new equipment or techniques to aid in quality production."
+          "advise clients about proper clothing and shoes.",
+          "advise patients about therapeutic exercise and nutritional medicine regimens.",
+          "answer clients' questions about the purposes and details of financial plans and strategies."
         ]
       },
       "Sales Representatives": {
-        "count": 31000,
+        "count": 32400,
         "usage_score": 80,
         "tasks": [
-          "act as advisers to student organizations.",
           "act as an intermediary in negotiations between buyers and sellers over property prices and settlement details and during the closing of sales.",
           "act as an intermediary in negotiations between buyers and sellers, generally representing one or the other.",
-          "adapt text to accommodate musical requirements of composers and singers.",
-          "advise business or other groups on local, national, or international factors affecting the buying or selling of products or services."
+          "advise business or other groups on local, national, or international factors affecting the buying or selling of products or services.",
+          "advise customers of necessary actions and strategies for debt repayment.",
+          "advise students on internships, prospective employers, and job placement services."
         ]
       },
       "Project Managers": {
-        "count": 47800,
+        "count": 46600,
         "usage_score": 80,
         "tasks": [
           "act as liaisons between on-site managers or tenants and owners.",
-          "advise clients on how they could be helped by counseling.",
+          "advise clients about proper clothing and shoes.",
           "advise construction firms or government agencies on dam or road construction, foundation design, land use, or resource management.",
           "advise internal management or business partners on the implementation or operation of compliance programs.",
           "advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency."
         ]
       },
-      "Software Developers": {
-        "count": 117800,
+      "Product Managers": {
+        "count": 124400,
+        "usage_score": 80,
+        "tasks": [
+          "act as liaisons between on-site managers or tenants and owners.",
+          "advise client on interior design factors such as space planning, layout and use of furnishings or equipment, and color coordination.",
+          "advise construction firms or government agencies on dam or road construction, foundation design, land use, or resource management.",
+          "advise farmers or growers of development programs or new equipment or techniques to aid in quality production.",
+          "advise internal management or business partners on the implementation or operation of compliance programs."
+        ]
+      },
+      "Content Writers": {
+        "count": 46200,
         "usage_score": 80,
         "tasks": [
           "adapt instructional content or delivery methods for different levels or types of learners.",
           "adapt software and accompanying technical documents to another language and culture.",
           "administer document and system access rights and revision control to ensure security of system and integrity of master documents.",
-          "advise attorneys, juries, litigants, and court personnel regarding conduct, issues, and proceedings.",
+          "administer, dispense, or prescribe natural medicines such as food or botanical extracts, herbs, dietary supplements, vitamins, nutraceuticals, and amino acids.",
           "advise clients on how they could be helped by counseling."
         ]
       },
       "Teachers": {
-        "count": 29400,
+        "count": 35200,
         "usage_score": 80,
         "tasks": [
           "adapt teaching methods and instructional materials to meet students' varying needs and interests.",
-          "adapt translations to students' cognitive and grade levels, collaborating with educational team members as necessary.",
-          "adjust digital files to alter print elements, such as fonts, graphics, or color separations.",
           "administer standardized ability and achievement tests and interpret results to determine students' strengths and areas of need.",
-          "answer inquiries regarding information such as schedules, accommodations, procedures, and policies."
+          "answer inquiries from the general public regarding judicial procedures, court appearances, trial dates, adjournments, outstanding warrants, summonses, subpoenas, witness fees, or payment of fines.",
+          "answer inquiries regarding information such as schedules, accommodations, procedures, and policies.",
+          "answer questions or provide advice to the public regarding licensing policies, procedures, or regulations."
         ]
       },
       "Trainers": {
@@ -17103,114 +17103,92 @@
           "communicate research or project results to other professionals or the public or teach related courses, seminars, or workshops."
         ]
       },
-      "Research Scientists": {
-        "count": 78800,
+      "Marketing Specialists": {
+        "count": 36600,
         "usage_score": 80,
         "tasks": [
           "adapt text to accommodate musical requirements of composers and singers.",
-          "advise patients and community members concerning diet, activity, hygiene, and disease prevention.",
-          "analyze a script, noting events that affect each character's appearance, so that plans can be made for each scene.",
-          "analyze all aspects of corporate logistics to determine the most cost-effective or efficient means of transporting products or supplies.",
-          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services."
+          "advise attorneys, juries, litigants, and court personnel regarding conduct, issues, and proceedings.",
+          "advise clients on market conditions, prices, mortgages, legal requirements and related matters.",
+          "advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency.",
+          "advise producers about improved products and techniques that could enhance their animal production efforts."
         ]
       },
-      "Data Scientists": {
-        "count": 71400,
+      "Physicians": {
+        "count": 41800,
         "usage_score": 80,
         "tasks": [
           "address the relationships of quantities, magnitudes, and forms through the use of numbers and symbols.",
-          "advise customer about or perform maintenance of software system.",
-          "advise personnel about traffic problems, such as construction areas, accidents, congestion, weather conditions, or other hazards.",
-          "analyze a script, noting events that affect each character's appearance, so that plans can be made for each scene.",
-          "analyze all aspects of corporate logistics to determine the most cost-effective or efficient means of transporting products or supplies."
-        ]
-      },
-      "Financial Analysts": {
-        "count": 62400,
-        "usage_score": 80,
-        "tasks": [
-          "address the relationships of quantities, magnitudes, and forms through the use of numbers and symbols.",
-          "advise customer about or perform maintenance of software system.",
-          "advise personnel about traffic problems, such as construction areas, accidents, congestion, weather conditions, or other hazards.",
-          "advise students on internships, prospective employers, and job placement services.",
-          "align, adjust, or calibrate equipment according to specifications."
-        ]
-      },
-      "Accountants": {
-        "count": 27200,
-        "usage_score": 80,
-        "tasks": [
-          "adjust digital files to alter print elements, such as fonts, graphics, or color separations.",
-          "advise corporations on issues involving corporate image projects or problems.",
-          "answer telephone calls to take messages, answer questions, and provide information during non-business hours or when switchboard is closed.",
-          "appraise property values, assessing income potential when relevant.",
-          "back up network data."
+          "administer online purchasing systems.",
+          "administer treatments or therapies, such as homeopathy, hydrotherapy, oriental or ayurvedic medicine, electrotherapy and diathermy, using physical agents including air, heat, cold, water, sound, or ultraviolet light to catalyze the body to heal itself.",
+          "advise animal owners regarding sanitary measures, feeding, general care, medical conditions, or treatment options.",
+          "advise corporations on issues involving corporate image projects or problems."
         ]
       },
       "Legal Assistants": {
-        "count": 26600,
+        "count": 28000,
         "usage_score": 80,
         "tasks": [
           "adjust digital files to alter print elements, such as fonts, graphics, or color separations.",
-          "advise clients about proper clothing and shoes.",
+          "administer standardized ability and achievement tests and interpret results to determine students' strengths and areas of need.",
           "advise clients concerning business transactions, claim liability, advisability of prosecuting or defending lawsuits, or legal rights and obligations.",
           "advise clients on financial and legal matters such as investments and taxes.",
           "advise clients on market conditions, prices, mortgages, legal requirements and related matters."
         ]
       },
-      "Marketing Specialists": {
-        "count": 37400,
+      "Software Developers": {
+        "count": 115000,
         "usage_score": 80,
         "tasks": [
           "adjust sales scripts to better target the needs and interests of specific individuals.",
-          "administer, dispense, or prescribe natural medicines such as food or botanical extracts, herbs, dietary supplements, vitamins, nutraceuticals, and amino acids.",
-          "advise clients on market conditions, prices, mortgages, legal requirements and related matters.",
-          "advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency.",
-          "advise patients and their families on nutritional principles, dietary plans and diet modifications, and food selection and preparation."
+          "advise farmers or growers of development programs or new equipment or techniques to aid in quality production.",
+          "advise internal management or business partners on the implementation or operation of compliance programs.",
+          "advise managers and employees on state and federal employment regulations, collective agreements, benefit and compensation policies, personnel procedures and classification programs.",
+          "allocate print space for story text, photos, and illustrations according to space parameters and copy significance, using knowledge of layout principles."
         ]
       },
-      "Mechanical Engineers": {
-        "count": 24000,
+      "Accountants": {
+        "count": 30400,
         "usage_score": 80,
         "tasks": [
-          "administer online purchasing systems.",
-          "advise patients about therapeutic exercise and nutritional medicine regimens.",
-          "advise producers about improved products and techniques that could enhance their animal production efforts.",
+          "administer standardized ability and achievement tests and interpret results to determine students' strengths and areas of need.",
           "answer inquiries from the general public regarding judicial procedures, court appearances, trial dates, adjournments, outstanding warrants, summonses, subpoenas, witness fees, or payment of fines.",
-          "answer inquiries pertaining to hotel services, guest registration, and travel directions, or make recommendations regarding shopping, dining, or entertainment."
+          "answer questions or provide advice to the public regarding licensing policies, procedures, or regulations.",
+          "assemble and compile documents for loan closings, such as title abstracts, insurance forms, loan forms, and tax receipts.",
+          "assess cardiac physiology and calculate valve areas from blood flow velocity measurements."
         ]
       },
-      "Physicians": {
-        "count": 36800,
+      "Nurses": {
+        "count": 52400,
         "usage_score": 80,
         "tasks": [
           "administer treatments or therapies, such as homeopathy, hydrotherapy, oriental or ayurvedic medicine, electrotherapy and diathermy, using physical agents including air, heat, cold, water, sound, or ultraviolet light to catalyze the body to heal itself.",
-          "administer, proctor, or score academic or diagnostic assessments.",
           "advise animal owners regarding sanitary measures, feeding, general care, medical conditions, or treatment options.",
-          "advise or instruct patients regarding preventive dental care, the causes and treatment of dental problems, or oral health care services.",
-          "advise participants in use of heat or ultraviolet treatments and hot baths."
+          "advise customers on plant selection or care.",
+          "advise customers on use and care of merchandise.",
+          "advise or instruct patients regarding preventive dental care, the causes and treatment of dental problems, or oral health care services."
+        ]
+      },
+      "Customer Service Representatives": {
+        "count": 46200,
+        "usage_score": 80,
+        "tasks": [
+          "administer, proctor, or score academic or diagnostic assessments.",
+          "advise clients on how they could be helped by counseling.",
+          "advise or assist in obtaining patents or meeting other legal requirements.",
+          "advise patients, parents or guardians, and community members concerning diet, activity, hygiene, and disease prevention.",
+          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services."
         ]
       },
       "Graphic Designers": {
-        "count": 55800,
+        "count": 52200,
         "usage_score": 80,
         "tasks": [
-          "administer, dispense, or prescribe natural medicines such as food or botanical extracts, herbs, dietary supplements, vitamins, nutraceuticals, and amino acids.",
+          "administer, proctor, or score academic or diagnostic assessments.",
+          "advise attorneys, juries, litigants, and court personnel regarding conduct, issues, and proceedings.",
           "advise client on interior design factors such as space planning, layout and use of furnishings or equipment, and color coordination.",
-          "advise clients or community groups on issues related to improving general health, such as diet or exercise.",
           "advise construction firms or government agencies on dam or road construction, foundation design, land use, or resource management.",
-          "advise customers of necessary actions and strategies for debt repayment."
-        ]
-      },
-      "Human Resources Specialists": {
-        "count": 26000,
-        "usage_score": 80,
-        "tasks": [
-          "administer, dispense, or prescribe natural medicines such as food or botanical extracts, herbs, dietary supplements, vitamins, nutraceuticals, and amino acids.",
-          "advise corporations on issues involving corporate image projects or problems.",
-          "answer telephone calls to take messages, answer questions, and provide information during non-business hours or when switchboard is closed.",
-          "arrange for advertising or posting of job vacancies and notify eligible workers of position availability.",
-          "arrange for financing of property purchases."
+          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services."
         ]
       },
       "Healthcare Workers": {
@@ -17224,6 +17202,28 @@
           "advise students on academic and vocational curricula and on career issues."
         ]
       },
+      "Human Resources Specialists": {
+        "count": 22400,
+        "usage_score": 80,
+        "tasks": [
+          "advise attorneys, juries, litigants, and court personnel regarding conduct, issues, and proceedings.",
+          "answer applicants' questions about benefits and claim procedures.",
+          "answer customers' questions about products, prices, availability, product uses, and credit terms.",
+          "assemble and compile documents for loan closings, such as title abstracts, insurance forms, loan forms, and tax receipts.",
+          "assemble, operate, or maintain field or laboratory testing, measuring, or mechanical equipment."
+        ]
+      },
+      "Social Media Managers": {
+        "count": 34400,
+        "usage_score": 80,
+        "tasks": [
+          "advise clients about proper clothing and shoes.",
+          "advise clients on market conditions, prices, mortgages, legal requirements and related matters.",
+          "advise farmers and demonstrate techniques in areas such as feeding and health maintenance of livestock, growing and harvesting practices, and financial planning.",
+          "advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency.",
+          "advise patients and their families on nutritional principles, dietary plans and diet modifications, and food selection and preparation."
+        ]
+      },
       "Lawyers": {
         "count": 6200,
         "usage_score": 80,
@@ -17235,48 +17235,48 @@
           "analyze and modify compensation and benefits policies to establish competitive programs and ensure compliance with legal requirements."
         ]
       },
-      "Social Media Managers": {
-        "count": 37200,
+      "Financial Analysts": {
+        "count": 60600,
         "usage_score": 80,
         "tasks": [
-          "advise clients on market conditions, prices, mortgages, legal requirements and related matters.",
-          "advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency.",
-          "advise project teams on subjects such as premarket regulatory requirements, export and labeling requirements, or clinical study compliance issues.",
-          "analyze competitive market strategies through analysis of related product, market, or share trends.",
-          "analyze market conditions to determine optimum times to execute securities transactions."
+          "advise clients on how they could be helped by counseling.",
+          "advise patients and community members concerning diet, activity, hygiene, and disease prevention.",
+          "advise patients, parents or guardians, and community members concerning diet, activity, hygiene, and disease prevention.",
+          "analyze a script, noting events that affect each character's appearance, so that plans can be made for each scene.",
+          "analyze all aspects of corporate logistics to determine the most cost-effective or efficient means of transporting products or supplies."
         ]
       },
-      "Customer Service Representatives": {
-        "count": 46400,
+      "Research Scientists": {
+        "count": 80400,
         "usage_score": 80,
         "tasks": [
-          "advise clients or community groups on issues related to improving general health, such as diet or exercise.",
+          "advise corporations on issues involving corporate image projects or problems.",
           "advise customers of necessary actions and strategies for debt repayment.",
-          "advise or assist in obtaining patents or meeting other legal requirements.",
-          "advise planning officials on project feasibility, cost-effectiveness, regulatory conformance, or possible alternatives.",
-          "advise students on internships, prospective employers, and job placement services."
+          "analyze a script, noting events that affect each character's appearance, so that plans can be made for each scene.",
+          "analyze all aspects of corporate logistics to determine the most cost-effective or efficient means of transporting products or supplies.",
+          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services."
         ]
       },
       "Administrative Assistants": {
-        "count": 40400,
+        "count": 40800,
         "usage_score": 80,
         "tasks": [
+          "advise corporations on issues involving corporate image projects or problems.",
+          "advise farmers and demonstrate techniques in areas such as feeding and health maintenance of livestock, growing and harvesting practices, and financial planning.",
           "advise or assist in obtaining patents or meeting other legal requirements.",
-          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services.",
-          "analyze patrons' requests to determine needed information and assist in furnishing or locating that information.",
-          "answer customer inquiries or explain cost, availability, policies, and procedures of facilities.",
-          "answer questions from taxpayers and assist them in completing tax forms."
+          "advise patients and their families on nutritional principles, dietary plans and diet modifications, and food selection and preparation.",
+          "advise personnel about traffic problems, such as construction areas, accidents, congestion, weather conditions, or other hazards."
         ]
       },
-      "Content Writers": {
-        "count": 47200,
+      "Data Scientists": {
+        "count": 68600,
         "usage_score": 80,
         "tasks": [
-          "advise or consult with individuals and institutions regarding issues such as the historical authenticity of materials or the customs of a specific historical period.",
-          "advise students on internships, prospective employers, and job placement services.",
-          "align, adjust, or calibrate equipment according to specifications.",
-          "analyze experimental data and interpret results to write reports and summaries of findings.",
-          "answer clients' questions about the purposes and details of financial plans and strategies."
+          "advise patients and community members concerning diet, activity, hygiene, and disease prevention.",
+          "analyze a script, noting events that affect each character's appearance, so that plans can be made for each scene.",
+          "analyze all aspects of corporate logistics to determine the most cost-effective or efficient means of transporting products or supplies.",
+          "analyze and characterize user experiences and institutional settings to assist consumer product developers, technology developers, and software engineers with the design of innovative products and services.",
+          "analyze and classify risks and investments to determine their potential impacts on companies."
         ]
       },
       "Journalists": {
