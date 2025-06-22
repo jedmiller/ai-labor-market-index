@@ -1,6 +1,6 @@
 {
   "query": "all:artificial intelligence AND (labor market OR employment OR jobs OR workforce OR automation)",
-  "date_collected": "2025-06-15T03:21:27.052021",
+  "date_collected": "2025-06-22T03:22:23.008988",
   "target_period": "2025-05",
   "papers": [
     {
@@ -121,6 +121,34 @@
       "links": [
         "http://arxiv.org/abs/2506.00664v1",
         "http://arxiv.org/pdf/2506.00664v1"
+      ],
+      "primary_search_term": "artificial intelligence",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
+      "id": "http://arxiv.org/abs/2506.12060v1",
+      "title": "Organizational Adaptation to Generative AI in Cybersecurity: A\n  Systematic Review",
+      "published": "2025-05-31T18:16:11Z",
+      "updated": "2025-05-31T18:16:11Z",
+      "summary": "Cybersecurity organizations are adapting to GenAI integration through\nmodified frameworks and hybrid operational processes, with success influenced\nby existing security maturity, regulatory requirements, and investments in\nhuman capital and infrastructure. This qualitative research employs systematic\ndocument analysis and comparative case study methodology to examine how\ncybersecurity organizations adapt their threat modeling frameworks and\noperational processes to address generative artificial intelligence\nintegration. Through examination of 25 studies from 2022 to 2025, the research\ndocuments substantial transformation in organizational approaches to threat\nmodeling, moving from traditional signature-based systems toward frameworks\nincorporating artificial intelligence capabilities. The research identifies\nthree primary adaptation patterns: Large Language Model integration for\nsecurity applications, GenAI frameworks for risk detection and response\nautomation, and AI/ML integration for threat hunting. Organizations with mature\nsecurity infrastructures, particularly in finance and critical infrastructure\nsectors, demonstrate higher readiness through structured governance approaches,\ndedicated AI teams, and robust incident response processes. Organizations\nachieve successful GenAI integration when they maintain appropriate human\noversight of automated systems, address data quality concerns and\nexplainability requirements, and establish governance frameworks tailored to\ntheir specific sectors. Organizations encounter ongoing difficulties with\nprivacy protection, bias reduction, personnel training, and defending against\nadversarial attacks. This work advances understanding of how organizations\nadopt innovative technologies in high-stakes environments and offers actionable\ninsights for cybersecurity professionals implementing GenAI systems.",
+      "authors": [
+        "Christopher Nott"
+      ],
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CY",
+        "K.6.5; I.2.0; K.4.1"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2506.12060v1",
+        "http://arxiv.org/pdf/2506.12060v1"
       ],
       "primary_search_term": "artificial intelligence",
       "secondary_search_terms": [
@@ -406,11 +434,11 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.00455v1",
-      "title": "Diffusion Models for Increasing Accuracy in Olfaction Sensors and\n  Datasets",
+      "id": "http://arxiv.org/abs/2506.00455v2",
+      "title": "Diffusion Graph Neural Networks for Robustness in Olfaction Sensors and\n  Datasets",
       "published": "2025-05-31T08:22:09Z",
-      "updated": "2025-05-31T08:22:09Z",
-      "summary": "Robotic odour source localization (OSL) is a critical capability for\nautonomous systems operating in complex environments. However, current OSL\nmethods often suffer from ambiguities, particularly when robots misattribute\nodours to incorrect objects due to limitations in olfactory datasets and sensor\nresolutions. To address this challenge, we introduce a novel machine learning\nmethod using diffusion-based molecular generation to enhance odour localization\naccuracy that can be used by itself or with automated olfactory dataset\nconstruction pipelines with vision-language models (VLMs) This generative\nprocess of our diffusion model expands the chemical space beyond the\nlimitations of both current olfactory datasets and the training data of VLMs,\nenabling the identification of potential odourant molecules not previously\ndocumented. The generated molecules can then be more accurately validated using\nadvanced olfactory sensors which emulate human olfactory recognition through\nelectronic sensor arrays. By integrating visual analysis, language processing,\nand molecular generation, our framework enhances the ability of\nolfaction-vision models on robots to accurately associate odours with their\ncorrect sources, thereby improving navigation and decision-making in\nenvironments where olfactory cues are essential. Our methodology represents a\nfoundational advancement in the field of robotic olfaction, offering a scalable\nsolution to the challenges posed by limited olfactory data and sensor\nambiguities.",
+      "updated": "2025-06-15T01:39:21Z",
+      "summary": "Robotic odour source localization (OSL) is a critical capability for\nautonomous systems operating in complex environments. However, current OSL\nmethods often suffer from ambiguities, particularly when robots misattribute\nodours to incorrect objects due to limitations in olfactory datasets and sensor\nresolutions. To address this challenge, we introduce a novel machine learning\nmethod using diffusion-based molecular generation to enhance odour localization\naccuracy that can be used by itself or with automated olfactory dataset\nconstruction pipelines with vision-language models (VLMs) This generative\nprocess of our diffusion model expands the chemical space beyond the\nlimitations of both current olfactory datasets and the training data of VLMs,\nenabling the identification of potential odourant molecules not previously\ndocumented. The generated molecules can then be more accurately validated using\nadvanced olfactory sensors which emulate human olfactory recognition through\nelectronic sensor arrays. By integrating visual analysis, language processing,\nand molecular generation, our framework enhances the ability of\nolfaction-vision models on robots to accurately associate odours with their\ncorrect sources, thereby improving navigation and decision-making through\nbetter sensor selection for a target compound. Our methodology represents a\nfoundational advancement in the field of artificial olfaction, offering a\nscalable solution to the challenges posed by limited olfactory data and sensor\nambiguities.",
       "authors": [
         "Kordel K. France",
         "Ovidiu Daescu"
@@ -421,8 +449,8 @@
         "cs.LG"
       ],
       "links": [
-        "http://arxiv.org/abs/2506.00455v1",
-        "http://arxiv.org/pdf/2506.00455v1"
+        "http://arxiv.org/abs/2506.00455v2",
+        "http://arxiv.org/pdf/2506.00455v2"
       ],
       "primary_search_term": "artificial intelligence",
       "secondary_search_terms": [
@@ -1068,10 +1096,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.08026v1",
+      "id": "http://arxiv.org/abs/2506.08026v2",
       "title": "TIP-Search: Time-Predictable Inference Scheduling for Market Prediction\n  under Uncertain Load",
       "published": "2025-05-30T14:52:01Z",
-      "updated": "2025-05-30T14:52:01Z",
+      "updated": "2025-06-16T19:58:59Z",
       "summary": "This paper proposes TIP-Search, a time-predictable inference scheduling\nframework for real-time market prediction under uncertain workloads. Motivated\nby the strict latency demands in high-frequency financial systems, TIP-Search\ndynamically selects a deep learning model from a heterogeneous pool, aiming to\nmaximize predictive accuracy while satisfying per-task deadline constraints.\nOur approach profiles latency and generalization performance offline, then\nperforms online task-aware selection without relying on explicit input domain\nlabels. We evaluate TIP-Search on three real-world limit order book datasets\n(FI-2010, Binance BTC/USDT, LOBSTER AAPL) and demonstrate that it outperforms\nstatic baselines with up to 8.5% improvement in accuracy and 100% deadline\nsatisfaction. Our results highlight the effectiveness of TIP-Search in robust\nlow-latency financial inference under uncertainty.",
       "authors": [
         "Xibai Wang"
@@ -1084,8 +1112,8 @@
         "q-fin.CP"
       ],
       "links": [
-        "http://arxiv.org/abs/2506.08026v1",
-        "http://arxiv.org/pdf/2506.08026v1"
+        "http://arxiv.org/abs/2506.08026v2",
+        "http://arxiv.org/pdf/2506.08026v2"
       ],
       "primary_search_term": "artificial intelligence",
       "secondary_search_terms": [
@@ -1536,35 +1564,6 @@
       "links": [
         "http://arxiv.org/abs/2505.24090v1",
         "http://arxiv.org/pdf/2505.24090v1"
-      ],
-      "primary_search_term": "artificial intelligence",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2505.24069v1",
-      "title": "DSR-Bench: Evaluating the Structural Reasoning Abilities of LLMs via\n  Data Structures",
-      "published": "2025-05-29T23:24:53Z",
-      "updated": "2025-05-29T23:24:53Z",
-      "summary": "Large language models (LLMs) are increasingly deployed for real-world tasks\nthat fundamentally involve data manipulation. A core requirement across these\ntasks is the ability to perform structural reasoning--that is, to understand\nand reason about data relationships. For example, customer requests require a\ntemporal ordering, which can be represented by data structures such as queues.\nHowever, existing benchmarks primarily focus on high-level, application-driven\nevaluations without isolating this fundamental capability. To address this gap,\nwe introduce DSR-Bench, a novel benchmark evaluating LLMs' structural reasoning\ncapabilities through data structures, which provide interpretable\nrepresentations of data relationships. DSR-Bench includes 20 data structures,\n35 operations, and 4,140 problem instances, organized hierarchically for\nfine-grained analysis of reasoning limitations. Our evaluation pipeline is\nfully automated and deterministic, eliminating subjective human or model-based\njudgments. Its synthetic nature also ensures scalability and minimizes data\ncontamination risks. We benchmark nine state-of-the-art LLMs. Our analysis\nshows that instruction-tuned models struggle with basic multi-attribute and\nmulti-hop reasoning. Furthermore, while reasoning-oriented models perform\nbetter, they remain fragile on complex and hybrid structures, with the best\nmodel achieving an average score of only 47% on the challenge subset.\nCrucially, models often perform poorly on multi-dimensional data and natural\nlanguage task descriptions, highlighting a critical gap for real-world\ndeployment.",
-      "authors": [
-        "Yu He",
-        "Yingxi Li",
-        "Colin White",
-        "Ellen Vitercik"
-      ],
-      "categories": [
-        "cs.LG",
-        "cs.AI"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2505.24069v1",
-        "http://arxiv.org/pdf/2505.24069v1"
       ],
       "primary_search_term": "artificial intelligence",
       "secondary_search_terms": [

@@ -1,31 +1,31 @@
 {
   "dataset": "occupation_automation",
-  "date_collected": "2025-06-15T03:21:19.348272",
+  "date_collected": "2025-06-22T03:22:20.437793",
   "target_period": "2025-04",
   "data": {
     "Software Developers": {
-      "automation_rate": 20.666666666666668,
-      "augmentation_rate": 79.33333333333333,
+      "automation_rate": 24.666666666666668,
+      "augmentation_rate": 75.33333333333333,
       "description": "Tasks related to Software Developers"
     },
     "Data Scientists": {
-      "automation_rate": 29.333333333333336,
-      "augmentation_rate": 70.66666666666666,
+      "automation_rate": 21.333333333333332,
+      "augmentation_rate": 78.66666666666667,
       "description": "Tasks related to Data Scientists"
     },
     "Financial Analysts": {
-      "automation_rate": 53.333333333333336,
-      "augmentation_rate": 46.666666666666664,
+      "automation_rate": 57.33333333333333,
+      "augmentation_rate": 42.66666666666667,
       "description": "Tasks related to Financial Analysts"
     },
     "Content Writers": {
-      "automation_rate": 42.666666666666664,
-      "augmentation_rate": 57.333333333333336,
+      "automation_rate": 58.66666666666667,
+      "augmentation_rate": 41.33333333333333,
       "description": "Tasks related to Content Writers"
     },
     "Customer Service Representatives": {
-      "automation_rate": 45.333333333333336,
-      "augmentation_rate": 54.666666666666664,
+      "automation_rate": 57.33333333333333,
+      "augmentation_rate": 42.66666666666667,
       "description": "Tasks related to Customer Service Representatives"
     },
     "Graphic Designers": {
@@ -34,58 +34,58 @@
       "description": "Tasks related to Graphic Designers"
     },
     "Marketing Specialists": {
-      "automation_rate": 53.333333333333336,
-      "augmentation_rate": 46.666666666666664,
+      "automation_rate": 46.666666666666664,
+      "augmentation_rate": 53.333333333333336,
       "description": "Tasks related to Marketing Specialists"
     },
     "Human Resources Specialists": {
-      "automation_rate": 44.0,
-      "augmentation_rate": 56.0,
+      "automation_rate": 53.333333333333336,
+      "augmentation_rate": 46.666666666666664,
       "description": "Tasks related to Human Resources Specialists"
     },
     "Accountants": {
-      "automation_rate": 42.666666666666664,
-      "augmentation_rate": 57.333333333333336,
+      "automation_rate": 58.66666666666667,
+      "augmentation_rate": 41.33333333333333,
       "description": "Tasks related to Accountants"
     },
     "Legal Assistants": {
-      "automation_rate": 58.66666666666667,
-      "augmentation_rate": 41.33333333333333,
+      "automation_rate": 45.333333333333336,
+      "augmentation_rate": 54.666666666666664,
       "description": "Tasks related to Legal Assistants"
     },
     "Teachers": {
-      "automation_rate": 26.666666666666668,
-      "augmentation_rate": 73.33333333333333,
+      "automation_rate": 22.0,
+      "augmentation_rate": 78.0,
       "description": "Tasks related to Teachers"
     },
     "Nurses": {
-      "automation_rate": 26.666666666666668,
-      "augmentation_rate": 73.33333333333333,
+      "automation_rate": 25.333333333333332,
+      "augmentation_rate": 74.66666666666667,
       "description": "Tasks related to Nurses"
     },
     "Product Managers": {
-      "automation_rate": 40.0,
-      "augmentation_rate": 60.0,
+      "automation_rate": 44.0,
+      "augmentation_rate": 56.0,
       "description": "Tasks related to Product Managers"
     },
     "Sales Representatives": {
-      "automation_rate": 53.333333333333336,
-      "augmentation_rate": 46.666666666666664,
+      "automation_rate": 42.666666666666664,
+      "augmentation_rate": 57.333333333333336,
       "description": "Tasks related to Sales Representatives"
     },
     "Research Scientists": {
-      "automation_rate": 22.666666666666668,
-      "augmentation_rate": 77.33333333333333,
+      "automation_rate": 27.333333333333332,
+      "augmentation_rate": 72.66666666666667,
       "description": "Tasks related to Research Scientists"
     },
     "Physicians": {
-      "automation_rate": 23.333333333333332,
-      "augmentation_rate": 76.66666666666667,
+      "automation_rate": 22.666666666666668,
+      "augmentation_rate": 77.33333333333333,
       "description": "Tasks related to Physicians"
     },
     "Administrative Assistants": {
-      "automation_rate": 44.0,
-      "augmentation_rate": 56.0,
+      "automation_rate": 50.666666666666664,
+      "augmentation_rate": 49.333333333333336,
       "description": "Tasks related to Administrative Assistants"
     },
     "Social Media Managers": {
@@ -94,13 +94,13 @@
       "description": "Tasks related to Social Media Managers"
     },
     "Mechanical Engineers": {
-      "automation_rate": 25.333333333333332,
-      "augmentation_rate": 74.66666666666667,
+      "automation_rate": 28.666666666666664,
+      "augmentation_rate": 71.33333333333334,
       "description": "Tasks related to Mechanical Engineers"
     },
     "Project Managers": {
-      "automation_rate": 50.666666666666664,
-      "augmentation_rate": 49.333333333333336,
+      "automation_rate": 58.66666666666667,
+      "augmentation_rate": 41.33333333333333,
       "description": "Tasks related to Project Managers"
     }
   }
