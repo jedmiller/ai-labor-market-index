@@ -1,6 +1,6 @@
 {
   "query": "all:machine learning AND (labor market OR employment OR jobs OR workforce OR automation)",
-  "date_collected": "2025-06-22T03:22:23.414069",
+  "date_collected": "2025-06-29T03:25:24.439230",
   "target_period": "2025-05",
   "papers": [
     {
@@ -412,10 +412,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.00305v1",
+      "id": "http://arxiv.org/abs/2506.00305v2",
       "title": "Learning Aerodynamics for the Control of Flying Humanoid Robots",
       "published": "2025-05-30T23:27:44Z",
-      "updated": "2025-05-30T23:27:44Z",
+      "updated": "2025-06-21T15:50:05Z",
       "summary": "Robots with multi-modal locomotion are an active research field due to their\nversatility in diverse environments. In this context, additional actuation can\nprovide humanoid robots with aerial capabilities. Flying humanoid robots face\nchallenges in modeling and control, particularly with aerodynamic forces. This\npaper addresses these challenges from a technological and scientific\nstandpoint. The technological contribution includes the mechanical design of\niRonCub-Mk1, a jet-powered humanoid robot, optimized for jet engine\nintegration, and hardware modifications for wind tunnel experiments on humanoid\nrobots for precise aerodynamic forces and surface pressure measurements. The\nscientific contribution offers a comprehensive approach to model and control\naerodynamic forces using classical and learning techniques. Computational Fluid\nDynamics (CFD) simulations calculate aerodynamic forces, validated through wind\ntunnel experiments on iRonCub-Mk1. An automated CFD framework expands the\naerodynamic dataset, enabling the training of a Deep Neural Network and a\nlinear regression model. These models are integrated into a simulator for\ndesigning aerodynamic-aware controllers, validated through flight simulations\nand balancing experiments on the iRonCub-Mk1 physical prototype.",
       "authors": [
         "Antonello Paolino",
@@ -435,8 +435,9 @@
         "cs.LG"
       ],
       "links": [
-        "http://arxiv.org/abs/2506.00305v1",
-        "http://arxiv.org/pdf/2506.00305v1"
+        "http://dx.doi.org/10.1038/s44172-025-00447-w",
+        "http://arxiv.org/abs/2506.00305v2",
+        "http://arxiv.org/pdf/2506.00305v2"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [
@@ -508,10 +509,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.00202v2",
+      "id": "http://arxiv.org/abs/2506.00202v3",
       "title": "What do professional software developers need to know to succeed in an\n  age of Artificial Intelligence?",
       "published": "2025-05-30T20:14:03Z",
-      "updated": "2025-06-04T17:32:53Z",
+      "updated": "2025-06-23T08:27:54Z",
       "summary": "Generative AI is showing early evidence of productivity gains for software\ndevelopers, but concerns persist regarding workforce disruption and deskilling.\nWe describe our research with 21 developers at the cutting edge of using AI,\nsummarizing 12 of their work goals we uncovered, together with 75 associated\ntasks and the skills & knowledge for each, illustrating how developers use AI\nat work. From all of these, we distilled our findings in the form of 5\ninsights. We found that the skills & knowledge to be a successful AI-enhanced\ndeveloper are organized into four domains (using Generative AI effectively,\ncore software engineering, adjacent engineering, and adjacent non-engineering)\ndeployed at critical junctures throughout a 6-step task workflow. In order to\n\"future proof\" developers for this age of AI, on-the-job learning initiatives\nand computer science degree programs will need to target both \"soft\" skills and\nthe technical skills & knowledge in all four domains to reskill, upskill and\nsafeguard against deskilling.",
       "authors": [
         "Matthew Kam",
@@ -531,8 +532,8 @@
       ],
       "links": [
         "http://dx.doi.org/10.1145/3696630.3727251",
-        "http://arxiv.org/abs/2506.00202v2",
-        "http://arxiv.org/pdf/2506.00202v2"
+        "http://arxiv.org/abs/2506.00202v3",
+        "http://arxiv.org/pdf/2506.00202v3"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [
@@ -1321,10 +1322,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2505.24183v1",
+      "id": "http://arxiv.org/abs/2505.24183v2",
       "title": "CodeV-R1: Reasoning-Enhanced Verilog Generation",
       "published": "2025-05-30T03:51:06Z",
-      "updated": "2025-05-30T03:51:06Z",
+      "updated": "2025-06-20T07:05:18Z",
       "summary": "Large language models (LLMs) trained via reinforcement learning with\nverifiable reward (RLVR) have achieved breakthroughs on tasks with explicit,\nautomatable verification, such as software programming and mathematical\nproblems. Extending RLVR to electronic design automation (EDA), especially\nautomatically generating hardware description languages (HDLs) like Verilog\nfrom natural-language (NL) specifications, however, poses three key challenges:\nthe lack of automated and accurate verification environments, the scarcity of\nhigh-quality NL-code pairs, and the prohibitive computation cost of RLVR. To\nthis end, we introduce CodeV-R1, an RLVR framework for training Verilog\ngeneration LLMs. First, we develop a rule-based testbench generator that\nperforms robust equivalence checking against golden references. Second, we\npropose a round-trip data synthesis method that pairs open-source Verilog\nsnippets with LLM-generated NL descriptions, verifies code-NL-code consistency\nvia the generated testbench, and filters out inequivalent examples to yield a\nhigh-quality dataset. Third, we employ a two-stage \"distill-then-RL\" training\npipeline: distillation for the cold start of reasoning abilities, followed by\nadaptive DAPO, our novel RLVR algorithm that can reduce training cost by\nadaptively adjusting sampling rate. The resulting model, CodeV-R1-7B, achieves\n68.6% and 72.9% pass@1 on VerilogEval v2 and RTLLM v1.1, respectively,\nsurpassing prior state-of-the-art by 12~20%, while matching or even exceeding\nthe performance of 671B DeepSeek-R1. We will release our model, training\npipeline, and dataset to facilitate research in EDA and LLM communities.",
       "authors": [
         "Yaoyu Zhu",
@@ -1353,8 +1354,8 @@
         "cs.PL"
       ],
       "links": [
-        "http://arxiv.org/abs/2505.24183v1",
-        "http://arxiv.org/pdf/2505.24183v1"
+        "http://arxiv.org/abs/2505.24183v2",
+        "http://arxiv.org/pdf/2505.24183v2"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [
@@ -1458,6 +1459,39 @@
       ]
     },
     {
+      "id": "http://arxiv.org/abs/2506.15701v1",
+      "title": "Compiler-R1: Towards Agentic Compiler Auto-tuning with Reinforcement\n  Learning",
+      "published": "2025-05-30T00:26:10Z",
+      "updated": "2025-05-30T00:26:10Z",
+      "summary": "Compiler auto-tuning optimizes pass sequences to improve performance metrics\nsuch as Intermediate Representation (IR) instruction count. Although recent\nadvances leveraging Large Language Models (LLMs) have shown promise in\nautomating compiler tuning, two significant challenges still remain: the\nabsence of high-quality reasoning datasets for agents training, and limited\neffective interactions with the compilation environment. In this work, we\nintroduce Compiler-R1, the first reinforcement learning (RL)-driven framework\nspecifically augmenting LLM capabilities for compiler auto-tuning. Compiler-R1\nfeatures a curated, high-quality reasoning dataset and a novel two-stage\nend-to-end RL training pipeline, enabling efficient environment exploration and\nlearning through an outcome-based reward. Extensive experiments across seven\ndatasets demonstrate Compiler-R1 achieving an average 8.46% IR instruction\ncount reduction compared to opt -Oz, showcasing the strong potential of\nRL-trained LLMs for compiler optimization. Our code and datasets are publicly\navailable at https://github.com/Panhaolin2001/Compiler-R1.",
+      "authors": [
+        "Haolin Pan",
+        "Hongyu Lin",
+        "Haoran Luo",
+        "Yang Liu",
+        "Kaichun Yao",
+        "Libo Zhang",
+        "Mingjie Xing",
+        "Yanjun Wu"
+      ],
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "links": [
+        "http://arxiv.org/abs/2506.15701v1",
+        "http://arxiv.org/pdf/2506.15701v1"
+      ],
+      "primary_search_term": "machine learning",
+      "secondary_search_terms": [
+        "labor market",
+        "employment",
+        "jobs",
+        "workforce",
+        "automation"
+      ]
+    },
+    {
       "id": "http://arxiv.org/abs/2505.24085v1",
       "title": "DeepBoost-AF: A Novel Unsupervised Feature Learning and Gradient\n  Boosting Fusion for Robust Atrial Fibrillation Detection in Raw ECG Signals",
       "published": "2025-05-30T00:08:56Z",
@@ -1503,35 +1537,6 @@
       "links": [
         "http://arxiv.org/abs/2505.24069v1",
         "http://arxiv.org/pdf/2505.24069v1"
-      ],
-      "primary_search_term": "machine learning",
-      "secondary_search_terms": [
-        "labor market",
-        "employment",
-        "jobs",
-        "workforce",
-        "automation"
-      ]
-    },
-    {
-      "id": "http://arxiv.org/abs/2505.24068v1",
-      "title": "DiffCoTune: Differentiable Co-Tuning for Cross-domain Robot Control",
-      "published": "2025-05-29T23:20:07Z",
-      "updated": "2025-05-29T23:20:07Z",
-      "summary": "The deployment of robot controllers is hindered by modeling discrepancies due\nto necessary simplifications for computational tractability or inaccuracies in\ndata-generating simulators. Such discrepancies typically require ad-hoc tuning\nto meet the desired performance, thereby ensuring successful transfer to a\ntarget domain. We propose a framework for automated, gradient-based tuning to\nenhance performance in the deployment domain by leveraging differentiable\nsimulators. Our method collects rollouts in an iterative manner to co-tune the\nsimulator and controller parameters, enabling systematic transfer within a few\ntrials in the deployment domain. Specifically, we formulate multi-step\nobjectives for tuning and employ alternating optimization to effectively adapt\nthe controller to the deployment domain. The scalability of our framework is\ndemonstrated by co-tuning model-based and learning-based controllers of\narbitrary complexity for tasks ranging from low-dimensional cart-pole\nstabilization to high-dimensional quadruped and biped tracking, showing\nperformance improvements across different deployment domains.",
-      "authors": [
-        "Lokesh Krishna",
-        "Sheng Cheng",
-        "Junheng Li",
-        "Naira Hovakimyan",
-        "Quan Nguyen"
-      ],
-      "categories": [
-        "cs.RO"
-      ],
-      "links": [
-        "http://arxiv.org/abs/2505.24068v1",
-        "http://arxiv.org/pdf/2505.24068v1"
       ],
       "primary_search_term": "machine learning",
       "secondary_search_terms": [

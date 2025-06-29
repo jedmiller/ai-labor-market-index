@@ -1,6 +1,6 @@
 {
   "query": "all:artificial intelligence AND (labor market OR employment OR jobs OR workforce OR automation)",
-  "date_collected": "2025-06-22T03:22:23.008988",
+  "date_collected": "2025-06-29T03:25:23.945554",
   "target_period": "2025-05",
   "papers": [
     {
@@ -713,10 +713,10 @@
       ]
     },
     {
-      "id": "http://arxiv.org/abs/2506.00202v2",
+      "id": "http://arxiv.org/abs/2506.00202v3",
       "title": "What do professional software developers need to know to succeed in an\n  age of Artificial Intelligence?",
       "published": "2025-05-30T20:14:03Z",
-      "updated": "2025-06-04T17:32:53Z",
+      "updated": "2025-06-23T08:27:54Z",
       "summary": "Generative AI is showing early evidence of productivity gains for software\ndevelopers, but concerns persist regarding workforce disruption and deskilling.\nWe describe our research with 21 developers at the cutting edge of using AI,\nsummarizing 12 of their work goals we uncovered, together with 75 associated\ntasks and the skills & knowledge for each, illustrating how developers use AI\nat work. From all of these, we distilled our findings in the form of 5\ninsights. We found that the skills & knowledge to be a successful AI-enhanced\ndeveloper are organized into four domains (using Generative AI effectively,\ncore software engineering, adjacent engineering, and adjacent non-engineering)\ndeployed at critical junctures throughout a 6-step task workflow. In order to\n\"future proof\" developers for this age of AI, on-the-job learning initiatives\nand computer science degree programs will need to target both \"soft\" skills and\nthe technical skills & knowledge in all four domains to reskill, upskill and\nsafeguard against deskilling.",
       "authors": [
         "Matthew Kam",
@@ -736,8 +736,8 @@
       ],
       "links": [
         "http://dx.doi.org/10.1145/3696630.3727251",
-        "http://arxiv.org/abs/2506.00202v2",
-        "http://arxiv.org/pdf/2506.00202v2"
+        "http://arxiv.org/abs/2506.00202v3",
+        "http://arxiv.org/pdf/2506.00202v3"
       ],
       "primary_search_term": "artificial intelligence",
       "secondary_search_terms": [
