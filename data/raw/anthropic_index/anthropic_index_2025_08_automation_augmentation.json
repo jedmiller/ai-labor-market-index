@@ -1,0 +1,843 @@
+{
+  "timestamp": "2025-10-04T10:34:50.766342",
+  "release": "release_2025_09_15",
+  "target_period": "2025-08",
+  "data": {
+    "Angola": {
+      "augmentation_pct": 40.723981900452486,
+      "automation_pct": 59.27601809954752
+    },
+    "Albania": {
+      "augmentation_pct": 43.71584699453552,
+      "automation_pct": 56.28415300546448
+    },
+    "Andorra": {
+      "augmentation_pct": 100.0,
+      "automation_pct": 0.0
+    },
+    "United Arab Emirates": {
+      "augmentation_pct": 47.24114441416894,
+      "automation_pct": 52.75885558583106
+    },
+    "Argentina": {
+      "augmentation_pct": 45.5838570956004,
+      "automation_pct": 54.4161429043996
+    },
+    "Armenia": {
+      "augmentation_pct": 43.18507890961262,
+      "automation_pct": 56.81492109038737
+    },
+    "Australia": {
+      "augmentation_pct": 53.96195652173913,
+      "automation_pct": 46.03804347826087
+    },
+    "Austria": {
+      "augmentation_pct": 54.62020360219264,
+      "automation_pct": 45.37979639780736
+    },
+    "Azerbaijan": {
+      "augmentation_pct": 47.34607218683652,
+      "automation_pct": 52.653927813163484
+    },
+    "Burundi": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Belgium": {
+      "augmentation_pct": 51.67317345231456,
+      "automation_pct": 48.32682654768544
+    },
+    "Benin": {
+      "augmentation_pct": 37.65182186234818,
+      "automation_pct": 62.34817813765182
+    },
+    "Burkina Faso": {
+      "augmentation_pct": 37.30769230769231,
+      "automation_pct": 62.69230769230769
+    },
+    "Bangladesh": {
+      "augmentation_pct": 42.08890270438296,
+      "automation_pct": 57.91109729561703
+    },
+    "Bulgaria": {
+      "augmentation_pct": 48.61477572559367,
+      "automation_pct": 51.385224274406326
+    },
+    "Bahrain": {
+      "augmentation_pct": 45.07042253521127,
+      "automation_pct": 54.929577464788736
+    },
+    "Bahamas": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Bosnia and Herzegovina": {
+      "augmentation_pct": 48.57954545454545,
+      "automation_pct": 51.42045454545454
+    },
+    "Belize": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Bolivia": {
+      "augmentation_pct": 46.23871614844533,
+      "automation_pct": 53.761283851554666
+    },
+    "Brazil": {
+      "augmentation_pct": 36.053016610723816,
+      "automation_pct": 63.94698338927619
+    },
+    "Barbados": {
+      "augmentation_pct": 36.53846153846153,
+      "automation_pct": 63.46153846153846
+    },
+    "Brunei": {
+      "augmentation_pct": 48.64864864864865,
+      "automation_pct": 51.35135135135135
+    },
+    "Bhutan": {
+      "augmentation_pct": 44.18604651162791,
+      "automation_pct": 55.81395348837209
+    },
+    "Botswana": {
+      "augmentation_pct": 43.18181818181818,
+      "automation_pct": 56.81818181818182
+    },
+    "Canada": {
+      "augmentation_pct": 53.39980959061983,
+      "automation_pct": 46.60019040938017
+    },
+    "Switzerland": {
+      "augmentation_pct": 53.09776207302709,
+      "automation_pct": 46.90223792697291
+    },
+    "Chile": {
+      "augmentation_pct": 49.10492292391845,
+      "automation_pct": 50.89507707608155
+    },
+    "Ivory Coast": {
+      "augmentation_pct": 40.390879478827365,
+      "automation_pct": 59.60912052117264
+    },
+    "Cameroon": {
+      "augmentation_pct": 39.66666666666666,
+      "automation_pct": 60.333333333333336
+    },
+    "Republic of the Congo": {
+      "augmentation_pct": 41.90476190476191,
+      "automation_pct": 58.0952380952381
+    },
+    "Colombia": {
+      "augmentation_pct": 48.04928131416838,
+      "automation_pct": 51.95071868583162
+    },
+    "Cabo Verde": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Costa Rica": {
+      "augmentation_pct": 47.01429772918419,
+      "automation_pct": 52.98570227081581
+    },
+    "Curacao": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Cayman Islands": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Cyprus": {
+      "augmentation_pct": 53.22862129144852,
+      "automation_pct": 46.77137870855148
+    },
+    "Czechia": {
+      "augmentation_pct": 53.251898316276005,
+      "automation_pct": 46.748101683724
+    },
+    "Germany": {
+      "augmentation_pct": 54.00170544524303,
+      "automation_pct": 45.998294554756974
+    },
+    "Denmark": {
+      "augmentation_pct": 55.88495575221239,
+      "automation_pct": 44.11504424778761
+    },
+    "Dominican Republic": {
+      "augmentation_pct": 44.00360685302074,
+      "automation_pct": 55.99639314697926
+    },
+    "Algeria": {
+      "augmentation_pct": 45.25316455696203,
+      "automation_pct": 54.74683544303798
+    },
+    "Ecuador": {
+      "augmentation_pct": 43.67088607594937,
+      "automation_pct": 56.32911392405063
+    },
+    "Egypt": {
+      "augmentation_pct": 40.87354567995423,
+      "automation_pct": 59.126454320045774
+    },
+    "Spain": {
+      "augmentation_pct": 49.55974842767296,
+      "automation_pct": 50.44025157232704
+    },
+    "Estonia": {
+      "augmentation_pct": 49.56521739130435,
+      "automation_pct": 50.43478260869565
+    },
+    "Finland": {
+      "augmentation_pct": 55.449101796407184,
+      "automation_pct": 44.550898203592816
+    },
+    "Fiji": {
+      "augmentation_pct": 47.82608695652174,
+      "automation_pct": 52.17391304347826
+    },
+    "France": {
+      "augmentation_pct": 51.01131134969326,
+      "automation_pct": 48.98868865030675
+    },
+    "Gabon": {
+      "augmentation_pct": 45.0,
+      "automation_pct": 55.00000000000001
+    },
+    "United Kingdom": {
+      "augmentation_pct": 54.50682548179872,
+      "automation_pct": 45.493174518201286
+    },
+    "Georgia": {
+      "augmentation_pct": 50.47882136279927,
+      "automation_pct": 49.521178637200734
+    },
+    "Ghana": {
+      "augmentation_pct": 39.93471164309032,
+      "automation_pct": 60.06528835690968
+    },
+    "Guinea": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Gambia": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Greece": {
+      "augmentation_pct": 51.844932274638026,
+      "automation_pct": 48.15506772536198
+    },
+    "Guatemala": {
+      "augmentation_pct": 48.01084990958409,
+      "automation_pct": 51.98915009041591
+    },
+    "Guyana": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Honduras": {
+      "augmentation_pct": 46.24413145539906,
+      "automation_pct": 53.755868544600936
+    },
+    "Croatia": {
+      "augmentation_pct": 50.45558086560364,
+      "automation_pct": 49.54441913439636
+    },
+    "Haiti": {
+      "augmentation_pct": 35.38461538461539,
+      "automation_pct": 64.61538461538461
+    },
+    "Hungary": {
+      "augmentation_pct": 51.28205128205128,
+      "automation_pct": 48.71794871794872
+    },
+    "Indonesia": {
+      "augmentation_pct": 45.28419032567591,
+      "automation_pct": 54.7158096743241
+    },
+    "Isle of Man": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "India": {
+      "augmentation_pct": 41.69443122322704,
+      "automation_pct": 58.305568776772965
+    },
+    "Ireland": {
+      "augmentation_pct": 53.31695331695332,
+      "automation_pct": 46.68304668304668
+    },
+    "Iraq": {
+      "augmentation_pct": 54.742647058823536,
+      "automation_pct": 45.25735294117647
+    },
+    "Iceland": {
+      "augmentation_pct": 53.333333333333336,
+      "automation_pct": 46.66666666666666
+    },
+    "Israel": {
+      "augmentation_pct": 54.00599026581805,
+      "automation_pct": 45.99400973418196
+    },
+    "Italy": {
+      "augmentation_pct": 52.01727066817667,
+      "automation_pct": 47.98272933182333
+    },
+    "Jamaica": {
+      "augmentation_pct": 36.82432432432432,
+      "automation_pct": 63.17567567567568
+    },
+    "Jersey": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Jordan": {
+      "augmentation_pct": 43.1712962962963,
+      "automation_pct": 56.82870370370371
+    },
+    "Japan": {
+      "augmentation_pct": 56.6533310140894,
+      "automation_pct": 43.34666898591059
+    },
+    "Kazakhstan": {
+      "augmentation_pct": 49.775784753363226,
+      "automation_pct": 50.22421524663677
+    },
+    "Kenya": {
+      "augmentation_pct": 42.62958280657396,
+      "automation_pct": 57.37041719342604
+    },
+    "Kyrgyzstan": {
+      "augmentation_pct": 41.832669322709165,
+      "automation_pct": 58.16733067729084
+    },
+    "Cambodia": {
+      "augmentation_pct": 38.88111888111888,
+      "automation_pct": 61.11888111888112
+    },
+    "South Korea": {
+      "augmentation_pct": 55.47196018288096,
+      "automation_pct": 44.52803981711904
+    },
+    "Kuwait": {
+      "augmentation_pct": 41.92546583850932,
+      "automation_pct": 58.07453416149069
+    },
+    "Laos": {
+      "augmentation_pct": 37.119113573407205,
+      "automation_pct": 62.8808864265928
+    },
+    "Lebanon": {
+      "augmentation_pct": 46.1764705882353,
+      "automation_pct": 53.8235294117647
+    },
+    "Liberia": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Saint Lucia": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Sri Lanka": {
+      "augmentation_pct": 39.90228013029317,
+      "automation_pct": 60.09771986970684
+    },
+    "Lesotho": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Lithuania": {
+      "augmentation_pct": 54.13826679649465,
+      "automation_pct": 45.86173320350536
+    },
+    "Luxembourg": {
+      "augmentation_pct": 47.756410256410255,
+      "automation_pct": 52.24358974358975
+    },
+    "Latvia": {
+      "augmentation_pct": 50.62893081761006,
+      "automation_pct": 49.37106918238994
+    },
+    "Morocco": {
+      "augmentation_pct": 42.70235818992989,
+      "automation_pct": 57.29764181007011
+    },
+    "Moldova": {
+      "augmentation_pct": 47.083333333333336,
+      "automation_pct": 52.91666666666666
+    },
+    "Madagascar": {
+      "augmentation_pct": 43.0939226519337,
+      "automation_pct": 56.9060773480663
+    },
+    "Maldives": {
+      "augmentation_pct": 45.09803921568628,
+      "automation_pct": 54.90196078431373
+    },
+    "Mexico": {
+      "augmentation_pct": 46.97860073178845,
+      "automation_pct": 53.02139926821155
+    },
+    "North Macedonia": {
+      "augmentation_pct": 43.68932038834952,
+      "automation_pct": 56.310679611650485
+    },
+    "Malta": {
+      "augmentation_pct": 47.72727272727273,
+      "automation_pct": 52.27272727272727
+    },
+    "Montenegro": {
+      "augmentation_pct": 52.51141552511416,
+      "automation_pct": 47.48858447488584
+    },
+    "Mongolia": {
+      "augmentation_pct": 41.566265060240966,
+      "automation_pct": 58.43373493975904
+    },
+    "Mozambique": {
+      "augmentation_pct": 33.957845433255265,
+      "automation_pct": 66.04215456674473
+    },
+    "Mauritania": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Martinique": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Mauritius": {
+      "augmentation_pct": 48.13559322033898,
+      "automation_pct": 51.864406779661024
+    },
+    "Malawi": {
+      "augmentation_pct": 38.79781420765027,
+      "automation_pct": 61.20218579234973
+    },
+    "Malaysia": {
+      "augmentation_pct": 50.230704697986575,
+      "automation_pct": 49.76929530201343
+    },
+    "Namibia": {
+      "augmentation_pct": 40.11976047904192,
+      "automation_pct": 59.88023952095808
+    },
+    "New Caledonia": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Niger": {
+      "augmentation_pct": 31.25,
+      "automation_pct": 68.75
+    },
+    "Nigeria": {
+      "augmentation_pct": 41.70046567522908,
+      "automation_pct": 58.29953432477092
+    },
+    "The Netherlands": {
+      "augmentation_pct": 55.2431011826544,
+      "automation_pct": 44.7568988173456
+    },
+    "Norway": {
+      "augmentation_pct": 56.1268620855358,
+      "automation_pct": 43.8731379144642
+    },
+    "Nepal": {
+      "augmentation_pct": 43.33976833976834,
+      "automation_pct": 56.66023166023167
+    },
+    "New Zealand": {
+      "augmentation_pct": 53.53450684548756,
+      "automation_pct": 46.46549315451243
+    },
+    "Oman": {
+      "augmentation_pct": 43.36917562724014,
+      "automation_pct": 56.63082437275986
+    },
+    "Pakistan": {
+      "augmentation_pct": 35.92179388048161,
+      "automation_pct": 64.07820611951838
+    },
+    "Panama": {
+      "augmentation_pct": 45.78488372093023,
+      "automation_pct": 54.21511627906976
+    },
+    "Peru": {
+      "augmentation_pct": 47.38225186982009,
+      "automation_pct": 52.61774813017991
+    },
+    "Philippines": {
+      "augmentation_pct": 48.03822372119168,
+      "automation_pct": 51.96177627880832
+    },
+    "Papua New Guinea": {
+      "augmentation_pct": 42.0,
+      "automation_pct": 57.99999999999999
+    },
+    "Poland": {
+      "augmentation_pct": 53.76036017599509,
+      "automation_pct": 46.23963982400491
+    },
+    "Puerto Rico": {
+      "augmentation_pct": 50.69124423963134,
+      "automation_pct": 49.30875576036866
+    },
+    "Portugal": {
+      "augmentation_pct": 51.24782356355194,
+      "automation_pct": 48.75217643644806
+    },
+    "Paraguay": {
+      "augmentation_pct": 40.75187969924812,
+      "automation_pct": 59.248120300751886
+    },
+    "Palestinian Territory": {
+      "augmentation_pct": 44.85049833887043,
+      "automation_pct": 55.14950166112956
+    },
+    "French Polynesia": {
+      "augmentation_pct": 50.0,
+      "automation_pct": 50.0
+    },
+    "Qatar": {
+      "augmentation_pct": 46.466809421841546,
+      "automation_pct": 53.53319057815846
+    },
+    "Reunion": {
+      "augmentation_pct": 48.36601307189542,
+      "automation_pct": 51.63398692810458
+    },
+    "Romania": {
+      "augmentation_pct": 49.84643734643734,
+      "automation_pct": 50.15356265356266
+    },
+    "Rwanda": {
+      "augmentation_pct": 37.25806451612903,
+      "automation_pct": 62.74193548387097
+    },
+    "Saudi Arabia": {
+      "augmentation_pct": 44.46085672082718,
+      "automation_pct": 55.53914327917282
+    },
+    "Senegal": {
+      "augmentation_pct": 40.77306733167082,
+      "automation_pct": 59.22693266832918
+    },
+    "Singapore": {
+      "augmentation_pct": 54.693722738479046,
+      "automation_pct": 45.30627726152096
+    },
+    "Sierra Leone": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "El Salvador": {
+      "augmentation_pct": 36.47058823529412,
+      "automation_pct": 63.52941176470588
+    },
+    "Serbia": {
+      "augmentation_pct": 51.26498002663116,
+      "automation_pct": 48.73501997336884
+    },
+    "Slovakia": {
+      "augmentation_pct": 48.755656108597286,
+      "automation_pct": 51.24434389140271
+    },
+    "Slovenia": {
+      "augmentation_pct": 50.08695652173913,
+      "automation_pct": 49.91304347826088
+    },
+    "Sweden": {
+      "augmentation_pct": 53.05901461829995,
+      "automation_pct": 46.94098538170006
+    },
+    "Eswatini": {
+      "augmentation_pct": 50.0,
+      "automation_pct": 50.0
+    },
+    "Chad": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Togo": {
+      "augmentation_pct": 45.09803921568628,
+      "automation_pct": 54.90196078431373
+    },
+    "Thailand": {
+      "augmentation_pct": 45.94617254967721,
+      "automation_pct": 54.0538274503228
+    },
+    "Tajikistan": {
+      "augmentation_pct": 50.617283950617285,
+      "automation_pct": 49.38271604938272
+    },
+    "Timor Leste": {
+      "augmentation_pct": 0.0,
+      "automation_pct": 100.0
+    },
+    "Trinidad and Tobago": {
+      "augmentation_pct": 49.06832298136646,
+      "automation_pct": 50.931677018633536
+    },
+    "Tunisia": {
+      "augmentation_pct": 39.46506550218341,
+      "automation_pct": 60.53493449781659
+    },
+    "Turkey": {
+      "augmentation_pct": 45.86903003446578,
+      "automation_pct": 54.13096996553421
+    },
+    "Taiwan": {
+      "augmentation_pct": 53.35876244967154,
+      "automation_pct": 46.641237550328455
+    },
+    "Tanzania": {
+      "augmentation_pct": 35.170603674540686,
+      "automation_pct": 64.82939632545933
+    },
+    "Uganda": {
+      "augmentation_pct": 43.55108877721944,
+      "automation_pct": 56.44891122278057
+    },
+    "Ukraine": {
+      "augmentation_pct": 48.16237888406281,
+      "automation_pct": 51.83762111593718
+    },
+    "Uruguay": {
+      "augmentation_pct": 42.9144385026738,
+      "automation_pct": 57.0855614973262
+    },
+    "United States": {
+      "augmentation_pct": 50.92617687528666,
+      "automation_pct": 49.07382312471334
+    },
+    "Uzbekistan": {
+      "augmentation_pct": 46.02150537634409,
+      "automation_pct": 53.97849462365591
+    },
+    "Vietnam": {
+      "augmentation_pct": 46.80666602446778,
+      "automation_pct": 53.19333397553222
+    },
+    "Kosovo": {
+      "augmentation_pct": 36.60714285714285,
+      "automation_pct": 63.39285714285714
+    },
+    "South Africa": {
+      "augmentation_pct": 46.8936678614098,
+      "automation_pct": 53.10633213859021
+    },
+    "Zambia": {
+      "augmentation_pct": 37.35294117647059,
+      "automation_pct": 62.64705882352941
+    },
+    "Zimbabwe": {
+      "augmentation_pct": 37.57225433526011,
+      "automation_pct": 62.42774566473989
+    },
+    "global": {
+      "augmentation_pct": 48.93022954850608,
+      "automation_pct": 51.06977045149392
+    },
+    "Alaska": {
+      "augmentation_pct": 50.86206896551724,
+      "automation_pct": 49.137931034482754
+    },
+    "Alabama": {
+      "augmentation_pct": 50.66889632107024,
+      "automation_pct": 49.331103678929765
+    },
+    "Arkansas": {
+      "augmentation_pct": 53.81026438569207,
+      "automation_pct": 46.18973561430793
+    },
+    "Arizona": {
+      "augmentation_pct": 51.8423582185197,
+      "automation_pct": 48.15764178148029
+    },
+    "California": {
+      "augmentation_pct": 49.64820671226496,
+      "automation_pct": 50.35179328773504
+    },
+    "Colorado": {
+      "augmentation_pct": 53.93725327238729,
+      "automation_pct": 46.06274672761271
+    },
+    "Connecticut": {
+      "augmentation_pct": 54.81520041644976,
+      "automation_pct": 45.18479958355023
+    },
+    "District of Columbia": {
+      "augmentation_pct": 56.51927437641724,
+      "automation_pct": 43.48072562358277
+    },
+    "Delaware": {
+      "augmentation_pct": 47.21549636803874,
+      "automation_pct": 52.78450363196126
+    },
+    "Florida": {
+      "augmentation_pct": 50.0,
+      "automation_pct": 50.0
+    },
+    "Hawaii": {
+      "augmentation_pct": 51.488095238095234,
+      "automation_pct": 48.51190476190476
+    },
+    "Iowa": {
+      "augmentation_pct": 50.0,
+      "automation_pct": 50.0
+    },
+    "Idaho": {
+      "augmentation_pct": 54.682274247491634,
+      "automation_pct": 45.31772575250836
+    },
+    "Illinois": {
+      "augmentation_pct": 53.29376854599407,
+      "automation_pct": 46.70623145400594
+    },
+    "Indiana": {
+      "augmentation_pct": 54.459308807134896,
+      "automation_pct": 45.540691192865104
+    },
+    "Kansas": {
+      "augmentation_pct": 54.26356589147287,
+      "automation_pct": 45.73643410852713
+    },
+    "Kentucky": {
+      "augmentation_pct": 48.61702127659574,
+      "automation_pct": 51.38297872340426
+    },
+    "Louisiana": {
+      "augmentation_pct": 52.362204724409445,
+      "automation_pct": 47.63779527559055
+    },
+    "Massachusetts": {
+      "augmentation_pct": 54.74511061237576,
+      "automation_pct": 45.25488938762424
+    },
+    "Maryland": {
+      "augmentation_pct": 52.50135943447526,
+      "automation_pct": 47.49864056552474
+    },
+    "Maine": {
+      "augmentation_pct": 54.60636515912898,
+      "automation_pct": 45.39363484087102
+    },
+    "Michigan": {
+      "augmentation_pct": 51.08449336354808,
+      "automation_pct": 48.91550663645193
+    },
+    "Minnesota": {
+      "augmentation_pct": 51.354401805869074,
+      "automation_pct": 48.645598194130926
+    },
+    "Missouri": {
+      "augmentation_pct": 50.29569135454801,
+      "automation_pct": 49.70430864545198
+    },
+    "Mississippi": {
+      "augmentation_pct": 50.54644808743169,
+      "automation_pct": 49.45355191256831
+    },
+    "Montana": {
+      "augmentation_pct": 50.455927051671736,
+      "automation_pct": 49.54407294832826
+    },
+    "North Carolina": {
+      "augmentation_pct": 53.722772277227726,
+      "automation_pct": 46.27722772277228
+    },
+    "North Dakota": {
+      "augmentation_pct": 44.04761904761904,
+      "automation_pct": 55.95238095238096
+    },
+    "Nebraska": {
+      "augmentation_pct": 50.0,
+      "automation_pct": 50.0
+    },
+    "New Hampshire": {
+      "augmentation_pct": 53.168044077134994,
+      "automation_pct": 46.83195592286501
+    },
+    "New Jersey": {
+      "augmentation_pct": 51.50994353056715,
+      "automation_pct": 48.49005646943285
+    },
+    "New Mexico": {
+      "augmentation_pct": 55.02318392581144,
+      "automation_pct": 44.97681607418856
+    },
+    "Nevada": {
+      "augmentation_pct": 51.439358187824446,
+      "automation_pct": 48.560641812175554
+    },
+    "New York": {
+      "augmentation_pct": 54.14218410883489,
+      "automation_pct": 45.8578158911651
+    },
+    "Ohio": {
+      "augmentation_pct": 52.19009447466362,
+      "automation_pct": 47.80990552533639
+    },
+    "Oklahoma": {
+      "augmentation_pct": 50.40556199304751,
+      "automation_pct": 49.59443800695249
+    },
+    "Oregon": {
+      "augmentation_pct": 54.6815042210284,
+      "automation_pct": 45.3184957789716
+    },
+    "Pennsylvania": {
+      "augmentation_pct": 53.67461702540236,
+      "automation_pct": 46.32538297459764
+    },
+    "Rhode Island": {
+      "augmentation_pct": 52.61121856866537,
+      "automation_pct": 47.38878143133462
+    },
+    "South Carolina": {
+      "augmentation_pct": 48.5207100591716,
+      "automation_pct": 51.4792899408284
+    },
+    "South Dakota": {
+      "augmentation_pct": 36.507936507936506,
+      "automation_pct": 63.49206349206349
+    },
+    "Tennessee": {
+      "augmentation_pct": 53.00171526586621,
+      "automation_pct": 46.99828473413379
+    },
+    "Texas": {
+      "augmentation_pct": 52.461912121881205,
+      "automation_pct": 47.53808787811879
+    },
+    "Utah": {
+      "augmentation_pct": 26.600676606941487,
+      "automation_pct": 73.39932339305851
+    },
+    "Virginia": {
+      "augmentation_pct": 49.71456334264545,
+      "automation_pct": 50.28543665735455
+    },
+    "Vermont": {
+      "augmentation_pct": 56.39810426540285,
+      "automation_pct": 43.60189573459716
+    },
+    "Washington": {
+      "augmentation_pct": 55.83058305830583,
+      "automation_pct": 44.169416941694166
+    },
+    "Wisconsin": {
+      "augmentation_pct": 53.62997658079626,
+      "automation_pct": 46.37002341920375
+    },
+    "West Virginia": {
+      "augmentation_pct": 49.55357142857143,
+      "automation_pct": 50.44642857142857
+    },
+    "Wyoming": {
+      "augmentation_pct": 46.72131147540984,
+      "automation_pct": 53.278688524590166
+    }
+  }
+}
