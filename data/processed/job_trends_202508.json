@@ -1,0 +1,358 @@
+{
+  "date_analyzed": "2025-10-16T13:49:19.055058",
+  "source": "Anthropic Economic Index (v2 format)",
+  "source_period": "2025-08",
+  "data_format": "geographic_and_soc_categories",
+  "data_scope": "US-specific",
+  "statistics": {
+    "total_soc_categories_analyzed": 22,
+    "classified_percentage": 82.87928796232868,
+    "us_automation_rate": 49.07382312471334,
+    "us_augmentation_rate": 50.92617687528666,
+    "global_average_automation": 56.712942606868396,
+    "global_average_augmentation": 43.287057393131604,
+    "countries_analyzed": 209
+  },
+  "industry_impacts": {
+    "Professional and Business Services": {
+      "total_weight": 20.77047994519838,
+      "weighted_automation": 1019.286859046071,
+      "weighted_augmentation": 1057.761135473767,
+      "soc_categories": [
+        "Architecture and Engineering",
+        "Legal",
+        "Life, Physical, and Social Science",
+        "Management",
+        "Office and Administrative Support"
+      ],
+      "automation_rate": 49.073823124713336,
+      "augmentation_rate": 50.92617687528665
+    },
+    "Information": {
+      "total_weight": 35.16931493200098,
+      "weighted_automation": 1725.892740390356,
+      "weighted_augmentation": 1791.038752809742,
+      "soc_categories": [
+        "Arts, Design, Entertainment, Sports, and Media",
+        "Computer and Mathematical"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Other Services": {
+      "total_weight": 1.3997403630127465,
+      "weighted_automation": 68.69061099500956,
+      "weighted_augmentation": 71.28342530626509,
+      "soc_categories": [
+        "Building and Grounds Cleaning and Maintenance",
+        "Farming, Fishing, and Forestry",
+        "Personal Care and Service"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Financial Activities": {
+      "total_weight": 3.429890827916241,
+      "weighted_automation": 168.3178558262382,
+      "weighted_augmentation": 174.67122696538587,
+      "soc_categories": [
+        "Business and Financial Operations"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Education and Health Services": {
+      "total_weight": 16.262760295660417,
+      "weighted_automation": 798.0758222688503,
+      "weighted_augmentation": 828.2002072971915,
+      "soc_categories": [
+        "Community and Social Service",
+        "Educational Instruction and Library",
+        "Healthcare Practitioners and Technical",
+        "Healthcare Support"
+      ],
+      "automation_rate": 49.07382312471335,
+      "augmentation_rate": 50.92617687528665
+    },
+    "Construction": {
+      "total_weight": 0.1322136687855978,
+      "weighted_automation": 6.488230196653859,
+      "weighted_augmentation": 6.733136681905919,
+      "soc_categories": [
+        "Construction and Extraction"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Leisure and Hospitality": {
+      "total_weight": 0.56142905730696,
+      "weighted_automation": 27.551470255356307,
+      "weighted_augmentation": 28.591435475339694,
+      "soc_categories": [
+        "Food Preparation and Serving Related"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Trade, Transportation, and Utilities": {
+      "total_weight": 3.6593486081637123,
+      "weighted_automation": 179.57822634869197,
+      "weighted_augmentation": 186.35663446767924,
+      "soc_categories": [
+        "Installation, Maintenance, and Repair",
+        "Sales and Related",
+        "Transportation and Material Moving"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528665
+    },
+    "Manufacturing": {
+      "total_weight": 1.2948316910415651,
+      "weighted_automation": 63.54234138244724,
+      "weighted_augmentation": 65.94082772170927,
+      "soc_categories": [
+        "Production"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    },
+    "Government": {
+      "total_weight": 0.1992785732420609,
+      "weighted_automation": 9.77936145582613,
+      "weighted_augmentation": 10.14849586837996,
+      "soc_categories": [
+        "Protective Service"
+      ],
+      "automation_rate": 49.07382312471334,
+      "augmentation_rate": 50.92617687528666
+    }
+  },
+  "geographic_coverage": {
+    "total_countries": 209,
+    "top_automated_countries": [
+      [
+        "Burundi",
+        100.0
+      ],
+      [
+        "Bahamas",
+        100.0
+      ],
+      [
+        "Belize",
+        100.0
+      ],
+      [
+        "Cabo Verde",
+        100.0
+      ],
+      [
+        "Curacao",
+        100.0
+      ]
+    ],
+    "top_augmented_countries": [
+      [
+        "Andorra",
+        100.0
+      ],
+      [
+        "Japan",
+        56.6533310140894
+      ],
+      [
+        "District of Columbia",
+        56.51927437641724
+      ],
+      [
+        "Vermont",
+        56.39810426540285
+      ],
+      [
+        "Norway",
+        56.1268620855358
+      ]
+    ]
+  },
+  "soc_distribution": [
+    {
+      "category": "Architecture and Engineering",
+      "percentage": 2.346313585912535
+    },
+    {
+      "category": "Arts, Design, Entertainment, Sports, and Media",
+      "percentage": 9.06334280225913
+    },
+    {
+      "category": "Building and Grounds Cleaning and Maintenance",
+      "percentage": 0.2050269936240435
+    },
+    {
+      "category": "Business and Financial Operations",
+      "percentage": 3.429890827916241
+    },
+    {
+      "category": "Community and Social Service",
+      "percentage": 2.566669700555201
+    },
+    {
+      "category": "Computer and Mathematical",
+      "percentage": 26.10597212974185
+    },
+    {
+      "category": "Construction and Extraction",
+      "percentage": 0.1322136687855978
+    },
+    {
+      "category": "Educational Instruction and Library",
+      "percentage": 10.65038586271814
+    },
+    {
+      "category": "Farming, Fishing, and Forestry",
+      "percentage": 0.5322079203652165
+    },
+    {
+      "category": "Food Preparation and Serving Related",
+      "percentage": 0.56142905730696
+    },
+    {
+      "category": "Healthcare Practitioners and Technical",
+      "percentage": 2.7606788884471083
+    },
+    {
+      "category": "Healthcare Support",
+      "percentage": 0.2850258439399669
+    },
+    {
+      "category": "Installation, Maintenance, and Repair",
+      "percentage": 0.4282573184576981
+    },
+    {
+      "category": "Legal",
+      "percentage": 0.46945433119524
+    },
+    {
+      "category": "Life, Physical, and Social Science",
+      "percentage": 7.917970041149106
+    },
+    {
+      "category": "Management",
+      "percentage": 2.6294232897251746
+    },
+    {
+      "category": "Office and Administrative Support",
+      "percentage": 7.407318697216326
+    },
+    {
+      "category": "Personal Care and Service",
+      "percentage": 0.6625054490234865
+    },
+    {
+      "category": "Production",
+      "percentage": 1.2948316910415651
+    },
+    {
+      "category": "Protective Service",
+      "percentage": 0.1992785732420609
+    },
+    {
+      "category": "Sales and Related",
+      "percentage": 3.0586386782465387
+    },
+    {
+      "category": "Transportation and Material Moving",
+      "percentage": 0.1724526114594754
+    }
+  ],
+  "top_augmented_roles": [
+    {
+      "title": "Physicians",
+      "augmentation_rate": 85.46630388810395
+    },
+    {
+      "title": "Software Developers",
+      "augmentation_rate": 75.68825816846639
+    },
+    {
+      "title": "Financial Analysts",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Teachers",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Sales Representatives",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Graphic Designers",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Lawyers",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "General Managers",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Assembly Workers",
+      "augmentation_rate": 50.92617687528666
+    },
+    {
+      "title": "Administrative Assistants",
+      "augmentation_rate": 35.84753073672757
+    }
+  ],
+  "top_automated_roles": [
+    {
+      "title": "Administrative Assistants",
+      "automation_rate": 64.15246926327242
+    },
+    {
+      "title": "Financial Analysts",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Teachers",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Sales Representatives",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Graphic Designers",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Lawyers",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "General Managers",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Assembly Workers",
+      "automation_rate": 49.07382312471334
+    },
+    {
+      "title": "Software Developers",
+      "automation_rate": 24.311741831533617
+    },
+    {
+      "title": "Physicians",
+      "automation_rate": 14.533696111896061
+    }
+  ],
+  "top_tasks": [],
+  "notes": [
+    "Data uses new August 2025 format with geographic and SOC category breakdowns",
+    "17.1% of data is not classified to specific SOC categories",
+    "Using US-specific SOC distribution from facet data",
+    "Occupation-level rates are estimated from SOC category and US geographic data"
+  ]
+}

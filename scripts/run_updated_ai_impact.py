@@ -200,14 +200,26 @@ class AIImpactWorkflow:
             success = False
         
         # 2. Process Anthropic Index data
-        anthropic_script = os.path.join(self.scripts_dir, "processing", "process_anthropic_index.py")
+        # Check if we have new format data (August 2025+)
+        new_format_file = os.path.join(self.raw_dir, "anthropic_index",
+                                      f"anthropic_index_{self.year}_{self.month:02d}_occupations.json")
+
+        if os.path.exists(new_format_file):
+            # Use v2 processor for new format
+            anthropic_script = os.path.join(self.scripts_dir, "processing", "process_anthropic_index_v2.py")
+            logger.info("Using v2 processor for new Anthropic data format")
+        else:
+            # Use original processor for old format
+            anthropic_script = os.path.join(self.scripts_dir, "processing", "process_anthropic_index.py")
+            logger.info("Using original processor for legacy Anthropic data format")
+
         anthropic_args = [
             "--year", str(self.year),
             "--month", str(self.month),
             "--input", os.path.join(self.raw_dir, "anthropic_index"),
             "--output", self.processed_dir
         ]
-        
+
         if not self.run_script(anthropic_script, anthropic_args, "Anthropic Index processing"):
             logger.warning("Failed to process Anthropic Index data, calculation will use default values")
         

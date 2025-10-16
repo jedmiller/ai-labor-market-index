@@ -1,0 +1,116 @@
+{
+  "date_collected": "2025-10-16T13:53:00Z",
+  "target_period": "2025-08",
+  "is_simulated": true,
+  "articles": [
+    {
+      "title": "OpenAI Announces 500 New AI Research Positions",
+      "date": "2025-08-15",
+      "source": "TechCrunch",
+      "company": "OpenAI",
+      "event_type": "hiring",
+      "ai_relation": "direct",
+      "affected_count": 500,
+      "summary": "OpenAI expands research team with 500 new positions focused on AGI safety and capabilities."
+    },
+    {
+      "title": "Google Expands AI Team by 1,200 Engineers",
+      "date": "2025-08-12",
+      "source": "Reuters",
+      "company": "Google",
+      "event_type": "hiring",
+      "ai_relation": "direct",
+      "affected_count": 1200,
+      "summary": "Google announces major expansion of its AI division with 1,200 new engineering roles."
+    },
+    {
+      "title": "Microsoft Invests in 800 AI Infrastructure Jobs",
+      "date": "2025-08-08",
+      "source": "Bloomberg",
+      "company": "Microsoft",
+      "event_type": "hiring",
+      "ai_relation": "infrastructure",
+      "affected_count": 800,
+      "summary": "Microsoft creates 800 new positions to support Azure AI infrastructure."
+    },
+    {
+      "title": "Bank of America Automates 2,000 Back Office Roles",
+      "date": "2025-08-20",
+      "source": "Financial Times",
+      "company": "Bank of America",
+      "event_type": "automation",
+      "ai_relation": "displacement",
+      "affected_count": -2000,
+      "summary": "Bank of America implements AI systems to automate 2,000 back office positions."
+    },
+    {
+      "title": "Amazon Retrains 5,000 Warehouse Workers for AI Roles",
+      "date": "2025-08-18",
+      "source": "WSJ",
+      "company": "Amazon",
+      "event_type": "reskilling",
+      "ai_relation": "transformation",
+      "affected_count": 5000,
+      "summary": "Amazon launches major reskilling program to transition warehouse workers to AI-assisted roles."
+    },
+    {
+      "title": "Meta Reduces Content Moderation Team by 1,500",
+      "date": "2025-08-22",
+      "source": "The Verge",
+      "company": "Meta",
+      "event_type": "layoff",
+      "ai_relation": "displacement",
+      "affected_count": -1500,
+      "summary": "Meta reduces human content moderation team as AI systems take over review processes."
+    },
+    {
+      "title": "Anthropic Raises $2B, Plans 300 New Hires",
+      "date": "2025-08-10",
+      "source": "TechCrunch",
+      "company": "Anthropic",
+      "event_type": "hiring",
+      "ai_relation": "direct",
+      "affected_count": 300,
+      "summary": "Anthropic secures major funding round and announces plans for 300 new research positions."
+    },
+    {
+      "title": "JPMorgan Implements AI Trading, Cuts 800 Traders",
+      "date": "2025-08-25",
+      "source": "Bloomberg",
+      "company": "JPMorgan Chase",
+      "event_type": "automation",
+      "ai_relation": "displacement",
+      "affected_count": -800,
+      "summary": "JPMorgan's new AI trading system reduces need for 800 human traders."
+    },
+    {
+      "title": "Tesla Expands FSD Team with 600 Engineers",
+      "date": "2025-08-14",
+      "source": "Electrek",
+      "company": "Tesla",
+      "event_type": "hiring",
+      "ai_relation": "direct",
+      "affected_count": 600,
+      "summary": "Tesla hires 600 engineers to accelerate Full Self-Driving development."
+    },
+    {
+      "title": "Healthcare Network Adds 1,000 AI-Assisted Diagnostic Roles",
+      "date": "2025-08-19",
+      "source": "Healthcare IT News",
+      "company": "Kaiser Permanente",
+      "event_type": "hiring",
+      "ai_relation": "augmentation",
+      "affected_count": 1000,
+      "summary": "Kaiser Permanente creates 1,000 new positions for AI-assisted diagnostics."
+    }
+  ],
+  "summary": {
+    "total_articles": 10,
+    "hiring_events": 6,
+    "layoff_events": 3,
+    "reskilling_events": 1,
+    "net_jobs_created": 4900,
+    "net_jobs_displaced": -4300,
+    "net_impact": 600
+  }
+}
