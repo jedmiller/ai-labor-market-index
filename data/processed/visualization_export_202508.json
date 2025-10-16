@@ -1,186 +1,196 @@
 {
   "metadata": {
-    "generated": "2025-10-16T13:39:30Z",
+    "generated": "2025-10-16T16:23:31.417843Z",
     "source_period": "2025-08",
     "data_version": "v2",
-    "anthropic_release": "release_2025_09_15"
+    "anthropic_release": "Anthropic Economic Index (v2 format)"
   },
   "current_state": {
-    "overall_impact": -0.076,
-    "overall_impact_percentage": -7.6,
-    "total_jobs_affected": -12108981,
-    "jobs_displaced": 15155749,
+    "overall_impact": -0.06840264139901127,
+    "overall_impact_percentage": -6.840264139901127,
+    "total_jobs_affected": -10897629,
+    "jobs_displaced": 13944394,
     "jobs_created": 2206202,
     "jobs_from_demand": 840553,
-    "total_employment": 159316000,
-    "automation_rate_us": 49.07,
-    "augmentation_rate_us": 50.93,
-    "automation_rate_global": 56.71,
-    "augmentation_rate_global": 43.29,
+    "total_employment": 159316000.0,
+    "automation_rate_us": 49.07382312471334,
+    "augmentation_rate_us": 50.92617687528666,
+    "automation_rate_global": 50,
+    "augmentation_rate_global": 50,
     "data_coverage": {
-      "countries_analyzed": 209,
+      "countries_analyzed": 0,
       "soc_categories": 22,
-      "classified_percentage": 6.1,
-      "unclassified_percentage": 93.9
+      "classified_percentage": 100,
+      "unclassified_percentage": 0
     }
   },
   "projections": {
     "scenarios": {
-      "conservative": {
-        "2026": -9.41,
-        "2027": -7.61,
-        "2028": -6.36,
-        "2029": -5.46,
-        "2030": -4.48
-      },
-      "moderate": {
-        "2026": -8.48,
-        "2027": -7.30,
-        "2028": -5.95,
-        "2029": -4.43,
-        "2030": -2.75
-      },
-      "aggressive": {
-        "2026": -7.90,
-        "2027": -7.17,
-        "2028": -5.54,
-        "2029": -3.19,
-        "2030": -0.56
-      }
+      "conservative": {},
+      "moderate": {},
+      "aggressive": {}
     },
-    "timeline": [2026, 2027, 2028, 2029, 2030]
+    "timeline": []
   },
   "industry_breakdown": {
-    "Information": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 3041000,
-      "projected_2030": -0.027
-    },
-    "Professional and Business Services": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 22964000,
-      "projected_2030": -0.027
-    },
-    "Financial Activities": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 9159000,
-      "projected_2030": -0.027
-    },
-    "Education and Health Services": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 26134000,
-      "projected_2030": -0.027
-    },
-    "Manufacturing": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 12975000,
-      "projected_2030": -0.027
-    },
-    "Trade, Transportation, and Utilities": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 28929000,
-      "projected_2030": -0.027
-    },
-    "Leisure and Hospitality": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 16821000,
-      "projected_2030": -0.027
+    "Mining and Logging": {
+      "current_impact": -0.09989999999999999,
+      "automation_rate": 50,
+      "augmentation_rate": 50,
+      "employment": 619989.98998999,
+      "projected_2030": -0.034964999999999996
     },
     "Construction": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 8397000,
-      "projected_2030": -0.027
+      "current_impact": -0.08865314351418163,
+      "automation_rate": 54.081383290358765,
+      "augmentation_rate": 45.91861670964123,
+      "employment": 8225991.443646237,
+      "projected_2030": -0.03102860022996357
     },
-    "Government": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 22754000,
-      "projected_2030": -0.027
+    "Manufacturing": {
+      "current_impact": -0.110313101369373,
+      "automation_rate": 74.29887367363365,
+      "augmentation_rate": 25.70112632636634,
+      "employment": 12715996.401035396,
+      "projected_2030": -0.03860958547928055
+    },
+    "Trade, Transportation, and Utilities": {
+      "current_impact": -0.08798407862292668,
+      "automation_rate": 58.1710541765394,
+      "augmentation_rate": 41.82894582346061,
+      "employment": 28914992.80117568,
+      "projected_2030": -0.030794427518024334
+    },
+    "Information": {
+      "current_impact": -0.044458434203060504,
+      "automation_rate": 38.004744839210304,
+      "augmentation_rate": 61.9952551607897,
+      "employment": 2921987.747176603,
+      "projected_2030": -0.015560451971071176
+    },
+    "Financial Activities": {
+      "current_impact": -0.05835314351418153,
+      "automation_rate": 54.081383290358765,
+      "augmentation_rate": 45.91861670964123,
+      "employment": 9201989.261632524,
+      "projected_2030": -0.020423600229963534
+    },
+    "Professional and Business Services": {
+      "current_impact": -0.03446052771066599,
+      "automation_rate": 46.754382865186656,
+      "augmentation_rate": 53.24561713481332,
+      "employment": 22576990.304161653,
+      "projected_2030": -0.012061184698733095
+    },
+    "Education and Health Services": {
+      "current_impact": -0.05163135583828449,
+      "automation_rate": 29.519774147413738,
+      "augmentation_rate": 70.48022585258626,
+      "employment": 27320994.71527009,
+      "projected_2030": -0.01807097454339957
+    },
+    "Leisure and Hospitality": {
+      "current_impact": -0.07727798145471276,
+      "automation_rate": 64.15246926327242,
+      "augmentation_rate": 35.84753073672757,
+      "employment": 16856987.921758883,
+      "projected_2030": -0.027047293509149466
     },
     "Other Services": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 5728000,
-      "projected_2030": -0.027
+      "current_impact": -0.06911991892491054,
+      "automation_rate": 47.733513500198875,
+      "augmentation_rate": 52.266486499801125,
+      "employment": 6020999.539251682,
+      "projected_2030": -0.024191971623718687
     },
-    "Mining and Logging": {
-      "current_impact": -0.076,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93,
-      "employment": 610000,
-      "projected_2030": -0.027
+    "Government": {
+      "current_impact": -0.06622167528355627,
+      "automation_rate": 44.084780204287384,
+      "augmentation_rate": 55.9152197957126,
+      "employment": 23938989.661798034,
+      "projected_2030": -0.023177586349244692
     }
   },
   "geographic_insights": {
-    "top_automated_countries": [
-      {"country": "Burundi", "automation_rate": 100.0},
-      {"country": "Bahamas", "automation_rate": 100.0},
-      {"country": "Belize", "automation_rate": 100.0},
-      {"country": "Cabo Verde", "automation_rate": 100.0},
-      {"country": "Curacao", "automation_rate": 100.0}
-    ],
-    "top_augmented_countries": [
-      {"country": "Andorra", "augmentation_rate": 100.0},
-      {"country": "Japan", "augmentation_rate": 56.65},
-      {"country": "District of Columbia", "augmentation_rate": 56.52},
-      {"country": "Vermont", "augmentation_rate": 56.40},
-      {"country": "Norway", "augmentation_rate": 56.13}
-    ],
-    "us_position": {
-      "automation_rank": 105,
-      "augmentation_rank": 105,
-      "automation_rate": 49.07,
-      "augmentation_rate": 50.93
-    }
+    "top_automated_countries": [],
+    "top_augmented_countries": [],
+    "us_position": {}
   },
   "occupation_insights": {
     "top_augmented_roles": [
-      {"role": "Physicians", "rate": 85.47},
-      {"role": "Software Developers", "rate": 75.69},
-      {"role": "Financial Analysts", "rate": 50.93},
-      {"role": "Teachers", "rate": 50.93},
-      {"role": "Sales Representatives", "rate": 50.93}
+      {
+        "title": "Physicians",
+        "augmentation_rate": 85.46630388810395
+      },
+      {
+        "title": "Software Developers",
+        "augmentation_rate": 75.68825816846639
+      },
+      {
+        "title": "Financial Analysts",
+        "augmentation_rate": 50.92617687528666
+      },
+      {
+        "title": "Teachers",
+        "augmentation_rate": 50.92617687528666
+      },
+      {
+        "title": "Sales Representatives",
+        "augmentation_rate": 50.92617687528666
+      }
     ],
     "top_automated_roles": [
-      {"role": "Administrative Assistants", "rate": 64.15},
-      {"role": "Financial Analysts", "rate": 49.07},
-      {"role": "Teachers", "rate": 49.07},
-      {"role": "Sales Representatives", "rate": 49.07},
-      {"role": "Graphic Designers", "rate": 49.07}
+      {
+        "title": "Administrative Assistants",
+        "automation_rate": 64.15246926327242
+      },
+      {
+        "title": "Financial Analysts",
+        "automation_rate": 49.07382312471334
+      },
+      {
+        "title": "Teachers",
+        "automation_rate": 49.07382312471334
+      },
+      {
+        "title": "Sales Representatives",
+        "automation_rate": 49.07382312471334
+      },
+      {
+        "title": "Graphic Designers",
+        "automation_rate": 49.07382312471334
+      }
     ],
     "soc_distribution": [
-      {"category": "Computer and Mathematical", "percentage": 6.10},
-      {"category": "Arts, Design, Entertainment", "percentage": 5.14},
-      {"category": "Life, Physical, and Social Science", "percentage": 4.00},
-      {"category": "Office and Administrative Support", "percentage": 2.74},
-      {"category": "Community and Social Service", "percentage": 2.08}
+      {
+        "category": "Architecture and Engineering",
+        "percentage": 2.346313585912535
+      },
+      {
+        "category": "Arts, Design, Entertainment, Sports, and Media",
+        "percentage": 9.06334280225913
+      },
+      {
+        "category": "Building and Grounds Cleaning and Maintenance",
+        "percentage": 0.2050269936240435
+      },
+      {
+        "category": "Business and Financial Operations",
+        "percentage": 3.429890827916241
+      },
+      {
+        "category": "Community and Social Service",
+        "percentage": 2.566669700555201
+      }
     ]
   },
   "methodology_notes": {
     "changes_from_previous": [
-      "Updated to Anthropic Economic Index release_2025_09_15",
-      "New geographic granularity with 209 countries",
-      "SOC category percentages instead of specific occupations",
-      "93.9% of data unclassified requiring estimation techniques",
-      "Industry impacts derived from SOC-to-industry mapping"
+      "Updated to latest Anthropic Economic Index",
+      "Industry-specific automation/augmentation rates",
+      "SOC-based industry impact calculations",
+      "US-specific data extraction from facet files",
+      "Improved displacement and creation effect models"
     ],
     "data_quality_indicators": {
       "has_anthropic_data": true,

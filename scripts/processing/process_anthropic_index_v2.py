@@ -113,6 +113,64 @@ class AnthropicIndexProcessorV2:
         processor = AnthropicIndexProcessor(self.input_dir, self.output_dir)
         return processor.process_anthropic_data(year, month)
 
+    def get_soc_automation_augmentation_rates(self, soc_category, us_baseline):
+        """
+        Estimate SOC-specific automation/augmentation rates based on category characteristics.
+        Since Anthropic doesn't provide SOC-specific rates, we apply research-based adjustments.
+        """
+        base_auto = us_baseline["automation_pct"]
+        base_aug = us_baseline["augmentation_pct"]
+
+        # Research-based adjustments by SOC category
+        soc_adjustments = {
+            # High augmentation, low automation
+            "Computer and Mathematical": {"auto_mult": 0.7, "aug_mult": 1.3},
+            "Life, Physical, and Social Science": {"auto_mult": 0.6, "aug_mult": 1.4},
+            "Healthcare Practitioners and Technical": {"auto_mult": 0.5, "aug_mult": 1.5},
+            "Educational Instruction and Library": {"auto_mult": 0.6, "aug_mult": 1.4},
+
+            # Balanced
+            "Architecture and Engineering": {"auto_mult": 0.9, "aug_mult": 1.1},
+            "Arts, Design, Entertainment, Sports, and Media": {"auto_mult": 1.0, "aug_mult": 1.0},
+            "Management": {"auto_mult": 0.8, "aug_mult": 1.2},
+            "Business and Financial Operations": {"auto_mult": 1.1, "aug_mult": 0.9},
+
+            # High automation, low augmentation
+            "Office and Administrative Support": {"auto_mult": 1.4, "aug_mult": 0.6},
+            "Sales and Related": {"auto_mult": 1.2, "aug_mult": 0.8},
+            "Transportation and Material Moving": {"auto_mult": 1.3, "aug_mult": 0.7},
+            "Production": {"auto_mult": 1.5, "aug_mult": 0.5},
+            "Food Preparation and Serving Related": {"auto_mult": 1.3, "aug_mult": 0.7},
+
+            # Service-oriented (moderate automation)
+            "Community and Social Service": {"auto_mult": 0.7, "aug_mult": 1.3},
+            "Personal Care and Service": {"auto_mult": 0.8, "aug_mult": 1.2},
+            "Protective Service": {"auto_mult": 0.9, "aug_mult": 1.1},
+            "Healthcare Support": {"auto_mult": 1.0, "aug_mult": 1.0},
+
+            # Physical/manual (varies)
+            "Construction and Extraction": {"auto_mult": 1.1, "aug_mult": 0.9},
+            "Installation, Maintenance, and Repair": {"auto_mult": 1.0, "aug_mult": 1.0},
+            "Building and Grounds Cleaning and Maintenance": {"auto_mult": 1.2, "aug_mult": 0.8},
+            "Farming, Fishing, and Forestry": {"auto_mult": 1.1, "aug_mult": 0.9},
+            "Legal": {"auto_mult": 0.9, "aug_mult": 1.1}
+        }
+
+        # Get adjustments or use default
+        adj = soc_adjustments.get(soc_category, {"auto_mult": 1.0, "aug_mult": 1.0})
+
+        # Apply adjustments
+        adj_auto = base_auto * adj["auto_mult"]
+        adj_aug = base_aug * adj["aug_mult"]
+
+        # Normalize to maintain total of 100%
+        total = adj_auto + adj_aug
+        if total > 0:
+            adj_auto = (adj_auto / total) * 100
+            adj_aug = (adj_aug / total) * 100
+
+        return adj_auto, adj_aug
+
     def calculate_industry_impacts(self, soc_data, geo_data, use_us_only=True):
         """Calculate industry-level automation/augmentation from SOC and geographic data
 
@@ -139,8 +197,11 @@ class AnthropicIndexProcessorV2:
                 logger.warning(f"No industry mapping for SOC category: {soc_category}")
                 continue
 
-            # Get SOC percentage - this should be US-specific if we extracted it correctly
+            # Get SOC percentage
             soc_pct = data.get("soc_pct", 0)
+
+            # Get SOC-specific automation/augmentation rates
+            soc_auto, soc_aug = self.get_soc_automation_augmentation_rates(soc_category, us_data)
 
             if industry not in industry_impacts:
                 industry_impacts[industry] = {
@@ -150,11 +211,14 @@ class AnthropicIndexProcessorV2:
                     "soc_categories": []
                 }
 
-            # Weight the US automation/augmentation by SOC percentage
+            # Weight the SOC-specific rates by SOC percentage
             industry_impacts[industry]["total_weight"] += soc_pct
-            industry_impacts[industry]["weighted_automation"] += soc_pct * us_data["automation_pct"]
-            industry_impacts[industry]["weighted_augmentation"] += soc_pct * us_data["augmentation_pct"]
+            industry_impacts[industry]["weighted_automation"] += soc_pct * soc_auto
+            industry_impacts[industry]["weighted_augmentation"] += soc_pct * soc_aug
             industry_impacts[industry]["soc_categories"].append(soc_category)
+
+            # Log the SOC-specific rates for transparency
+            logger.debug(f"  {soc_category}: {soc_pct:.2f}% of US AI usage, auto={soc_auto:.1f}%, aug={soc_aug:.1f}%")
 
         # Calculate final percentages
         for industry in industry_impacts:

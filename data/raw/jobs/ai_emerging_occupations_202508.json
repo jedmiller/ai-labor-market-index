@@ -3,15 +3,12 @@
     {
       "soc_code": "15-2051.00",
       "title": "Data Scientists",
-      "growth_rate": 0.13700352208995042,
-      "employment": 97675,
+      "growth_rate": 0.4008573984580549,
+      "employment": 53012,
       "ai_relevance": 0.9,
       "skills": [
-        "deep learning",
-        "openai",
-        "ml ops",
-        "prompt engineering",
-        "llm",
+        "machine learning",
+        "reinforcement learning",
         "tensorflow"
       ],
       "industries": [
@@ -21,15 +18,14 @@
     {
       "soc_code": "15-1252.00",
       "title": "Software Developers",
-      "growth_rate": 0.3913572610415982,
-      "employment": 45026,
+      "growth_rate": 0.1512381194497588,
+      "employment": 39541,
       "ai_relevance": 0.9,
       "skills": [
-        "llm",
-        "generative ai",
-        "langchain",
-        "computer vision",
-        "reinforcement learning"
+        "ai engineering",
+        "large language models",
+        "speech recognition",
+        "neural networks"
       ],
       "industries": [
         "Information"
@@ -38,13 +34,14 @@
     {
       "soc_code": "15-1211.00",
       "title": "Computer Systems Analysts",
-      "growth_rate": 0.4400620016187794,
-      "employment": 75086,
+      "growth_rate": 0.4841337792348408,
+      "employment": 32513,
       "ai_relevance": 0.9,
       "skills": [
-        "transformers",
         "recommendation systems",
-        "generative ai"
+        "gpt",
+        "computer vision",
+        "tensorflow"
       ],
       "industries": [
         "Information"
@@ -53,14 +50,13 @@
     {
       "soc_code": "15-1232.00",
       "title": "Computer User Support Specialists",
-      "growth_rate": 0.2736721515201691,
-      "employment": 82312,
+      "growth_rate": 0.16752747766471612,
+      "employment": 58546,
       "ai_relevance": 0.9,
       "skills": [
-        "data science",
-        "reinforcement learning",
-        "ai ethics",
-        "recommendation systems"
+        "machine learning",
+        "natural language processing",
+        "computer vision"
       ],
       "industries": [
         "Information"
@@ -69,14 +65,14 @@
     {
       "soc_code": "15-1255.00",
       "title": "Web and Digital Interface Designers",
-      "growth_rate": 0.2595980465224096,
-      "employment": 8985,
+      "growth_rate": 0.17964603668852425,
+      "employment": 37119,
       "ai_relevance": 0.7,
       "skills": [
-        "gpt",
-        "ml ops",
         "transformers",
-        "llm"
+        "llm",
+        "artificial intelligence",
+        "openai"
       ],
       "industries": [
         "Information"
@@ -85,15 +81,16 @@
     {
       "soc_code": "15-2041.00",
       "title": "Statisticians",
-      "growth_rate": 0.3078403639769929,
-      "employment": 59044,
+      "growth_rate": 0.18845663322198072,
+      "employment": 89690,
       "ai_relevance": 0.7,
       "skills": [
+        "ai ethics",
+        "tensorflow",
+        "transformers",
+        "generative ai",
         "ai applications",
-        "data science",
-        "large language models",
-        "machine learning",
-        "deep learning"
+        "langchain"
       ],
       "industries": [
         "Information"
@@ -102,14 +99,16 @@
     {
       "soc_code": "15-1299.00",
       "title": "Computer Occupations, All Other",
-      "growth_rate": 0.32512785384920384,
-      "employment": 35096,
+      "growth_rate": 0.33479299670778145,
+      "employment": 21851,
       "ai_relevance": 0.9,
       "skills": [
-        "computer vision",
         "artificial intelligence",
-        "large language models",
-        "speech recognition"
+        "deep learning",
+        "tensorflow",
+        "transformers",
+        "reinforcement learning",
+        "llm"
       ],
       "industries": [
         "Information"
@@ -118,14 +117,16 @@
     {
       "soc_code": "15-1221.00",
       "title": "Computer and Information Research Scientists",
-      "growth_rate": 0.1613743105365114,
-      "employment": 9434,
+      "growth_rate": 0.4442528036930523,
+      "employment": 58790,
       "ai_relevance": 0.9,
       "skills": [
-        "ml ops",
-        "transformers",
-        "computer vision",
-        "ai applications"
+        "gpt",
+        "pytorch",
+        "generative ai",
+        "speech recognition",
+        "natural language processing",
+        "langchain"
       ],
       "industries": [
         "Information"
@@ -134,13 +135,15 @@
     {
       "soc_code": "15-2031.00",
       "title": "Operations Research Analysts",
-      "growth_rate": 0.27686506603002187,
-      "employment": 82642,
+      "growth_rate": 0.1717468641625314,
+      "employment": 66380,
       "ai_relevance": 0.9,
       "skills": [
-        "ai applications",
-        "llm",
-        "data science"
+        "data science",
+        "ml ops",
+        "deep learning",
+        "gpt",
+        "recommendation systems"
       ],
       "industries": [
         "Information"
@@ -149,16 +152,13 @@
     {
       "soc_code": "11-3021.00",
       "title": "Computer and Information Systems Managers",
-      "growth_rate": 0.48780682128007924,
-      "employment": 77209,
+      "growth_rate": 0.40297301278664577,
+      "employment": 92218,
       "ai_relevance": 0.9,
       "skills": [
-        "tensorflow",
-        "openai",
-        "ml ops",
-        "ai ethics",
-        "speech recognition",
-        "prompt engineering"
+        "computer vision",
+        "gpt",
+        "deep learning"
       ],
       "industries": [
         "Information"
@@ -167,13 +167,14 @@
     {
       "soc_code": "13-1161.00",
       "title": "Market Research Analysts and Marketing Specialists",
-      "growth_rate": 0.42437247412830326,
-      "employment": 63382,
+      "growth_rate": 0.4807955459799492,
+      "employment": 69601,
       "ai_relevance": 0.9,
       "skills": [
+        "gpt",
+        "prompt engineering",
         "tensorflow",
-        "natural language processing",
-        "prompt engineering"
+        "langchain"
       ],
       "industries": [
         "Professional and Business Services"
@@ -182,16 +183,13 @@
     {
       "soc_code": "25-1021.00",
       "title": "Computer Science Teachers, Postsecondary",
-      "growth_rate": 0.49086213342867757,
-      "employment": 75510,
+      "growth_rate": 0.10891382173876295,
+      "employment": 7202,
       "ai_relevance": 0.9,
       "skills": [
-        "llm",
-        "recommendation systems",
-        "large language models",
-        "artificial intelligence",
-        "speech recognition",
-        "ai ethics"
+        "computer vision",
+        "data science",
+        "gpt"
       ],
       "industries": [
         "Information"
@@ -200,14 +198,16 @@
     {
       "soc_code": "17-2199.00",
       "title": "Engineers, All Other",
-      "growth_rate": 0.49174365438351353,
-      "employment": 30049,
+      "growth_rate": 0.3522533465767671,
+      "employment": 10736,
       "ai_relevance": 0.7,
       "skills": [
-        "deep learning",
-        "machine learning",
-        "langchain",
-        "computer vision"
+        "neural networks",
+        "ai applications",
+        "ml ops",
+        "artificial intelligence",
+        "transformers",
+        "deep learning"
       ],
       "industries": [
         "Information"
@@ -216,16 +216,15 @@
     {
       "soc_code": "15-2099.00",
       "title": "Mathematical Science Occupations, All Other",
-      "growth_rate": 0.33867308886903025,
-      "employment": 20110,
+      "growth_rate": 0.2950315876695657,
+      "employment": 7976,
       "ai_relevance": 0.7,
       "skills": [
-        "machine learning",
-        "recommendation systems",
-        "artificial intelligence",
-        "data science",
+        "prompt engineering",
         "pytorch",
-        "speech recognition"
+        "natural language processing",
+        "recommendation systems",
+        "reinforcement learning"
       ],
       "industries": [
         "Information"
@@ -234,98 +233,139 @@
     {
       "soc_code": "19-3022.00",
       "title": "Survey Researchers",
-      "growth_rate": 0.11373976454498713,
-      "employment": 66679,
+      "growth_rate": 0.30973137017674157,
+      "employment": 42682,
       "ai_relevance": 0.9,
       "skills": [
-        "large language models",
-        "data science",
-        "recommendation systems",
-        "computer vision",
-        "openai",
-        "ml ops"
+        "speech recognition",
+        "natural language processing",
+        "ai engineering",
+        "tensorflow",
+        "reinforcement learning",
+        "gpt"
       ],
       "industries": [
         "Information"
       ]
     },
     {
-      "soc_code": "15-3527.00",
+      "soc_code": "15-8950.00",
       "title": "AI Ethics Specialist",
-      "growth_rate": 0.32598443339716054,
-      "employment": 10314,
+      "growth_rate": 0.571342751791942,
+      "employment": 2441,
       "ai_relevance": 0.95,
       "skills": [
-        "ai ethics",
         "ai applications",
         "neural networks",
-        "pytorch",
-        "transformers",
-        "computer vision"
+        "tensorflow",
+        "ai engineering",
+        "machine learning",
+        "data science"
       ],
       "industries": [
         "Information"
       ]
     },
     {
-      "soc_code": "15-9133.00",
+      "soc_code": "15-8698.00",
       "title": "ML Operations Engineer",
-      "growth_rate": 0.43857889844714887,
-      "employment": 12119,
+      "growth_rate": 0.5770649930462621,
+      "employment": 17136,
       "ai_relevance": 0.95,
       "skills": [
-        "generative ai",
-        "large language models",
         "openai",
-        "data science",
-        "transformers"
-      ],
-      "industries": [
-        "Information"
-      ]
-    },
-    {
-      "soc_code": "15-8344.00",
-      "title": "Prompt Engineer",
-      "growth_rate": 0.6114484192691081,
-      "employment": 3225,
-      "ai_relevance": 0.95,
-      "skills": [
-        "natural language processing",
-        "artificial intelligence",
-        "recommendation systems",
-        "ml ops"
-      ],
-      "industries": [
-        "Information"
-      ]
-    },
-    {
-      "soc_code": "15-6692.00",
-      "title": "AI Integration Specialist",
-      "growth_rate": 0.38041618580555436,
-      "employment": 8801,
-      "ai_relevance": 0.95,
-      "skills": [
-        "ai ethics",
-        "llm",
-        "deep learning",
-        "computer vision"
-      ],
-      "industries": [
-        "Information"
-      ]
-    },
-    {
-      "soc_code": "15-7119.00",
-      "title": "Conversational AI Designer",
-      "growth_rate": 0.5083313097342512,
-      "employment": 10520,
-      "ai_relevance": 0.95,
-      "skills": [
         "transformers",
-        "speech recognition",
+        "prompt engineering",
+        "tensorflow",
+        "gpt"
+      ],
+      "industries": [
+        "Information"
+      ]
+    },
+    {
+      "soc_code": "15-1287.00",
+      "title": "Prompt Engineer",
+      "growth_rate": 0.3572001389151231,
+      "employment": 13476,
+      "ai_relevance": 0.95,
+      "skills": [
+        "machine learning",
+        "data science",
+        "transformers",
+        "prompt engineering",
+        "openai",
+        "large language models"
+      ],
+      "industries": [
+        "Information"
+      ]
+    },
+    {
+      "soc_code": "15-6974.00",
+      "title": "AI Integration Specialist",
+      "growth_rate": 0.31891855850484047,
+      "employment": 7849,
+      "ai_relevance": 0.95,
+      "skills": [
+        "neural networks",
+        "data science",
         "artificial intelligence",
+        "computer vision",
+        "gpt",
+        "llm"
+      ],
+      "industries": [
+        "Information"
+      ]
+    },
+    {
+      "soc_code": "15-8280.00",
+      "title": "Conversational AI Designer",
+      "growth_rate": 0.6765892598736531,
+      "employment": 5197,
+      "ai_relevance": 0.95,
+      "skills": [
+        "speech recognition",
+        "computer vision",
+        "openai",
+        "machine learning",
+        "tensorflow"
+      ],
+      "industries": [
+        "Information"
+      ]
+    },
+    {
+      "soc_code": "15-3031.00",
+      "title": "AI Compliance Officer",
+      "growth_rate": 0.3876090942644005,
+      "employment": 12932,
+      "ai_relevance": 0.95,
+      "skills": [
+        "speech recognition",
+        "ai engineering",
+        "gpt",
+        "natural language processing",
+        "neural networks"
+      ],
+      "industries": [
+        "Information"
+      ]
+    },
+    {
+      "soc_code": "15-2643.00",
+      "title": "Neural Network Architect",
+      "growth_rate": 0.4058542549885114,
+      "employment": 9920,
+      "ai_relevance": 0.95,
+      "skills": [
+        "recommendation systems",
+        "prompt engineering",
+        "openai",
+        "ai ethics",
+        "gpt",
+        "langchain",
         "pytorch"
       ],
       "industries": [
@@ -333,86 +373,50 @@
       ]
     },
     {
-      "soc_code": "15-8951.00",
-      "title": "AI Compliance Officer",
-      "growth_rate": 0.3615119360506373,
-      "employment": 6858,
-      "ai_relevance": 0.95,
-      "skills": [
-        "langchain",
-        "transformers",
-        "tensorflow",
-        "ml ops"
-      ],
-      "industries": [
-        "Information"
-      ]
-    },
-    {
-      "soc_code": "15-9159.00",
-      "title": "Neural Network Architect",
-      "growth_rate": 0.6103870631801636,
-      "employment": 19141,
-      "ai_relevance": 0.95,
-      "skills": [
-        "natural language processing",
-        "llm",
-        "tensorflow",
-        "langchain"
-      ],
-      "industries": [
-        "Information"
-      ]
-    },
-    {
-      "soc_code": "15-1457.00",
+      "soc_code": "15-6473.00",
       "title": "Data Trust Officer",
-      "growth_rate": 0.5243372521580274,
-      "employment": 17539,
+      "growth_rate": 0.5417498165268557,
+      "employment": 6290,
       "ai_relevance": 0.95,
       "skills": [
-        "artificial intelligence",
-        "neural networks",
-        "ai applications",
+        "deep learning",
+        "machine learning",
         "ml ops",
-        "natural language processing"
+        "speech recognition"
       ],
       "industries": [
         "Information"
       ]
     },
     {
-      "soc_code": "15-7090.00",
+      "soc_code": "15-3425.00",
       "title": "Augmented Intelligence Specialist",
-      "growth_rate": 0.3150768076834967,
-      "employment": 16325,
+      "growth_rate": 0.32435240896634937,
+      "employment": 12921,
       "ai_relevance": 0.95,
       "skills": [
-        "gpt",
-        "ai ethics",
-        "neural networks",
-        "ml ops",
-        "computer vision",
-        "data science",
-        "langchain"
+        "ai applications",
+        "large language models",
+        "reinforcement learning",
+        "generative ai",
+        "ai ethics"
       ],
       "industries": [
         "Information"
       ]
     },
     {
-      "soc_code": "15-9522.00",
+      "soc_code": "15-8978.00",
       "title": "Human-AI Collaboration Coach",
-      "growth_rate": 0.7980312472345487,
-      "employment": 2440,
+      "growth_rate": 0.35235127247202375,
+      "employment": 1812,
       "ai_relevance": 0.95,
       "skills": [
-        "llm",
-        "recommendation systems",
-        "generative ai",
-        "transformers",
+        "speech recognition",
+        "ml ops",
+        "artificial intelligence",
         "data science",
-        "ai engineering"
+        "generative ai"
       ],
       "industries": [
         "Information"
@@ -420,5 +424,5 @@
     }
   ],
   "is_simulated": true,
-  "timestamp": "2025-10-16T13:53:45.104002"
+  "timestamp": "2025-10-16T16:21:40.906112"
 }

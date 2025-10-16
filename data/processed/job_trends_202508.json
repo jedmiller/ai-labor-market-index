@@ -1,5 +1,5 @@
 {
-  "date_analyzed": "2025-10-16T13:49:19.055058",
+  "date_analyzed": "2025-10-16T16:21:42.956655",
   "source": "Anthropic Economic Index (v2 format)",
   "source_period": "2025-08",
   "data_format": "geographic_and_soc_categories",
@@ -16,8 +16,8 @@
   "industry_impacts": {
     "Professional and Business Services": {
       "total_weight": 20.77047994519838,
-      "weighted_automation": 1019.286859046071,
-      "weighted_augmentation": 1057.761135473767,
+      "weighted_automation": 971.1109716514864,
+      "weighted_augmentation": 1105.9370228683515,
       "soc_categories": [
         "Architecture and Engineering",
         "Legal",
@@ -25,106 +25,106 @@
         "Management",
         "Office and Administrative Support"
       ],
-      "automation_rate": 49.073823124713336,
-      "augmentation_rate": 50.92617687528665
+      "automation_rate": 46.754382865186656,
+      "augmentation_rate": 53.24561713481332
     },
     "Information": {
       "total_weight": 35.16931493200098,
-      "weighted_automation": 1725.892740390356,
-      "weighted_augmentation": 1791.038752809742,
+      "weighted_automation": 1336.600840160526,
+      "weighted_augmentation": 2180.330653039572,
       "soc_categories": [
         "Arts, Design, Entertainment, Sports, and Media",
         "Computer and Mathematical"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 38.004744839210304,
+      "augmentation_rate": 61.9952551607897
     },
     "Other Services": {
       "total_weight": 1.3997403630127465,
-      "weighted_automation": 68.69061099500956,
-      "weighted_augmentation": 71.28342530626509,
+      "weighted_automation": 66.81452551464221,
+      "weighted_augmentation": 73.15951078663244,
       "soc_categories": [
         "Building and Grounds Cleaning and Maintenance",
         "Farming, Fishing, and Forestry",
         "Personal Care and Service"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 47.733513500198875,
+      "augmentation_rate": 52.266486499801125
     },
     "Financial Activities": {
       "total_weight": 3.429890827916241,
-      "weighted_automation": 168.3178558262382,
-      "weighted_augmentation": 174.67122696538587,
+      "weighted_automation": 185.49324050862418,
+      "weighted_augmentation": 157.4958422829999,
       "soc_categories": [
         "Business and Financial Operations"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 54.081383290358765,
+      "augmentation_rate": 45.91861670964123
     },
     "Education and Health Services": {
       "total_weight": 16.262760295660417,
-      "weighted_automation": 798.0758222688503,
-      "weighted_augmentation": 828.2002072971915,
+      "weighted_automation": 480.073010941423,
+      "weighted_augmentation": 1146.2030186246186,
       "soc_categories": [
         "Community and Social Service",
         "Educational Instruction and Library",
         "Healthcare Practitioners and Technical",
         "Healthcare Support"
       ],
-      "automation_rate": 49.07382312471335,
-      "augmentation_rate": 50.92617687528665
+      "automation_rate": 29.519774147413738,
+      "augmentation_rate": 70.48022585258626
     },
     "Construction": {
       "total_weight": 0.1322136687855978,
-      "weighted_automation": 6.488230196653859,
-      "weighted_augmentation": 6.733136681905919,
+      "weighted_automation": 7.150298097818457,
+      "weighted_augmentation": 6.071068780741322,
       "soc_categories": [
         "Construction and Extraction"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 54.081383290358765,
+      "augmentation_rate": 45.91861670964123
     },
     "Leisure and Hospitality": {
       "total_weight": 0.56142905730696,
-      "weighted_automation": 27.551470255356307,
-      "weighted_augmentation": 28.591435475339694,
+      "weighted_automation": 36.01706034239277,
+      "weighted_augmentation": 20.125845388303233,
       "soc_categories": [
         "Food Preparation and Serving Related"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 64.15246926327242,
+      "augmentation_rate": 35.84753073672757
     },
     "Trade, Transportation, and Utilities": {
       "total_weight": 3.6593486081637123,
-      "weighted_automation": 179.57822634869197,
-      "weighted_augmentation": 186.35663446767924,
+      "weighted_automation": 212.86816613633536,
+      "weighted_augmentation": 153.0666946800359,
       "soc_categories": [
         "Installation, Maintenance, and Repair",
         "Sales and Related",
         "Transportation and Material Moving"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528665
+      "automation_rate": 58.1710541765394,
+      "augmentation_rate": 41.82894582346061
     },
     "Manufacturing": {
       "total_weight": 1.2948316910415651,
-      "weighted_automation": 63.54234138244724,
-      "weighted_augmentation": 65.94082772170927,
+      "weighted_automation": 96.20453624131468,
+      "weighted_augmentation": 33.27863286284182,
       "soc_categories": [
         "Production"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 74.29887367363365,
+      "augmentation_rate": 25.70112632636634
     },
     "Government": {
       "total_weight": 0.1992785732420609,
-      "weighted_automation": 9.77936145582613,
-      "weighted_augmentation": 10.14849586837996,
+      "weighted_automation": 8.785152100800241,
+      "weighted_augmentation": 11.142705223405848,
       "soc_categories": [
         "Protective Service"
       ],
-      "automation_rate": 49.07382312471334,
-      "augmentation_rate": 50.92617687528666
+      "automation_rate": 44.084780204287384,
+      "augmentation_rate": 55.9152197957126
     }
   },
   "geographic_coverage": {

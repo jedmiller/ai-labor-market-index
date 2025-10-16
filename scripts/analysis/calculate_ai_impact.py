@@ -574,11 +574,24 @@ class AIImpactCalculator:
         industry_augmentation = {}
         
         # Get data from Anthropic Economic Index if available
+        avg_automation = 0
+        avg_augmentation = 0
+
         if anthropic_data:
             logger.info(f"Anthropic data structure: {list(anthropic_data.keys())}")
-            
+
+            # Check for new format with industry_impacts (August 2025+)
+            if "industry_impacts" in anthropic_data:
+                logger.info("Found industry-specific impacts in new format")
+                for industry, impact_data in anthropic_data["industry_impacts"].items():
+                    industry_automation[industry] = impact_data.get("automation_rate", 50.0)
+                    industry_augmentation[industry] = impact_data.get("augmentation_rate", 50.0)
+                    logger.info(f"  {industry}: auto={industry_automation[industry]:.1f}%, aug={industry_augmentation[industry]:.1f}%")
+                # We have industry-specific data, so no need for averages
+                avg_automation = -1  # Flag to indicate we have industry-specific data
+                avg_augmentation = -1
             # Try to extract automation/augmentation data from various possible structures
-            if "statistics" in anthropic_data:
+            elif "statistics" in anthropic_data:
                 avg_automation = anthropic_data["statistics"].get("average_automation_rate", 0)
                 avg_augmentation = anthropic_data["statistics"].get("average_augmentation_rate", 0)
                 logger.info(f"Found statistics: automation={avg_automation}, augmentation={avg_augmentation}")
@@ -587,7 +600,7 @@ class AIImpactCalculator:
                 occupation_data = anthropic_data["datasets"]["occupation_automation"]
                 automation_rates = [data.get("automation_rate", 0) for data in occupation_data.values()]
                 augmentation_rates = [data.get("augmentation_rate", 0) for data in occupation_data.values()]
-                
+
                 if automation_rates and augmentation_rates:
                     avg_automation = sum(automation_rates) / len(automation_rates)
                     avg_augmentation = sum(augmentation_rates) / len(augmentation_rates)
@@ -599,8 +612,8 @@ class AIImpactCalculator:
                 avg_automation = 0
                 avg_augmentation = 0
                 logger.warning("No valid automation/augmentation data found in Anthropic data")
-            
-            # Use as default values for all industries if we found data
+
+            # Use as default values for all industries if we found data (but not if we have industry-specific)
             if avg_automation > 0 or avg_augmentation > 0:
                 for industry in industry_data:
                     industry_automation[industry] = avg_automation
@@ -1445,9 +1458,16 @@ class AIImpactCalculator:
         events_data = self.load_data(self.workforce_events_file)
         research_data = self.load_data(self.research_trends_file)
         
-        # Load Anthropic data separately with better search
-        anthropic_data = self.load_anthropic_data()
-        
+        # Use job_trends data which contains the Anthropic data in the new format
+        # If job_data exists and has industry_impacts, use it as the primary source
+        if job_data and "industry_impacts" in job_data:
+            logger.info("Using job_trends data with industry-specific impacts")
+            anthropic_data = job_data  # job_trends contains the processed Anthropic data
+        else:
+            # Fall back to loading old format Anthropic data if needed
+            logger.info("No industry impacts in job_trends, loading Anthropic data separately")
+            anthropic_data = self.load_anthropic_data()
+
         # Validate all data sources
         validation_results = self.validate_data_sources(employment_data, anthropic_data, job_data)
         

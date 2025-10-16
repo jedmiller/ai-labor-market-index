@@ -1,175 +1,175 @@
 {
   "date": "2025-08",
-  "total_impact": -0.07600609996484972,
-  "jobs_affected": -12108981,
-  "jobs_displaced": 15155749,
+  "total_impact": -0.06840264139901127,
+  "jobs_affected": -10897629,
+  "jobs_displaced": 13944394,
   "jobs_created": 2206202,
   "jobs_demand_effect": 840553,
   "total_employment": 159316000.0,
   "total_employment_thousands": 159316.0,
-  "transformation_rate": 0.1360672030555625,
+  "transformation_rate": 0.12846374448972406,
   "transformation_by_industry": {
-    "Total Nonfarm": 0.139,
-    "Mining and Logging": 0.1264,
-    "Construction": 0.124,
-    "Manufacturing": 0.157,
-    "Trade, Transportation, and Utilities": 0.12682,
-    "Information": 0.17027666666666663,
-    "Financial Activities": 0.138996,
-    "Professional and Business Services": 0.15993,
-    "Education and Health Services": 0.13766666666666666,
-    "Leisure and Hospitality": 0.12175000000000001,
-    "Other Services": 0.12340000000000001,
-    "Government": 0.12415
+    "Total Nonfarm": 0.1341,
+    "Mining and Logging": 0.11789999999999999,
+    "Construction": 0.1111531435141816,
+    "Manufacturing": 0.15531310136937296,
+    "Trade, Transportation, and Utilities": 0.12398407862292672,
+    "Information": 0.1704584342030606,
+    "Financial Activities": 0.1339531435141816,
+    "Professional and Business Services": 0.15596052771066596,
+    "Education and Health Services": 0.1326313558382845,
+    "Leisure and Hospitality": 0.11327798145471278,
+    "Other Services": 0.1069199189249105,
+    "Government": 0.10402167528355614
   },
   "by_industry": {
     "Total Nonfarm": {
-      "impact": -0.07599999999999996,
-      "jobs_affected": -12108015,
-      "jobs_displaced": 15931600,
+      "impact": -0.07109999999999994,
+      "jobs_affected": -11327367,
+      "jobs_displaced": 15150951,
       "jobs_created": 2389740,
       "jobs_demand_effect": 1433844,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.09509999999999999,
         "creation_effect": 0.015,
         "demand_effect": 0.009
       }
     },
     "Mining and Logging": {
-      "impact": -0.10839999999999994,
-      "jobs_affected": -67207,
-      "jobs_displaced": 62000,
+      "impact": -0.09989999999999999,
+      "jobs_affected": -61937,
+      "jobs_displaced": 56730,
       "jobs_created": 3720,
       "jobs_demand_effect": -8928,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.0915,
         "creation_effect": 0.006,
         "demand_effect": -0.0144
       }
     },
     "Construction": {
-      "impact": -0.10150000000000003,
-      "jobs_affected": -834939,
-      "jobs_displaced": 822600,
+      "impact": -0.08865314351418163,
+      "jobs_affected": -729260,
+      "jobs_displaced": 716921,
       "jobs_created": 61695,
       "jobs_demand_effect": -74034,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.0871531435141816,
         "creation_effect": 0.0075,
         "demand_effect": -0.009
       }
     },
     "Manufacturing": {
-      "impact": -0.11199999999999999,
-      "jobs_affected": -1424191,
-      "jobs_displaced": 1271600,
+      "impact": -0.110313101369373,
+      "jobs_affected": -1402741,
+      "jobs_displaced": 1250149,
       "jobs_created": 190740,
       "jobs_demand_effect": -343332,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.09831310136937295,
         "creation_effect": 0.015,
         "demand_effect": -0.027
       }
     },
     "Trade, Transportation, and Utilities": {
-      "impact": -0.09082000000000001,
-      "jobs_affected": -2626060,
-      "jobs_displaced": 2764852,
+      "impact": -0.08798407862292668,
+      "jobs_affected": -2544059,
+      "jobs_displaced": 2682851,
       "jobs_created": 346980,
       "jobs_demand_effect": -208188,
       "components": {
-        "displacement_effect": -0.09561999999999998,
+        "displacement_effect": -0.09278407862292673,
         "creation_effect": 0.012,
         "demand_effect": -0.0072
       }
     },
     "Information": {
-      "impact": -0.04427666666666663,
-      "jobs_affected": -129376,
-      "jobs_displaced": 269632,
+      "impact": -0.044458434203060504,
+      "jobs_affected": -129907,
+      "jobs_displaced": 270163,
       "jobs_created": 87660,
       "jobs_demand_effect": 52595,
       "components": {
-        "displacement_effect": -0.09227666666666665,
+        "displacement_effect": -0.0924584342030606,
         "creation_effect": 0.03,
         "demand_effect": 0.018
       }
     },
     "Financial Activities": {
-      "impact": -0.0633959999999999,
-      "jobs_affected": -583369,
-      "jobs_displaced": 848387,
+      "impact": -0.05835314351418153,
+      "jobs_affected": -536965,
+      "jobs_displaced": 801983,
       "jobs_created": 165636,
       "jobs_demand_effect": 99381,
       "components": {
-        "displacement_effect": -0.092196,
+        "displacement_effect": -0.0871531435141816,
         "creation_effect": 0.018,
         "demand_effect": 0.0108
       }
     },
     "Professional and Business Services": {
-      "impact": -0.038429999999999964,
-      "jobs_affected": -867634,
-      "jobs_displaced": 1985195,
+      "impact": -0.03446052771066599,
+      "jobs_affected": -778015,
+      "jobs_displaced": 1895576,
       "jobs_created": 507982,
       "jobs_demand_effect": 609578,
       "components": {
-        "displacement_effect": -0.08792999999999998,
+        "displacement_effect": -0.08396052771066598,
         "creation_effect": 0.0225,
         "demand_effect": 0.026999999999999996
       }
     },
     "Education and Health Services": {
-      "impact": -0.05666666666666664,
-      "jobs_affected": -1548189,
-      "jobs_displaced": 2449783,
+      "impact": -0.05163135583828449,
+      "jobs_affected": -1410620,
+      "jobs_displaced": 2312213,
       "jobs_created": 409815,
       "jobs_demand_effect": 491777,
       "components": {
-        "displacement_effect": -0.08966666666666667,
+        "displacement_effect": -0.0846313558382845,
         "creation_effect": 0.015,
         "demand_effect": 0.018
       }
     },
     "Leisure and Hospitality": {
-      "impact": -0.08574999999999999,
-      "jobs_affected": -1445487,
-      "jobs_displaced": 1685700,
+      "impact": -0.07727798145471276,
+      "jobs_affected": -1302674,
+      "jobs_displaced": 1542887,
       "jobs_created": 126427,
       "jobs_demand_effect": 113784,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.09152798145471278,
         "creation_effect": 0.0075,
         "demand_effect": 0.00675
       }
     },
     "Other Services": {
-      "impact": -0.08560000000000001,
-      "jobs_affected": -515397,
-      "jobs_displaced": 602100,
+      "impact": -0.06911991892491054,
+      "jobs_affected": -416171,
+      "jobs_displaced": 502873,
       "jobs_created": 54188,
       "jobs_demand_effect": 32513,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.0835199189249105,
         "creation_effect": 0.009,
         "demand_effect": 0.0054
       }
     },
     "Government": {
-      "impact": -0.08635000000000004,
-      "jobs_affected": -2067132,
-      "jobs_displaced": 2393900,
+      "impact": -0.06622167528355627,
+      "jobs_affected": -1585280,
+      "jobs_displaced": 1912048,
       "jobs_created": 251359,
       "jobs_demand_effect": 75407,
       "components": {
-        "displacement_effect": -0.1,
+        "displacement_effect": -0.07987167528355615,
         "creation_effect": 0.010499999999999999,
         "demand_effect": 0.00315
       }
     }
   },
   "components": {
-    "displacement_effect": -0.09513012454492957,
+    "displacement_effect": -0.08752666597909112,
     "creation_effect": 0.0276959564638831,
     "market_maturity": 0.5,
     "adjusted_market_maturity": 0.5,
@@ -180,7 +180,7 @@
   "data_quality": {
     "calculation_method": "component_based",
     "data_completeness": 1.0,
-    "last_updated": "2025-10-16T13:54:23.980106",
+    "last_updated": "2025-10-16T16:22:18.322770",
     "confidence_factors": {
       "has_anthropic_data": true,
       "has_recent_employment": true,
@@ -212,6 +212,6 @@
     ],
     "transformation_rate_included": true,
     "confidence_intervals_available": true,
-    "last_calculation": "2025-10-16T13:54:23.980547"
+    "last_calculation": "2025-10-16T16:22:18.323214"
   }
 }
