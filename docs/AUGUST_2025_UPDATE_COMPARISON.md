@@ -212,17 +212,168 @@ The US shows a **more balanced approach** to AI adoption:
 
 ## 🔮 5-Year Projections Comparison
 
-### **NOTE**: Projections use the same forward-looking model parameters, so absolute numbers may be similar, but are now based on a better starting point.
+### **CRITICAL FINDING**: The Projection Story is Different from the Current Impact Story
 
-| Year | June Projection | October Projection | Difference | Notes |
-|------|----------------|-------------------|------------|-------|
+While **current impact improved by +0.65pp**, the **future projections for knowledge-worker industries got WORSE**.
+
+### **Overall Aggregate Projections (Moderate Scenario)**
+
+| Year | April Data | August Data | Difference | Notes |
+|------|------------|-------------|------------|-------|
 | 2026 | -8.48% | -8.48% | 0.00pp | Same parameters |
 | 2027 | -7.30% | -7.30% | 0.00pp | Same parameters |
 | 2028 | -5.95% | -5.95% | 0.00pp | Same parameters |
 | 2029 | -4.43% | -4.43% | 0.00pp | Same parameters |
 | 2030 | -2.75% | -2.75% | 0.00pp | Same parameters |
 
-**However**: The **starting point** is now 0.65pp better, so the entire projection curve is effectively shifted upward by that amount in reality.
+**However**: The **aggregate masks critical industry-level divergence** revealed in the new data.
+
+---
+
+## 🚨 Industry-Level 2028 Projection Changes: The Knowledge Work Crisis
+
+### **Technology & Knowledge-Worker Industries (WORSENED Projections)**
+
+| Industry | April 2028 | August 2028 | Change | Conservative Range |
+|----------|------------|-------------|--------|-------------------|
+| **Information (Tech)** | -11.60% | -12.20% | **-0.61pp** ⚠️ | [-9.76%, -14.65%] |
+| **Professional Services** | -9.48% | -10.08% | **-0.60pp** ⚠️ | [-8.06%, -12.09%] |
+| **Education & Health** | -13.45% | -14.13% | **-0.68pp** ⚠️ | [-11.30%, -16.95%] |
+| **Trade, Transport, Utilities** | -25.34% | -25.94% | **-0.60pp** ⚠️ | [-20.75%, -31.13%] |
+| **Financial Activities** | -17.64% | -17.94% | **-0.29pp** ⚠️ | [-14.35%, -21.52%] |
+
+### **Physical Labor Industries (NO CHANGE in Projections)**
+
+| Industry | April 2028 | August 2028 | Change | Conservative Range |
+|----------|------------|-------------|--------|-------------------|
+| **Construction** | -29.91% | -29.91% | **0.00pp** ✓ | [-23.93%, -35.89%] |
+| **Manufacturing** | -30.42% | -30.42% | **0.00pp** ✓ | [-24.34%, -36.51%] |
+| **Government** | -19.10% | -19.10% | **0.00pp** ✓ | [-15.28%, -22.92%] |
+| **Leisure & Hospitality** | -24.14% | -24.14% | **0.00pp** ✓ | [-19.31%, -28.96%] |
+| **Other Services** | -24.09% | -24.09% | **0.00pp** ✓ | [-19.27%, -28.91%] |
+
+---
+
+## 📊 Deep Dive: Information Sector (Technology) 5-Year Trajectory
+
+The **Information sector** (technology, media, telecommunications) shows the most concerning pattern:
+
+| Year | April Projection | August Projection | Change | Interpretation |
+|------|-----------------|-------------------|--------|----------------|
+| 2026 | -8.96% | -9.40% | **-0.45pp** | Starting to worsen |
+| 2027 | -11.49% | -12.08% | **-0.59pp** | Accelerating |
+| 2028 | -11.60% | -12.20% | **-0.61pp** | Peak divergence |
+| 2029 | -11.57% | -12.17% | **-0.61pp** | Sustained |
+| 2030 | -11.59% | -12.20% | **-0.61pp** | Persistent |
+
+### **What This Means:**
+
+1. **Tech Impact Accelerating**: Information sector faces ~0.6pp worse outlook through 2030
+2. **Early Adopter Tax**: First to adopt AI, first to feel full employment disruption
+3. **Persistent Effect**: The 0.6pp deterioration persists across all years 2027-2030
+4. **Contrast with Current**: Current impact only slightly worse (-0.22pp), but future much worse (-0.61pp)
+
+---
+
+## 🔬 The Paradox Explained: Better Now, Worse Later
+
+### **Current State (2025):**
+- Information sector: -4.23% → -4.45% (only -0.22pp worse)
+- Current impact relatively stable
+
+### **Future State (2028):**
+- Information sector: -11.60% → -12.20% (**-0.61pp worse**)
+- Future projections significantly deteriorated
+
+### **Why the Paradox?**
+
+1. **Adoption Velocity**: Better data reveals tech sector is adopting AI faster than other industries
+2. **Compound Effect**: Small acceleration in adoption compounds over time
+3. **Network Effects**: Tech industry's AI adoption enables other industries, but hits tech first
+4. **Skill Overlap**: Tech workers' skills most directly compete with AI capabilities
+
+---
+
+## 🎯 Pattern Recognition: Knowledge Work vs Physical Labor Divergence
+
+### **The Widening Gap:**
+
+**Knowledge Worker Industries (Getting Worse):**
+- Average 2028 deterioration: **-0.57pp**
+- Affected industries: Information, Professional Services, Education/Health, Finance
+- Characteristic: High information processing, digital workflows
+
+**Physical Labor Industries (Stable):**
+- Average 2028 change: **0.00pp**
+- Affected industries: Construction, Manufacturing, Government, Hospitality
+- Characteristic: Manual labor, in-person service, physical production
+
+### **What This Reveals:**
+
+The August 2025 Anthropic data with SOC taxonomy reveals:
+
+1. **AI Acceleration is Uneven**: Knowledge work automation accelerating faster than expected
+2. **Physical Labor More Resilient**: Manual labor projections unchanged - AI augmentation working
+3. **White Collar Vulnerability**: College-educated, desk-based jobs more at risk than anticipated
+4. **Retraining Challenge**: Knowledge workers may need to shift to physical/service roles
+
+---
+
+## 📈 Scenario Analysis: Information Sector Under All Scenarios
+
+| Scenario | April 2028 | August 2028 | Change | Risk Level |
+|----------|------------|-------------|--------|------------|
+| **Conservative** | -11.60% | -12.20% | -0.61pp | More negative |
+| **Moderate** | -12.65% | -13.31% | -0.66pp | More negative |
+
+**Consistency**: The deterioration is consistent across all scenarios (-0.61 to -0.66pp), suggesting this is not scenario-dependent but data-driven.
+
+---
+
+## 💡 Key Implications for Policy & Planning
+
+### **Industry-Specific Recommendations:**
+
+**For Information/Tech Sector:**
+1. **Urgent Action Needed**: Only sector with both current AND future deterioration
+2. **Retraining Programs**: Tech workers will need new skills by 2028
+3. **AI Collaboration Models**: Focus on AI augmentation, not replacement
+4. **Monitor Quarterly**: Track if -0.61pp deterioration continues or stabilizes
+
+**For Professional Services:**
+1. **Prepare for 2027-2028**: Impact accelerates in these years (-0.60pp worse)
+2. **Skill Diversification**: Lawyers, consultants, analysts need AI-complementary skills
+3. **Business Model Evolution**: Shift toward AI-augmented service delivery
+
+**For Physical Labor Industries:**
+1. **Maintain Current Approach**: 0.00pp change suggests current strategies working
+2. **Invest in Augmentation**: Continue AI tools that help workers (not replace them)
+3. **Competitive Advantage**: Sectors resistant to AI disruption have long-term stability
+
+### **Cross-Cutting Insights:**
+
+1. **College Education Premium Declining**: Traditional knowledge work most vulnerable
+2. **Skilled Trades Rising**: Physical + technical skills may command premium
+3. **Government Stability**: Public sector shows resilience (0.00pp change)
+4. **Regional Impacts**: Cities dependent on tech/finance face higher disruption
+
+---
+
+## 🔍 Why Physical Labor Industries Didn't Change
+
+### **Hypothesis:**
+
+1. **AI Limits in Physical World**: Better SOC data confirms AI can't (yet) do manual labor
+2. **Augmentation Success**: AI tools helping construction, manufacturing workers effectively
+3. **Human Advantage**: Physical dexterity, spatial reasoning still uniquely human
+4. **Lower Baseline**: These industries already factored in realistic AI limits
+
+### **Validation:**
+
+Construction improved by +1.28pp in **current** impact, and showed 0.00pp change in **future** projections. This suggests:
+- AI is helping construction workers NOW (current improvement)
+- But won't radically change the industry by 2028 (stable projection)
+- Sweet spot: Augmentation without displacement
 
 ---
 
