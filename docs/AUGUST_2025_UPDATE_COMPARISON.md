@@ -110,11 +110,11 @@ Occupation Coverage: 23 SOC Occupation Categories
 
 **AFTER:**
 - Method: SOC taxonomy with US-specific rates
-- US automation rate: 49.07% (more balanced than global 57%)
+- US automation rate: 49.07% (slightly more augmentation than global 51%)
 - Coverage: 23 SOC categories (82.9% classified)
 - Result: -9.51% baseline displacement
 
-**Change**: **+0.49pp improvement** due to US's more balanced automation/augmentation approach.
+**Change**: **+0.49pp improvement** due to US's slightly more augmentation-focused approach (49% automation vs 51% global).
 
 ---
 
@@ -157,10 +157,10 @@ The US shows a **more balanced approach** to AI adoption:
 
 | Region | Automation Rate | Augmentation Rate | Balance |
 |--------|----------------|-------------------|---------|
-| **Global Average** | 57% | 43% | More automation-heavy |
-| **United States** | 49% | 51% | **More augmentation-focused** |
+| **Global Average** | 51% | 49% | Slightly more automation |
+| **United States** | 49% | 51% | **Slightly more augmentation** |
 
-**Implication**: US companies are using AI more for augmentation than replacement, leading to better net employment outcomes.
+**Implication**: US shows a modest 2 percentage point shift toward augmentation vs global average. While both regions are near 50/50, the US leans slightly more toward augmentation, which may lead to marginally better employment outcomes.
 
 ---
 
@@ -189,13 +189,13 @@ The US shows a **more balanced approach** to AI adoption:
 
 4. **Information Sector Concern**: Only sector that worsened (-0.22pp), suggesting AI impact is intensifying in tech-heavy industries.
 
-5. **US Advantage**: US's 49/51 automation/augmentation split vs global 57/43 suggests more thoughtful adoption strategy.
+5. **US Advantage**: US's 49/51 automation/augmentation split vs global 51/49 shows a modest 2pp shift toward augmentation.
 
 ### **Why the Improvement?**
 
 1. **Better Data = Better Estimates**: SOC taxonomy reveals more nuanced automation patterns than generic occupation names.
 
-2. **Augmentation Over Automation**: Real-world adoption shows more augmentation (51%) than automation (49%) in the US.
+2. **Augmentation Over Automation**: Real-world adoption shows slightly more augmentation (51%) than automation (49%) in the US, compared to global 49% augmentation / 51% automation.
 
 3. **Market Maturation**: As AI tools mature, companies are finding optimal human-AI collaboration models.
 
